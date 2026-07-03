@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PYTHON="${PYTHON:-python}"
+PYTHON="${PYTHON:-python3}"
 PYTHONPATH=src "$PYTHON" scripts/run_search.py \
   --task ccocr \
   --model-alias gemma3_12b_it \

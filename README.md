@@ -84,7 +84,7 @@ bash configs/ccocr_gemma3_12b.sh
 A direct command has the form:
 
 ```bash
-PYTHONPATH=src python scripts/run_search.py \
+PYTHONPATH=src python3 scripts/run_search.py \
   --task counting \
   --model-alias gemma3_4b_it \
   --direction word-minus-digit \
