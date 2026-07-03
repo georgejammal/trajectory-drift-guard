@@ -11,4 +11,5 @@ PYTHONPATH=src "$PYTHON" scripts/run_search.py \
   --component-modes mlp,mlp_attn \
   --batch-size 64 \
   --max-new-tokens 512 \
+  --max-gold-tokens-exclusive 500 \
   --qwen-max-pixels 1003520

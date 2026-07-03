@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import shutil
 import sys
 import time
 from pathlib import Path
@@ -67,6 +68,79 @@ def label_token_filter(
         else:
             excluded += 1
     return kept, {"max_gold_tokens_exclusive": max_gold_tokens_exclusive, "kept": len(kept), "excluded": excluded}
+
+
+def filtered_labels(
+    *,
+    labels: dict[str, str],
+    processor: Any,
+    max_gold_tokens_exclusive: int | None,
+) -> tuple[dict[str, str], dict[str, Any]]:
+    if max_gold_tokens_exclusive is None:
+        return labels, {"max_gold_tokens_exclusive": None, "kept": len(labels), "excluded": 0}
+    tokenizer = getattr(processor, "tokenizer", None)
+    if tokenizer is None:
+        raise RuntimeError("max_gold_tokens_exclusive requires processor.tokenizer.")
+    kept = {}
+    excluded = 0
+    for image_name, gold in labels.items():
+        token_count = len(tokenizer.encode(str(gold), add_special_tokens=False))
+        if token_count < max_gold_tokens_exclusive:
+            kept[image_name] = gold
+        else:
+            excluded += 1
+    return kept, {"max_gold_tokens_exclusive": max_gold_tokens_exclusive, "kept": len(kept), "excluded": excluded}
+
+
+def make_filtered_eval_assets(
+    *,
+    data_info: list[dict[str, Any]],
+    cc_ocr_root: Path,
+    output_dir: Path,
+    processor: Any,
+    max_gold_tokens_exclusive: int,
+) -> tuple[Path, Path]:
+    eval_root = output_dir / "_filtered_eval" / f"gold_lt_{max_gold_tokens_exclusive}"
+    index_dir = eval_root / "index"
+    prediction_dir = eval_root / "predictions"
+    index_dir.mkdir(parents=True, exist_ok=True)
+    if prediction_dir.exists():
+        shutil.rmtree(prediction_dir)
+    prediction_dir.mkdir(parents=True, exist_ok=True)
+
+    filtered_index = []
+    filter_summary = {}
+    for row in data_info:
+        dataset_name = row["dataset"]
+        dataset_base_dir = cc_ocr_root / row["base_dir"]
+        labels = load_labels(dataset_base_dir)
+        kept_labels, info = filtered_labels(
+            labels=labels,
+            processor=processor,
+            max_gold_tokens_exclusive=max_gold_tokens_exclusive,
+        )
+        filtered_base_dir = eval_root / row["base_dir"]
+        filtered_base_dir.mkdir(parents=True, exist_ok=True)
+        write_json(filtered_base_dir / "label.json", kept_labels)
+
+        filtered_prediction_dir = prediction_dir / dataset_name
+        filtered_prediction_dir.mkdir(parents=True, exist_ok=True)
+        source_prediction_dir = output_dir / dataset_name
+        for image_name in kept_labels:
+            source = source_prediction_dir / f"{image_name}.json"
+            target = filtered_prediction_dir / f"{image_name}.json"
+            if source.exists():
+                target.symlink_to(source.resolve())
+
+        filtered_row = dict(row)
+        filtered_row["num"] = len(kept_labels)
+        filtered_index.append(filtered_row)
+        filter_summary[dataset_name] = info
+
+    index_path = index_dir / "multi_lan_ocr.json"
+    write_json(index_path, filtered_index)
+    write_json(eval_root / "filter_summary.json", filter_summary)
+    return index_path, prediction_dir
 
 
 def load_samples(dataset_base_dir: Path, output_dir: Path, *, limit: int | None, resume: bool) -> list[dict[str, Any]]:
@@ -208,6 +282,7 @@ def evaluate_ccocr_suite(
     index_path: Path = DEFAULT_CC_OCR_INDEX,
     languages: list[str] | None = None,
     evaluate: bool = True,
+    max_gold_tokens_exclusive: int | None = None,
     **kwargs: Any,
 ) -> dict[str, Any]:
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -225,6 +300,7 @@ def evaluate_ccocr_suite(
                 component_mode=component_mode,
                 mlp_selection=mlp_selection,
                 attn_selection=attn_selection,
+                max_gold_tokens_exclusive=max_gold_tokens_exclusive,
                 **kwargs,
             )
         )
@@ -232,6 +308,7 @@ def evaluate_ccocr_suite(
         "task": "ccocr",
         "component_mode": component_mode,
         "languages": [row["dataset"] for row in data_info],
+        "max_gold_tokens_exclusive": max_gold_tokens_exclusive,
         "datasets": run_summaries,
     }
     write_json(output_dir / "run_summary.json", summary)
@@ -239,7 +316,21 @@ def evaluate_ccocr_suite(
         # The vendored evaluator resolves label files relative to the index path.
         # Keep the original benchmark index even for language subsets; datasets
         # without prediction directories are skipped by the evaluator.
-        summary_path = evaluate_with_vendored_cc_ocr(index_path, output_dir, cc_ocr_root)
+        eval_index_path = index_path
+        eval_output_dir = output_dir
+        if max_gold_tokens_exclusive is not None:
+            eval_index_path, eval_output_dir = make_filtered_eval_assets(
+                data_info=data_info,
+                cc_ocr_root=cc_ocr_root,
+                output_dir=output_dir,
+                processor=processor,
+                max_gold_tokens_exclusive=max_gold_tokens_exclusive,
+            )
+            summary["filtered_eval_index_path"] = str(eval_index_path)
+            summary["filtered_eval_prediction_dir"] = str(eval_output_dir)
+        summary_path = evaluate_with_vendored_cc_ocr(eval_index_path, eval_output_dir, cc_ocr_root)
+        if eval_output_dir != output_dir and (eval_output_dir / "status.json").exists():
+            shutil.copy2(eval_output_dir / "status.json", output_dir / "status.json")
         summary["cc_ocr_summary_path"] = str(summary_path)
         write_json(output_dir / "run_summary.json", summary)
     return summary
