@@ -232,6 +232,8 @@ def run_ccocr_search(
     run_baseline: bool,
 ) -> list[dict[str, Any]]:
     spec = model_spec(model_alias)
+    tokenizer = load_tokenizer(spec.path)
+    embedding = load_embedding(spec.path)
     processor = load_processor(spec.path)
     model = load_vlm(model_alias, spec.path)
     task_root = output_root / "runs" / "ccocr" / model_alias
