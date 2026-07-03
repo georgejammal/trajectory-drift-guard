@@ -9,6 +9,6 @@ PYTHONPATH=src "$PYTHON" scripts/run_search.py \
   --windows 24-46,24-44,24-43,25-44,24-42 \
   --sigmas 2.5,3,3.5,4,4.5,5 \
   --component-modes mlp,mlp_attn \
-  --batch-size 100 \
+  --batch-size 256 \
   --max-new-tokens 512 \
   --max-gold-tokens-exclusive 500

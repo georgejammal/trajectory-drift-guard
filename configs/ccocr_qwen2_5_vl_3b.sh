@@ -9,7 +9,7 @@ PYTHONPATH=src "$PYTHON" scripts/run_search.py \
   --windows 18-35,18-33,19-34,20-34,22-34 \
   --sigmas 2.5,3,3.5,4,4.5,5 \
   --component-modes mlp,mlp_attn \
-  --batch-size 64 \
+  --batch-size 192 \
   --max-new-tokens 512 \
   --max-gold-tokens-exclusive 500 \
   --qwen-max-pixels 1003520
