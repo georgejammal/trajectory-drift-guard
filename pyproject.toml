@@ -1,0 +1,17 @@
+[project]
+name = "parsing-neurons-repro"
+version = "0.1.0"
+description = "Reproducible parsing-neuron sweeps for counting and multilingual OCR."
+requires-python = ">=3.10"
+dependencies = [
+  "datasets",
+  "pillow",
+  "qwen-vl-utils",
+  "safetensors",
+  "torch",
+  "tqdm",
+  "transformers",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
