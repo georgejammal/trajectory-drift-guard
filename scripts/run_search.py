@@ -52,9 +52,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--languages", default="Arabic,Japanese,Korean,Russian", help="CC-OCR languages.")
     parser.add_argument(
         "--flores-root",
-        default=(
-            "data/flores_transfer_pairs/"
-            "flores101_en_to_cc_ocr_languages_random500/pairs_by_language"
+        default=os.path.join(
+            os.environ.get("PARSING_NEURONS_DATA_ROOT", "data"),
+            "flores_transfer_pairs",
+            "flores101_en_to_cc_ocr_languages_random500",
+            "pairs_by_language",
         ),
         help="Directory with en_to_<language>.json files.",
     )
