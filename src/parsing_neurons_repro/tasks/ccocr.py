@@ -191,7 +191,7 @@ def evaluate_ccocr_language(
         "gold_token_filter": filter_info,
         "elapsed_seconds": time.time() - start,
     }
-    write_json(language_out / "run_summary.json", summary)
+    write_json(output_dir / "_run_summaries" / f"{dataset_name}.json", summary)
     return summary
 
 
@@ -212,10 +212,6 @@ def evaluate_ccocr_suite(
 ) -> dict[str, Any]:
     output_dir.mkdir(parents=True, exist_ok=True)
     data_info = load_index(index_path, languages or DEFAULT_LANGUAGES)
-    active_index_path = index_path
-    if languages:
-        active_index_path = output_dir / "active_index.json"
-        write_json(active_index_path, data_info)
     run_summaries = []
     for row in data_info:
         run_summaries.append(
@@ -240,7 +236,10 @@ def evaluate_ccocr_suite(
     }
     write_json(output_dir / "run_summary.json", summary)
     if evaluate:
-        summary_path = evaluate_with_vendored_cc_ocr(active_index_path, output_dir, cc_ocr_root)
+        # The vendored evaluator resolves label files relative to the index path.
+        # Keep the original benchmark index even for language subsets; datasets
+        # without prediction directories are skipped by the evaluator.
+        summary_path = evaluate_with_vendored_cc_ocr(index_path, output_dir, cc_ocr_root)
         summary["cc_ocr_summary_path"] = str(summary_path)
         write_json(output_dir / "run_summary.json", summary)
     return summary
