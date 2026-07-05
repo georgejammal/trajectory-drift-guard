@@ -153,3 +153,55 @@ def build_abs_intervention(
         return CombinedIntervention()
     return CombinedIntervention(*contexts)
 
+
+class ResidualAddIntervention:
+    """Add alpha * direction to the residual stream at selected layer inputs."""
+
+    def __init__(
+        self,
+        model: Any,
+        layers: list[int],
+        direction: torch.Tensor,
+        alpha: float = 1.0,
+        token_scope: str = "last_position",
+    ) -> None:
+        self.decoder_layers = decoder_layers(model)
+        self.target_layers = [int(layer) for layer in layers]
+        self.direction = direction.float()
+        self.alpha = float(alpha)
+        self.token_scope = token_scope
+        self.handles: list[Any] = []
+        self.direction_cache: dict[torch.device, torch.Tensor] = {}
+
+    def __enter__(self) -> "ResidualAddIntervention":
+        for layer in self.target_layers:
+            self.handles.append(self.decoder_layers[layer].register_forward_pre_hook(self._hook()))
+        return self
+
+    def __exit__(self, exc_type, exc, tb) -> bool:
+        for handle in self.handles:
+            handle.remove()
+        self.handles = []
+        return False
+
+    def _direction(self, device: torch.device, dtype: torch.dtype) -> torch.Tensor:
+        if device not in self.direction_cache:
+            self.direction_cache[device] = self.direction.to(device=device)
+        return self.direction_cache[device].to(dtype=dtype)
+
+    def _hook(self):
+        def hook(module, inputs):
+            if not inputs:
+                return inputs
+            hidden = inputs[0]
+            if not torch.is_tensor(hidden) or hidden.ndim < 2:
+                return inputs
+            direction = self._direction(hidden.device, hidden.dtype)
+            modified = hidden.clone()
+            if self.token_scope == "all_positions":
+                modified = modified + self.alpha * direction.view(*([1] * (hidden.ndim - 1)), -1)
+            else:
+                modified[:, -1, :] = modified[:, -1, :] + self.alpha * direction
+            return (modified, *inputs[1:])
+
+        return hook

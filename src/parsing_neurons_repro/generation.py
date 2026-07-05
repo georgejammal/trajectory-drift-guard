@@ -6,6 +6,7 @@ from typing import Any
 
 import torch
 from PIL import Image
+from transformers import LogitsProcessor, LogitsProcessorList
 
 from .models import model_family
 
@@ -32,6 +33,27 @@ def close_images(images: list[list[Image.Image]]) -> None:
     for group in images:
         for image in group:
             image.close()
+
+
+class AllowedTokenLogitsProcessor(LogitsProcessor):
+    """Mask generation to a fixed set of token ids."""
+
+    def __init__(self, allowed_token_ids: list[int] | set[int]) -> None:
+        if not allowed_token_ids:
+            raise ValueError("allowed_token_ids must not be empty.")
+        self.allowed_token_ids = sorted({int(token_id) for token_id in allowed_token_ids})
+        self._mask_cache: dict[tuple[torch.device, int], torch.Tensor] = {}
+
+    def __call__(self, input_ids: torch.LongTensor, scores: torch.FloatTensor) -> torch.FloatTensor:
+        key = (scores.device, scores.shape[-1])
+        if key not in self._mask_cache:
+            mask = torch.full((scores.shape[-1],), torch.finfo(scores.dtype).min, device=scores.device)
+            valid = [token_id for token_id in self.allowed_token_ids if 0 <= token_id < scores.shape[-1]]
+            if not valid:
+                raise ValueError("No allowed token ids are valid for this vocabulary.")
+            mask[torch.tensor(valid, dtype=torch.long, device=scores.device)] = 0
+            self._mask_cache[key] = mask
+        return scores + self._mask_cache[key]
 
 
 def build_gemma_prompt(processor: Any, question: str, *, suffix: str = "", question_prefix: str = "") -> str:
@@ -141,6 +163,7 @@ def generate_batch(
     max_new_tokens: int = 16,
     qwen_max_pixels: int | None = None,
     qwen_min_pixels: int | None = None,
+    allowed_token_ids: list[int] | set[int] | None = None,
 ) -> list[str]:
     inputs = prepare_vlm_inputs(
         model_alias=model_alias,
@@ -153,8 +176,14 @@ def generate_batch(
         qwen_min_pixels=qwen_min_pixels,
     )
     inputs = move_to_device(inputs, model_device(model))
+    generate_kwargs: dict[str, Any] = {
+        "max_new_tokens": max_new_tokens,
+        "do_sample": False,
+    }
+    if allowed_token_ids is not None:
+        generate_kwargs["logits_processor"] = LogitsProcessorList([AllowedTokenLogitsProcessor(allowed_token_ids)])
     with torch.inference_mode():
-        generated = model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
+        generated = model.generate(**inputs, **generate_kwargs)
     return decode_new_tokens(model_alias=model_alias, processor=processor, generated=generated, inputs=inputs)
 
 
@@ -170,6 +199,7 @@ def generate_batch_adaptive(
     max_new_tokens: int = 16,
     qwen_max_pixels: int | None = None,
     qwen_min_pixels: int | None = None,
+    allowed_token_ids: list[int] | set[int] | None = None,
     adaptive_oom_split: bool = True,
 ) -> list[str]:
     try:
@@ -184,6 +214,7 @@ def generate_batch_adaptive(
             max_new_tokens=max_new_tokens,
             qwen_max_pixels=qwen_max_pixels,
             qwen_min_pixels=qwen_min_pixels,
+            allowed_token_ids=allowed_token_ids,
         )
     except torch.OutOfMemoryError:
         if not adaptive_oom_split or len(images) == 1:
@@ -203,6 +234,7 @@ def generate_batch_adaptive(
             max_new_tokens=max_new_tokens,
             qwen_max_pixels=qwen_max_pixels,
             qwen_min_pixels=qwen_min_pixels,
+            allowed_token_ids=allowed_token_ids,
             adaptive_oom_split=adaptive_oom_split,
         ) + generate_batch_adaptive(
             model_alias=model_alias,
@@ -215,5 +247,6 @@ def generate_batch_adaptive(
             max_new_tokens=max_new_tokens,
             qwen_max_pixels=qwen_max_pixels,
             qwen_min_pixels=qwen_min_pixels,
+            allowed_token_ids=allowed_token_ids,
             adaptive_oom_split=adaptive_oom_split,
         )

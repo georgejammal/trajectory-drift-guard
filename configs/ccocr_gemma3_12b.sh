@@ -6,7 +6,7 @@ PYTHONPATH=src "$PYTHON" scripts/run_search.py \
   --task ccocr \
   --model-alias gemma3_12b_it \
   --languages Arabic,Japanese,Korean,Russian \
-  --windows 24-46,24-44,24-43,25-44,24-42 \
+  --windows 24-43,24-42,24-40,24-38 \
   --sigmas 2.5,3,3.5,4,4.5,5 \
   --component-modes mlp,mlp_attn \
   --batch-size 256 \

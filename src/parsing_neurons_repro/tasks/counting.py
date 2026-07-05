@@ -151,6 +151,8 @@ def evaluate_counting_dataset(
     limit: int | None = None,
     qwen_max_pixels: int | None = 401408,
     qwen_min_pixels: int | None = None,
+    allowed_token_ids: list[int] | set[int] | None = None,
+    decoding_constraint: str | None = None,
     adaptive_oom_split: bool = True,
 ) -> dict[str, Any]:
     if gold_numbers is None:
@@ -199,6 +201,7 @@ def evaluate_counting_dataset(
                     max_new_tokens=max_new_tokens,
                     qwen_max_pixels=qwen_max_pixels,
                     qwen_min_pixels=qwen_min_pixels,
+                    allowed_token_ids=allowed_token_ids,
                     adaptive_oom_split=adaptive_oom_split,
                 )
                 for (source_index, row), prediction_text in zip(batch, decoded):
@@ -228,6 +231,7 @@ def evaluate_counting_dataset(
                                 "correct": is_correct,
                                 "strict_digit_correct": is_strict_digit_correct,
                                 "component_mode": component_mode,
+                                "decoding_constraint": decoding_constraint,
                             },
                             ensure_ascii=False,
                         )
@@ -246,6 +250,10 @@ def evaluate_counting_dataset(
         "split": split,
         "gold_numbers": gold_numbers,
         "component_mode": component_mode,
+        "decoding_constraint": decoding_constraint,
+        "allowed_token_ids": sorted(int(token_id) for token_id in allowed_token_ids)
+        if allowed_token_ids is not None
+        else None,
         "total": total,
         "correct": correct,
         "accuracy": correct / total if total else 0.0,
