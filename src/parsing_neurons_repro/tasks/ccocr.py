@@ -204,6 +204,7 @@ def evaluate_ccocr_language(
     max_gold_tokens_exclusive: int | None = None,
     qwen_max_pixels: int | None = 1003520,
     qwen_min_pixels: int | None = None,
+    scalar_mode: str = "abs",
     adaptive_oom_split: bool = True,
     resume: bool = True,
 ) -> dict[str, Any]:
@@ -226,6 +227,7 @@ def evaluate_ccocr_language(
         attn_selection=attn_selection,
         mlp_token_scope="all_positions",
         attn_token_scope="last_position",
+        scalar_mode=scalar_mode,
     )
     total = 0
     start = time.time()
@@ -257,6 +259,7 @@ def evaluate_ccocr_language(
         "task": "ccocr",
         "language": dataset_name,
         "component_mode": component_mode,
+        "scalar_mode": scalar_mode,
         "queued": len(samples),
         "written_this_run": total,
         "expected": data_info["num"] if limit is None else min(limit, data_info["num"]),
@@ -307,6 +310,7 @@ def evaluate_ccocr_suite(
     summary = {
         "task": "ccocr",
         "component_mode": component_mode,
+        "scalar_mode": kwargs.get("scalar_mode", "abs"),
         "languages": [row["dataset"] for row in data_info],
         "max_gold_tokens_exclusive": max_gold_tokens_exclusive,
         "datasets": run_summaries,

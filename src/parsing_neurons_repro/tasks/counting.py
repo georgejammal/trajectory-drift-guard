@@ -153,6 +153,7 @@ def evaluate_counting_dataset(
     qwen_min_pixels: int | None = None,
     allowed_token_ids: list[int] | set[int] | None = None,
     decoding_constraint: str | None = None,
+    scalar_mode: str = "abs",
     adaptive_oom_split: bool = True,
 ) -> dict[str, Any]:
     if gold_numbers is None:
@@ -183,6 +184,7 @@ def evaluate_counting_dataset(
         attn_selection=attn_selection,
         mlp_token_scope="all_positions",
         attn_token_scope="last_position",
+        scalar_mode=scalar_mode,
     )
     with predictions_path.open("w", encoding="utf-8") as handle:
         with context:
@@ -231,6 +233,7 @@ def evaluate_counting_dataset(
                                 "correct": is_correct,
                                 "strict_digit_correct": is_strict_digit_correct,
                                 "component_mode": component_mode,
+                                "scalar_mode": scalar_mode,
                                 "decoding_constraint": decoding_constraint,
                             },
                             ensure_ascii=False,
@@ -250,6 +253,7 @@ def evaluate_counting_dataset(
         "split": split,
         "gold_numbers": gold_numbers,
         "component_mode": component_mode,
+        "scalar_mode": scalar_mode,
         "decoding_constraint": decoding_constraint,
         "allowed_token_ids": sorted(int(token_id) for token_id in allowed_token_ids)
         if allowed_token_ids is not None
@@ -313,5 +317,6 @@ def evaluate_counting_suite(
         )
     macro = sum(item["accuracy"] for item in results) / len(results) if results else 0.0
     summary = {"task": "counting", "component_mode": component_mode, "macro_accuracy": macro, "datasets": results}
+    summary["scalar_mode"] = kwargs.get("scalar_mode", "abs")
     write_json(output_dir / component_mode / "suite_metrics.json", summary)
     return summary

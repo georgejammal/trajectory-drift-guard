@@ -214,6 +214,7 @@ def generate_config(
     prompt: str,
     qwen_max_pixels: int | None,
     resume: bool,
+    scalar_mode: str = "abs",
 ) -> dict[str, Any]:
     prediction_dir = run_dir / "predictions"
     prediction_dir.mkdir(parents=True, exist_ok=True)
@@ -232,6 +233,7 @@ def generate_config(
         attn_selection=attn_selection,
         mlp_token_scope="all_positions",
         attn_token_scope="last_position",
+        scalar_mode=scalar_mode,
     )
     start = time.time()
     written = 0
@@ -270,6 +272,7 @@ def generate_config(
         "model_alias": config.model_alias,
         "language": config.language,
         "component_mode": config.component_mode,
+        "scalar_mode": scalar_mode,
         "sigma": config.sigma,
         "window": config.window,
         "run_name": config.run_name,

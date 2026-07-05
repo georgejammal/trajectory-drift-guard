@@ -24,17 +24,38 @@ def rows_by_layer(selection_path: Path, index_name: str) -> dict[int, list[int]]
     return dict(sorted(by_layer.items()))
 
 
-class MLPAbsIntervention:
-    """Apply a <- |a| to selected gated MLP intermediate coordinates."""
+def transform_selected_scalars(hidden: torch.Tensor, mode: str) -> torch.Tensor:
+    if mode == "abs":
+        return hidden.abs()
+    if mode == "zero":
+        return torch.zeros_like(hidden)
+    if mode == "negative_abs":
+        return -hidden.abs()
+    if mode == "relu":
+        return hidden.clamp_min(0)
+    if mode == "scaled_abs_1p2":
+        return 1.2 * hidden.abs()
+    raise ValueError(f"Unsupported scalar intervention mode: {mode}")
 
-    def __init__(self, model: Any, neurons_by_layer: dict[int, list[int]], token_scope: str = "all_positions") -> None:
+
+class MLPScalarIntervention:
+    """Transform selected gated MLP intermediate coordinates."""
+
+    def __init__(
+        self,
+        model: Any,
+        neurons_by_layer: dict[int, list[int]],
+        token_scope: str = "all_positions",
+        scalar_mode: str = "abs",
+    ) -> None:
         self.layers = decoder_layers(model)
         self.neurons_by_layer = neurons_by_layer
         self.token_scope = token_scope
+        self.scalar_mode = scalar_mode
         self.handles: list[Any] = []
         self.index_cache: dict[tuple[int, torch.device], torch.Tensor] = {}
 
-    def __enter__(self) -> "MLPAbsIntervention":
+    def __enter__(self) -> "MLPScalarIntervention":
         for layer, neurons in self.neurons_by_layer.items():
             if not neurons:
                 continue
@@ -62,25 +83,32 @@ class MLPAbsIntervention:
             indices = self._indices(layer, hidden.device)
             modified = hidden.clone()
             if self.token_scope == "last_position":
-                modified[:, -1, indices] = modified[:, -1, indices].abs()
+                modified[:, -1, indices] = transform_selected_scalars(modified[:, -1, indices], self.scalar_mode)
             else:
-                modified[..., indices] = modified[..., indices].abs()
+                modified[..., indices] = transform_selected_scalars(modified[..., indices], self.scalar_mode)
             return (modified,)
 
         return hook
 
 
-class AttentionAbsIntervention:
-    """Apply z <- |z| to selected attention o_proj input channels at the last token."""
+class AttentionScalarIntervention:
+    """Transform selected attention o_proj input channels."""
 
-    def __init__(self, model: Any, channels_by_layer: dict[int, list[int]], token_scope: str = "last_position") -> None:
+    def __init__(
+        self,
+        model: Any,
+        channels_by_layer: dict[int, list[int]],
+        token_scope: str = "last_position",
+        scalar_mode: str = "abs",
+    ) -> None:
         self.layers = decoder_layers(model)
         self.channels_by_layer = channels_by_layer
         self.token_scope = token_scope
+        self.scalar_mode = scalar_mode
         self.handles: list[Any] = []
         self.index_cache: dict[tuple[int, torch.device], torch.Tensor] = {}
 
-    def __enter__(self) -> "AttentionAbsIntervention":
+    def __enter__(self) -> "AttentionScalarIntervention":
         for layer, channels in self.channels_by_layer.items():
             if not channels:
                 continue
@@ -108,9 +136,9 @@ class AttentionAbsIntervention:
             indices = self._indices(layer, hidden.device)
             modified = hidden.clone()
             if self.token_scope == "all_positions":
-                modified[..., indices] = modified[..., indices].abs()
+                modified[..., indices] = transform_selected_scalars(modified[..., indices], self.scalar_mode)
             else:
-                modified[:, -1, indices] = modified[:, -1, indices].abs()
+                modified[:, -1, indices] = transform_selected_scalars(modified[:, -1, indices], self.scalar_mode)
             return (modified,)
 
         return hook
@@ -139,16 +167,31 @@ def build_abs_intervention(
     attn_selection: Path | None,
     mlp_token_scope: str = "all_positions",
     attn_token_scope: str = "last_position",
+    scalar_mode: str = "abs",
 ) -> CombinedIntervention:
     contexts = []
     if component_mode in {"mlp", "mlp_attn"}:
         if mlp_selection is None:
             raise ValueError("MLP selection path is required for component mode with MLP.")
-        contexts.append(MLPAbsIntervention(model, rows_by_layer(mlp_selection, "neuron"), token_scope=mlp_token_scope))
+        contexts.append(
+            MLPScalarIntervention(
+                model,
+                rows_by_layer(mlp_selection, "neuron"),
+                token_scope=mlp_token_scope,
+                scalar_mode=scalar_mode,
+            )
+        )
     if component_mode in {"attn", "mlp_attn"}:
         if attn_selection is None:
             raise ValueError("Attention selection path is required for component mode with attention.")
-        contexts.append(AttentionAbsIntervention(model, rows_by_layer(attn_selection, "channel"), token_scope=attn_token_scope))
+        contexts.append(
+            AttentionScalarIntervention(
+                model,
+                rows_by_layer(attn_selection, "channel"),
+                token_scope=attn_token_scope,
+                scalar_mode=scalar_mode,
+            )
+        )
     if component_mode == "baseline":
         return CombinedIntervention()
     return CombinedIntervention(*contexts)
