@@ -10,7 +10,7 @@ from typing import Any
 import torch
 
 from parsing_neurons_repro.generation import decode_new_tokens, model_device, move_to_device, prepare_vlm_inputs
-from parsing_neurons_repro.incline import INCLINEIntervention, ensure_flores_bridge
+from parsing_neurons_repro.incline import INCLINEIntervention, ensure_flores_bridge, ensure_ncwm_bridge
 from parsing_neurons_repro.io import clean_float, parse_csv, parse_float_grid, read_json, slug_parts, window_layers, write_json
 from parsing_neurons_repro.models import MODEL_PATHS, load_processor, load_vlm, model_spec
 from parsing_neurons_repro.tasks.icdar2019 import (
@@ -51,7 +51,7 @@ def bridge_path(args: argparse.Namespace, model_alias: str, language: str, stats
         / model_alias
         / language.lower()
         / slug_parts(
-            "flores-incline",
+            args.bridge_source + "-incline",
             "layers" + stats_layers,
             "n" + str(args.bridge_samples),
             args.bridge_token_scope,
@@ -168,6 +168,13 @@ def parse_args() -> argparse.Namespace:
         / "flores101_en_to_cc_ocr_languages_random500"
         / "pairs_by_language",
     )
+    parser.add_argument("--bridge-source", choices=["news_commentary", "flores"], default="news_commentary")
+    parser.add_argument(
+        "--ncwm-root",
+        type=Path,
+        default=Path(os.environ.get("PARSING_NEURONS_DATA_ROOT", "data")) / "ncwm",
+        help="News Commentary bridge root in the INCLINE data/ncwm layout.",
+    )
     parser.add_argument("--stats-layers", default="all")
     parser.add_argument("--intervention-window", default="all")
     parser.add_argument("--alphas", default="-1,-0.9,-0.8,-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.1,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1")
@@ -216,21 +223,38 @@ def main() -> None:
             )
             if len(samples) < args.samples_per_language:
                 print(f"[incline-icdar] warning: {language} has only {len(samples)} samples", flush=True)
-            bridge = ensure_flores_bridge(
-                model_alias=model_alias,
-                model=model,
-                tokenizer=tokenizer,
-                language=language,
-                layers=window_layers(stats_layers),
-                output_path=bridge_path(args, model_alias, language, stats_layers),
-                flores_root=args.flores_root.resolve(),
-                max_samples=args.bridge_samples,
-                batch_size=args.bridge_batch_size,
-                max_length=args.bridge_max_length,
-                token_scope=args.bridge_token_scope,
-                ridge=args.ridge,
-                force=args.force_recompute_bridge,
-            )
+            if args.bridge_source == "news_commentary":
+                bridge = ensure_ncwm_bridge(
+                    model_alias=model_alias,
+                    model=model,
+                    tokenizer=tokenizer,
+                    language=language,
+                    layers=window_layers(stats_layers),
+                    output_path=bridge_path(args, model_alias, language, stats_layers),
+                    ncwm_root=args.ncwm_root.resolve(),
+                    max_samples=args.bridge_samples,
+                    batch_size=args.bridge_batch_size,
+                    max_length=args.bridge_max_length,
+                    token_scope=args.bridge_token_scope,
+                    ridge=args.ridge,
+                    force=args.force_recompute_bridge,
+                )
+            else:
+                bridge = ensure_flores_bridge(
+                    model_alias=model_alias,
+                    model=model,
+                    tokenizer=tokenizer,
+                    language=language,
+                    layers=window_layers(stats_layers),
+                    output_path=bridge_path(args, model_alias, language, stats_layers),
+                    flores_root=args.flores_root.resolve(),
+                    max_samples=args.bridge_samples,
+                    batch_size=args.bridge_batch_size,
+                    max_length=args.bridge_max_length,
+                    token_scope=args.bridge_token_scope,
+                    ridge=args.ridge,
+                    force=args.force_recompute_bridge,
+                )
             summaries = []
             lang_root = args.output_root / "runs" / "icdar2019_incline_validation" / model_alias / language.lower()
             for alpha in alphas:

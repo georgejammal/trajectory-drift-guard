@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-05-30T21:45:38.354399+00:00",
+  "run_id": "benign_utility_katz_style_seed0_n100_20260530",
+  "paper_protocol": "Katz et al. benign capability check: PIQA, OpenBookQA, SIQA, ARC; 100 random samples per benchmark; accuracy and refusal rate.",
+  "model_path": "/home/georgejammal/.cache/huggingface/hub/models--google--gemma-3-4b-it/snapshots/093f9f388b31de276ce2de164bdc2081324b9767",
+  "sample_set": "/home/georgejammal/projects/semantic-to-symbolic/safeguard_eval/sample_sets/benign_utility_katz_style_seed0_n100.jsonl",
+  "sample_count": 400,
+  "seed": 0,
+  "samples_per_benchmark": 100,
+  "batch_size": 128,
+  "max_new_tokens": 512,
+  "dtype": "bfloat16",
+  "neuron_set": "/home/georgejammal/projects/semantic-to-symbolic/safeguard_logit_lens/neuron_sets/gemma3_4b_it_refusal_minus_answerability_top1000_layers17_33.json",
+  "conditions": [
+    "baseline",
+    "refusal_minus_answerability_top1000_abs"
+  ],
+  "intervention_neuron_metadata": {
+    "path": "/home/georgejammal/projects/semantic-to-symbolic/safeguard_logit_lens/neuron_sets/gemma3_4b_it_refusal_minus_answerability_top1000_layers17_33.json",
+    "top_k": 1000,
+    "loaded": 1000,
+    "score_key": "cosine_similarity",
+    "score_weighting": "none",
+    "source_direction": "refusal_minus_answerability",
+    "source_score_definition": "cosine_similarity(down_proj[:, neuron], mean_family_a_unembed - mean_family_b_unembed)",
+    "layer_counts": {
+      "17": 97,
+      "18": 95,
+      "19": 82,
+      "20": 82,
+      "21": 70,
+      "22": 80,
+      "23": 57,
+      "24": 53,
+      "25": 57,
+      "26": 40,
+      "27": 37,
+      "28": 36,
+      "29": 40,
+      "30": 34,
+      "31": 50,
+      "32": 42,
+      "33": 48
+    }
+  }
+}

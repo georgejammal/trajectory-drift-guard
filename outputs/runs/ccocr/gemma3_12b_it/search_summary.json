@@ -1,0 +1,698 @@
+[
+  {
+    "task": "ccocr",
+    "component_mode": "mlp",
+    "languages": [
+      "Korean"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Korean",
+        "component_mode": "mlp",
+        "queued": 0,
+        "written_this_run": 0,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 0,
+          "excluded": 3
+        },
+        "elapsed_seconds": 0.0003345012664794922
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma2p5_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma2p5_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma2p5_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp_attn",
+    "languages": [
+      "Korean"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Korean",
+        "component_mode": "mlp_attn",
+        "queued": 0,
+        "written_this_run": 0,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 0,
+          "excluded": 3
+        },
+        "elapsed_seconds": 0.0004885196685791016
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma2p5_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma2p5_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma2p5_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp",
+    "languages": [
+      "Korean"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Korean",
+        "component_mode": "mlp",
+        "queued": 0,
+        "written_this_run": 0,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 0,
+          "excluded": 3
+        },
+        "elapsed_seconds": 0.00023937225341796875
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma3_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma3_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma3_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp_attn",
+    "languages": [
+      "Korean"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Korean",
+        "component_mode": "mlp_attn",
+        "queued": 0,
+        "written_this_run": 0,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 0,
+          "excluded": 3
+        },
+        "elapsed_seconds": 0.0004248619079589844
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma3_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma3_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma3_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp",
+    "languages": [
+      "Korean"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Korean",
+        "component_mode": "mlp",
+        "queued": 0,
+        "written_this_run": 0,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 0,
+          "excluded": 3
+        },
+        "elapsed_seconds": 0.00021910667419433594
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma3p5_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma3p5_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma3p5_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp_attn",
+    "languages": [
+      "Korean"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Korean",
+        "component_mode": "mlp_attn",
+        "queued": 0,
+        "written_this_run": 0,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 0,
+          "excluded": 3
+        },
+        "elapsed_seconds": 0.0003712177276611328
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma3p5_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma3p5_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma3p5_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp",
+    "languages": [
+      "Korean"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Korean",
+        "component_mode": "mlp",
+        "queued": 0,
+        "written_this_run": 0,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 0,
+          "excluded": 3
+        },
+        "elapsed_seconds": 0.00020647048950195312
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma4_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma4_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma4_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp_attn",
+    "languages": [
+      "Korean"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Korean",
+        "component_mode": "mlp_attn",
+        "queued": 147,
+        "written_this_run": 147,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 147,
+          "excluded": 3
+        },
+        "elapsed_seconds": 114.87097096443176
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma4_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma4_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma4_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp",
+    "languages": [
+      "Korean"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Korean",
+        "component_mode": "mlp",
+        "queued": 147,
+        "written_this_run": 147,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 147,
+          "excluded": 3
+        },
+        "elapsed_seconds": 80.10814380645752
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma4p5_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma4p5_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma4p5_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp_attn",
+    "languages": [
+      "Korean"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Korean",
+        "component_mode": "mlp_attn",
+        "queued": 147,
+        "written_this_run": 147,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 147,
+          "excluded": 3
+        },
+        "elapsed_seconds": 79.97610545158386
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma4p5_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma4p5_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma4p5_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp",
+    "languages": [
+      "Korean"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Korean",
+        "component_mode": "mlp",
+        "queued": 147,
+        "written_this_run": 147,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 147,
+          "excluded": 3
+        },
+        "elapsed_seconds": 79.88055491447449
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma5_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma5_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_sigma5_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp_attn",
+    "languages": [
+      "Korean"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Korean",
+        "component_mode": "mlp_attn",
+        "queued": 147,
+        "written_this_run": 147,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 147,
+          "excluded": 3
+        },
+        "elapsed_seconds": 80.16259574890137
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma5_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma5_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-korean/mlp_attn_sigma5_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "mlp",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 70.02705001831055
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma2p5_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma2p5_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma2p5_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp_attn",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "mlp_attn",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 74.56411957740784
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma2p5_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma2p5_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma2p5_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "mlp",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 63.590051889419556
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma3_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma3_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma3_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp_attn",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "mlp_attn",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 74.55400252342224
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma3_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma3_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma3_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "mlp",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 69.51487302780151
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma3p5_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma3p5_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma3p5_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp_attn",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "mlp_attn",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 72.48195457458496
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma3p5_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma3p5_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma3p5_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "mlp",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 66.31406950950623
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma4_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma4_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma4_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp_attn",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "mlp_attn",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 74.43674349784851
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma4_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma4_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma4_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "mlp",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 74.29518723487854
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma4p5_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma4p5_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma4p5_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp_attn",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "mlp_attn",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 68.54559683799744
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma4p5_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma4p5_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma4p5_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "mlp",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 72.46023797988892
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma5_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma5_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_sigma5_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "mlp_attn",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "mlp_attn",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 256,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 70.63621163368225
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma5_layers24-43/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma5_layers24-43/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_12b_it/flores_en-to-russian/mlp_attn_sigma5_layers24-43/_filtered_eval/gold_lt_500/summary.md"
+  }
+]

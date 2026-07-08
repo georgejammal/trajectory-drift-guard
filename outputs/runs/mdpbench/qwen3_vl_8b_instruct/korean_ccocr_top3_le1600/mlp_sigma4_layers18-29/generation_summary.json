@@ -1,0 +1,17 @@
+{
+  "task": "mdpbench",
+  "model_alias": "qwen3_vl_8b_instruct",
+  "language": "Korean",
+  "component_mode": "mlp",
+  "sigma": 4.0,
+  "window": "18-29",
+  "run_name": "mlp_sigma4_layers18-29",
+  "ccocr_micro": 64.03,
+  "num_selected_samples": 128,
+  "queued": 128,
+  "written_this_run": 128,
+  "prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/mdpbench/qwen3_vl_8b_instruct/korean_ccocr_top3_le1600/mlp_sigma4_layers18-29/predictions",
+  "mlp_selection": "/home/georgejammal/projects/parsing_neurons_repro/outputs/selections/ccocr/qwen3_vl_8b_instruct/flores_en-to-korean/mlp_sigma4_layers18-29.json",
+  "attn_selection": null,
+  "elapsed_seconds": 426.6162872314453
+}

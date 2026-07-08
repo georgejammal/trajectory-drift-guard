@@ -1,0 +1,56 @@
+{
+  "total": 400,
+  "accuracy": 0.66,
+  "refusal_rate": 0.0075,
+  "unparsed_rate": 0.015,
+  "by_benchmark": {
+    "arc_challenge": {
+      "total": 100,
+      "accuracy": 0.57,
+      "refusal_rate": 0.0,
+      "unparsed_rate": 0.04,
+      "prediction_counts": {
+        "A": 22,
+        "B": 19,
+        "C": 35,
+        "D": 20,
+        "None": 4
+      }
+    },
+    "openbookqa": {
+      "total": 100,
+      "accuracy": 0.73,
+      "refusal_rate": 0.0,
+      "unparsed_rate": 0.0,
+      "prediction_counts": {
+        "A": 25,
+        "B": 20,
+        "C": 29,
+        "D": 26
+      }
+    },
+    "piqa": {
+      "total": 100,
+      "accuracy": 0.72,
+      "refusal_rate": 0.01,
+      "unparsed_rate": 0.01,
+      "prediction_counts": {
+        "A": 55,
+        "B": 44,
+        "None": 1
+      }
+    },
+    "siqa": {
+      "total": 100,
+      "accuracy": 0.62,
+      "refusal_rate": 0.02,
+      "unparsed_rate": 0.01,
+      "prediction_counts": {
+        "A": 41,
+        "B": 24,
+        "C": 34,
+        "None": 1
+      }
+    }
+  }
+}

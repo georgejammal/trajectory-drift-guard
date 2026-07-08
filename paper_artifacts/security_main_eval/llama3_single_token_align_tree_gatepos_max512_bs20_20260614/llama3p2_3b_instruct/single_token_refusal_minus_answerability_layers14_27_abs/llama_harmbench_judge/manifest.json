@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-06-14T07:51:42.514808+00:00",
+  "judge": "HarmBench-Llama-2-13b-cls",
+  "classifier_path": "cais/HarmBench-Llama-2-13b-cls",
+  "batch_size": 16,
+  "completion_token_clip": 512,
+  "completions": "/home/georgejammal/projects/semantic-to-symbolic/safeguard_eval/outputs/llama3_single_token_align_tree_gatepos_max512_bs20_20260614/llama3p2_3b_instruct/single_token_refusal_minus_answerability_layers14_27_abs/completions.jsonl",
+  "sample_count": 400
+}

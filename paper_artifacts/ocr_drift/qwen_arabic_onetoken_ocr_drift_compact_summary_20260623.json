@@ -1,0 +1,82 @@
+[
+  {
+    "run": "qwen_arabic_onetoken_ocr_drift_120_20260623",
+    "n": 120,
+    "n_success": 101,
+    "n_failed": 19,
+    "best": {
+      "position_mode": "final_m2",
+      "condition": "norm0_raw|real_gt3sd_null_lte1sd_layers18_32",
+      "orientation": "drift_D_minus_P",
+      "window": "25-25",
+      "window_start": 25,
+      "window_end": 25,
+      "auc_failed_high": 0.8332464825429912,
+      "n": 120,
+      "n_success": 101,
+      "n_failed": 19,
+      "threshold": {
+        "threshold": 0.0039584338665008545,
+        "balanced_accuracy": 0.7871287128712872,
+        "accuracy": 0.6416666666666667,
+        "tpr_failed": 1.0,
+        "tnr_success": 0.5742574257425742
+      },
+      "success_score_stats": {
+        "mean": 0.002556056948378682,
+        "std": 0.007755405735224485,
+        "q25": -0.002747967839241028,
+        "median": 0.0022169500589370728,
+        "q75": 0.008431702852249146
+      },
+      "failed_score_stats": {
+        "mean": 0.012704620137810707,
+        "std": 0.00667479308322072,
+        "q25": 0.0078701451420784,
+        "median": 0.010780423879623413,
+        "q75": 0.018163055181503296
+      }
+    },
+    "best_window_scores_csv": "/home/georgejammal/projects/try_and_change/outputs/qwen_arabic_onetoken_ocr_drift_120_20260623/best_window_scores.csv"
+  },
+  {
+    "run": "qwen_arabic_onetoken_ocr_drift_120_min3_20260623",
+    "n": 120,
+    "n_success": 110,
+    "n_failed": 10,
+    "best": {
+      "position_mode": "final_m0",
+      "condition": "norm0_raw|real_gt3sd_null_lte1sd_layers18_32",
+      "orientation": "drift_D_minus_P",
+      "window": "26-26",
+      "window_start": 26,
+      "window_end": 26,
+      "auc_failed_high": 0.7745454545454545,
+      "n": 120,
+      "n_success": 110,
+      "n_failed": 10,
+      "threshold": {
+        "threshold": 0.0026862919330596924,
+        "balanced_accuracy": 0.8,
+        "accuracy": 0.8,
+        "tpr_failed": 0.8,
+        "tnr_success": 0.8
+      },
+      "success_score_stats": {
+        "mean": -0.0012216375907883048,
+        "std": 0.005845692940056324,
+        "q25": -0.004628617316484451,
+        "median": -0.0016186423599720001,
+        "q75": 0.001721750944852829
+      },
+      "failed_score_stats": {
+        "mean": 0.005044448189437389,
+        "std": 0.006829347927123308,
+        "q25": 0.002817165106534958,
+        "median": 0.0033617541193962097,
+        "q75": 0.005946079269051552
+      }
+    },
+    "best_window_scores_csv": "/home/georgejammal/projects/try_and_change/outputs/qwen_arabic_onetoken_ocr_drift_120_min3_20260623/best_window_scores.csv"
+  }
+]

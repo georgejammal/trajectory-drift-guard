@@ -1,0 +1,17 @@
+{
+  "task": "mdpbench",
+  "model_alias": "gemma3_4b_it",
+  "language": "Korean",
+  "component_mode": "mlp",
+  "sigma": 5.0,
+  "window": "19-31",
+  "run_name": "mlp_sigma5_layers19-31",
+  "ccocr_micro": 54.05,
+  "num_selected_samples": 136,
+  "queued": 136,
+  "written_this_run": 136,
+  "prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/mdpbench/gemma3_4b_it/korean_ccocr_top3_le1600/mlp_sigma5_layers19-31/predictions",
+  "mlp_selection": "/home/georgejammal/projects/parsing_neurons_repro/outputs/selections/ccocr/gemma3_4b_it/flores_en-to-korean/mlp_sigma5_layers19-31.json",
+  "attn_selection": null,
+  "elapsed_seconds": 307.56054735183716
+}

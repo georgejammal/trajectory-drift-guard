@@ -1,0 +1,166 @@
+{
+  "task": "mdpbench",
+  "model_alias": "gemma3_4b_it",
+  "language": "Russian",
+  "layer": 17,
+  "alpha": 1.0,
+  "token_scope": "last_position",
+  "direction_metadata": {
+    "kind": "multilingual_ocr",
+    "direction": "target-minus-english",
+    "pairs_path": "/home/georgejammal/projects/parsing_neurons/data/flores_transfer_pairs/flores101_en_to_cc_ocr_languages_random500/pairs_by_language/en_to_russian.json",
+    "source_field": "english",
+    "target_field": "target",
+    "num_pairs": 500,
+    "formula": "normalize(mean(E(target_sentence)-E(source_sentence)))",
+    "norm_before_normalization": 0.30635595321655273,
+    "sample_components": [
+      {
+        "source": "On Monday, scientists from the Stanford University School of Medicine announced the invention of a new diagnostic tool that can sort cells by type: a tiny printable chip that can be manufactured using standard inkjet printers for possibly about one U.S. cent each.",
+        "target": "В понедельник ученые из Медицинской школы Стэнфордского университета объявили об изобретении нового диагностического инструмента, который может сортировать клетки по их типу; это маленький чип, который можно напечатать, используя стандартный струйный принтер примерно за 1 цент США.",
+        "source_token_count": 49,
+        "target_token_count": 62,
+        "component_norm": 0.3651030957698822
+      },
+      {
+        "source": "The JAS 39C Gripen crashed onto a runway at around 9:30 am local time (0230 UTC) and exploded, closing the airport to commercial flights.",
+        "target": "Приблизительно в 9:30 по местному времени (02:30 UTC) JAS 39C Gripen упал на взлетно-посадочную полосу и взорвался. Аэропорт пришлось закрыть для коммерческих рейсов.",
+        "source_token_count": 39,
+        "target_token_count": 58,
+        "component_norm": 0.24346224963665009
+      },
+      {
+        "source": "The pilot was identified as Squadron Leader Dilokrit Pattavee.",
+        "target": "Личность пилота была установлена. Им оказался командир эскадрильи Дилокрит Паттави.",
+        "source_token_count": 14,
+        "target_token_count": 26,
+        "component_norm": 0.38987481594085693
+      },
+      {
+        "source": "Since moving to the Catalan-capital, Vidal had played 49 games for the club.",
+        "target": "После переезда в столицу Каталонии  Видаль провел за клуб 49 матчей.",
+        "source_token_count": 19,
+        "target_token_count": 23,
+        "component_norm": 0.3719308078289032
+      },
+      {
+        "source": "The protest started around 11:00 local time (UTC+1) on Whitehall opposite the police-guarded entrance to Downing Street, the Prime Minister's official residence.",
+        "target": "Протест начался около 11:00 по местному времени (UTC+1) на улице Уайтхолл напротив охраняемого полицией въезда на Даунинг-стрит, официальную резиденцию премьер-министра.",
+        "source_token_count": 38,
+        "target_token_count": 54,
+        "component_norm": 0.28172674775123596
+      },
+      {
+        "source": "Just after 11:00, protesters blocked traffic on the northbound carriage in Whitehall.",
+        "target": "Сразу после 11:00 протестующие перекрыли движение в северном направлении по Уайтхоллу.",
+        "source_token_count": 19,
+        "target_token_count": 27,
+        "component_norm": 0.32768067717552185
+      },
+      {
+        "source": "At 11:20, the police asked the protesters to move back on to the pavement, stating that they needed to balance the right to protest with the traffic building up.",
+        "target": "В 11:20 полиция попросила митингующих вернуться на тротуар, заявив, что им необходимо соблюдать баланс между правом протестовать и задержкой дорожного движения.",
+        "source_token_count": 37,
+        "target_token_count": 44,
+        "component_norm": 0.3880143463611603
+      },
+      {
+        "source": "Nadal's head to head record against the Canadian is 7–2.",
+        "target": "Рекорд Надала в схватках один на один с канадцем —  7–2.",
+        "source_token_count": 17,
+        "target_token_count": 22,
+        "component_norm": 0.39368680119514465
+      },
+      {
+        "source": "He recently lost against Raonic in the Brisbane Open.",
+        "target": "Недавно он проиграл Раоничу на турнире в Брисбене.",
+        "source_token_count": 11,
+        "target_token_count": 19,
+        "component_norm": 0.4361470937728882
+      },
+      {
+        "source": "\"Panama Papers\" is an umbrella term for roughly ten million documents from Panamanian law firm Mossack Fonseca, leaked to the press in spring 2016.",
+        "target": "\"Панамские документы\" — это собирательное название приблизительно десяти миллионов документов панамской юридической фирмы Mossack Fonseca, просочившихся в прессу весной 2016 г.",
+        "source_token_count": 36,
+        "target_token_count": 42,
+        "component_norm": 0.29813745617866516
+      },
+      {
+        "source": "Born in Hong Kong, Ma studied at New York University and Harvard Law School and once held an American permanent resident \"green card\".",
+        "target": "Ма родился в Гонконге, учился в Нью-Йоркском университете и Гарвардской юридической школе. Он также когда-то имел постоянный вид на жительство в Америке (\"грин-карту\").",
+        "source_token_count": 26,
+        "target_token_count": 47,
+        "component_norm": 0.3479861617088318
+      },
+      {
+        "source": "Hsieh also argued that the photogenic Ma was more style than substance.",
+        "target": "Се также утверждал, что фотогеничный Ма больше выделялся внешностью, чем харизмой.",
+        "source_token_count": 15,
+        "target_token_count": 22,
+        "component_norm": 0.3772123456001282
+      },
+      {
+        "source": "Ovechkin's first assist of the night was on the game-winning goal by rookie Nicklas Backstrom;",
+        "target": "Первая голевая передача Овечкина в тот вечер принесла команде победный гол, выполненный новичком Никласом Бекстрёмом;",
+        "source_token_count": 25,
+        "target_token_count": 35,
+        "component_norm": 0.3898169994354248
+      },
+      {
+        "source": "Batten was ranked 190th on the 2008 400 Richest Americans list with an estimated fortune of $2.3 billion.",
+        "target": "Баттен занял 190-е место в списке 400 богатейших американцев в 2008 году, его состояние оценивалось в 2,3 миллиарда долларов США.",
+        "source_token_count": 35,
+        "target_token_count": 45,
+        "component_norm": 0.23667292296886444
+      },
+      {
+        "source": "The jail became notorious after prisoner abuse was discovered there after US forces took over.",
+        "target": "Тюрьма получила скандальную известность после раскрытия издевательств над заключенными, происходивших в ней, когда она перешла под контроль американских военных.",
+        "source_token_count": 16,
+        "target_token_count": 38,
+        "component_norm": 0.40349018573760986
+      },
+      {
+        "source": "As the cars ahead of Alonso went in for fuel under the safety car, he moved up the pack to take victory.",
+        "target": "Когда машины впереди Алонсо отправились за топливом под машину безопасности, он двинулся вверх, чтобы взять победу.",
+        "source_token_count": 24,
+        "target_token_count": 27,
+        "component_norm": 0.4131607711315155
+      },
+      {
+        "source": "Construction is ongoing for five new skyscrapers at the site, with a transportation center and memorial park in the middle.",
+        "target": "На этом месте ведется стройка пяти новых небоскрёбов с транспортным центром и мемориальным парком посередине.",
+        "source_token_count": 22,
+        "target_token_count": 28,
+        "component_norm": 0.47497236728668213
+      },
+      {
+        "source": "Each show would also provide recommendations for books that children should look for when they went to their library.",
+        "target": "Каждое шоу также даст рекомендацию по поводу книги, которую стоит искать детям, когда они пойдут в библиотеку.",
+        "source_token_count": 20,
+        "target_token_count": 26,
+        "component_norm": 0.41512975096702576
+      },
+      {
+        "source": "John Grant, from WNED Buffalo (Reading Rainbow's home station) said \"Reading Rainbow taught kids why to read,... the love of reading — [the show] encouraged kids to pick up a book and to read.\"",
+        "target": "Джон Грант с канала WNED Buffalo (где показывают Reading Rainbow) сказал: \"Шоу Reading Rainbow показало детям, зачем нужно читать, ... привило любовь к чтению — [оно] побудило детей взять книгу в руки и прочитать ее\".",
+        "source_token_count": 45,
+        "target_token_count": 59,
+        "component_norm": 0.2918073534965515
+      },
+      {
+        "source": "The storm, situated about 645 miles (1040 km) west of the Cape Verde islands, is likely to dissipate before threatening any land areas, forecasters say.",
+        "target": "Синоптики говорят, что шторм, находящийся примерно в 645 милях (1040 км) к западу от островов Кабо-Верде, скорее всего, закончится до того, как сможет стать угрозой каким-либо участкам суши.",
+        "source_token_count": 38,
+        "target_token_count": 61,
+        "component_norm": 0.2701728641986847
+      }
+    ]
+  },
+  "intervention": "hidden_states <- hidden_states + alpha * d at layer input",
+  "num_selected_samples": 116,
+  "queued": 116,
+  "prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/mdpbench_residual_add/gemma3_4b_it/russian_alpha1_last_position_le1600/resid_alpha1_layer17_last_position/predictions",
+  "written_this_run": 116,
+  "elapsed_seconds": 267.41749477386475
+}

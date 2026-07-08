@@ -3,8 +3,24 @@ from __future__ import annotations
 
 import argparse
 import os
+from pathlib import Path
 
+from parsing_neurons_repro.models import MODEL_PATHS
 from parsing_neurons_repro.search import run_search_from_args
+
+
+LOCAL_MODEL_PATHS = {
+    "gemma3_4b_it": "/home/georgejammal/.cache/huggingface/hub/models--google--gemma-3-4b-it/snapshots/093f9f388b31de276ce2de164bdc2081324b9767",
+    "gemma3_12b_it": "/home/georgejammal/.cache/huggingface/hub/models--google--gemma-3-12b-it/snapshots/299b6fef6178f0c84214043f933b85cde85bbcf1",
+    "qwen2_5_vl_3b_instruct": "/home/georgejammal/.cache/huggingface/hub/models--Qwen--Qwen2.5-VL-3B-Instruct/snapshots/6628550ee45e342cc5f1692f146b0e0eef2b4d80",
+    "qwen3_vl_8b_instruct": "/home/georgejammal/.cache/huggingface/hub/models--Qwen--Qwen3-VL-8B-Instruct/snapshots/9ba50c9f45e55e58ce5108ed88e4273fb7d937b7",
+}
+
+
+def resolve_local_model_paths() -> None:
+    for alias, path in LOCAL_MODEL_PATHS.items():
+        if Path(path).exists():
+            MODEL_PATHS[alias] = path
 
 
 def parse_args() -> argparse.Namespace:
@@ -51,6 +67,12 @@ def parse_args() -> argparse.Namespace:
 
     parser.add_argument("--languages", default="Arabic,Japanese,Korean,Russian", help="CC-OCR languages.")
     parser.add_argument(
+        "--direction-source",
+        choices=["flores", "news_commentary"],
+        default="flores",
+        help="CC-OCR direction-estimation corpus.",
+    )
+    parser.add_argument(
         "--flores-root",
         default=os.path.join(
             os.environ.get("PARSING_NEURONS_DATA_ROOT", "data"),
@@ -59,6 +81,11 @@ def parse_args() -> argparse.Namespace:
             "pairs_by_language",
         ),
         help="Directory with en_to_<language>.json files.",
+    )
+    parser.add_argument(
+        "--ncwm-root",
+        default=os.path.join(os.environ.get("PARSING_NEURONS_DATA_ROOT", "data"), "ncwm"),
+        help="News Commentary / NCWM root with en-<lang>/train.en and train.<lang> files.",
     )
     parser.add_argument(
         "--max-gold-tokens-exclusive",
@@ -70,6 +97,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> None:
+    resolve_local_model_paths()
     run_search_from_args(parse_args())
 
 

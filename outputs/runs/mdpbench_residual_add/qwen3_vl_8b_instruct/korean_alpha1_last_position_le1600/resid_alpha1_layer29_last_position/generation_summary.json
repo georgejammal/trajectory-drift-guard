@@ -1,0 +1,166 @@
+{
+  "task": "mdpbench",
+  "model_alias": "qwen3_vl_8b_instruct",
+  "language": "Korean",
+  "layer": 29,
+  "alpha": 1.0,
+  "token_scope": "last_position",
+  "direction_metadata": {
+    "kind": "multilingual_ocr",
+    "direction": "target-minus-english",
+    "pairs_path": "/home/georgejammal/projects/parsing_neurons/data/flores_transfer_pairs/flores101_en_to_cc_ocr_languages_random500/pairs_by_language/en_to_korean.json",
+    "source_field": "english",
+    "target_field": "target",
+    "num_pairs": 500,
+    "formula": "normalize(mean(E(target_sentence)-E(source_sentence)))",
+    "norm_before_normalization": 0.3447153866291046,
+    "sample_components": [
+      {
+        "source": "On Monday, scientists from the Stanford University School of Medicine announced the invention of a new diagnostic tool that can sort cells by type: a tiny printable chip that can be manufactured using standard inkjet printers for possibly about one U.S. cent each.",
+        "target": "스탠포드 의과대학 연구진은 지난 월요일 세포를 유형별로 분류할 수 있는 새로운 진단도구를 개발했다고 밝혔다. 이는 아주 작은 크기의 인쇄가 가능한 칩으로, 일반적인 잉크젯 프린터를 이용해 개 당 미화 약 1센트로 생산이 가능할 것으로 예상된다.",
+        "source_token_count": 49,
+        "target_token_count": 91,
+        "component_norm": 0.43212807178497314
+      },
+      {
+        "source": "The JAS 39C Gripen crashed onto a runway at around 9:30 am local time (0230 UTC) and exploded, closing the airport to commercial flights.",
+        "target": "현지 시간으로 약 아침 9시 30분(0230 UTC)에 JAS 39C 그리펜이 활주로에 추락 후 폭발해, 공항의 상업 항공편 운항이 중단되었습니다.",
+        "source_token_count": 40,
+        "target_token_count": 59,
+        "component_norm": 0.34684523940086365
+      },
+      {
+        "source": "The pilot was identified as Squadron Leader Dilokrit Pattavee.",
+        "target": "그 조종사는 비행 중대장 딜로크리트 패타비로 확인되었다.",
+        "source_token_count": 14,
+        "target_token_count": 23,
+        "component_norm": 0.5706337690353394
+      },
+      {
+        "source": "Since moving to the Catalan-capital, Vidal had played 49 games for the club.",
+        "target": "바르셀로나로 이적한 후 비달은 클럽을 위해 49경기를 뛰었습니다.",
+        "source_token_count": 19,
+        "target_token_count": 27,
+        "component_norm": 0.5139350295066833
+      },
+      {
+        "source": "The protest started around 11:00 local time (UTC+1) on Whitehall opposite the police-guarded entrance to Downing Street, the Prime Minister's official residence.",
+        "target": "시위는 총리의 공식 거주지인 다우닝가의 경찰이 경비를 서는 입구 맞은편 화이트홀에서 현지 시간 11:00(UTC+1) 경에 시작되었습니다.",
+        "source_token_count": 37,
+        "target_token_count": 57,
+        "component_norm": 0.4048142433166504
+      },
+      {
+        "source": "Just after 11:00, protesters blocked traffic on the northbound carriage in Whitehall.",
+        "target": "11시가 막 지난 후, 시위대는 화이트홀에 있는 북쪽으로 향하는 마차들의 교통을 막았다.",
+        "source_token_count": 21,
+        "target_token_count": 37,
+        "component_norm": 0.505635142326355
+      },
+      {
+        "source": "At 11:20, the police asked the protesters to move back on to the pavement, stating that they needed to balance the right to protest with the traffic building up.",
+        "target": "11시 20분에 경찰이 시위대에게 보도로 돌아가도록 요청했으며, 시위할 권리와 증가하는 교통량 사이에 절충할 필요가 있다고 말했습니다.",
+        "source_token_count": 37,
+        "target_token_count": 49,
+        "component_norm": 0.5115647912025452
+      },
+      {
+        "source": "Nadal's head to head record against the Canadian is 7–2.",
+        "target": "나달과 이 캐나다 선수와의 정면 대결 기록은 7 대 2입니다.",
+        "source_token_count": 16,
+        "target_token_count": 27,
+        "component_norm": 0.5456793904304504
+      },
+      {
+        "source": "He recently lost against Raonic in the Brisbane Open.",
+        "target": "그는 최근 브리즈번 오픈(Brisbane Open) 경기에서 라오니치(Raonic)에게 패했다.",
+        "source_token_count": 11,
+        "target_token_count": 34,
+        "component_norm": 0.5447629690170288
+      },
+      {
+        "source": "\"Panama Papers\" is an umbrella term for roughly ten million documents from Panamanian law firm Mossack Fonseca, leaked to the press in spring 2016.",
+        "target": "\"\"\"파나마 페이퍼스(Panama Papers)\"\"는 2016년 봄, 언론에 유출된 파나마 법률 회사인 모색 폰세카(Mossack Fonseca)의 약 천만 건에 이르는 문서를 의미하는 포괄적인 용어입니다.\"",
+        "source_token_count": 38,
+        "target_token_count": 74,
+        "component_norm": 0.3692111074924469
+      },
+      {
+        "source": "Born in Hong Kong, Ma studied at New York University and Harvard Law School and once held an American permanent resident \"green card\".",
+        "target": "마(Ma) 씨는 홍콩에서 태어나 뉴욕대와 하버드대 로스쿨에서 공부했으며 미국 영주권자 '그린카드'를 소지한 적이 있다.",
+        "source_token_count": 26,
+        "target_token_count": 53,
+        "component_norm": 0.46581336855888367
+      },
+      {
+        "source": "Hsieh also argued that the photogenic Ma was more style than substance.",
+        "target": "또한 셰이는 사진 잘 받는 마가 스타일은 멋있지만 실속은 없다고 말했습니다.",
+        "source_token_count": 16,
+        "target_token_count": 30,
+        "component_norm": 0.5514501929283142
+      },
+      {
+        "source": "Ovechkin's first assist of the night was on the game-winning goal by rookie Nicklas Backstrom;",
+        "target": "그날 밤 오베치킨의 첫 어시스트는 신인 니클라스 백스트롬의 경기 결승골로 이어졌습니다.",
+        "source_token_count": 23,
+        "target_token_count": 38,
+        "component_norm": 0.5122588872909546
+      },
+      {
+        "source": "Batten was ranked 190th on the 2008 400 Richest Americans list with an estimated fortune of $2.3 billion.",
+        "target": "배튼씨는 2008년 400명의 미국 내 부자 순위에서 약 23억 달러의 재산으로 190위에 올랐다.",
+        "source_token_count": 35,
+        "target_token_count": 47,
+        "component_norm": 0.3530086874961853
+      },
+      {
+        "source": "The jail became notorious after prisoner abuse was discovered there after US forces took over.",
+        "target": "미군 점령 후에 수감자 학대 사건이 밝혀지자 교도소의 악명은 높아졌다.",
+        "source_token_count": 16,
+        "target_token_count": 34,
+        "component_norm": 0.6162244081497192
+      },
+      {
+        "source": "As the cars ahead of Alonso went in for fuel under the safety car, he moved up the pack to take victory.",
+        "target": "알론소 앞에 있던 차들이 안전차 밑으로 연료를 넣으러 들어가자, 그는 승기를 잡기 위해 무리를 옮겼다.",
+        "source_token_count": 24,
+        "target_token_count": 42,
+        "component_norm": 0.5234590768814087
+      },
+      {
+        "source": "Construction is ongoing for five new skyscrapers at the site, with a transportation center and memorial park in the middle.",
+        "target": "현장에서는 다섯 개의 고층 건물과 가운데 위치하는 교통 센터와 기념 공원이 건설 중입니다.",
+        "source_token_count": 24,
+        "target_token_count": 31,
+        "component_norm": 0.5482642650604248
+      },
+      {
+        "source": "Each show would also provide recommendations for books that children should look for when they went to their library.",
+        "target": "각 쇼마다 어린이들이 도서관에 가서 꼭 읽어봐야 할 책을 권장해 주기도 한다.",
+        "source_token_count": 20,
+        "target_token_count": 33,
+        "component_norm": 0.5996085405349731
+      },
+      {
+        "source": "John Grant, from WNED Buffalo (Reading Rainbow's home station) said \"Reading Rainbow taught kids why to read,... the love of reading — [the show] encouraged kids to pick up a book and to read.\"",
+        "target": "\"WNED 버팔로(리딩 레인보우의 채널사)의 존 그랜트는 \"\"리딩 레인보우는 아이들에게 왜 책을 읽어야 하는지 가르쳤고,... 책을 좋아하도록 가르쳤고 - [쇼는] 아이들이 책을 읽도록 격려했다\"\"라고 전했다.\"",
+        "source_token_count": 44,
+        "target_token_count": 85,
+        "component_norm": 0.42507660388946533
+      },
+      {
+        "source": "The storm, situated about 645 miles (1040 km) west of the Cape Verde islands, is likely to dissipate before threatening any land areas, forecasters say.",
+        "target": "일기예보에 따르면 카보베르데 섬 서쪽으로 약 645마일(1040 킬로미터) 지점에 위치한 폭풍은 육상에 위협이 되기 전 소멸될 것으로 예상된다.",
+        "source_token_count": 39,
+        "target_token_count": 65,
+        "component_norm": 0.4309666156768799
+      }
+    ]
+  },
+  "intervention": "hidden_states <- hidden_states + alpha * d at layer input",
+  "num_selected_samples": 128,
+  "queued": 128,
+  "prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/mdpbench_residual_add/qwen3_vl_8b_instruct/korean_alpha1_last_position_le1600/resid_alpha1_layer29_last_position/predictions",
+  "written_this_run": 128,
+  "elapsed_seconds": 431.8483579158783
+}

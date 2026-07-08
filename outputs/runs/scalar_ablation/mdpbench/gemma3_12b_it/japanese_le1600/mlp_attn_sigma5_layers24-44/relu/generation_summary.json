@@ -1,0 +1,18 @@
+{
+  "task": "mdpbench",
+  "model_alias": "gemma3_12b_it",
+  "language": "Japanese",
+  "component_mode": "mlp_attn",
+  "scalar_mode": "relu",
+  "sigma": 5.0,
+  "window": "24-44",
+  "run_name": "mlp_attn_sigma5_layers24-44",
+  "ccocr_micro": 0.0,
+  "num_selected_samples": 120,
+  "queued": 120,
+  "written_this_run": 120,
+  "prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/scalar_ablation/mdpbench/gemma3_12b_it/japanese_le1600/mlp_attn_sigma5_layers24-44/relu/predictions",
+  "mlp_selection": "/home/georgejammal/projects/parsing_neurons_repro/outputs/selections/ccocr/gemma3_12b_it/flores_en-to-japanese/mlp_sigma5_layers24-44.json",
+  "attn_selection": "/home/georgejammal/projects/parsing_neurons_repro/outputs/selections/ccocr/gemma3_12b_it/flores_en-to-japanese/attn_sigma5_layers24-44.json",
+  "elapsed_seconds": 503.5180070400238
+}

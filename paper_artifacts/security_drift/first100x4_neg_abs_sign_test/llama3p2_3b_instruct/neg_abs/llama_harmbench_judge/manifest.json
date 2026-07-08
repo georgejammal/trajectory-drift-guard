@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-06-17T21:52:59.886449+00:00",
+  "judge": "HarmBench-Llama-2-13b-cls",
+  "classifier_path": "cais/HarmBench-Llama-2-13b-cls",
+  "completions": "try_and_change/security_drift/outputs/first100x4_neg_abs_sign_test/llama3p2_3b_instruct/neg_abs/completions.jsonl",
+  "sample_count": 400,
+  "batch_size": 4,
+  "completion_token_clip": 512,
+  "label_semantics": {
+    "1": "attack success; model failed to refuse",
+    "0": "non-success; model refused or avoided the harmful behavior",
+    "-1": "invalid classifier output"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "task": "ccocr",
+  "component_mode": "baseline",
+  "languages": [
+    "Arabic",
+    "Japanese",
+    "Korean",
+    "Russian"
+  ],
+  "datasets": [
+    {
+      "task": "ccocr",
+      "language": "Arabic",
+      "component_mode": "baseline",
+      "queued": 118,
+      "written_this_run": 118,
+      "expected": 150,
+      "batch_size": 32,
+      "max_new_tokens": 512,
+      "gold_token_filter": {
+        "max_gold_tokens_exclusive": null,
+        "kept": 118,
+        "excluded": 0
+      },
+      "elapsed_seconds": 197.25643110275269
+    },
+    {
+      "task": "ccocr",
+      "language": "Japanese",
+      "component_mode": "baseline",
+      "queued": 150,
+      "written_this_run": 150,
+      "expected": 150,
+      "batch_size": 32,
+      "max_new_tokens": 512,
+      "gold_token_filter": {
+        "max_gold_tokens_exclusive": null,
+        "kept": 150,
+        "excluded": 0
+      },
+      "elapsed_seconds": 253.30111598968506
+    },
+    {
+      "task": "ccocr",
+      "language": "Korean",
+      "component_mode": "baseline",
+      "queued": 150,
+      "written_this_run": 150,
+      "expected": 150,
+      "batch_size": 32,
+      "max_new_tokens": 512,
+      "gold_token_filter": {
+        "max_gold_tokens_exclusive": null,
+        "kept": 150,
+        "excluded": 0
+      },
+      "elapsed_seconds": 217.70134949684143
+    },
+    {
+      "task": "ccocr",
+      "language": "Russian",
+      "component_mode": "baseline",
+      "queued": 150,
+      "written_this_run": 150,
+      "expected": 150,
+      "batch_size": 32,
+      "max_new_tokens": 512,
+      "gold_token_filter": {
+        "max_gold_tokens_exclusive": null,
+        "kept": 150,
+        "excluded": 0
+      },
+      "elapsed_seconds": 173.73500752449036
+    }
+  ],
+  "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/qwen3_vl_8b_instruct/baseline/_filtered_eval/gold_lt_500/summary.md",
+  "max_gold_tokens_exclusive": 500,
+  "filtered_eval_index_path": "outputs/runs/ccocr/qwen3_vl_8b_instruct/baseline/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+  "filtered_eval_prediction_dir": "outputs/runs/ccocr/qwen3_vl_8b_instruct/baseline/_filtered_eval/gold_lt_500/predictions"
+}

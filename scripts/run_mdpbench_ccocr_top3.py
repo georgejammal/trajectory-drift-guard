@@ -354,7 +354,7 @@ def evaluate_official(
     official_result_dir = official_root / "result" / f"{eval_prediction_dir.name}_result"
     if official_result_dir.exists():
         shutil.rmtree(official_result_dir)
-    validation = run_command([python, "pdf_validation.py", "--config", str(config_path), "--slim"], cwd=official_root)
+    validation = run_command([python, "pdf_validation.py", "--config", str(config_path.resolve()), "--slim"], cwd=official_root)
     (eval_dir / "pdf_validation.log").write_text(validation.stdout, encoding="utf-8")
     if validation.returncode != 0:
         metadata = {

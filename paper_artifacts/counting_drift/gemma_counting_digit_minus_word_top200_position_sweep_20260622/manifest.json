@@ -1,0 +1,227 @@
+{
+  "run_id": "gemma_counting_digit_minus_word_top200_position_sweep_20260622",
+  "output_dir": "/home/georgejammal/projects/try_and_change/outputs/gemma_counting_digit_minus_word_top200_position_sweep_20260622",
+  "config": "/home/georgejammal/projects/drifting/configs/gemma_counting_final.json",
+  "model_path": "/home/georgejammal/.cache/huggingface/hub/models--google--gemma-3-4b-it/snapshots/093f9f388b31de276ce2de164bdc2081324b9767",
+  "datasets": [
+    "countbenchqa",
+    "how_many",
+    "tallyqa_balanced"
+  ],
+  "digits": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "samples_per_digit_per_dataset": 30,
+  "selection_counts": {
+    "countbenchqa": {
+      "2": 30,
+      "3": 30,
+      "4": 30,
+      "5": 30,
+      "6": 30,
+      "7": 30,
+      "8": 30,
+      "9": 30
+    },
+    "how_many": {
+      "2": 30,
+      "3": 30,
+      "4": 30,
+      "5": 30,
+      "6": 30,
+      "7": 30,
+      "8": 30,
+      "9": 30
+    },
+    "tallyqa_balanced": {
+      "2": 30,
+      "3": 30,
+      "4": 30,
+      "5": 30,
+      "6": 30,
+      "7": 30,
+      "8": 30,
+      "9": 30
+    }
+  },
+  "position_modes": [
+    "final_newline",
+    "assistant_role",
+    "assistant_start",
+    "user_end",
+    "user_final_content",
+    "question_mark"
+  ],
+  "layer_range": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "min_window_width": 1,
+  "max_window_width": 34,
+  "direction": "per digit d_k = E(str(k)) - E(word(k)) using input embeddings",
+  "score_definition": "S_W(x;k,t) = sum_{ell in W} sum_n a_{ell,n}(x,t) <w_down_{ell,n}, d_k>",
+  "direction_metadata": {
+    "2": {
+      "word": "two",
+      "digit": "2",
+      "word_token_ids": [
+        13498
+      ],
+      "digit_token_ids": [
+        236778
+      ],
+      "raw_norm": 1.3019598722457886
+    },
+    "3": {
+      "word": "three",
+      "digit": "3",
+      "word_token_ids": [
+        19891
+      ],
+      "digit_token_ids": [
+        236800
+      ],
+      "raw_norm": 1.2358933687210083
+    },
+    "4": {
+      "word": "four",
+      "digit": "4",
+      "word_token_ids": [
+        19025
+      ],
+      "digit_token_ids": [
+        236812
+      ],
+      "raw_norm": 1.2215385437011719
+    },
+    "5": {
+      "word": "five",
+      "digit": "5",
+      "word_token_ids": [
+        21716
+      ],
+      "digit_token_ids": [
+        236810
+      ],
+      "raw_norm": 1.1937694549560547
+    },
+    "6": {
+      "word": "six",
+      "digit": "6",
+      "word_token_ids": [
+        34699
+      ],
+      "digit_token_ids": [
+        236825
+      ],
+      "raw_norm": 1.1871131658554077
+    },
+    "7": {
+      "word": "seven",
+      "digit": "7",
+      "word_token_ids": [
+        47526
+      ],
+      "digit_token_ids": [
+        236832
+      ],
+      "raw_norm": 1.196954607963562
+    },
+    "8": {
+      "word": "eight",
+      "digit": "8",
+      "word_token_ids": [
+        44622
+      ],
+      "digit_token_ids": [
+        236828
+      ],
+      "raw_norm": 1.1659667491912842
+    },
+    "9": {
+      "word": "nine",
+      "digit": "9",
+      "word_token_ids": [
+        52908
+      ],
+      "digit_token_ids": [
+        236819
+      ],
+      "raw_norm": 1.2059112787246704
+    }
+  },
+  "coordinate_selection": {
+    "raw_top200": {
+      "totals_by_digit": {
+        "2": 200,
+        "3": 200,
+        "4": 200,
+        "5": 200,
+        "6": 200,
+        "7": 200,
+        "8": 200,
+        "9": 200
+      }
+    },
+    "unit_top200": {
+      "totals_by_digit": {
+        "2": 200,
+        "3": 200,
+        "4": 200,
+        "5": 200,
+        "6": 200,
+        "7": 200,
+        "8": 200,
+        "9": 200
+      }
+    }
+  },
+  "reported_conditions": [
+    "raw_top200",
+    "unit_top200"
+  ],
+  "n_samples": 720,
+  "n_correct": 295,
+  "n_wrong": 425,
+  "scores_path": "/home/georgejammal/projects/try_and_change/outputs/gemma_counting_digit_minus_word_top200_position_sweep_20260622/sample_position_scores.jsonl",
+  "summary_path": "/home/georgejammal/projects/try_and_change/outputs/gemma_counting_digit_minus_word_top200_position_sweep_20260622/position_auc_summary.json"
+}

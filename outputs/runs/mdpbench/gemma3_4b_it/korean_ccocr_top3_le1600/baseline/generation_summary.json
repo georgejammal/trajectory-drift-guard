@@ -1,0 +1,17 @@
+{
+  "task": "mdpbench",
+  "model_alias": "gemma3_4b_it",
+  "language": "Korean",
+  "component_mode": "baseline",
+  "sigma": 0.0,
+  "window": "none",
+  "run_name": "baseline",
+  "ccocr_micro": 0.0,
+  "num_selected_samples": 136,
+  "queued": 136,
+  "written_this_run": 136,
+  "prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/mdpbench/gemma3_4b_it/korean_ccocr_top3_le1600/baseline/predictions",
+  "mlp_selection": null,
+  "attn_selection": null,
+  "elapsed_seconds": 302.31385684013367
+}

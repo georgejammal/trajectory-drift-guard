@@ -9,6 +9,13 @@ import torch.nn.functional as F
 from .io import read_records
 
 
+NCWM_LANGUAGE_CODES = {
+    "Arabic": "ar",
+    "Japanese": "ja",
+    "Russian": "ru",
+}
+
+
 NUMBER_WORDS_EN = {
     0: "zero",
     1: "one",
@@ -147,6 +154,71 @@ def flores_direction(
         "target_field": target_field,
         "num_pairs": len(used),
         "formula": "normalize(mean(E(target_sentence)-E(source_sentence)))",
+        "norm_before_normalization": float(raw.norm().item()),
+        "sample_components": used[:20],
+    }
+
+
+def news_commentary_direction(
+    tokenizer: Any,
+    embedding: torch.Tensor,
+    *,
+    ncwm_root: Path,
+    language: str,
+    max_pairs: int | None = 500,
+) -> tuple[torch.Tensor, dict[str, Any]]:
+    if language not in NCWM_LANGUAGE_CODES:
+        raise ValueError(
+            f"News Commentary direction data is not available for {language!r}. "
+            f"Available languages: {sorted(NCWM_LANGUAGE_CODES)}"
+        )
+    code = NCWM_LANGUAGE_CODES[language]
+    pair_root = ncwm_root / f"en-{code}"
+    english_path = pair_root / "train.en"
+    target_path = pair_root / f"train.{code}"
+    if not english_path.exists() or not target_path.exists():
+        raise FileNotFoundError(
+            f"Missing News Commentary files for {language}: expected "
+            f"{english_path} and {target_path}."
+        )
+    english = [line.strip() for line in english_path.read_text(encoding="utf-8").splitlines()]
+    target = [line.strip() for line in target_path.read_text(encoding="utf-8").splitlines()]
+    pairs = [(en, tgt) for en, tgt in zip(english, target) if en and tgt]
+    if max_pairs is not None:
+        pairs = pairs[:max_pairs]
+
+    components: list[torch.Tensor] = []
+    used: list[dict[str, Any]] = []
+    for source, target_text in pairs:
+        source_ids = token_ids(tokenizer, source)
+        target_ids = token_ids(tokenizer, target_text)
+        if not source_ids or not target_ids:
+            continue
+        component = mean_embedding(embedding, target_ids) - mean_embedding(embedding, source_ids)
+        components.append(component)
+        used.append(
+            {
+                "source": source,
+                "target": target_text,
+                "source_token_count": len(source_ids),
+                "target_token_count": len(target_ids),
+                "component_norm": float(component.norm().item()),
+            }
+        )
+    if not components:
+        raise RuntimeError(f"No usable News Commentary pairs found for {language} in {pair_root}")
+    raw = torch.stack(components, dim=0).mean(dim=0)
+    return normalized(raw), {
+        "kind": "multilingual_ocr",
+        "direction": "target-minus-english",
+        "source": "news_commentary",
+        "ncwm_root": str(ncwm_root),
+        "language": language,
+        "language_code": code,
+        "english_path": str(english_path),
+        "target_path": str(target_path),
+        "num_pairs": len(used),
+        "formula": "normalize(mean(E(target_sentence)-E(english_sentence)))",
         "norm_before_normalization": float(raw.norm().item()),
         "sample_components": used[:20],
     }

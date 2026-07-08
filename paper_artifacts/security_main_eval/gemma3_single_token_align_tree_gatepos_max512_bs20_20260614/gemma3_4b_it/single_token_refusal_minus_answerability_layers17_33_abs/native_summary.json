@@ -1,0 +1,39 @@
+{
+  "overall": {
+    "total": 400,
+    "native_success": 53,
+    "native_asr": 0.1325,
+    "refusal_prefix": 312,
+    "refusal_prefix_rate": 0.78
+  },
+  "by_benchmark": {
+    "autodan": {
+      "total": 100,
+      "native_success": 2,
+      "refusal_prefix": 98,
+      "native_asr": 0.02,
+      "refusal_prefix_rate": 0.98
+    },
+    "malwaregen": {
+      "total": 100,
+      "native_success": 44,
+      "refusal_prefix": 90,
+      "native_asr": 0.44,
+      "refusal_prefix_rate": 0.9
+    },
+    "pair": {
+      "total": 100,
+      "native_success": 7,
+      "refusal_prefix": 93,
+      "native_asr": 0.07,
+      "refusal_prefix_rate": 0.93
+    },
+    "promptinject": {
+      "total": 100,
+      "native_success": 0,
+      "refusal_prefix": 31,
+      "native_asr": 0.0,
+      "refusal_prefix_rate": 0.31
+    }
+  }
+}

@@ -1,0 +1,84 @@
+[
+  {
+    "model": "gemma3_4b_it",
+    "window": "20-22",
+    "x_layer": 17,
+    "x_filter": "raw_pre_mlp_margin_layer_x > 0",
+    "failed_total_with_pre_mlp": 81,
+    "failed_refusal_like_n": 72,
+    "failed_answerability_like_n": 9,
+    "successful_refusal_n": 259,
+    "failed_refusal_like_by_benchmark": {
+      "malwaregen": 52,
+      "promptinject": 20
+    },
+    "successful_refusal_by_benchmark": {
+      "malwaregen": 88,
+      "promptinject": 171
+    },
+    "auc_failed_refusal_like_gt_success": 0.8422887172887172,
+    "failed_refusal_like_mean": 0.0074037557965817135,
+    "failed_refusal_like_median": -0.004600629210472107,
+    "successful_refusal_mean": -0.06331864833781445,
+    "successful_refusal_median": -0.06221938692033291,
+    "failed_refusal_like_margin_x_mean": 24.495021528667873,
+    "failed_refusal_like_margin_x_median": 26.41771125793457,
+    "threshold_metrics": {
+      "threshold": -0.029704807326197624,
+      "tp": 52,
+      "fp": 39,
+      "tn": 220,
+      "fn": 20,
+      "tpr": 0.7222222222222222,
+      "fpr": 0.15057915057915058,
+      "specificity": 0.8494208494208494,
+      "precision": 0.5714285714285714,
+      "recall": 0.7222222222222222,
+      "f1": 0.638036809815951,
+      "accuracy": 0.8217522658610272,
+      "balanced_accuracy": 0.7858215358215358,
+      "youden_j": 0.5716430716430716
+    }
+  },
+  {
+    "model": "llama3p2_3b_instruct",
+    "window": "18-21",
+    "x_layer": 17,
+    "x_filter": "raw_pre_mlp_margin_layer_x > 0",
+    "failed_total_with_pre_mlp": 69,
+    "failed_refusal_like_n": 50,
+    "failed_answerability_like_n": 19,
+    "successful_refusal_n": 271,
+    "failed_refusal_like_by_benchmark": {
+      "malwaregen": 43,
+      "promptinject": 7
+    },
+    "successful_refusal_by_benchmark": {
+      "malwaregen": 89,
+      "promptinject": 182
+    },
+    "auc_failed_refusal_like_gt_success": 0.7967527675276753,
+    "failed_refusal_like_mean": 0.14135460472665728,
+    "failed_refusal_like_median": 0.1448632339015603,
+    "successful_refusal_mean": -0.10953994811000474,
+    "successful_refusal_median": -0.11491168569773436,
+    "failed_refusal_like_margin_x_mean": 1.3389323902130128,
+    "failed_refusal_like_margin_x_median": 1.2514865398406982,
+    "threshold_metrics": {
+      "threshold": 0.038903973530977964,
+      "tp": 41,
+      "fp": 80,
+      "tn": 191,
+      "fn": 9,
+      "tpr": 0.82,
+      "fpr": 0.2952029520295203,
+      "specificity": 0.7047970479704797,
+      "precision": 0.33884297520661155,
+      "recall": 0.82,
+      "f1": 0.47953216374269003,
+      "accuracy": 0.7227414330218068,
+      "balanced_accuracy": 0.7623985239852398,
+      "youden_j": 0.5247970479704797
+    }
+  }
+]

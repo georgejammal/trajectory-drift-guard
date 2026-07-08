@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-06-14T09:36:04.852433+00:00",
+  "judge": "AlignTree ChatGPT/HarmBench prompt judge",
+  "openai_model": "gpt-4o-mini",
+  "openai_seed": null,
+  "completions": "/home/georgejammal/projects/semantic-to-symbolic/safeguard_eval/outputs/llama3_single_token_align_tree_gatepos_max512_bs20_20260614/llama3p2_3b_instruct/single_token_refusal_minus_answerability_layers14_27_abs/completions.jsonl",
+  "sample_count": 400,
+  "refusal_prefilter_count": 351,
+  "openai_api_judged_count": 49,
+  "note": "Uses AlignTree evaluate_jailbreaks chatgpt path, including substring-refusal prefilter."
+}

@@ -1,0 +1,17 @@
+{
+  "task": "mdpbench",
+  "model_alias": "qwen3_vl_8b_instruct",
+  "language": "Japanese",
+  "component_mode": "baseline",
+  "sigma": 0.0,
+  "window": "none",
+  "run_name": "baseline",
+  "ccocr_micro": 0.0,
+  "num_selected_samples": 112,
+  "queued": 112,
+  "written_this_run": 112,
+  "prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/mdpbench/qwen3_vl_8b_instruct/japanese_ccocr_top3_le1600/baseline/predictions",
+  "mlp_selection": null,
+  "attn_selection": null,
+  "elapsed_seconds": 335.0171983242035
+}

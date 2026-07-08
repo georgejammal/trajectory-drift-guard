@@ -1,0 +1,16 @@
+[
+  {
+    "model": "gemma3_4b_it",
+    "window": "20-22",
+    "auc": 0.8338815005481672,
+    "successful": "n=259, mean=-0.0633, median=-0.0622",
+    "failed": "n=81, mean=0.0055, median=-0.0079"
+  },
+  {
+    "model": "llama3p2_3b_instruct",
+    "window": "18-21",
+    "auc": 0.8389753462752019,
+    "successful": "n=271, mean=-0.1095, median=-0.1149",
+    "failed": "n=69, mean=0.2529, median=0.2006"
+  }
+]

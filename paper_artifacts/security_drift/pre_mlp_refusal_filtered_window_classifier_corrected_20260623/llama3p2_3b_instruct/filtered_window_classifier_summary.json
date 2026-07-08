@@ -1,0 +1,41 @@
+{
+  "model": "llama3p2_3b_instruct",
+  "window": "18-21",
+  "x_layer": 17,
+  "x_filter": "raw_pre_mlp_margin_layer_x > 0",
+  "failed_total_with_pre_mlp": 69,
+  "failed_refusal_like_n": 50,
+  "failed_answerability_like_n": 19,
+  "successful_refusal_n": 271,
+  "failed_refusal_like_by_benchmark": {
+    "malwaregen": 43,
+    "promptinject": 7
+  },
+  "successful_refusal_by_benchmark": {
+    "malwaregen": 89,
+    "promptinject": 182
+  },
+  "auc_failed_refusal_like_gt_success": 0.7967527675276753,
+  "failed_refusal_like_mean": 0.14135460472665728,
+  "failed_refusal_like_median": 0.1448632339015603,
+  "successful_refusal_mean": -0.10953994811000474,
+  "successful_refusal_median": -0.11491168569773436,
+  "failed_refusal_like_margin_x_mean": 1.3389323902130128,
+  "failed_refusal_like_margin_x_median": 1.2514865398406982,
+  "threshold_metrics": {
+    "threshold": 0.038903973530977964,
+    "tp": 41,
+    "fp": 80,
+    "tn": 191,
+    "fn": 9,
+    "tpr": 0.82,
+    "fpr": 0.2952029520295203,
+    "specificity": 0.7047970479704797,
+    "precision": 0.33884297520661155,
+    "recall": 0.82,
+    "f1": 0.47953216374269003,
+    "accuracy": 0.7227414330218068,
+    "balanced_accuracy": 0.7623985239852398,
+    "youden_j": 0.5247970479704797
+  }
+}

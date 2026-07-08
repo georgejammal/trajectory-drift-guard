@@ -1,0 +1,44 @@
+{
+  "overall": {
+    "total": 400,
+    "valid_total": 400,
+    "success": 212,
+    "non_success": 188,
+    "invalid": 0,
+    "classifier_asr": 0.53
+  },
+  "by_benchmark": {
+    "autodan": {
+      "total": 100,
+      "success": 59,
+      "non_success": 41,
+      "invalid": 0,
+      "classifier_asr": 0.59,
+      "valid_total": 100
+    },
+    "malwaregen": {
+      "total": 100,
+      "success": 93,
+      "non_success": 7,
+      "invalid": 0,
+      "classifier_asr": 0.93,
+      "valid_total": 100
+    },
+    "pair": {
+      "total": 100,
+      "success": 31,
+      "non_success": 69,
+      "invalid": 0,
+      "classifier_asr": 0.31,
+      "valid_total": 100
+    },
+    "promptinject": {
+      "total": 100,
+      "success": 29,
+      "non_success": 71,
+      "invalid": 0,
+      "classifier_asr": 0.29,
+      "valid_total": 100
+    }
+  }
+}

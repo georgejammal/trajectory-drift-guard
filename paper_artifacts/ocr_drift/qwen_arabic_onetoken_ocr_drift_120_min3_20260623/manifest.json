@@ -1,0 +1,252 @@
+{
+  "run_id": "qwen_arabic_onetoken_ocr_drift_120_min3_20260623",
+  "output_dir": "/home/georgejammal/projects/try_and_change/outputs/qwen_arabic_onetoken_ocr_drift_120_min3_20260623",
+  "model_path": "/home/georgejammal/.cache/huggingface/hub/models--Qwen--Qwen2.5-VL-3B-Instruct/snapshots/66285546d2b821cf421d4f5eb2576359d3770cd3",
+  "flores_pairs_json": "/home/georgejammal/projects/semantic-to-symbolic/cc-ocr-outputs/flores_transfer/flores101_en_to_cc_ocr_languages_random500/pairs_by_language/en_to_arabic.json",
+  "word_selection": {
+    "candidate_unique_words": 4429,
+    "rejected_multi_token_before_stop": 616,
+    "selected_words": 120,
+    "min_chars": 3,
+    "max_chars": 8
+  },
+  "num_samples": 120,
+  "num_success": 110,
+  "num_failed": 10,
+  "prompt": "Transcribe exactly the Arabic word in the image. Output only the word.",
+  "rendering": {
+    "width": 512,
+    "height": 256,
+    "font_path": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+    "background": "white",
+    "noise": "none"
+  },
+  "direction": {
+    "definition": "mean_i(mean_unembed(arabic_sentence_i) - mean_unembed(english_sentence_i))",
+    "num_direction_pairs": 250,
+    "raw_direction_norm": 0.2928639054298401,
+    "unit_direction_norm": 0.9999999403953552,
+    "source_token_length_mean": 27.376,
+    "target_token_length_mean": 43.76
+  },
+  "neuron_sets": {
+    "real_gt3sd_layers18_32": {
+      "path": "/home/georgejammal/projects/try_and_change/neuron_sets/qwen25vl_ccocr_mean_unembed_real3_null1_layers18_32_20260621_candidates/arabic/layers18_32/arabic_mean_unembed_real_gt3sd_layers18_32.csv",
+      "num_neurons": 424,
+      "layer_counts": {
+        "18": 27,
+        "19": 27,
+        "20": 38,
+        "21": 21,
+        "22": 27,
+        "23": 21,
+        "24": 27,
+        "25": 25,
+        "26": 30,
+        "27": 25,
+        "28": 24,
+        "29": 26,
+        "30": 30,
+        "31": 42,
+        "32": 34
+      },
+      "manifest_path": "/home/georgejammal/projects/try_and_change/neuron_sets/qwen25vl_ccocr_mean_unembed_real3_null1_layers18_32_20260621_candidates/arabic/layers18_32/arabic_mean_unembed_real_gt3sd_layers18_32.csv.manifest.json"
+    },
+    "real_gt3sd_null_lte1sd_layers18_32": {
+      "path": "/home/georgejammal/projects/try_and_change/neuron_sets/qwen25vl_ccocr_mean_unembed_real3_null1_layers18_32_20260621_candidates/arabic/layers18_32/arabic_mean_unembed_real_gt3sd_null_lte1sd_layers18_32.csv",
+      "num_neurons": 284,
+      "layer_counts": {
+        "18": 20,
+        "19": 17,
+        "20": 23,
+        "21": 13,
+        "22": 22,
+        "23": 10,
+        "24": 19,
+        "25": 15,
+        "26": 16,
+        "27": 16,
+        "28": 17,
+        "29": 20,
+        "30": 23,
+        "31": 29,
+        "32": 24
+      },
+      "manifest_path": "/home/georgejammal/projects/try_and_change/neuron_sets/qwen25vl_ccocr_mean_unembed_real3_null1_layers18_32_20260621_candidates/arabic/layers18_32/arabic_mean_unembed_real_gt3sd_null_lte1sd_layers18_32.csv.manifest.json"
+    },
+    "real_gt3sd_null_lte3sd_layers18_32": {
+      "path": "/home/georgejammal/projects/try_and_change/neuron_sets/qwen25vl_ccocr_mean_unembed_best18_32_20260621_candidates/arabic/layers18_32/arabic_mean_unembed_real_gt3sd_null_lte3sd_layers18_32.csv",
+      "num_neurons": 420,
+      "layer_counts": {
+        "18": 26,
+        "19": 27,
+        "20": 38,
+        "21": 21,
+        "22": 27,
+        "23": 21,
+        "24": 27,
+        "25": 25,
+        "26": 30,
+        "27": 25,
+        "28": 24,
+        "29": 25,
+        "30": 30,
+        "31": 42,
+        "32": 32
+      },
+      "manifest_path": "/home/georgejammal/projects/try_and_change/neuron_sets/qwen25vl_ccocr_mean_unembed_best18_32_20260621_candidates/arabic/layers18_32/arabic_mean_unembed_real_gt3sd_null_lte3sd_layers18_32.csv.manifest.json"
+    }
+  },
+  "layer_range": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
+  ],
+  "max_window_width": 36,
+  "position_modes": [
+    "final_m0",
+    "final_m1",
+    "final_m2",
+    "final_m3",
+    "final_m4",
+    "final_m5",
+    "final_m6",
+    "final_m7",
+    "final_m8",
+    "final_m9",
+    "final_m10",
+    "final_m11",
+    "final_m12",
+    "suffix_period"
+  ],
+  "condition_names": [
+    "norm0_raw|real_gt3sd_layers18_32",
+    "norm0_raw|real_gt3sd_null_lte1sd_layers18_32",
+    "norm0_raw|real_gt3sd_null_lte3sd_layers18_32",
+    "norm1_unit|real_gt3sd_layers18_32",
+    "norm1_unit|real_gt3sd_null_lte1sd_layers18_32",
+    "norm1_unit|real_gt3sd_null_lte3sd_layers18_32"
+  ],
+  "token_debug": {
+    "first_sample_positions": {
+      "final_m0": {
+        "absolute_position": 197,
+        "token_id": 198,
+        "token": "\n"
+      },
+      "final_m1": {
+        "absolute_position": 196,
+        "token_id": 77091,
+        "token": "assistant"
+      },
+      "final_m2": {
+        "absolute_position": 195,
+        "token_id": 151644,
+        "token": "<|im_start|>"
+      },
+      "final_m3": {
+        "absolute_position": 194,
+        "token_id": 198,
+        "token": "\n"
+      },
+      "final_m4": {
+        "absolute_position": 193,
+        "token_id": 151645,
+        "token": "<|im_end|>"
+      },
+      "final_m5": {
+        "absolute_position": 192,
+        "token_id": 13,
+        "token": "."
+      },
+      "final_m6": {
+        "absolute_position": 191,
+        "token_id": 3409,
+        "token": " word"
+      },
+      "final_m7": {
+        "absolute_position": 190,
+        "token_id": 279,
+        "token": " the"
+      },
+      "final_m8": {
+        "absolute_position": 189,
+        "token_id": 1172,
+        "token": " only"
+      },
+      "final_m9": {
+        "absolute_position": 188,
+        "token_id": 9258,
+        "token": " Output"
+      },
+      "final_m10": {
+        "absolute_position": 187,
+        "token_id": 13,
+        "token": "."
+      },
+      "final_m11": {
+        "absolute_position": 186,
+        "token_id": 2168,
+        "token": " image"
+      },
+      "final_m12": {
+        "absolute_position": 185,
+        "token_id": 279,
+        "token": " the"
+      },
+      "suffix_period": {
+        "absolute_position": 192,
+        "token_id": 13,
+        "token": "."
+      }
+    }
+  },
+  "plot_paths": [
+    "/home/georgejammal/projects/try_and_change/outputs/qwen_arabic_onetoken_ocr_drift_120_min3_20260623/boxplot_final_m0_norm0_raw_real_gt3sd_null_lte1sd_layers18_32_drift_D_minus_P_26-26.png",
+    "/home/georgejammal/projects/try_and_change/outputs/qwen_arabic_onetoken_ocr_drift_120_min3_20260623/boxplot_final_m0_norm1_unit_real_gt3sd_null_lte1sd_layers18_32_drift_D_minus_P_26-26.png",
+    "/home/georgejammal/projects/try_and_change/outputs/qwen_arabic_onetoken_ocr_drift_120_min3_20260623/boxplot_final_m2_norm0_raw_real_gt3sd_null_lte1sd_layers18_32_drift_D_minus_P_25-25.png",
+    "/home/georgejammal/projects/try_and_change/outputs/qwen_arabic_onetoken_ocr_drift_120_min3_20260623/boxplot_final_m2_norm1_unit_real_gt3sd_null_lte1sd_layers18_32_drift_D_minus_P_25-25.png",
+    "/home/georgejammal/projects/try_and_change/outputs/qwen_arabic_onetoken_ocr_drift_120_min3_20260623/boxplot_final_m7_norm0_raw_real_gt3sd_layers18_32_drift_D_minus_P_28-28.png",
+    "/home/georgejammal/projects/try_and_change/outputs/qwen_arabic_onetoken_ocr_drift_120_min3_20260623/boxplot_final_m7_norm0_raw_real_gt3sd_null_lte3sd_layers18_32_drift_D_minus_P_28-28.png"
+  ],
+  "elapsed_score_seconds": 23.53659462928772,
+  "outputs": {
+    "rendered_manifest": "/home/georgejammal/projects/try_and_change/outputs/qwen_arabic_onetoken_ocr_drift_120_min3_20260623/rendered_manifest.jsonl",
+    "predictions": "/home/georgejammal/projects/try_and_change/outputs/qwen_arabic_onetoken_ocr_drift_120_min3_20260623/predictions.jsonl",
+    "score_tensor": "/home/georgejammal/projects/try_and_change/outputs/qwen_arabic_onetoken_ocr_drift_120_min3_20260623/score_tensor.npz",
+    "auc_summary": "/home/georgejammal/projects/try_and_change/outputs/qwen_arabic_onetoken_ocr_drift_120_min3_20260623/auc_summary.json"
+  }
+}

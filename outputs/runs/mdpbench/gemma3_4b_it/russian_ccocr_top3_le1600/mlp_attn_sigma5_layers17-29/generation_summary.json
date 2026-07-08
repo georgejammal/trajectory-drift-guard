@@ -1,0 +1,17 @@
+{
+  "task": "mdpbench",
+  "model_alias": "gemma3_4b_it",
+  "language": "Russian",
+  "component_mode": "mlp_attn",
+  "sigma": 5.0,
+  "window": "17-29",
+  "run_name": "mlp_attn_sigma5_layers17-29",
+  "ccocr_micro": 56.43,
+  "num_selected_samples": 116,
+  "queued": 116,
+  "written_this_run": 116,
+  "prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/mdpbench/gemma3_4b_it/russian_ccocr_top3_le1600/mlp_attn_sigma5_layers17-29/predictions",
+  "mlp_selection": "/home/georgejammal/projects/parsing_neurons_repro/outputs/selections/ccocr/gemma3_4b_it/flores_en-to-russian/mlp_sigma5_layers17-29.json",
+  "attn_selection": "/home/georgejammal/projects/parsing_neurons_repro/outputs/selections/ccocr/gemma3_4b_it/flores_en-to-russian/attn_sigma5_layers17-29.json",
+  "elapsed_seconds": 259.06983733177185
+}

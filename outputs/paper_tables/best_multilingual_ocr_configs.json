@@ -1,0 +1,264 @@
+{
+  "description": "Best multilingual OCR results/configurations transcribed from the paper table. Scores are rounded as displayed in the table.",
+  "direction_source": "flores_en_to_target",
+  "selection_rule": "cosine_similarity >= sigma / sqrt(d_model)",
+  "intervention": "absolute_value_on_selected_scalar_activations",
+  "cc_ocr": {
+    "metric": "official micro F1",
+    "filter": {
+      "max_gold_tokens_exclusive": 500
+    }
+  },
+  "mdpbench": {
+    "metric": "official All score",
+    "filter": {
+      "gt_token_cap_multiplier": 1.2,
+      "max_gt_token_cap": 1600
+    }
+  },
+  "models": {
+    "gemma3_4b_it": {
+      "display_name": "Gemma-3-4B-IT",
+      "languages": {
+        "Arabic": {
+          "cc_ocr": {
+            "baseline": 71.3,
+            "ours": 74.1,
+            "relative_change_percent": 3.9
+          },
+          "mdpbench": {
+            "baseline": 30.4,
+            "ours": 31.7,
+            "relative_change_percent": 4.3
+          },
+          "config": {
+            "component": "mlp",
+            "uses_mlp": true,
+            "uses_attention_out": false,
+            "sigma": 2.5,
+            "window": "17-29"
+          }
+        },
+        "Japanese": {
+          "cc_ocr": {
+            "baseline": 50.8,
+            "ours": 53.9,
+            "relative_change_percent": 6.1
+          },
+          "mdpbench": {
+            "baseline": 29.0,
+            "ours": 29.5,
+            "relative_change_percent": 1.7
+          },
+          "config": {
+            "component": "mlp_attn",
+            "uses_mlp": true,
+            "uses_attention_out": true,
+            "sigma": 5.0,
+            "window": "17-29"
+          }
+        },
+        "Korean": {
+          "cc_ocr": {
+            "baseline": 43.0,
+            "ours": 52.6,
+            "relative_change_percent": 22.3
+          },
+          "mdpbench": {
+            "baseline": 20.3,
+            "ours": 22.5,
+            "relative_change_percent": 10.8
+          },
+          "config": {
+            "component": "mlp",
+            "uses_mlp": true,
+            "uses_attention_out": false,
+            "sigma": 5.0,
+            "window": "17-29"
+          }
+        },
+        "Russian": {
+          "cc_ocr": {
+            "baseline": 52.6,
+            "ours": 57.2,
+            "relative_change_percent": 8.7
+          },
+          "mdpbench": {
+            "baseline": 27.8,
+            "ours": 29.7,
+            "relative_change_percent": 6.8
+          },
+          "config": {
+            "component": "mlp_attn",
+            "uses_mlp": true,
+            "uses_attention_out": true,
+            "sigma": 5.0,
+            "window": "19-31"
+          }
+        }
+      }
+    },
+    "gemma3_12b_it": {
+      "display_name": "Gemma-3-12B-IT",
+      "languages": {
+        "Arabic": {
+          "cc_ocr": {
+            "baseline": 79.4,
+            "ours": 81.1,
+            "relative_change_percent": 2.1
+          },
+          "mdpbench": {
+            "baseline": 38.4,
+            "ours": 38.7,
+            "relative_change_percent": 0.8
+          },
+          "config": {
+            "component": "mlp_attn",
+            "uses_mlp": true,
+            "uses_attention_out": true,
+            "sigma": 3.5,
+            "window": "24-43"
+          }
+        },
+        "Japanese": {
+          "cc_ocr": {
+            "baseline": 64.3,
+            "ours": 66.0,
+            "relative_change_percent": 2.6
+          },
+          "mdpbench": {
+            "baseline": 36.4,
+            "ours": 37.4,
+            "relative_change_percent": 2.7
+          },
+          "config": {
+            "component": "mlp_attn",
+            "uses_mlp": true,
+            "uses_attention_out": true,
+            "sigma": 5.0,
+            "window": "24-44"
+          }
+        },
+        "Korean": {
+          "cc_ocr": {
+            "baseline": 61.3,
+            "ours": 63.6,
+            "relative_change_percent": 3.8
+          },
+          "mdpbench": {
+            "baseline": 26.2,
+            "ours": 26.1,
+            "relative_change_percent": -0.4
+          },
+          "config": {
+            "component": "mlp",
+            "uses_mlp": true,
+            "uses_attention_out": false,
+            "sigma": 3.5,
+            "window": "24-43"
+          }
+        },
+        "Russian": {
+          "cc_ocr": {
+            "baseline": 61.8,
+            "ours": 63.2,
+            "relative_change_percent": 2.3
+          },
+          "mdpbench": {
+            "baseline": 37.7,
+            "ours": 37.4,
+            "relative_change_percent": -0.8
+          },
+          "config": {
+            "component": "mlp_attn",
+            "uses_mlp": true,
+            "uses_attention_out": true,
+            "sigma": 5.0,
+            "window": "24-43"
+          }
+        }
+      }
+    },
+    "qwen3_vl_8b_instruct": {
+      "display_name": "Qwen3-VL-8B",
+      "languages": {
+        "Arabic": {
+          "cc_ocr": {
+            "baseline": 74.8,
+            "ours": 76.7,
+            "relative_change_percent": 2.5
+          },
+          "mdpbench": {
+            "baseline": 35.5,
+            "ours": 38.0,
+            "relative_change_percent": 7.0
+          },
+          "config": {
+            "component": "mlp_attn",
+            "uses_mlp": true,
+            "uses_attention_out": true,
+            "sigma": 3.5,
+            "window": "18-29"
+          }
+        },
+        "Japanese": {
+          "cc_ocr": {
+            "baseline": 56.0,
+            "ours": 58.9,
+            "relative_change_percent": 5.2
+          },
+          "mdpbench": {
+            "baseline": 56.4,
+            "ours": 54.5,
+            "relative_change_percent": -3.4
+          },
+          "config": {
+            "component": "mlp_attn",
+            "uses_mlp": true,
+            "uses_attention_out": true,
+            "sigma": 3.0,
+            "window": "18-29"
+          }
+        },
+        "Korean": {
+          "cc_ocr": {
+            "baseline": 63.2,
+            "ours": 67.8,
+            "relative_change_percent": 7.3
+          },
+          "mdpbench": {
+            "baseline": 41.7,
+            "ours": 42.8,
+            "relative_change_percent": 2.6
+          },
+          "config": {
+            "component": "mlp_attn",
+            "uses_mlp": true,
+            "uses_attention_out": true,
+            "sigma": 4.5,
+            "window": "18-29"
+          }
+        },
+        "Russian": {
+          "cc_ocr": {
+            "baseline": 77.7,
+            "ours": 78.4,
+            "relative_change_percent": 0.9
+          },
+          "mdpbench": {
+            "baseline": 47.0,
+            "ours": 48.6,
+            "relative_change_percent": 3.4
+          },
+          "config": {
+            "component": "mlp_attn",
+            "uses_mlp": true,
+            "uses_attention_out": true,
+            "sigma": 4.5,
+            "window": "18-29"
+          }
+        }
+      }
+    }
+  }
+}

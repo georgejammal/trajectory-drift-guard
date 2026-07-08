@@ -1,0 +1,16 @@
+{
+  "task": "mdpbench_arabic",
+  "model_alias": "gemma3_12b_it",
+  "component_mode": "mlp_attn",
+  "sigma": 3.5,
+  "window": "24-42",
+  "run_name": "mlp_attn_sigma3p5_layers24-42",
+  "ccocr_arabic_micro": 80.76,
+  "num_selected_samples": 148,
+  "queued": 148,
+  "written_this_run": 148,
+  "prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/mdpbench/gemma3_12b_it/arabic_ccocr_top3_le1600/mlp_attn_sigma3p5_layers24-42/predictions",
+  "mlp_selection": "/home/georgejammal/projects/parsing_neurons_repro/outputs/selections/ccocr/gemma3_12b_it/flores_en-to-arabic/mlp_sigma3p5_layers24-42.json",
+  "attn_selection": "/home/georgejammal/projects/parsing_neurons_repro/outputs/selections/ccocr/gemma3_12b_it/flores_en-to-arabic/attn_sigma3p5_layers24-42.json",
+  "elapsed_seconds": 972.7639882564545
+}

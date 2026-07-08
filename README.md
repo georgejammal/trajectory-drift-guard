@@ -57,6 +57,7 @@ Dataset defaults are resolved under `PARSING_NEURONS_DATA_ROOT`, defaulting to
 - `data/tallyqa_balanced`
 - `data/cc_ocr_dataset`
 - `data/flores_transfer_pairs/flores101_en_to_cc_ocr_languages_random500/pairs_by_language`
+- `data/ncwm` for INCLINE's News Commentary bridge data.
 
 Outputs are written under `PARSING_NEURONS_OUTPUT_ROOT`, defaulting to
 `outputs/`.
@@ -154,20 +155,35 @@ The repository links the original INCLINE code as a submodule under
 CC-OCR adaptation is in
 `src/parsing_neurons_repro/incline.py` and `scripts/run_incline_ccocr.py`.
 
-This wrapper reproduces INCLINE's core operation: from parallel FLORES
-English/target-language text, it collects per-layer MLP module outputs, fits a
+This wrapper reproduces INCLINE's core operation: from parallel News
+Commentary English/target-language text, it collects per-layer MLP module outputs, fits a
 least-squares map from target-language MLP outputs to English MLP outputs, and
 patches the MLP output at the final prompt token during CC-OCR generation.
 Bridge examples longer than `--bridge-max-length` are skipped rather than
 truncated, matching the released INCLINE scripts, and bridge factors are stored
 in float32.
 
+Materialize the public OPUS News-Commentary v16 downloads into the
+`data/ncwm/en-{lang}/train.en` and `train.{lang}` layout used by the released
+INCLINE scripts. The released scripts iterate only over `ind < 500`, so the
+materializer writes the first 500 aligned pairs by default:
+
+```bash
+PYTHONPATH=src python3 scripts/materialize_news_commentary_ncwm.py \
+  --languages Arabic,Japanese,Russian
+```
+
+News Commentary v16 does not provide a Korean-English pair, so Korean INCLINE
+comparisons require either a different bridge corpus or should be marked as not
+available for the same-dataset baseline.
+
 Example run:
 
 ```bash
 PYTHONPATH=src /home/georgejammal/projects/a100env/bin/python scripts/run_incline_ccocr.py \
   --models gemma3_4b_it \
-  --languages Arabic,Japanese,Korean,Russian \
+  --languages Arabic,Japanese,Russian \
+  --bridge-source news_commentary \
   --stats-layers all \
   --intervention-windows all \
   --sigmas=-1,-0.9,-0.8,-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.1,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1 \
@@ -176,10 +192,12 @@ PYTHONPATH=src /home/georgejammal/projects/a100env/bin/python scripts/run_inclin
 ```
 
 For the paper comparison, use the validation-first protocol. INCLINE's
-alignment maps are learned from 500 FLORES English-target pairs, the
+alignment maps are learned from 500 News Commentary English-target pairs, the
 intervention strength is selected on 200 ICDAR2019 RRC-MLT validation images
-for Arabic/Japanese/Korean, and the Russian strength is set to the mean selected
-value because ICDAR2019 does not include Russian. The selected strengths are
+for Arabic/Japanese, and the Russian strength is set to the mean selected
+value because ICDAR2019 does not include Russian. Korean is omitted from the
+same-dataset INCLINE comparison because News Commentary does not contain an
+English-Korean pair. The selected strengths are
 then evaluated on CC-OCR and MDPBench.
 
 If the official RRC download is unavailable, materialize the Hugging Face

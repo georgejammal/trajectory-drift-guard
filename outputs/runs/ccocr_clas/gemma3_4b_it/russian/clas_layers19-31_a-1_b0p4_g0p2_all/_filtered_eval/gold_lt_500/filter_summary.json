@@ -1,0 +1,7 @@
+{
+  "Russian": {
+    "max_gold_tokens_exclusive": 500,
+    "kept": 144,
+    "excluded": 6
+  }
+}

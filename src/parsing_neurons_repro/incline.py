@@ -11,6 +11,13 @@ from .io import read_json, window_layers, write_json
 from .models import decoder_layers
 
 
+NCWM_LANGUAGE_CODES = {
+    "Arabic": "ar",
+    "Japanese": "ja",
+    "Russian": "ru",
+}
+
+
 def _untuple(output: Any) -> torch.Tensor:
     return output[0] if isinstance(output, tuple) else output
 
@@ -234,7 +241,29 @@ def load_bridge(path: Path) -> dict[str, Any]:
     return torch.load(path, map_location="cpu", weights_only=False)
 
 
-def ensure_flores_bridge(
+def load_parallel_ncwm_texts(*, ncwm_root: Path, language: str, max_samples: int = 500) -> tuple[list[str], list[str]]:
+    if language not in NCWM_LANGUAGE_CODES:
+        raise ValueError(
+            f"News Commentary bridge data is not available for {language!r}. "
+            f"Available languages in this setup: {sorted(NCWM_LANGUAGE_CODES)}"
+        )
+    code = NCWM_LANGUAGE_CODES[language]
+    pair_root = ncwm_root / f"en-{code}"
+    english_path = pair_root / "train.en"
+    target_path = pair_root / f"train.{code}"
+    if not english_path.exists() or not target_path.exists():
+        raise FileNotFoundError(
+            f"Missing News Commentary bridge files for {language}: expected "
+            f"{english_path} and {target_path}. Run scripts/materialize_news_commentary_ncwm.py first."
+        )
+    english = [line.rstrip("\n") for line in english_path.read_text(encoding="utf-8").splitlines()]
+    target = [line.rstrip("\n") for line in target_path.read_text(encoding="utf-8").splitlines()]
+    paired = [(en.strip(), tgt.strip()) for en, tgt in zip(english, target)]
+    paired = paired[:max_samples]
+    return [en for en, _ in paired], [tgt for _, tgt in paired]
+
+
+def ensure_text_bridge(
     *,
     model_alias: str,
     model: Any,
@@ -242,7 +271,9 @@ def ensure_flores_bridge(
     language: str,
     layers: list[int] | str,
     output_path: Path,
-    flores_root: Path,
+    english: list[str],
+    target: list[str],
+    source_name: str,
     max_samples: int = 500,
     batch_size: int = 4,
     max_length: int = 512,
@@ -253,14 +284,8 @@ def ensure_flores_bridge(
     if output_path.exists() and not force:
         return output_path
     layer_list = window_layers(layers) if isinstance(layers, str) else [int(layer) for layer in layers]
-    texts_by_language = load_parallel_flores_texts(
-        flores_root=flores_root,
-        languages=[language],
-        max_samples=max_samples,
-        anchor_language="English",
-    )
-    english = texts_by_language["English"]
-    target = texts_by_language[language]
+    english = english[:max_samples]
+    target = target[:max_samples]
     english, target = incline_training_texts(english, target)
     num_constructed = len(english)
     english, target, skipped = filter_bridge_text_pairs(
@@ -270,7 +295,7 @@ def ensure_flores_bridge(
         max_length=max_length,
     )
     print(
-        f"[incline:bridge] kept {len(english)}/{num_constructed} bridge pairs "
+        f"[incline:bridge] kept {len(english)}/{num_constructed} {source_name} bridge pairs "
         f"for {model_alias}/{language}; skipped {skipped} longer than {max_length} tokens",
         flush=True,
     )
@@ -305,6 +330,7 @@ def ensure_flores_bridge(
         {
             "model_alias": model_alias,
             "language": language,
+            "source_name": source_name,
             "layers": layer_list,
             "num_samples": len(english),
             "num_constructed_samples": num_constructed,
@@ -316,6 +342,88 @@ def ensure_flores_bridge(
         },
     )
     return output_path
+
+
+def ensure_ncwm_bridge(
+    *,
+    model_alias: str,
+    model: Any,
+    tokenizer: Any,
+    language: str,
+    layers: list[int] | str,
+    output_path: Path,
+    ncwm_root: Path,
+    max_samples: int = 500,
+    batch_size: int = 4,
+    max_length: int = 512,
+    token_scope: str = "all_nonpad",
+    ridge: float = 0.0,
+    force: bool = False,
+) -> Path:
+    english, target = load_parallel_ncwm_texts(ncwm_root=ncwm_root, language=language, max_samples=max_samples)
+    return ensure_text_bridge(
+        model_alias=model_alias,
+        model=model,
+        tokenizer=tokenizer,
+        language=language,
+        layers=layers,
+        output_path=output_path,
+        english=english,
+        target=target,
+        source_name="news_commentary_v16",
+        max_samples=max_samples,
+        batch_size=batch_size,
+        max_length=max_length,
+        token_scope=token_scope,
+        ridge=ridge,
+        force=force,
+    )
+
+
+def ensure_flores_bridge(
+    *,
+    model_alias: str,
+    model: Any,
+    tokenizer: Any,
+    language: str,
+    layers: list[int] | str,
+    output_path: Path,
+    flores_root: Path,
+    max_samples: int = 500,
+    batch_size: int = 4,
+    max_length: int = 512,
+    token_scope: str = "all_nonpad",
+    ridge: float = 0.0,
+    force: bool = False,
+) -> Path:
+    if output_path.exists() and not force:
+        return output_path
+    layer_list = window_layers(layers) if isinstance(layers, str) else [int(layer) for layer in layers]
+    texts_by_language = load_parallel_flores_texts(
+        flores_root=flores_root,
+        languages=[language],
+        max_samples=max_samples,
+        anchor_language="English",
+    )
+    english = texts_by_language["English"]
+    target = texts_by_language[language]
+    return ensure_text_bridge(
+        model_alias=model_alias,
+        model=model,
+        tokenizer=tokenizer,
+        language=language,
+        layers=layer_list,
+        output_path=output_path,
+        english=english,
+        target=target,
+        source_name="flores",
+        max_samples=max_samples,
+        batch_size=batch_size,
+        max_length=max_length,
+        token_scope=token_scope,
+        ridge=ridge,
+        force=force,
+    )
 
 
 class INCLINEIntervention:

@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-05-31T14:04:23.375036+00:00",
+  "model_alias": "llama3p2_3b_instruct",
+  "model_path": "/home/georgejammal/.cache/huggingface/hub/models--meta-llama--Llama-3.2-3B-Instruct/snapshots/0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "sample_set": "/home/georgejammal/projects/semantic-to-symbolic/safeguard_eval/sample_sets/benign_utility_katz_style_seed0_n100.jsonl",
+  "sample_count": 400,
+  "seed": 0,
+  "samples_per_benchmark": 100,
+  "batch_size": 128,
+  "max_new_tokens": 512,
+  "neuron_set": "/home/georgejammal/projects/semantic-to-symbolic/safeguard_logit_lens/neuron_sets/llama3p2_3b_instruct_refusal_minus_answerability_top1000_layers14_27.json",
+  "protocol": "Katz-style benign QA check: PIQA, OpenBookQA, Social IQA, ARC; accuracy and refusal rate.",
+  "intervention_neuron_metadata": {
+    "path": "/home/georgejammal/projects/semantic-to-symbolic/safeguard_logit_lens/neuron_sets/llama3p2_3b_instruct_refusal_minus_answerability_top1000_layers14_27.json",
+    "top_k": 1000,
+    "loaded": 1000,
+    "score_key": "cosine_similarity",
+    "score_weighting": "none",
+    "source_direction": "refusal_minus_answerability",
+    "source_score_definition": "cosine_similarity(down_proj[:, neuron], mean_family_a_unembed - mean_family_b_unembed)",
+    "layer_counts": {
+      "14": 109,
+      "15": 99,
+      "16": 81,
+      "17": 87,
+      "18": 74,
+      "19": 84,
+      "20": 85,
+      "21": 64,
+      "22": 63,
+      "23": 53,
+      "24": 54,
+      "25": 58,
+      "26": 39,
+      "27": 50
+    }
+  }
+}

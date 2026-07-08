@@ -1,0 +1,42 @@
+{
+  "baseline_accuracy": 0.66,
+  "intervention_accuracy": 0.65,
+  "accuracy_delta": -0.010000000000000009,
+  "baseline_refusal_rate": 0.0075,
+  "intervention_refusal_rate": 0.005,
+  "refusal_rate_delta": -0.0024999999999999996,
+  "by_benchmark": {
+    "arc_challenge": {
+      "baseline_accuracy": 0.57,
+      "intervention_accuracy": 0.56,
+      "accuracy_delta": -0.009999999999999898,
+      "baseline_refusal_rate": 0.0,
+      "intervention_refusal_rate": 0.0,
+      "refusal_rate_delta": 0.0
+    },
+    "openbookqa": {
+      "baseline_accuracy": 0.73,
+      "intervention_accuracy": 0.74,
+      "accuracy_delta": 0.010000000000000009,
+      "baseline_refusal_rate": 0.0,
+      "intervention_refusal_rate": 0.0,
+      "refusal_rate_delta": 0.0
+    },
+    "piqa": {
+      "baseline_accuracy": 0.72,
+      "intervention_accuracy": 0.69,
+      "accuracy_delta": -0.030000000000000027,
+      "baseline_refusal_rate": 0.01,
+      "intervention_refusal_rate": 0.01,
+      "refusal_rate_delta": 0.0
+    },
+    "siqa": {
+      "baseline_accuracy": 0.62,
+      "intervention_accuracy": 0.61,
+      "accuracy_delta": -0.010000000000000009,
+      "baseline_refusal_rate": 0.02,
+      "intervention_refusal_rate": 0.01,
+      "refusal_rate_delta": -0.01
+    }
+  }
+}

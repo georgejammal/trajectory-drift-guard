@@ -1,0 +1,48 @@
+{
+  "created_utc": "2026-06-14T09:34:26.924688+00:00",
+  "run_id": "gemma3_single_token_align_tree_gatepos_max512_bs20_20260614",
+  "model_path": "/home/georgejammal/.cache/huggingface/hub/models--google--gemma-3-4b-it/snapshots/093f9f388b31de276ce2de164bdc2081324b9767",
+  "neuron_json": "/home/georgejammal/projects/semantic-to-symbolic/safeguard_logit_lens/neuron_sets/gemma3_4b_it_refusal_minus_answerability_single_token_top1000_layers17_33.json",
+  "sample_source": "/home/georgejammal/projects/semantic-to-symbolic/external/AlignTree/dataset/processed",
+  "n_test_per_dataset": 100,
+  "sample_count": 400,
+  "counts_by_benchmark": {
+    "autodan": 100,
+    "malwaregen": 100,
+    "pair": 100,
+    "promptinject": 100
+  },
+  "generation": {
+    "batch_size": 20,
+    "max_new_tokens": 512,
+    "do_sample": false
+  },
+  "gate_positive_only": true,
+  "conditions": [
+    {
+      "name": "single_token_refusal_minus_answerability_layers17_33_abs",
+      "layer_label": "layers17_33",
+      "layers": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "mode": "abs",
+      "scale_factor": 1.0
+    }
+  ]
+}

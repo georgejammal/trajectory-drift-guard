@@ -1,0 +1,14 @@
+{
+  "output_jsonl": "/home/georgejammal/projects/try_and_change/security_drift/sample_sets/benign_utility_katz_style_seed0_n100.jsonl",
+  "total": 400,
+  "malicious": 0,
+  "benign": 400,
+  "benchmarks": [
+    "malwaregen",
+    "promptinject"
+  ],
+  "malicious_per_benchmark": 0,
+  "benign_per_benchmark": 100,
+  "label_jsonl": null,
+  "completion_jsonl": null
+}

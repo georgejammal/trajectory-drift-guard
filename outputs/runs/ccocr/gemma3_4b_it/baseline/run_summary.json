@@ -1,0 +1,80 @@
+{
+  "task": "ccocr",
+  "component_mode": "baseline",
+  "languages": [
+    "Arabic",
+    "Japanese",
+    "Korean",
+    "Russian"
+  ],
+  "max_gold_tokens_exclusive": 500,
+  "datasets": [
+    {
+      "task": "ccocr",
+      "language": "Arabic",
+      "component_mode": "baseline",
+      "queued": 0,
+      "written_this_run": 0,
+      "expected": 150,
+      "batch_size": 300,
+      "max_new_tokens": 512,
+      "gold_token_filter": {
+        "max_gold_tokens_exclusive": 500,
+        "kept": 0,
+        "excluded": 2
+      },
+      "elapsed_seconds": 1.0251998901367188e-05
+    },
+    {
+      "task": "ccocr",
+      "language": "Japanese",
+      "component_mode": "baseline",
+      "queued": 0,
+      "written_this_run": 0,
+      "expected": 150,
+      "batch_size": 300,
+      "max_new_tokens": 512,
+      "gold_token_filter": {
+        "max_gold_tokens_exclusive": 500,
+        "kept": 0,
+        "excluded": 7
+      },
+      "elapsed_seconds": 8.821487426757812e-06
+    },
+    {
+      "task": "ccocr",
+      "language": "Korean",
+      "component_mode": "baseline",
+      "queued": 0,
+      "written_this_run": 0,
+      "expected": 150,
+      "batch_size": 300,
+      "max_new_tokens": 512,
+      "gold_token_filter": {
+        "max_gold_tokens_exclusive": 500,
+        "kept": 0,
+        "excluded": 3
+      },
+      "elapsed_seconds": 8.344650268554688e-06
+    },
+    {
+      "task": "ccocr",
+      "language": "Russian",
+      "component_mode": "baseline",
+      "queued": 0,
+      "written_this_run": 0,
+      "expected": 150,
+      "batch_size": 300,
+      "max_new_tokens": 512,
+      "gold_token_filter": {
+        "max_gold_tokens_exclusive": 500,
+        "kept": 0,
+        "excluded": 6
+      },
+      "elapsed_seconds": 6.9141387939453125e-06
+    }
+  ],
+  "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_4b_it/baseline/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+  "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_4b_it/baseline/_filtered_eval/gold_lt_500/predictions",
+  "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr/gemma3_4b_it/baseline/_filtered_eval/gold_lt_500/summary.md"
+}

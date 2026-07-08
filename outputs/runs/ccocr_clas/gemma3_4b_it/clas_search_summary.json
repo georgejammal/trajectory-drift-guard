@@ -1,0 +1,962 @@
+[
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers17-29_a-5_b0p4_g0p2_all",
+    "languages": [
+      "Arabic"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Arabic",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers17-29_a-5_b0p4_g0p2_all",
+        "queued": 148,
+        "written_this_run": 148,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 148,
+          "excluded": 2
+        },
+        "elapsed_seconds": 107.33416724205017
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a-5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a-5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a-5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Arabic",
+      "window": "17-29",
+      "alpha": -5.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers17-29_a-3_b0p4_g0p2_all",
+    "languages": [
+      "Arabic"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Arabic",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers17-29_a-3_b0p4_g0p2_all",
+        "queued": 148,
+        "written_this_run": 148,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 148,
+          "excluded": 2
+        },
+        "elapsed_seconds": 106.76256465911865
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a-3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a-3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a-3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Arabic",
+      "window": "17-29",
+      "alpha": -3.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers17-29_a-1_b0p4_g0p2_all",
+    "languages": [
+      "Arabic"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Arabic",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers17-29_a-1_b0p4_g0p2_all",
+        "queued": 148,
+        "written_this_run": 148,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 148,
+          "excluded": 2
+        },
+        "elapsed_seconds": 106.63894987106323
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a-1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a-1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a-1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Arabic",
+      "window": "17-29",
+      "alpha": -1.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers17-29_a1_b0p4_g0p2_all",
+    "languages": [
+      "Arabic"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Arabic",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers17-29_a1_b0p4_g0p2_all",
+        "queued": 148,
+        "written_this_run": 148,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 148,
+          "excluded": 2
+        },
+        "elapsed_seconds": 106.73543119430542
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Arabic",
+      "window": "17-29",
+      "alpha": 1.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers17-29_a3_b0p4_g0p2_all",
+    "languages": [
+      "Arabic"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Arabic",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers17-29_a3_b0p4_g0p2_all",
+        "queued": 148,
+        "written_this_run": 148,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 148,
+          "excluded": 2
+        },
+        "elapsed_seconds": 106.85704112052917
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Arabic",
+      "window": "17-29",
+      "alpha": 3.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers17-29_a5_b0p4_g0p2_all",
+    "languages": [
+      "Arabic"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Arabic",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers17-29_a5_b0p4_g0p2_all",
+        "queued": 148,
+        "written_this_run": 148,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 148,
+          "excluded": 2
+        },
+        "elapsed_seconds": 106.88437128067017
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers17-29_a5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Arabic",
+      "window": "17-29",
+      "alpha": 5.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers19-31_a-5_b0p4_g0p2_all",
+    "languages": [
+      "Arabic"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Arabic",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers19-31_a-5_b0p4_g0p2_all",
+        "queued": 148,
+        "written_this_run": 148,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 148,
+          "excluded": 2
+        },
+        "elapsed_seconds": 106.93451380729675
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a-5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a-5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a-5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Arabic",
+      "window": "19-31",
+      "alpha": -5.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers19-31_a-3_b0p4_g0p2_all",
+    "languages": [
+      "Arabic"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Arabic",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers19-31_a-3_b0p4_g0p2_all",
+        "queued": 148,
+        "written_this_run": 148,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 148,
+          "excluded": 2
+        },
+        "elapsed_seconds": 106.54533171653748
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a-3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a-3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a-3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Arabic",
+      "window": "19-31",
+      "alpha": -3.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers19-31_a-1_b0p4_g0p2_all",
+    "languages": [
+      "Arabic"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Arabic",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers19-31_a-1_b0p4_g0p2_all",
+        "queued": 148,
+        "written_this_run": 148,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 148,
+          "excluded": 2
+        },
+        "elapsed_seconds": 96.2598488330841
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a-1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a-1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a-1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Arabic",
+      "window": "19-31",
+      "alpha": -1.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers19-31_a1_b0p4_g0p2_all",
+    "languages": [
+      "Arabic"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Arabic",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers19-31_a1_b0p4_g0p2_all",
+        "queued": 148,
+        "written_this_run": 148,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 148,
+          "excluded": 2
+        },
+        "elapsed_seconds": 106.88061380386353
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Arabic",
+      "window": "19-31",
+      "alpha": 1.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers19-31_a3_b0p4_g0p2_all",
+    "languages": [
+      "Arabic"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Arabic",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers19-31_a3_b0p4_g0p2_all",
+        "queued": 148,
+        "written_this_run": 148,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 148,
+          "excluded": 2
+        },
+        "elapsed_seconds": 107.1414270401001
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Arabic",
+      "window": "19-31",
+      "alpha": 3.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers19-31_a5_b0p4_g0p2_all",
+    "languages": [
+      "Arabic"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Arabic",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers19-31_a5_b0p4_g0p2_all",
+        "queued": 148,
+        "written_this_run": 148,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 148,
+          "excluded": 2
+        },
+        "elapsed_seconds": 106.93336415290833
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/arabic/clas_layers19-31_a5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Arabic",
+      "window": "19-31",
+      "alpha": 5.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers17-29_a-5_b0p4_g0p2_all",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers17-29_a-5_b0p4_g0p2_all",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 104.12117052078247
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a-5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a-5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a-5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Russian",
+      "window": "17-29",
+      "alpha": -5.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers17-29_a-3_b0p4_g0p2_all",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers17-29_a-3_b0p4_g0p2_all",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 77.86170673370361
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a-3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a-3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a-3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Russian",
+      "window": "17-29",
+      "alpha": -3.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers17-29_a-1_b0p4_g0p2_all",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers17-29_a-1_b0p4_g0p2_all",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 57.83322501182556
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a-1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a-1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a-1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Russian",
+      "window": "17-29",
+      "alpha": -1.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers17-29_a1_b0p4_g0p2_all",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers17-29_a1_b0p4_g0p2_all",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 58.36857891082764
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Russian",
+      "window": "17-29",
+      "alpha": 1.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers17-29_a3_b0p4_g0p2_all",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers17-29_a3_b0p4_g0p2_all",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 78.83813548088074
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Russian",
+      "window": "17-29",
+      "alpha": 3.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers17-29_a5_b0p4_g0p2_all",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers17-29_a5_b0p4_g0p2_all",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 79.00615072250366
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers17-29_a5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Russian",
+      "window": "17-29",
+      "alpha": 5.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers19-31_a-5_b0p4_g0p2_all",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers19-31_a-5_b0p4_g0p2_all",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 103.825523853302
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a-5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a-5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a-5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Russian",
+      "window": "19-31",
+      "alpha": -5.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers19-31_a-3_b0p4_g0p2_all",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers19-31_a-3_b0p4_g0p2_all",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 77.93305444717407
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a-3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a-3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a-3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Russian",
+      "window": "19-31",
+      "alpha": -3.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers19-31_a-1_b0p4_g0p2_all",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers19-31_a-1_b0p4_g0p2_all",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 57.08215665817261
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a-1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a-1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a-1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Russian",
+      "window": "19-31",
+      "alpha": -1.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers19-31_a1_b0p4_g0p2_all",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers19-31_a1_b0p4_g0p2_all",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 64.91016912460327
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a1_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Russian",
+      "window": "19-31",
+      "alpha": 1.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers19-31_a3_b0p4_g0p2_all",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers19-31_a3_b0p4_g0p2_all",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 78.2332763671875
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a3_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Russian",
+      "window": "19-31",
+      "alpha": 3.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  },
+  {
+    "task": "ccocr",
+    "component_mode": "clas",
+    "scalar_mode": "clas_layers19-31_a5_b0p4_g0p2_all",
+    "languages": [
+      "Russian"
+    ],
+    "max_gold_tokens_exclusive": 500,
+    "datasets": [
+      {
+        "task": "ccocr",
+        "language": "Russian",
+        "component_mode": "clas",
+        "scalar_mode": "clas_layers19-31_a5_b0p4_g0p2_all",
+        "queued": 144,
+        "written_this_run": 144,
+        "expected": 150,
+        "batch_size": 64,
+        "max_new_tokens": 512,
+        "gold_token_filter": {
+          "max_gold_tokens_exclusive": 500,
+          "kept": 144,
+          "excluded": 6
+        },
+        "elapsed_seconds": 105.10992550849915
+      }
+    ],
+    "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+    "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/predictions",
+    "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/ccocr_clas/gemma3_4b_it/russian/clas_layers19-31_a5_b0p4_g0p2_all/_filtered_eval/gold_lt_500/summary.md",
+    "clas": {
+      "stats_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/clas/stats/gemma3_4b_it/xquad_langs-english-arabic-german-greek-spanish-hindi-romanian-russian-thai-turkish-vietnamese-chinese_layers17-33_tau0_last_nonpad_mean_n100/stats.json",
+      "language": "Russian",
+      "window": "19-31",
+      "alpha": 5.0,
+      "beta": 0.4,
+      "gamma": 0.2,
+      "specific_scope": "all"
+    }
+  }
+]

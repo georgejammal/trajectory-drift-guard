@@ -1,0 +1,93 @@
+{
+  "created_utc": "2026-06-14T07:29:36.276946+00:00",
+  "run_id": "gemma3_single_token_align_tree_gatepos_max512_bs20_20260614",
+  "model_alias": "gemma3_4b_it",
+  "model_path": "/home/georgejammal/.cache/huggingface/hub/models--google--gemma-3-4b-it/snapshots/093f9f388b31de276ce2de164bdc2081324b9767",
+  "sample_source": "AlignTree dataset/processed malicious datasets, first n_test rows",
+  "sample_count": 400,
+  "prompting": "AlignTree Gemma chat template, include trailing model turn newline",
+  "generation": {
+    "batch_size": 20,
+    "max_new_tokens": 512,
+    "do_sample": false
+  },
+  "condition": {
+    "name": "single_token_refusal_minus_answerability_layers17_33_abs",
+    "layer_label": "layers17_33",
+    "layers": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "mode": "abs",
+    "scale_factor": 1.0
+  },
+  "intervention": {
+    "mode": "abs",
+    "scale_factor": 1.0,
+    "gate_positive_only": true,
+    "site": "model.model.language_model.layers[*].mlp gated intermediate before down_proj",
+    "token_scope": "all prompt positions and all autoregressive generation steps",
+    "neuron_metadata": {
+      "path": "/home/georgejammal/projects/semantic-to-symbolic/safeguard_logit_lens/neuron_sets/gemma3_4b_it_refusal_minus_answerability_single_token_top1000_layers17_33.json",
+      "source_direction": "refusal_minus_answerability_single_token",
+      "source_score_definition": "cosine_similarity(down_proj[:, neuron], mean_single_token_refusal_unembed - mean_single_token_answerability_unembed)",
+      "source_top_k": 1000,
+      "selected_layers": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "loaded": 1000,
+      "score_key": "cosine_similarity",
+      "score_weighting": "none",
+      "layer_counts": {
+        "17": 96,
+        "18": 104,
+        "19": 91,
+        "20": 89,
+        "21": 67,
+        "22": 79,
+        "23": 64,
+        "24": 57,
+        "25": 55,
+        "26": 43,
+        "27": 32,
+        "28": 36,
+        "29": 31,
+        "30": 30,
+        "31": 41,
+        "32": 46,
+        "33": 39
+      }
+    }
+  }
+}

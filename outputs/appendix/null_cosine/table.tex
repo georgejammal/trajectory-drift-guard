@@ -1,0 +1,98 @@
+\subsection{Empirical Validation of the Isotropic Null}
+\label{app:null-cosine-validation}
+
+Our neuron-selection rule assumes that, under a null hypothesis in which a
+parsing direction is unrelated to an MLP neuron, the cosine alignment between
+the two behaves like the cosine between independent random vectors in
+\(\mathbb{R}^{d_{\mathrm{model}}}\). In particular, for a unit direction \(d\)
+and an MLP output-weight neuron \(v_{\ell,n}\), we use
+\[
+    s_{\ell,n}
+    =
+    \frac{\langle d, v_{\ell,n}\rangle}
+    {\|d\|_2\|v_{\ell,n}\|_2},
+\]
+and approximate the null distribution by
+\[
+    s_{\ell,n}
+    \approx
+    \mathcal{N}\!\left(0,\frac{1}{d_{\mathrm{model}}}\right).
+\]
+This gives the threshold
+\[
+    \tau_\kappa = \frac{\kappa}{\sqrt{d_{\mathrm{model}}}},
+\]
+so that selecting neurons with \(s_{\ell,n}>\tau_\kappa\) corresponds to a
+right-tail test against the isotropic null.
+
+To test this approximation empirically, we performed a static weight-only
+experiment. For each model, we loaded the MLP output projection matrices from
+the upper half of the text decoder. If the model has \(L\) decoder layers, we
+use layers \(\ell\in\{L/2,\ldots,L-1\}\). For each layer, we view the MLP
+output projection as
+\[
+    W^{\mathrm{down}}_\ell
+    \in
+    \mathbb{R}^{d_{\mathrm{model}}\times d_{\mathrm{ff}}},
+\]
+and treat each column
+\[
+    v_{\ell,n}=W^{\mathrm{down}}_{\ell,:,n}
+\]
+as one MLP neuron. We then sample 128 random directions per model under two
+null sources. The first source is Gaussian:
+\[
+    z_i\sim\mathcal{N}(0,I),
+    \qquad
+    d_i=\frac{z_i}{\|z_i\|_2}.
+\]
+The second source is closer to our task-direction construction: we sample two
+random vocabulary tokens \(a_i,b_i\), take their embedding vectors, and form
+\[
+    d_i
+    =
+    \frac{e(a_i)-e(b_i)}
+    {\|e(a_i)-e(b_i)\|_2}.
+\]
+For every sampled direction \(d_i\), every upper-half layer \(\ell\), and every
+MLP neuron \(n\), we compute \(s_{\ell,n,i}=\cos(d_i,v_{\ell,n})\). We then
+compare the empirical standard deviation and right-tail mass to the theoretical
+null prediction \(1/\sqrt{d_{\mathrm{model}}}\).
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llrrrrr}
+\toprule
+Model & Source & \(d_{\mathrm{model}}\) & Layers & Std. & \(1/\sqrt{d}\) & \(\Pr[s>3/\sqrt{d}]\) \\
+\midrule
+Gemma-3-4B-IT & Gaussian & 2560 & 17--33 & 0.01976 & 0.01976 & 0.00134 \\
+Gemma-3-4B-IT & Embed. pairs & 2560 & 17--33 & 0.01966 & 0.01976 & 0.00178 \\
+Gemma-3-12B-IT & Gaussian & 3840 & 24--47 & 0.01614 & 0.01614 & 0.00135 \\
+Gemma-3-12B-IT & Embed. pairs & 3840 & 24--47 & 0.01629 & 0.01614 & 0.00212 \\
+Qwen2.5-VL-3B & Gaussian & 2048 & 18--35 & 0.02209 & 0.02210 & 0.00134 \\
+Qwen2.5-VL-3B & Embed. pairs & 2048 & 18--35 & 0.02208 & 0.02210 & 0.00157 \\
+Qwen3-VL-8B & Gaussian & 4096 & 18--35 & 0.01562 & 0.01562 & 0.00135 \\
+Qwen3-VL-8B & Embed. pairs & 4096 & 18--35 & 0.01560 & 0.01562 & 0.00131 \\
+\bottomrule
+\end{tabular}%
+}
+\caption{Empirical null distribution of cosine alignment between random
+model-space directions and MLP output-weight neurons in upper-half layers.
+Gaussian unit directions match the theoretical standard deviation
+\(1/\sqrt{d_{\mathrm{model}}}\) almost exactly. Random token-embedding-pair
+directions are also close, with slightly heavier tails in some models.}
+\label{tab:null-cosine-validation}
+\end{table}
+
+The Gaussian null matches the theoretical prediction almost exactly across all
+models: the empirical standard deviation is equal to \(1/\sqrt{d_{\mathrm{model}}}\)
+up to rounding, and the empirical \(3\sigma\) right-tail probability is about
+\(1.35\times 10^{-3}\), as expected for a standard normal tail. Random
+embedding-pair directions also remain close to the same scale. The mild
+increase in the \(3\sigma\) tail for some Gemma embedding-pair directions
+suggests that embedding-derived directions are not perfectly isotropic, but the
+null scale remains accurate. We therefore use \(\kappa/\sqrt{d_{\mathrm{model}}}\)
+as a model-size-corrected significance threshold for static neuron selection.

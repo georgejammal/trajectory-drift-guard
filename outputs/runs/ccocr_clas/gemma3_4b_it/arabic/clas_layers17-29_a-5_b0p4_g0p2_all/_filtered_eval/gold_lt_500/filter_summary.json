@@ -1,0 +1,7 @@
+{
+  "Arabic": {
+    "max_gold_tokens_exclusive": 500,
+    "kept": 148,
+    "excluded": 2
+  }
+}

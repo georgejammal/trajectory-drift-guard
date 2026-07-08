@@ -1,0 +1,31 @@
+{
+  "task": "ccocr",
+  "component_mode": "mlp_attn",
+  "scalar_mode": "scaled_abs_1p2",
+  "languages": [
+    "Russian"
+  ],
+  "max_gold_tokens_exclusive": 500,
+  "datasets": [
+    {
+      "task": "ccocr",
+      "language": "Russian",
+      "component_mode": "mlp_attn",
+      "scalar_mode": "scaled_abs_1p2",
+      "queued": 144,
+      "written_this_run": 144,
+      "expected": 150,
+      "batch_size": 16,
+      "max_new_tokens": 512,
+      "gold_token_filter": {
+        "max_gold_tokens_exclusive": 500,
+        "kept": 144,
+        "excluded": 6
+      },
+      "elapsed_seconds": 160.0158977508545
+    }
+  ],
+  "filtered_eval_index_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/scalar_ablation/ccocr/gemma3_12b_it/russian/mlp_attn_sigma5_layers24-43/scaled_abs_1p2/_filtered_eval/gold_lt_500/index/multi_lan_ocr.json",
+  "filtered_eval_prediction_dir": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/scalar_ablation/ccocr/gemma3_12b_it/russian/mlp_attn_sigma5_layers24-43/scaled_abs_1p2/_filtered_eval/gold_lt_500/predictions",
+  "cc_ocr_summary_path": "/home/georgejammal/projects/parsing_neurons_repro/outputs/runs/scalar_ablation/ccocr/gemma3_12b_it/russian/mlp_attn_sigma5_layers24-43/scaled_abs_1p2/_filtered_eval/gold_lt_500/summary.md"
+}

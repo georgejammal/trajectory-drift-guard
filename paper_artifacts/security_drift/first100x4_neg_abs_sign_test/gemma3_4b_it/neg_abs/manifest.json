@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-06-17T21:35:43.834032+00:00",
+  "run_id": "first100x4_neg_abs_sign_test",
+  "model_alias": "gemma3_4b_it",
+  "condition": {
+    "name": "neg_abs",
+    "mode": "neg_abs",
+    "layers": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ]
+  },
+  "sample_count": 400,
+  "manifest_jsonl": "try_and_change/security_drift/sample_sets/first100_pair_promptinject_malwaregen_autodan.jsonl"
+}

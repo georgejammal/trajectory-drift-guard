@@ -6,7 +6,7 @@ from typing import Any
 
 import torch
 
-from .directions import counting_direction, flores_direction
+from .directions import counting_direction, flores_direction, news_commentary_direction
 from .io import clean_float, parse_csv, parse_float_grid, slug_parts, write_json
 from .models import load_processor, load_tensor, load_tokenizer, load_vlm, model_spec, weight_map, weight_templates
 from .scoring import score_static_components
@@ -224,6 +224,8 @@ def run_ccocr_search(
     component_modes: list[str],
     languages: list[str],
     flores_root: Path,
+    direction_source: str,
+    ncwm_root: Path,
     batch_size: int,
     limit: int | None,
     max_new_tokens: int,
@@ -262,16 +264,28 @@ def run_ccocr_search(
         )
 
     for language in languages:
-        pairs_path = flores_root / f"en_to_{language.lower()}.json"
-        direction, direction_metadata = flores_direction(
-            tokenizer,
-            embedding,
-            pairs_path=pairs_path,
-            source_field="english",
-            target_field="target",
-            max_pairs=500,
-        )
-        direction_slug = slug_parts("flores", "en-to-" + language.lower())
+        if direction_source == "flores":
+            pairs_path = flores_root / f"en_to_{language.lower()}.json"
+            direction, direction_metadata = flores_direction(
+                tokenizer,
+                embedding,
+                pairs_path=pairs_path,
+                source_field="english",
+                target_field="target",
+                max_pairs=500,
+            )
+            direction_slug = slug_parts("flores", "en-to-" + language.lower())
+        elif direction_source == "news_commentary":
+            direction, direction_metadata = news_commentary_direction(
+                tokenizer,
+                embedding,
+                ncwm_root=ncwm_root,
+                language=language,
+                max_pairs=500,
+            )
+            direction_slug = slug_parts("news-commentary", "en-to-" + language.lower())
+        else:
+            raise ValueError(f"Unsupported CC-OCR direction source: {direction_source}")
         for window in windows:
             for sigma in sigmas:
                 mlp_selection = ensure_selection(
@@ -357,6 +371,8 @@ def run_search_from_args(args: Any) -> list[dict[str, Any]]:
             component_modes=component_modes,
             languages=parse_csv(args.languages),
             flores_root=Path(args.flores_root).resolve(),
+            direction_source=args.direction_source,
+            ncwm_root=Path(args.ncwm_root).resolve(),
             batch_size=args.batch_size,
             limit=args.limit,
             max_new_tokens=args.max_new_tokens,

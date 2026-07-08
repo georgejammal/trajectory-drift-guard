@@ -1,0 +1,8 @@
+{
+  "output_jsonl": "/home/georgejammal/projects/try_and_change/security_drift/sample_sets/open_ended_benign_squad_v1_seed0_n100.jsonl",
+  "source": "SQuAD v1.1 dev",
+  "source_url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v1.1.json",
+  "seed": 0,
+  "n": 100,
+  "benchmark": "squad_v1_open"
+}

@@ -1,0 +1,11 @@
+{
+  "total": 400,
+  "empty_completions": 0,
+  "counts_by_benchmark": {
+    "autodan": 100,
+    "malwaregen": 100,
+    "pair": 100,
+    "promptinject": 100
+  },
+  "mean_completion_chars": 1474.8725
+}

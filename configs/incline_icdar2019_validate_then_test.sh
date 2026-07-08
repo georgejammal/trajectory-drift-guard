@@ -5,8 +5,8 @@ cd /home/georgejammal/projects/parsing_neurons_repro
 
 PYTHON_BIN="${PYTHON_BIN:-/home/georgejammal/projects/a100env/bin/python}"
 MODELS="${MODELS:-gemma3_4b_it}"
-LANGS_VAL="${LANGS_VAL:-Arabic,Japanese,Korean}"
-LANGS_TEST="${LANGS_TEST:-Arabic,Japanese,Korean,Russian}"
+LANGS_VAL="${LANGS_VAL:-Arabic,Japanese}"
+LANGS_TEST="${LANGS_TEST:-Arabic,Japanese,Russian}"
 ICDAR_ROOT="${ICDAR_ROOT:-data/icdar2019_mlt}"
 ICDAR_SAMPLES_PER_LANGUAGE="${ICDAR_SAMPLES_PER_LANGUAGE:-200}"
 OUT_ROOT="${OUT_ROOT:-outputs/incline}"
@@ -25,6 +25,7 @@ PYTHONPATH=src "${PYTHON_BIN}" scripts/run_incline_icdar2019_validate.py \
   --output-root "${OUT_ROOT}" \
   --stats-layers all \
   --intervention-window all \
+  --bridge-source news_commentary \
   --samples-per-language "${ICDAR_SAMPLES_PER_LANGUAGE}" \
   --bridge-samples 500 \
   --bridge-batch-size 8 \
@@ -36,6 +37,7 @@ PYTHONPATH=src "${PYTHON_BIN}" scripts/run_incline_ccocr.py \
   --output-root "${OUT_ROOT}" \
   --stats-layers all \
   --intervention-windows all \
+  --bridge-source news_commentary \
   --selected-alphas-json "${SELECTED}" \
   --bridge-samples 500 \
   --bridge-batch-size 8 \
@@ -51,5 +53,6 @@ PYTHONPATH=src "${PYTHON_BIN}" scripts/run_mdpbench_incline_selected.py \
   --output-root "${OUT_ROOT}" \
   --stats-layers all \
   --intervention-window all \
+  --bridge-source news_commentary \
   --bridge-samples 500 \
   --bridge-batch-size 8

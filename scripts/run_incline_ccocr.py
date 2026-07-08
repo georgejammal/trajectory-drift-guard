@@ -10,7 +10,7 @@ from typing import Any
 
 import torch
 
-from parsing_neurons_repro.incline import INCLINEIntervention, ensure_flores_bridge
+from parsing_neurons_repro.incline import INCLINEIntervention, ensure_flores_bridge, ensure_ncwm_bridge
 from parsing_neurons_repro.io import clean_float, parse_csv, parse_float_grid, read_json, slug_parts, window_layers, write_json
 from parsing_neurons_repro.models import MODEL_PATHS, load_processor, load_vlm, model_spec
 from parsing_neurons_repro.tasks.ccocr import DEFAULT_CC_OCR_INDEX, DEFAULT_CC_OCR_ROOT, evaluate_ccocr_suite
@@ -62,6 +62,13 @@ def parse_args() -> argparse.Namespace:
         / "flores_transfer_pairs"
         / "flores101_en_to_cc_ocr_languages_random500"
         / "pairs_by_language",
+    )
+    parser.add_argument("--bridge-source", choices=["news_commentary", "flores"], default="news_commentary")
+    parser.add_argument(
+        "--ncwm-root",
+        type=Path,
+        default=Path(os.environ.get("PARSING_NEURONS_DATA_ROOT", "data")) / "ncwm",
+        help="News Commentary bridge root in the INCLINE data/ncwm layout.",
     )
     parser.add_argument(
         "--stats-layers",
@@ -128,7 +135,7 @@ def bridge_path(args: argparse.Namespace, model_alias: str, language: str, stats
         / model_alias
         / language_slug(language)
         / slug_parts(
-            "flores",
+            args.bridge_source,
             "layers" + stats_layers,
             "n" + str(args.bridge_samples),
             args.bridge_token_scope,
@@ -185,21 +192,38 @@ def main() -> None:
             )
 
         for language in languages:
-            current_bridge = ensure_flores_bridge(
-                model_alias=model_alias,
-                model=model,
-                tokenizer=tokenizer,
-                language=language,
-                layers=window_layers(stats_layers),
-                output_path=bridge_path(args, model_alias, language, stats_layers),
-                flores_root=args.flores_root.resolve(),
-                max_samples=args.bridge_samples,
-                batch_size=args.bridge_batch_size,
-                max_length=args.bridge_max_length,
-                token_scope=args.bridge_token_scope,
-                ridge=args.ridge,
-                force=args.force_recompute_bridge,
-            )
+            if args.bridge_source == "news_commentary":
+                current_bridge = ensure_ncwm_bridge(
+                    model_alias=model_alias,
+                    model=model,
+                    tokenizer=tokenizer,
+                    language=language,
+                    layers=window_layers(stats_layers),
+                    output_path=bridge_path(args, model_alias, language, stats_layers),
+                    ncwm_root=args.ncwm_root.resolve(),
+                    max_samples=args.bridge_samples,
+                    batch_size=args.bridge_batch_size,
+                    max_length=args.bridge_max_length,
+                    token_scope=args.bridge_token_scope,
+                    ridge=args.ridge,
+                    force=args.force_recompute_bridge,
+                )
+            else:
+                current_bridge = ensure_flores_bridge(
+                    model_alias=model_alias,
+                    model=model,
+                    tokenizer=tokenizer,
+                    language=language,
+                    layers=window_layers(stats_layers),
+                    output_path=bridge_path(args, model_alias, language, stats_layers),
+                    flores_root=args.flores_root.resolve(),
+                    max_samples=args.bridge_samples,
+                    batch_size=args.bridge_batch_size,
+                    max_length=args.bridge_max_length,
+                    token_scope=args.bridge_token_scope,
+                    ridge=args.ridge,
+                    force=args.force_recompute_bridge,
+                )
             for window in intervention_windows:
                 for sign in direction_signs:
                     language_alpha = selected_alpha(selected_payload, model_alias=model_alias, language=language)
@@ -242,6 +266,7 @@ def main() -> None:
                         )
                         summary["incline"] = {
                             "bridge_path": str(current_bridge),
+                            "bridge_source": args.bridge_source,
                             "stats_layers": stats_layers,
                             "window": window,
                             "alpha": sigma,
