@@ -149,14 +149,18 @@ files are written under `outputs/clas/stats/...`.
 
 ## INCLINE Baseline
 
-The repository vendors the original INCLINE code under `external/INCLINE` for
-reference only. We do not modify it. The runnable CC-OCR adaptation is in
+The repository links the original INCLINE code as a submodule under
+`external/INCLINE` for reference only. We do not modify it. The runnable
+CC-OCR adaptation is in
 `src/parsing_neurons_repro/incline.py` and `scripts/run_incline_ccocr.py`.
 
 This wrapper reproduces INCLINE's core operation: from parallel FLORES
 English/target-language text, it collects per-layer MLP module outputs, fits a
 least-squares map from target-language MLP outputs to English MLP outputs, and
 patches the MLP output at the final prompt token during CC-OCR generation.
+Bridge examples longer than `--bridge-max-length` are skipped rather than
+truncated, matching the released INCLINE scripts, and bridge factors are stored
+in float32.
 
 Example run:
 

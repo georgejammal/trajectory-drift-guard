@@ -104,8 +104,7 @@ def collect_mlp_outputs(
                 batch,
                 return_tensors="pt",
                 padding=True,
-                truncation=True,
-                max_length=max_length,
+                truncation=False,
             )
             inputs = {key: value.to(device) for key, value in inputs.items()}
             collector.set_attention_mask(inputs.get("attention_mask"))
@@ -146,7 +145,7 @@ def compute_bridge_factors(
         if ridge:
             gram = gram + float(ridge) * torch.eye(gram.shape[0], dtype=gram.dtype)
         bridge = torch.linalg.pinv(gram) @ y
-        factors[layer] = {"x": x.to(torch.float16), "bridge": bridge.to(torch.float16)}
+        factors[layer] = {"x": x.contiguous(), "bridge": bridge.contiguous()}
     return factors
 
 
@@ -165,6 +164,46 @@ def incline_training_texts(english: list[str], target: list[str]) -> tuple[list[
             target_out.append(f"{target_text} {en_text}".strip())
             english_out.append(f"{en_text} {en_text}".strip())
     return english_out, target_out
+
+
+def tokenized_length(tokenizer: Any, text: str) -> int:
+    encoded = tokenizer(
+        text,
+        return_tensors=None,
+        add_special_tokens=True,
+        truncation=False,
+    )
+    return len(encoded["input_ids"])
+
+
+def filter_bridge_text_pairs(
+    *,
+    tokenizer: Any,
+    english: list[str],
+    target: list[str],
+    max_length: int,
+) -> tuple[list[str], list[str], int]:
+    """Skip long bridge examples, matching the released INCLINE scripts.
+
+    The upstream implementation discards training examples whose tokenized
+    length exceeds its 500-token cap, rather than learning from truncated
+    activations. We apply the same rule to the paired English/target bridge
+    inputs after the odd/even construction.
+    """
+
+    kept_english: list[str] = []
+    kept_target: list[str] = []
+    skipped = 0
+    for english_text, target_text in zip(english, target):
+        if tokenized_length(tokenizer, target_text) > max_length:
+            skipped += 1
+            continue
+        if tokenized_length(tokenizer, english_text) > max_length:
+            skipped += 1
+            continue
+        kept_english.append(english_text)
+        kept_target.append(target_text)
+    return kept_english, kept_target, skipped
 
 
 def save_bridge(path: Path, payload: dict[str, Any]) -> None:
@@ -223,6 +262,23 @@ def ensure_flores_bridge(
     english = texts_by_language["English"]
     target = texts_by_language[language]
     english, target = incline_training_texts(english, target)
+    num_constructed = len(english)
+    english, target, skipped = filter_bridge_text_pairs(
+        tokenizer=tokenizer,
+        english=english,
+        target=target,
+        max_length=max_length,
+    )
+    print(
+        f"[incline:bridge] kept {len(english)}/{num_constructed} bridge pairs "
+        f"for {model_alias}/{language}; skipped {skipped} longer than {max_length} tokens",
+        flush=True,
+    )
+    if not english:
+        raise ValueError(
+            f"No INCLINE bridge pairs remained for {model_alias}/{language} "
+            f"after filtering at max_length={max_length}."
+        )
     print(f"[incline:bridge] collecting English activations for {model_alias}/{language}", flush=True)
     english_acts = collect_mlp_outputs(
         model=model,
@@ -251,6 +307,8 @@ def ensure_flores_bridge(
             "language": language,
             "layers": layer_list,
             "num_samples": len(english),
+            "num_constructed_samples": num_constructed,
+            "num_skipped_long_samples": skipped,
             "token_scope": token_scope,
             "max_length": max_length,
             "ridge": ridge,
