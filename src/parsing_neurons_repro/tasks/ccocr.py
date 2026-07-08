@@ -205,6 +205,7 @@ def evaluate_ccocr_language(
     qwen_max_pixels: int | None = 1003520,
     qwen_min_pixels: int | None = None,
     scalar_mode: str = "abs",
+    custom_context: Any | None = None,
     adaptive_oom_split: bool = True,
     resume: bool = True,
 ) -> dict[str, Any]:
@@ -220,15 +221,17 @@ def evaluate_ccocr_language(
         max_gold_tokens_exclusive=max_gold_tokens_exclusive,
     )
 
-    context = build_abs_intervention(
-        model=model,
-        component_mode=component_mode,
-        mlp_selection=mlp_selection,
-        attn_selection=attn_selection,
-        mlp_token_scope="all_positions",
-        attn_token_scope="last_position",
-        scalar_mode=scalar_mode,
-    )
+    context = custom_context
+    if context is None:
+        context = build_abs_intervention(
+            model=model,
+            component_mode=component_mode,
+            mlp_selection=mlp_selection,
+            attn_selection=attn_selection,
+            mlp_token_scope="all_positions",
+            attn_token_scope="last_position",
+            scalar_mode=scalar_mode,
+        )
     total = 0
     start = time.time()
     with context:
@@ -286,6 +289,7 @@ def evaluate_ccocr_suite(
     languages: list[str] | None = None,
     evaluate: bool = True,
     max_gold_tokens_exclusive: int | None = None,
+    custom_context: Any | None = None,
     **kwargs: Any,
 ) -> dict[str, Any]:
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -304,6 +308,7 @@ def evaluate_ccocr_suite(
                 mlp_selection=mlp_selection,
                 attn_selection=attn_selection,
                 max_gold_tokens_exclusive=max_gold_tokens_exclusive,
+                custom_context=custom_context,
                 **kwargs,
             )
         )

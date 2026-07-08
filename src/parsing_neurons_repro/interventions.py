@@ -6,7 +6,7 @@ from typing import Any
 
 import torch
 
-from .io import read_json
+from .io import read_json, window_layers
 from .models import decoder_layers
 
 
@@ -157,6 +157,137 @@ class CombinedIntervention:
         for context in reversed(self.contexts):
             context.__exit__(exc_type, exc, tb)
         return False
+
+
+def clas_indices_by_layer(
+    stats_path: Path,
+    *,
+    layers: list[int],
+    target_language: str | None = None,
+    specific_scope: str = "all",
+) -> tuple[dict[int, list[int]], dict[int, list[int]]]:
+    """Load CLAS category masks from a stats file.
+
+    CLAS distinguishes partial-shared neurons from language-specific neurons.
+    The paper treats these as MLP intermediate coordinates; in this codebase
+    those are the input channels to ``mlp.down_proj``.
+    """
+
+    payload = read_json(stats_path)
+    layer_set = {int(layer) for layer in layers}
+    partial: dict[int, list[int]] = defaultdict(list)
+    specific: dict[int, list[int]] = defaultdict(list)
+    for row in payload["rows"]:
+        layer = int(row["layer"])
+        if layer not in layer_set:
+            continue
+        category = row["category"]
+        neuron = int(row["neuron"])
+        if category == "partial_shared":
+            partial[layer].append(neuron)
+        elif category == "language_specific":
+            if specific_scope == "all":
+                specific[layer].append(neuron)
+            elif specific_scope == "target":
+                if target_language is None:
+                    raise ValueError("target_language is required when specific_scope='target'.")
+                active = row.get("active_languages", [])
+                if len(active) == 1 and str(active[0]).lower() == target_language.lower():
+                    specific[layer].append(neuron)
+            else:
+                raise ValueError(f"Unsupported CLAS specific_scope: {specific_scope}")
+    return dict(sorted(partial.items())), dict(sorted(specific.items()))
+
+
+class CLASIntervention:
+    """Cross-Lingual Activation Steering for MLP intermediate activations.
+
+    This is a paper-faithful reimplementation of CLAS as a baseline. Given
+    category masks estimated from parallel multilingual inputs, it rescales
+    partial-shared and language-specific MLP coordinates and blends the result
+    with the original activation, matching the CLAS paper notation:
+
+        h1 = h * (1 + beta * M_partial)
+        h2 = h1 * (1 - gamma * M_specific)
+        h_final = (1 - alpha) * h + alpha * h2
+
+    where ``h`` is the gated MLP intermediate vector entering ``down_proj``.
+    """
+
+    def __init__(
+        self,
+        model: Any,
+        stats_path: Path,
+        layers: list[int] | str,
+        *,
+        target_language: str | None = None,
+        alpha: float = 1.0,
+        beta: float = 0.2,
+        gamma: float = 0.2,
+        token_scope: str = "all_positions",
+        specific_scope: str = "all",
+    ) -> None:
+        self.layers = decoder_layers(model)
+        self.target_layers = window_layers(layers) if isinstance(layers, str) else [int(layer) for layer in layers]
+        self.partial_by_layer, self.specific_by_layer = clas_indices_by_layer(
+            stats_path,
+            layers=self.target_layers,
+            target_language=target_language,
+            specific_scope=specific_scope,
+        )
+        self.alpha = float(alpha)
+        self.beta = float(beta)
+        self.gamma = float(gamma)
+        self.token_scope = token_scope
+        self.handles: list[Any] = []
+        self.index_cache: dict[tuple[str, int, torch.device], torch.Tensor] = {}
+
+    def __enter__(self) -> "CLASIntervention":
+        for layer in self.target_layers:
+            partial = self.partial_by_layer.get(layer, [])
+            specific = self.specific_by_layer.get(layer, [])
+            if not partial and not specific:
+                continue
+            mlp = self.layers[layer].mlp
+            max_index = max(partial + specific)
+            if max_index >= mlp.down_proj.in_features:
+                raise ValueError(f"CLAS neuron index out of range in layer {layer}.")
+            self.handles.append(mlp.down_proj.register_forward_pre_hook(self._hook(layer)))
+        return self
+
+    def __exit__(self, exc_type, exc, tb) -> bool:
+        for handle in self.handles:
+            handle.remove()
+        self.handles = []
+        return False
+
+    def _indices(self, kind: str, layer: int, device: torch.device) -> torch.Tensor:
+        key = (kind, layer, device)
+        if key not in self.index_cache:
+            source = self.partial_by_layer if kind == "partial" else self.specific_by_layer
+            self.index_cache[key] = torch.tensor(source.get(layer, []), dtype=torch.long, device=device)
+        return self.index_cache[key]
+
+    def _apply(self, hidden: torch.Tensor, partial: torch.Tensor, specific: torch.Tensor) -> torch.Tensor:
+        modified = hidden.clone()
+        if partial.numel():
+            modified[..., partial] = modified[..., partial] * (1.0 + self.alpha * self.beta)
+        if specific.numel():
+            modified[..., specific] = modified[..., specific] * (1.0 - self.alpha * self.gamma)
+        return modified
+
+    def _hook(self, layer: int):
+        def hook(module, inputs):
+            hidden = inputs[0]
+            partial = self._indices("partial", layer, hidden.device)
+            specific = self._indices("specific", layer, hidden.device)
+            if self.token_scope == "last_position":
+                modified = hidden.clone()
+                modified[:, -1:, :] = self._apply(modified[:, -1:, :], partial, specific)
+                return (modified,)
+            return (self._apply(hidden, partial, specific),)
+
+        return hook
 
 
 def build_abs_intervention(

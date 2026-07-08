@@ -154,6 +154,7 @@ def evaluate_counting_dataset(
     allowed_token_ids: list[int] | set[int] | None = None,
     decoding_constraint: str | None = None,
     scalar_mode: str = "abs",
+    custom_context: Any | None = None,
     adaptive_oom_split: bool = True,
 ) -> dict[str, Any]:
     if gold_numbers is None:
@@ -177,15 +178,17 @@ def evaluate_counting_dataset(
     start = time.time()
 
     indexed_rows = list(zip(source_indices, dataset))
-    context = build_abs_intervention(
-        model=model,
-        component_mode=component_mode,
-        mlp_selection=mlp_selection,
-        attn_selection=attn_selection,
-        mlp_token_scope="all_positions",
-        attn_token_scope="last_position",
-        scalar_mode=scalar_mode,
-    )
+    context = custom_context
+    if context is None:
+        context = build_abs_intervention(
+            model=model,
+            component_mode=component_mode,
+            mlp_selection=mlp_selection,
+            attn_selection=attn_selection,
+            mlp_token_scope="all_positions",
+            attn_token_scope="last_position",
+            scalar_mode=scalar_mode,
+        )
     with predictions_path.open("w", encoding="utf-8") as handle:
         with context:
             for batch_idx, batch in enumerate(batched(indexed_rows, batch_size), start=1):
