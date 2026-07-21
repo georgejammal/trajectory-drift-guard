@@ -129,7 +129,7 @@ def load_vlm(alias: str, model_path: Path, dtype: str = "bfloat16") -> Any:
         cls = AutoModelForImageTextToText
     return cls.from_pretrained(
         model_path,
-        dtype=dtype_from_name(dtype),
+        torch_dtype=dtype_from_name(dtype),
         device_map="auto" if torch.cuda.is_available() else None,
         trust_remote_code=True,
     ).eval()

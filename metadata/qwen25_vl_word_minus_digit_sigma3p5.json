@@ -1,0 +1,54 @@
+{
+  "experiment": "qwen2.5-vl-word-minus-digit-counting-intervention",
+  "model_alias": "qwen2_5_vl_3b_instruct",
+  "model_path": "models/Qwen2.5-VL-3B-Instruct",
+  "direction": "word-minus-digit",
+  "direction_language": "pooled_en_zh",
+  "direction_digits": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "component_mode": "mlp_attn",
+  "layers": "32-35",
+  "sigma": 3.5,
+  "mlp_target": "model.layers.{layer}.mlp.down_proj.weight columns",
+  "attention_target": "model.layers.{layer}.self_attn.o_proj.weight columns",
+  "mlp_token_scope": "all_positions",
+  "attention_token_scope": "last_position",
+  "dtype": "bfloat16",
+  "batch_size": 128,
+  "max_new_tokens": 16,
+  "qwen_max_pixels": 401408,
+  "decoding": {
+    "do_sample": false,
+    "suffix": " Answer with one number do not add any further explanations."
+  },
+  "datasets": {
+    "countbenchqa": {
+      "total": 437,
+      "correct": 346,
+      "accuracy": 0.7917620137299771,
+      "baseline_accuracy": 0.7757437070938215
+    },
+    "how_many": {
+      "total": 440,
+      "correct": 190,
+      "accuracy": 0.4318181818181818,
+      "baseline_accuracy": 0.40454545454545454
+    },
+    "tallyqa_balanced": {
+      "total": 450,
+      "correct": 191,
+      "accuracy": 0.42444444444444446,
+      "baseline_accuracy": 0.4066666666666667
+    }
+  },
+  "job": {
+    "slurm_job_id": "672915",
+    "node": "n-802",
+    "gpu": "L40S",
+    "state": "COMPLETED",
+    "elapsed": "00:15:53",
+    "exit_code": 0
+  },
+  "reproduction_command": "source tau_env.sh && python scripts/run_search.py --task counting --model-alias qwen2_5_vl_3b_instruct --direction word-minus-digit --counting-language pooled_en_zh --windows 32-35 --sigmas 3.5 --component-modes mlp_attn --batch-size 128 --max-new-tokens 16 --qwen-max-pixels 401408 --no-run-baseline",
+  "full_sweep_command": "source tau_env.sh && python scripts/run_search.py --task counting --model-alias qwen2_5_vl_3b_instruct --direction word-minus-digit --counting-language pooled_en_zh --windows 32-35 --sigmas 2.5,3,3.5,4,4.5,5,5.5 --component-modes mlp_attn --batch-size 128 --max-new-tokens 16 --qwen-max-pixels 401408 --no-run-baseline",
+  "results_path": "outputs/runs/qwen25_sigma_sweep_l40s/runs/counting/qwen2_5_vl_3b_instruct/word-minus-digit_pooled_en_zh_digits0-1-2-3-4-5-6-7-8-9/search_summary.json"
+}

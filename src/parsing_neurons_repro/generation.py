@@ -216,7 +216,7 @@ def generate_batch_adaptive(
             qwen_min_pixels=qwen_min_pixels,
             allowed_token_ids=allowed_token_ids,
         )
-    except torch.OutOfMemoryError:
+    except torch.cuda.OutOfMemoryError:
         if not adaptive_oom_split or len(images) == 1:
             raise
         if torch.cuda.is_available():
