@@ -1,0 +1,499 @@
+{
+  "model_alias": "qwen3_vl_8b_instruct",
+  "model_path": "/specific/scratches/scratch/georgejammal/trajectory-drift-guard/models/Qwen3-VL-8B-Instruct",
+  "component": "attn",
+  "write_vector_key_template": "model.language_model.layers.{layer}.self_attn.o_proj.weight",
+  "direction_metadata": {
+    "kind": "counting",
+    "direction": "word-minus-digit",
+    "language": "pooled_en_zh",
+    "digits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "formula": "normalize(mean(word-minus-digit))",
+    "norm_before_normalization": 1.0915025472640991,
+    "components": [
+      {
+        "language": "en",
+        "digit": 0,
+        "word": "zero",
+        "digit_token_ids": [
+          15
+        ],
+        "word_token_ids": [
+          14154
+        ],
+        "component_norm": 2.086181163787842
+      },
+      {
+        "language": "en",
+        "digit": 1,
+        "word": "one",
+        "digit_token_ids": [
+          16
+        ],
+        "word_token_ids": [
+          603
+        ],
+        "component_norm": 2.162997245788574
+      },
+      {
+        "language": "en",
+        "digit": 2,
+        "word": "two",
+        "digit_token_ids": [
+          17
+        ],
+        "word_token_ids": [
+          19789
+        ],
+        "component_norm": 2.0256314277648926
+      },
+      {
+        "language": "en",
+        "digit": 3,
+        "word": "three",
+        "digit_token_ids": [
+          18
+        ],
+        "word_token_ids": [
+          27856
+        ],
+        "component_norm": 2.0189521312713623
+      },
+      {
+        "language": "en",
+        "digit": 4,
+        "word": "four",
+        "digit_token_ids": [
+          19
+        ],
+        "word_token_ids": [
+          34024
+        ],
+        "component_norm": 2.049226999282837
+      },
+      {
+        "language": "en",
+        "digit": 5,
+        "word": "five",
+        "digit_token_ids": [
+          20
+        ],
+        "word_token_ids": [
+          52670
+        ],
+        "component_norm": 1.9841431379318237
+      },
+      {
+        "language": "en",
+        "digit": 6,
+        "word": "six",
+        "digit_token_ids": [
+          21
+        ],
+        "word_token_ids": [
+          50364
+        ],
+        "component_norm": 1.9709258079528809
+      },
+      {
+        "language": "en",
+        "digit": 7,
+        "word": "seven",
+        "digit_token_ids": [
+          22
+        ],
+        "word_token_ids": [
+          80185
+        ],
+        "component_norm": 1.9782657623291016
+      },
+      {
+        "language": "en",
+        "digit": 8,
+        "word": "eight",
+        "digit_token_ids": [
+          23
+        ],
+        "word_token_ids": [
+          67532
+        ],
+        "component_norm": 2.0233590602874756
+      },
+      {
+        "language": "en",
+        "digit": 9,
+        "word": "nine",
+        "digit_token_ids": [
+          24
+        ],
+        "word_token_ids": [
+          93223
+        ],
+        "component_norm": 1.9976487159729004
+      },
+      {
+        "language": "zh",
+        "digit": 0,
+        "word": "零",
+        "digit_token_ids": [
+          15
+        ],
+        "word_token_ids": [
+          99822
+        ],
+        "component_norm": 2.1342954635620117
+      },
+      {
+        "language": "zh",
+        "digit": 1,
+        "word": "一",
+        "digit_token_ids": [
+          16
+        ],
+        "word_token_ids": [
+          14777
+        ],
+        "component_norm": 2.0916225910186768
+      },
+      {
+        "language": "zh",
+        "digit": 2,
+        "word": "二",
+        "digit_token_ids": [
+          17
+        ],
+        "word_token_ids": [
+          40820
+        ],
+        "component_norm": 2.0033416748046875
+      },
+      {
+        "language": "zh",
+        "digit": 3,
+        "word": "三",
+        "digit_token_ids": [
+          18
+        ],
+        "word_token_ids": [
+          44991
+        ],
+        "component_norm": 2.0370795726776123
+      },
+      {
+        "language": "zh",
+        "digit": 4,
+        "word": "四",
+        "digit_token_ids": [
+          19
+        ],
+        "word_token_ids": [
+          63703
+        ],
+        "component_norm": 2.0529980659484863
+      },
+      {
+        "language": "zh",
+        "digit": 5,
+        "word": "五",
+        "digit_token_ids": [
+          20
+        ],
+        "word_token_ids": [
+          75108
+        ],
+        "component_norm": 2.073922872543335
+      },
+      {
+        "language": "zh",
+        "digit": 6,
+        "word": "六",
+        "digit_token_ids": [
+          21
+        ],
+        "word_token_ids": [
+          99566
+        ],
+        "component_norm": 2.068382978439331
+      },
+      {
+        "language": "zh",
+        "digit": 7,
+        "word": "七",
+        "digit_token_ids": [
+          22
+        ],
+        "word_token_ids": [
+          99612
+        ],
+        "component_norm": 2.119060754776001
+      },
+      {
+        "language": "zh",
+        "digit": 8,
+        "word": "八",
+        "digit_token_ids": [
+          23
+        ],
+        "word_token_ids": [
+          99568
+        ],
+        "component_norm": 2.049248218536377
+      },
+      {
+        "language": "zh",
+        "digit": 9,
+        "word": "九",
+        "digit_token_ids": [
+          24
+        ],
+        "word_token_ids": [
+          99609
+        ],
+        "component_norm": 2.0863542556762695
+      }
+    ]
+  },
+  "window": "34-35",
+  "layers": [
+    34,
+    35
+  ],
+  "sigma": 4.5,
+  "null_cosine_sd": 0.015625,
+  "cosine_threshold": 0.0703125,
+  "selection_rule": "cosine_similarity >= sigma / sqrt(d_model)",
+  "selected_count": 24,
+  "layer_counts": {
+    "34": 4,
+    "35": 20
+  },
+  "rows": [
+    {
+      "layer": 35,
+      "channel": 3649,
+      "score": 0.0976962149143219,
+      "cosine_similarity": 0.0976962149143219,
+      "dot_product": 0.06091613322496414,
+      "weight_norm": 0.6235260367393494,
+      "rank": 1
+    },
+    {
+      "layer": 34,
+      "channel": 1947,
+      "score": 0.09141866862773895,
+      "cosine_similarity": 0.09141866862773895,
+      "dot_product": 0.05780409276485443,
+      "weight_norm": 0.6323007345199585,
+      "rank": 2
+    },
+    {
+      "layer": 35,
+      "channel": 1879,
+      "score": 0.0901307538151741,
+      "cosine_similarity": 0.0901307538151741,
+      "dot_product": 0.05955520272254944,
+      "weight_norm": 0.6607645153999329,
+      "rank": 3
+    },
+    {
+      "layer": 35,
+      "channel": 1566,
+      "score": 0.08902010321617126,
+      "cosine_similarity": 0.08902010321617126,
+      "dot_product": 0.09683963656425476,
+      "weight_norm": 1.0878400802612305,
+      "rank": 4
+    },
+    {
+      "layer": 35,
+      "channel": 1652,
+      "score": 0.08521963655948639,
+      "cosine_similarity": 0.08521963655948639,
+      "dot_product": 0.09747985750436783,
+      "weight_norm": 1.1438661813735962,
+      "rank": 5
+    },
+    {
+      "layer": 35,
+      "channel": 1623,
+      "score": 0.08022215217351913,
+      "cosine_similarity": 0.08022215217351913,
+      "dot_product": 0.05847223848104477,
+      "weight_norm": 0.7288789749145508,
+      "rank": 6
+    },
+    {
+      "layer": 35,
+      "channel": 1607,
+      "score": 0.08002018928527832,
+      "cosine_similarity": 0.08002018928527832,
+      "dot_product": 0.09450341761112213,
+      "weight_norm": 1.1809946298599243,
+      "rank": 7
+    },
+    {
+      "layer": 35,
+      "channel": 2007,
+      "score": 0.07958411425352097,
+      "cosine_similarity": 0.07958411425352097,
+      "dot_product": 0.05388423055410385,
+      "weight_norm": 0.6770727038383484,
+      "rank": 8
+    },
+    {
+      "layer": 35,
+      "channel": 1582,
+      "score": 0.07945267856121063,
+      "cosine_similarity": 0.07945267856121063,
+      "dot_product": 0.07749169319868088,
+      "weight_norm": 0.9753187894821167,
+      "rank": 9
+    },
+    {
+      "layer": 35,
+      "channel": 1597,
+      "score": 0.07925566285848618,
+      "cosine_similarity": 0.07925566285848618,
+      "dot_product": 0.09150330722332001,
+      "weight_norm": 1.1545333862304688,
+      "rank": 10
+    },
+    {
+      "layer": 34,
+      "channel": 3059,
+      "score": 0.07827705889940262,
+      "cosine_similarity": 0.07827705889940262,
+      "dot_product": 0.05792107433080673,
+      "weight_norm": 0.7399495244026184,
+      "rank": 11
+    },
+    {
+      "layer": 35,
+      "channel": 1610,
+      "score": 0.07799910008907318,
+      "cosine_similarity": 0.07799910008907318,
+      "dot_product": 0.08896122127771378,
+      "weight_norm": 1.140541672706604,
+      "rank": 12
+    },
+    {
+      "layer": 35,
+      "channel": 1540,
+      "score": 0.07535117864608765,
+      "cosine_similarity": 0.07535117864608765,
+      "dot_product": 0.0852365791797638,
+      "weight_norm": 1.1311910152435303,
+      "rank": 13
+    },
+    {
+      "layer": 35,
+      "channel": 1562,
+      "score": 0.07461929321289062,
+      "cosine_similarity": 0.07461929321289062,
+      "dot_product": 0.08728533983230591,
+      "weight_norm": 1.169742226600647,
+      "rank": 14
+    },
+    {
+      "layer": 35,
+      "channel": 1587,
+      "score": 0.07380132377147675,
+      "cosine_similarity": 0.07380132377147675,
+      "dot_product": 0.08419570326805115,
+      "weight_norm": 1.1408426761627197,
+      "rank": 15
+    },
+    {
+      "layer": 35,
+      "channel": 1463,
+      "score": 0.07374133914709091,
+      "cosine_similarity": 0.07374133914709091,
+      "dot_product": 0.11549852043390274,
+      "weight_norm": 1.56626558303833,
+      "rank": 16
+    },
+    {
+      "layer": 35,
+      "channel": 1751,
+      "score": 0.07311320304870605,
+      "cosine_similarity": 0.07311320304870605,
+      "dot_product": 0.047426436096429825,
+      "weight_norm": 0.6486712694168091,
+      "rank": 17
+    },
+    {
+      "layer": 35,
+      "channel": 1638,
+      "score": 0.07263966649770737,
+      "cosine_similarity": 0.07263966649770737,
+      "dot_product": 0.08341848850250244,
+      "weight_norm": 1.1483875513076782,
+      "rank": 18
+    },
+    {
+      "layer": 35,
+      "channel": 1541,
+      "score": 0.07234273850917816,
+      "cosine_similarity": 0.07234273850917816,
+      "dot_product": 0.08403144031763077,
+      "weight_norm": 1.1615740060806274,
+      "rank": 19
+    },
+    {
+      "layer": 34,
+      "channel": 2931,
+      "score": 0.07233631610870361,
+      "cosine_similarity": 0.07233631610870361,
+      "dot_product": 0.05682915821671486,
+      "weight_norm": 0.7856241464614868,
+      "rank": 20
+    },
+    {
+      "layer": 35,
+      "channel": 1552,
+      "score": 0.07217717915773392,
+      "cosine_similarity": 0.07217717915773392,
+      "dot_product": 0.07451637834310532,
+      "weight_norm": 1.0324090719223022,
+      "rank": 21
+    },
+    {
+      "layer": 35,
+      "channel": 1558,
+      "score": 0.07195417582988739,
+      "cosine_similarity": 0.07195417582988739,
+      "dot_product": 0.08760514855384827,
+      "weight_norm": 1.217513084411621,
+      "rank": 22
+    },
+    {
+      "layer": 34,
+      "channel": 3398,
+      "score": 0.07132300734519958,
+      "cosine_similarity": 0.07132300734519958,
+      "dot_product": 0.06473000347614288,
+      "weight_norm": 0.9075613021850586,
+      "rank": 23
+    },
+    {
+      "layer": 35,
+      "channel": 1849,
+      "score": 0.07048467546701431,
+      "cosine_similarity": 0.07048467546701431,
+      "dot_product": 0.08116688579320908,
+      "weight_norm": 1.1515536308288574,
+      "rank": 24
+    }
+  ]
+}

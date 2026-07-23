@@ -1,0 +1,172 @@
+{
+  "model_alias": "gemma3_4b_it",
+  "model_path": "/specific/scratches/scratch/georgejammal/trajectory-drift-guard/models/gemma-3-4b-it",
+  "component": "attn",
+  "write_vector_key_template": "language_model.model.layers.{layer}.self_attn.o_proj.weight",
+  "direction_metadata": {
+    "kind": "counting",
+    "direction": "word-minus-digit",
+    "language": "en",
+    "digits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "formula": "normalize(mean(word-minus-digit))",
+    "norm_before_normalization": 1.030545711517334,
+    "components": [
+      {
+        "language": "en",
+        "digit": 0,
+        "word": "zero",
+        "digit_token_ids": [
+          236771
+        ],
+        "word_token_ids": [
+          13321
+        ],
+        "component_norm": 1.2787975072860718
+      },
+      {
+        "language": "en",
+        "digit": 1,
+        "word": "one",
+        "digit_token_ids": [
+          236770
+        ],
+        "word_token_ids": [
+          811
+        ],
+        "component_norm": 1.308083415031433
+      },
+      {
+        "language": "en",
+        "digit": 2,
+        "word": "two",
+        "digit_token_ids": [
+          236778
+        ],
+        "word_token_ids": [
+          13498
+        ],
+        "component_norm": 1.3019596338272095
+      },
+      {
+        "language": "en",
+        "digit": 3,
+        "word": "three",
+        "digit_token_ids": [
+          236800
+        ],
+        "word_token_ids": [
+          19891
+        ],
+        "component_norm": 1.2358931303024292
+      },
+      {
+        "language": "en",
+        "digit": 4,
+        "word": "four",
+        "digit_token_ids": [
+          236812
+        ],
+        "word_token_ids": [
+          19025
+        ],
+        "component_norm": 1.2215381860733032
+      },
+      {
+        "language": "en",
+        "digit": 5,
+        "word": "five",
+        "digit_token_ids": [
+          236810
+        ],
+        "word_token_ids": [
+          21716
+        ],
+        "component_norm": 1.1937692165374756
+      },
+      {
+        "language": "en",
+        "digit": 6,
+        "word": "six",
+        "digit_token_ids": [
+          236825
+        ],
+        "word_token_ids": [
+          34699
+        ],
+        "component_norm": 1.1871129274368286
+      },
+      {
+        "language": "en",
+        "digit": 7,
+        "word": "seven",
+        "digit_token_ids": [
+          236832
+        ],
+        "word_token_ids": [
+          47526
+        ],
+        "component_norm": 1.196954369544983
+      },
+      {
+        "language": "en",
+        "digit": 8,
+        "word": "eight",
+        "digit_token_ids": [
+          236828
+        ],
+        "word_token_ids": [
+          44622
+        ],
+        "component_norm": 1.1659663915634155
+      },
+      {
+        "language": "en",
+        "digit": 9,
+        "word": "nine",
+        "digit_token_ids": [
+          236819
+        ],
+        "word_token_ids": [
+          52908
+        ],
+        "component_norm": 1.2059110403060913
+      }
+    ]
+  },
+  "window": "17-23",
+  "layers": [
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "sigma": 4.5,
+  "null_cosine_sd": 0.01976423537605237,
+  "cosine_threshold": 0.08893905919223566,
+  "selection_rule": "cosine_similarity >= sigma / sqrt(d_model)",
+  "selected_count": 0,
+  "layer_counts": {
+    "17": 0,
+    "18": 0,
+    "19": 0,
+    "20": 0,
+    "21": 0,
+    "22": 0,
+    "23": 0
+  },
+  "rows": []
+}

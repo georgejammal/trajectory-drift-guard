@@ -1,0 +1,18 @@
+{
+  "seed": 20260722,
+  "per_label": 20,
+  "source_split": "test",
+  "excluded_test_dataset": "tallyqa_balanced",
+  "labels": {
+    "1": 20,
+    "2": 20,
+    "3": 20,
+    "4": 20,
+    "5": 20,
+    "6": 20,
+    "7": 20,
+    "8": 20,
+    "9": 20
+  },
+  "total": 180
+}

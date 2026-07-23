@@ -1,0 +1,395 @@
+{
+  "task": "counting",
+  "component_mode": "mlp_attn",
+  "macro_accuracy": 0.48247779087596016,
+  "datasets": [
+    {
+      "task": "counting",
+      "dataset": "countbenchqa",
+      "dataset_path": "/specific/scratches/scratch/georgejammal/trajectory-drift-guard/data/countbenchqa",
+      "split": "test",
+      "gold_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "component_mode": "mlp_attn",
+      "scalar_mode": "abs",
+      "decoding_constraint": null,
+      "allowed_token_ids": null,
+      "total": 437,
+      "correct": 334,
+      "accuracy": 0.7643020594965675,
+      "parsed": 437,
+      "parsed_rate": 1.0,
+      "strict_digit_correct": 225,
+      "strict_digit_accuracy": 0.5148741418764302,
+      "prediction_histogram": {
+        "3": 62,
+        "12": 2,
+        "6": 58,
+        "2": 46,
+        "4": 59,
+        "7": 51,
+        "9": 75,
+        "8": 36,
+        "5": 39,
+        "1": 7,
+        "10": 2
+      },
+      "output_form_histogram": {
+        "arabic_digit": 290,
+        "english_word": 147
+      },
+      "per_label_metrics": {
+        "2": {
+          "samples": 54,
+          "correct": 46,
+          "accuracy": 0.8518518518518519,
+          "parsed": 54,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 21,
+          "strict_digit_accuracy": 0.3888888888888889
+        },
+        "3": {
+          "samples": 57,
+          "correct": 52,
+          "accuracy": 0.9122807017543859,
+          "parsed": 57,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 22,
+          "strict_digit_accuracy": 0.38596491228070173
+        },
+        "4": {
+          "samples": 55,
+          "correct": 48,
+          "accuracy": 0.8727272727272727,
+          "parsed": 55,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 32,
+          "strict_digit_accuracy": 0.5818181818181818
+        },
+        "5": {
+          "samples": 44,
+          "correct": 30,
+          "accuracy": 0.6818181818181818,
+          "parsed": 44,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 21,
+          "strict_digit_accuracy": 0.4772727272727273
+        },
+        "6": {
+          "samples": 58,
+          "correct": 38,
+          "accuracy": 0.6551724137931034,
+          "parsed": 58,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 31,
+          "strict_digit_accuracy": 0.5344827586206896
+        },
+        "7": {
+          "samples": 52,
+          "correct": 36,
+          "accuracy": 0.6923076923076923,
+          "parsed": 52,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 30,
+          "strict_digit_accuracy": 0.5769230769230769
+        },
+        "8": {
+          "samples": 57,
+          "correct": 28,
+          "accuracy": 0.49122807017543857,
+          "parsed": 57,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 25,
+          "strict_digit_accuracy": 0.43859649122807015
+        },
+        "9": {
+          "samples": 60,
+          "correct": 56,
+          "accuracy": 0.9333333333333333,
+          "parsed": 60,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 43,
+          "strict_digit_accuracy": 0.7166666666666667
+        }
+      },
+      "predictions_path": "/specific/scratches/scratch/georgejammal/trajectory-drift-guard/outputs/unified_env_20260721/runs/counting/gemma3_4b_it/word-minus-digit_en_digits0-1-2-3-4-5-6-7-8-9/mlp_attn_sigma4p5_layers17-23/countbenchqa/mlp_attn/predictions.jsonl",
+      "elapsed_seconds": 68.20751810073853
+    },
+    {
+      "task": "counting",
+      "dataset": "how_many",
+      "dataset_path": "/specific/scratches/scratch/georgejammal/trajectory-drift-guard/data/how_many",
+      "split": "test",
+      "gold_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "component_mode": "mlp_attn",
+      "scalar_mode": "abs",
+      "decoding_constraint": null,
+      "allowed_token_ids": null,
+      "total": 440,
+      "correct": 150,
+      "accuracy": 0.3409090909090909,
+      "parsed": 440,
+      "parsed_rate": 1.0,
+      "strict_digit_correct": 89,
+      "strict_digit_accuracy": 0.20227272727272727,
+      "prediction_histogram": {
+        "9": 35,
+        "1": 33,
+        "0": 2,
+        "2": 52,
+        "3": 71,
+        "8": 40,
+        "4": 38,
+        "5": 47,
+        "7": 41,
+        "10": 8,
+        "6": 56,
+        "11": 8,
+        "12": 9
+      },
+      "output_form_histogram": {
+        "arabic_digit": 297,
+        "english_word": 143
+      },
+      "per_label_metrics": {
+        "1": {
+          "samples": 50,
+          "correct": 29,
+          "accuracy": 0.58,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 17,
+          "strict_digit_accuracy": 0.34
+        },
+        "2": {
+          "samples": 50,
+          "correct": 31,
+          "accuracy": 0.62,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 16,
+          "strict_digit_accuracy": 0.32
+        },
+        "3": {
+          "samples": 50,
+          "correct": 21,
+          "accuracy": 0.42,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 8,
+          "strict_digit_accuracy": 0.16
+        },
+        "4": {
+          "samples": 50,
+          "correct": 11,
+          "accuracy": 0.22,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 3,
+          "strict_digit_accuracy": 0.06
+        },
+        "5": {
+          "samples": 50,
+          "correct": 14,
+          "accuracy": 0.28,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 10,
+          "strict_digit_accuracy": 0.2
+        },
+        "6": {
+          "samples": 50,
+          "correct": 10,
+          "accuracy": 0.2,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 7,
+          "strict_digit_accuracy": 0.14
+        },
+        "7": {
+          "samples": 50,
+          "correct": 14,
+          "accuracy": 0.28,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 11,
+          "strict_digit_accuracy": 0.22
+        },
+        "8": {
+          "samples": 50,
+          "correct": 11,
+          "accuracy": 0.22,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 9,
+          "strict_digit_accuracy": 0.18
+        },
+        "9": {
+          "samples": 40,
+          "correct": 9,
+          "accuracy": 0.225,
+          "parsed": 40,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 8,
+          "strict_digit_accuracy": 0.2
+        }
+      },
+      "predictions_path": "/specific/scratches/scratch/georgejammal/trajectory-drift-guard/outputs/unified_env_20260721/runs/counting/gemma3_4b_it/word-minus-digit_en_digits0-1-2-3-4-5-6-7-8-9/mlp_attn_sigma4p5_layers17-23/how_many/mlp_attn/predictions.jsonl",
+      "elapsed_seconds": 69.66418647766113
+    },
+    {
+      "task": "counting",
+      "dataset": "tallyqa_balanced",
+      "dataset_path": "/specific/scratches/scratch/georgejammal/trajectory-drift-guard/data/tallyqa_balanced",
+      "split": "test",
+      "gold_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "component_mode": "mlp_attn",
+      "scalar_mode": "abs",
+      "decoding_constraint": null,
+      "allowed_token_ids": null,
+      "total": 450,
+      "correct": 154,
+      "accuracy": 0.3422222222222222,
+      "parsed": 450,
+      "parsed_rate": 1.0,
+      "strict_digit_correct": 109,
+      "strict_digit_accuracy": 0.24222222222222223,
+      "prediction_histogram": {
+        "3": 56,
+        "2": 72,
+        "1": 27,
+        "4": 38,
+        "7": 48,
+        "6": 68,
+        "5": 57,
+        "9": 27,
+        "12": 4,
+        "8": 46,
+        "11": 2,
+        "10": 2,
+        "19": 1,
+        "0": 1,
+        "14": 1
+      },
+      "output_form_histogram": {
+        "arabic_digit": 333,
+        "english_word": 117
+      },
+      "per_label_metrics": {
+        "1": {
+          "samples": 50,
+          "correct": 24,
+          "accuracy": 0.48,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 22,
+          "strict_digit_accuracy": 0.44
+        },
+        "2": {
+          "samples": 50,
+          "correct": 26,
+          "accuracy": 0.52,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 14,
+          "strict_digit_accuracy": 0.28
+        },
+        "3": {
+          "samples": 50,
+          "correct": 19,
+          "accuracy": 0.38,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 14,
+          "strict_digit_accuracy": 0.28
+        },
+        "4": {
+          "samples": 50,
+          "correct": 14,
+          "accuracy": 0.28,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 6,
+          "strict_digit_accuracy": 0.12
+        },
+        "5": {
+          "samples": 50,
+          "correct": 17,
+          "accuracy": 0.34,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 10,
+          "strict_digit_accuracy": 0.2
+        },
+        "6": {
+          "samples": 50,
+          "correct": 18,
+          "accuracy": 0.36,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 12,
+          "strict_digit_accuracy": 0.24
+        },
+        "7": {
+          "samples": 50,
+          "correct": 14,
+          "accuracy": 0.28,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 13,
+          "strict_digit_accuracy": 0.26
+        },
+        "8": {
+          "samples": 50,
+          "correct": 12,
+          "accuracy": 0.24,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 10,
+          "strict_digit_accuracy": 0.2
+        },
+        "9": {
+          "samples": 50,
+          "correct": 10,
+          "accuracy": 0.2,
+          "parsed": 50,
+          "parsed_rate": 1.0,
+          "strict_digit_correct": 8,
+          "strict_digit_accuracy": 0.16
+        }
+      },
+      "predictions_path": "/specific/scratches/scratch/georgejammal/trajectory-drift-guard/outputs/unified_env_20260721/runs/counting/gemma3_4b_it/word-minus-digit_en_digits0-1-2-3-4-5-6-7-8-9/mlp_attn_sigma4p5_layers17-23/tallyqa_balanced/mlp_attn/predictions.jsonl",
+      "elapsed_seconds": 70.58419418334961
+    }
+  ],
+  "scalar_mode": "abs"
+}

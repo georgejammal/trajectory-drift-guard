@@ -1,0 +1,36 @@
+{
+  "countbenchqa": {
+    "repository_path": "data/countbenchqa",
+    "split": "test",
+    "evaluated_examples": 437,
+    "labels": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  },
+  "how_many": {
+    "repository_path": "data/how_many",
+    "split": "test",
+    "evaluated_examples": 440,
+    "label_allocation": {"1-8": 50, "9": 40}
+  },
+  "tallyqa_balanced": {
+    "repository_path": "data/tallyqa_balanced",
+    "split": "test",
+    "evaluated_examples": 450,
+    "label_allocation": {"1-9": 50}
+  },
+  "how_many_validation": {
+    "repository_path": "data/how_many_validation",
+    "split": "test partition materialized as validation",
+    "evaluated_examples": 160,
+    "seed": 20260721,
+    "per_label": 20,
+    "metadata_file": "counting_validation/how_many_validation_metadata.json"
+  },
+  "tallyqa_validation": {
+    "repository_path": "data/tallyqa_validation",
+    "split": "test partition materialized as validation",
+    "evaluated_examples": 180,
+    "seed": 20260722,
+    "per_label": 20,
+    "metadata_file": "counting_validation/tallyqa_validation_metadata.json"
+  }
+}

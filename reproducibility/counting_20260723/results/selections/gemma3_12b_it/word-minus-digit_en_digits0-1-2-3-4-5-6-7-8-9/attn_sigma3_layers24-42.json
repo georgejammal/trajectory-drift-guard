@@ -1,0 +1,2717 @@
+{
+  "model_alias": "gemma3_12b_it",
+  "model_path": "/specific/scratches/scratch/georgejammal/trajectory-drift-guard/models/gemma-3-12b-it",
+  "component": "attn",
+  "write_vector_key_template": "language_model.model.layers.{layer}.self_attn.o_proj.weight",
+  "direction_metadata": {
+    "kind": "counting",
+    "direction": "word-minus-digit",
+    "language": "en",
+    "digits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "formula": "normalize(mean(word-minus-digit))",
+    "norm_before_normalization": 0.9227744340896606,
+    "components": [
+      {
+        "language": "en",
+        "digit": 0,
+        "word": "zero",
+        "digit_token_ids": [
+          236771
+        ],
+        "word_token_ids": [
+          13321
+        ],
+        "component_norm": 1.231959581375122
+      },
+      {
+        "language": "en",
+        "digit": 1,
+        "word": "one",
+        "digit_token_ids": [
+          236770
+        ],
+        "word_token_ids": [
+          811
+        ],
+        "component_norm": 1.210739016532898
+      },
+      {
+        "language": "en",
+        "digit": 2,
+        "word": "two",
+        "digit_token_ids": [
+          236778
+        ],
+        "word_token_ids": [
+          13498
+        ],
+        "component_norm": 1.2412464618682861
+      },
+      {
+        "language": "en",
+        "digit": 3,
+        "word": "three",
+        "digit_token_ids": [
+          236800
+        ],
+        "word_token_ids": [
+          19891
+        ],
+        "component_norm": 1.1666897535324097
+      },
+      {
+        "language": "en",
+        "digit": 4,
+        "word": "four",
+        "digit_token_ids": [
+          236812
+        ],
+        "word_token_ids": [
+          19025
+        ],
+        "component_norm": 1.136175513267517
+      },
+      {
+        "language": "en",
+        "digit": 5,
+        "word": "five",
+        "digit_token_ids": [
+          236810
+        ],
+        "word_token_ids": [
+          21716
+        ],
+        "component_norm": 1.137671947479248
+      },
+      {
+        "language": "en",
+        "digit": 6,
+        "word": "six",
+        "digit_token_ids": [
+          236825
+        ],
+        "word_token_ids": [
+          34699
+        ],
+        "component_norm": 1.126832365989685
+      },
+      {
+        "language": "en",
+        "digit": 7,
+        "word": "seven",
+        "digit_token_ids": [
+          236832
+        ],
+        "word_token_ids": [
+          47526
+        ],
+        "component_norm": 1.1198744773864746
+      },
+      {
+        "language": "en",
+        "digit": 8,
+        "word": "eight",
+        "digit_token_ids": [
+          236828
+        ],
+        "word_token_ids": [
+          44622
+        ],
+        "component_norm": 1.1275634765625
+      },
+      {
+        "language": "en",
+        "digit": 9,
+        "word": "nine",
+        "digit_token_ids": [
+          236819
+        ],
+        "word_token_ids": [
+          52908
+        ],
+        "component_norm": 1.127516269683838
+      }
+    ]
+  },
+  "window": "24-42",
+  "layers": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+  ],
+  "sigma": 3.0,
+  "null_cosine_sd": 0.01613743060919757,
+  "cosine_threshold": 0.04841229182759271,
+  "selection_rule": "cosine_similarity >= sigma / sqrt(d_model)",
+  "selected_count": 280,
+  "layer_counts": {
+    "24": 14,
+    "25": 9,
+    "26": 2,
+    "27": 5,
+    "28": 6,
+    "29": 12,
+    "30": 12,
+    "31": 8,
+    "32": 8,
+    "33": 35,
+    "34": 18,
+    "35": 29,
+    "36": 15,
+    "37": 12,
+    "38": 28,
+    "39": 19,
+    "40": 11,
+    "41": 20,
+    "42": 17
+  },
+  "rows": [
+    {
+      "layer": 33,
+      "channel": 3661,
+      "score": 0.11429540067911148,
+      "cosine_similarity": 0.11429540067911148,
+      "dot_product": 0.11128872632980347,
+      "weight_norm": 0.97369384765625,
+      "rank": 1
+    },
+    {
+      "layer": 33,
+      "channel": 3811,
+      "score": 0.09244396537542343,
+      "cosine_similarity": 0.09244396537542343,
+      "dot_product": 0.08338421583175659,
+      "weight_norm": 0.9019973874092102,
+      "rank": 2
+    },
+    {
+      "layer": 39,
+      "channel": 3151,
+      "score": 0.08908000588417053,
+      "cosine_similarity": 0.08908000588417053,
+      "dot_product": 0.06716123223304749,
+      "weight_norm": 0.7539428472518921,
+      "rank": 3
+    },
+    {
+      "layer": 41,
+      "channel": 2191,
+      "score": 0.08865101635456085,
+      "cosine_similarity": 0.08865101635456085,
+      "dot_product": 0.055107541382312775,
+      "weight_norm": 0.6216233372688293,
+      "rank": 4
+    },
+    {
+      "layer": 41,
+      "channel": 1949,
+      "score": 0.086807981133461,
+      "cosine_similarity": 0.086807981133461,
+      "dot_product": 0.06294351071119308,
+      "weight_norm": 0.7250890135765076,
+      "rank": 5
+    },
+    {
+      "layer": 39,
+      "channel": 3193,
+      "score": 0.08417211472988129,
+      "cosine_similarity": 0.08417211472988129,
+      "dot_product": 0.06360451877117157,
+      "weight_norm": 0.7556483149528503,
+      "rank": 6
+    },
+    {
+      "layer": 34,
+      "channel": 2716,
+      "score": 0.08405580371618271,
+      "cosine_similarity": 0.08405580371618271,
+      "dot_product": 0.07575495541095734,
+      "weight_norm": 0.9012460112571716,
+      "rank": 7
+    },
+    {
+      "layer": 30,
+      "channel": 2821,
+      "score": 0.08152556419372559,
+      "cosine_similarity": 0.08152556419372559,
+      "dot_product": 0.03507399559020996,
+      "weight_norm": 0.4302208423614502,
+      "rank": 8
+    },
+    {
+      "layer": 36,
+      "channel": 3603,
+      "score": 0.08064103126525879,
+      "cosine_similarity": 0.08064103126525879,
+      "dot_product": 0.06405092030763626,
+      "weight_norm": 0.7942720651626587,
+      "rank": 9
+    },
+    {
+      "layer": 35,
+      "channel": 488,
+      "score": 0.08023885637521744,
+      "cosine_similarity": 0.08023885637521744,
+      "dot_product": 0.053324002772569656,
+      "weight_norm": 0.6645658612251282,
+      "rank": 10
+    },
+    {
+      "layer": 34,
+      "channel": 2706,
+      "score": 0.07992470264434814,
+      "cosine_similarity": 0.07992470264434814,
+      "dot_product": 0.07064864784479141,
+      "weight_norm": 0.8839401006698608,
+      "rank": 11
+    },
+    {
+      "layer": 35,
+      "channel": 2877,
+      "score": 0.07947323471307755,
+      "cosine_similarity": 0.07947323471307755,
+      "dot_product": 0.06664155423641205,
+      "weight_norm": 0.8385408520698547,
+      "rank": 12
+    },
+    {
+      "layer": 34,
+      "channel": 865,
+      "score": 0.074001744389534,
+      "cosine_similarity": 0.074001744389534,
+      "dot_product": 0.05240486562252045,
+      "weight_norm": 0.7081571817398071,
+      "rank": 13
+    },
+    {
+      "layer": 40,
+      "channel": 2727,
+      "score": 0.07384178042411804,
+      "cosine_similarity": 0.07384178042411804,
+      "dot_product": 0.04319501668214798,
+      "weight_norm": 0.5849671363830566,
+      "rank": 14
+    },
+    {
+      "layer": 39,
+      "channel": 3073,
+      "score": 0.07229602336883545,
+      "cosine_similarity": 0.07229602336883545,
+      "dot_product": 0.04760688170790672,
+      "weight_norm": 0.6584993004798889,
+      "rank": 15
+    },
+    {
+      "layer": 33,
+      "channel": 1488,
+      "score": 0.07219256460666656,
+      "cosine_similarity": 0.07219256460666656,
+      "dot_product": 0.049509014934301376,
+      "weight_norm": 0.6857910752296448,
+      "rank": 16
+    },
+    {
+      "layer": 33,
+      "channel": 3800,
+      "score": 0.07207894325256348,
+      "cosine_similarity": 0.07207894325256348,
+      "dot_product": 0.06145684793591499,
+      "weight_norm": 0.852632462978363,
+      "rank": 17
+    },
+    {
+      "layer": 36,
+      "channel": 3612,
+      "score": 0.07155188918113708,
+      "cosine_similarity": 0.07155188918113708,
+      "dot_product": 0.05463306978344917,
+      "weight_norm": 0.7635447382926941,
+      "rank": 18
+    },
+    {
+      "layer": 35,
+      "channel": 2942,
+      "score": 0.07023196667432785,
+      "cosine_similarity": 0.07023196667432785,
+      "dot_product": 0.059993889182806015,
+      "weight_norm": 0.8542248606681824,
+      "rank": 19
+    },
+    {
+      "layer": 33,
+      "channel": 1192,
+      "score": 0.06986376643180847,
+      "cosine_similarity": 0.06986376643180847,
+      "dot_product": 0.06335850805044174,
+      "weight_norm": 0.9068865180015564,
+      "rank": 20
+    },
+    {
+      "layer": 37,
+      "channel": 3686,
+      "score": 0.06852693855762482,
+      "cosine_similarity": 0.06852693855762482,
+      "dot_product": 0.051467493176460266,
+      "weight_norm": 0.7510549426078796,
+      "rank": 21
+    },
+    {
+      "layer": 35,
+      "channel": 1839,
+      "score": 0.06836223602294922,
+      "cosine_similarity": 0.06836223602294922,
+      "dot_product": 0.05673787742853165,
+      "weight_norm": 0.8299593925476074,
+      "rank": 22
+    },
+    {
+      "layer": 36,
+      "channel": 3715,
+      "score": 0.06831784546375275,
+      "cosine_similarity": 0.06831784546375275,
+      "dot_product": 0.05703439563512802,
+      "weight_norm": 0.8348388671875,
+      "rank": 23
+    },
+    {
+      "layer": 36,
+      "channel": 3765,
+      "score": 0.06826222687959671,
+      "cosine_similarity": 0.06826222687959671,
+      "dot_product": 0.05637834966182709,
+      "weight_norm": 0.8259084820747375,
+      "rank": 24
+    },
+    {
+      "layer": 33,
+      "channel": 3684,
+      "score": 0.06818684190511703,
+      "cosine_similarity": 0.06818684190511703,
+      "dot_product": 0.05848141759634018,
+      "weight_norm": 0.8576642870903015,
+      "rank": 25
+    },
+    {
+      "layer": 29,
+      "channel": 4022,
+      "score": 0.06802688539028168,
+      "cosine_similarity": 0.06802688539028168,
+      "dot_product": 0.06977628171443939,
+      "weight_norm": 1.0257163047790527,
+      "rank": 26
+    },
+    {
+      "layer": 33,
+      "channel": 2345,
+      "score": 0.06790881603956223,
+      "cosine_similarity": 0.06790881603956223,
+      "dot_product": 0.062060728669166565,
+      "weight_norm": 0.9138832688331604,
+      "rank": 27
+    },
+    {
+      "layer": 30,
+      "channel": 3037,
+      "score": 0.0677938163280487,
+      "cosine_similarity": 0.0677938163280487,
+      "dot_product": 0.030261468142271042,
+      "weight_norm": 0.4463750720024109,
+      "rank": 28
+    },
+    {
+      "layer": 34,
+      "channel": 2561,
+      "score": 0.06773386150598526,
+      "cosine_similarity": 0.06773386150598526,
+      "dot_product": 0.05879012495279312,
+      "weight_norm": 0.8679576516151428,
+      "rank": 29
+    },
+    {
+      "layer": 36,
+      "channel": 3599,
+      "score": 0.06760634481906891,
+      "cosine_similarity": 0.06760634481906891,
+      "dot_product": 0.05513045936822891,
+      "weight_norm": 0.8154627680778503,
+      "rank": 30
+    },
+    {
+      "layer": 35,
+      "channel": 436,
+      "score": 0.06705858558416367,
+      "cosine_similarity": 0.06705858558416367,
+      "dot_product": 0.04521458223462105,
+      "weight_norm": 0.6742549538612366,
+      "rank": 31
+    },
+    {
+      "layer": 29,
+      "channel": 3241,
+      "score": 0.06685379147529602,
+      "cosine_similarity": 0.06685379147529602,
+      "dot_product": 0.053435396403074265,
+      "weight_norm": 0.7992874383926392,
+      "rank": 32
+    },
+    {
+      "layer": 37,
+      "channel": 3749,
+      "score": 0.06684025377035141,
+      "cosine_similarity": 0.06684025377035141,
+      "dot_product": 0.04595908522605896,
+      "weight_norm": 0.6875959038734436,
+      "rank": 33
+    },
+    {
+      "layer": 33,
+      "channel": 3748,
+      "score": 0.06664514541625977,
+      "cosine_similarity": 0.06664514541625977,
+      "dot_product": 0.060632575303316116,
+      "weight_norm": 0.909782350063324,
+      "rank": 34
+    },
+    {
+      "layer": 39,
+      "channel": 3106,
+      "score": 0.06653665006160736,
+      "cosine_similarity": 0.06653665006160736,
+      "dot_product": 0.04411126673221588,
+      "weight_norm": 0.6629619598388672,
+      "rank": 35
+    },
+    {
+      "layer": 35,
+      "channel": 2822,
+      "score": 0.06653514504432678,
+      "cosine_similarity": 0.06653514504432678,
+      "dot_product": 0.051626767963171005,
+      "weight_norm": 0.7759323120117188,
+      "rank": 36
+    },
+    {
+      "layer": 33,
+      "channel": 3805,
+      "score": 0.06613287329673767,
+      "cosine_similarity": 0.06613287329673767,
+      "dot_product": 0.05762379243969917,
+      "weight_norm": 0.8713335394859314,
+      "rank": 37
+    },
+    {
+      "layer": 28,
+      "channel": 1038,
+      "score": 0.0655466616153717,
+      "cosine_similarity": 0.0655466616153717,
+      "dot_product": 0.038999732583761215,
+      "weight_norm": 0.59499192237854,
+      "rank": 38
+    },
+    {
+      "layer": 36,
+      "channel": 3752,
+      "score": 0.06538297235965729,
+      "cosine_similarity": 0.06538297235965729,
+      "dot_product": 0.04725596308708191,
+      "weight_norm": 0.7227563858032227,
+      "rank": 39
+    },
+    {
+      "layer": 41,
+      "channel": 2213,
+      "score": 0.06492070108652115,
+      "cosine_similarity": 0.06492070108652115,
+      "dot_product": 0.03834989666938782,
+      "weight_norm": 0.5907190442085266,
+      "rank": 40
+    },
+    {
+      "layer": 40,
+      "channel": 2852,
+      "score": 0.06485166400671005,
+      "cosine_similarity": 0.06485166400671005,
+      "dot_product": 0.050380513072013855,
+      "weight_norm": 0.7768576741218567,
+      "rank": 41
+    },
+    {
+      "layer": 29,
+      "channel": 3142,
+      "score": 0.06480269134044647,
+      "cosine_similarity": 0.06480269134044647,
+      "dot_product": 0.05553102120757103,
+      "weight_norm": 0.8569246530532837,
+      "rank": 42
+    },
+    {
+      "layer": 41,
+      "channel": 1921,
+      "score": 0.0647626519203186,
+      "cosine_similarity": 0.0647626519203186,
+      "dot_product": 0.04685000702738762,
+      "weight_norm": 0.7234109044075012,
+      "rank": 43
+    },
+    {
+      "layer": 33,
+      "channel": 3677,
+      "score": 0.06461498141288757,
+      "cosine_similarity": 0.06461498141288757,
+      "dot_product": 0.05327386409044266,
+      "weight_norm": 0.8244816064834595,
+      "rank": 44
+    },
+    {
+      "layer": 33,
+      "channel": 3637,
+      "score": 0.0644795224070549,
+      "cosine_similarity": 0.0644795224070549,
+      "dot_product": 0.05066434293985367,
+      "weight_norm": 0.7857431769371033,
+      "rank": 45
+    },
+    {
+      "layer": 31,
+      "channel": 58,
+      "score": 0.0642189085483551,
+      "cosine_similarity": 0.0642189085483551,
+      "dot_product": 0.051061201840639114,
+      "weight_norm": 0.7951115965843201,
+      "rank": 46
+    },
+    {
+      "layer": 35,
+      "channel": 322,
+      "score": 0.06401648372411728,
+      "cosine_similarity": 0.06401648372411728,
+      "dot_product": 0.042419079691171646,
+      "weight_norm": 0.6626274585723877,
+      "rank": 47
+    },
+    {
+      "layer": 38,
+      "channel": 580,
+      "score": 0.06391698122024536,
+      "cosine_similarity": 0.06391698122024536,
+      "dot_product": 0.04102329909801483,
+      "weight_norm": 0.6418216228485107,
+      "rank": 48
+    },
+    {
+      "layer": 27,
+      "channel": 631,
+      "score": 0.06365563720464706,
+      "cosine_similarity": 0.06365563720464706,
+      "dot_product": 0.03391609340906143,
+      "weight_norm": 0.5328058004379272,
+      "rank": 49
+    },
+    {
+      "layer": 33,
+      "channel": 2350,
+      "score": 0.06325114518404007,
+      "cosine_similarity": 0.06325114518404007,
+      "dot_product": 0.058815330266952515,
+      "weight_norm": 0.9298697710037231,
+      "rank": 50
+    },
+    {
+      "layer": 38,
+      "channel": 1304,
+      "score": 0.06262777745723724,
+      "cosine_similarity": 0.06262777745723724,
+      "dot_product": 0.04012646526098251,
+      "weight_norm": 0.6407135725021362,
+      "rank": 51
+    },
+    {
+      "layer": 38,
+      "channel": 541,
+      "score": 0.06253428012132645,
+      "cosine_similarity": 0.06253428012132645,
+      "dot_product": 0.040616415441036224,
+      "weight_norm": 0.6495063900947571,
+      "rank": 52
+    },
+    {
+      "layer": 38,
+      "channel": 568,
+      "score": 0.062338873744010925,
+      "cosine_similarity": 0.062338873744010925,
+      "dot_product": 0.040533095598220825,
+      "weight_norm": 0.6502057909965515,
+      "rank": 53
+    },
+    {
+      "layer": 42,
+      "channel": 2177,
+      "score": 0.062250372022390366,
+      "cosine_similarity": 0.062250372022390366,
+      "dot_product": 0.029597464948892593,
+      "weight_norm": 0.47545844316482544,
+      "rank": 54
+    },
+    {
+      "layer": 32,
+      "channel": 2648,
+      "score": 0.06216850504279137,
+      "cosine_similarity": 0.06216850504279137,
+      "dot_product": 0.05491746962070465,
+      "weight_norm": 0.8833647966384888,
+      "rank": 55
+    },
+    {
+      "layer": 39,
+      "channel": 3102,
+      "score": 0.06206267699599266,
+      "cosine_similarity": 0.06206267699599266,
+      "dot_product": 0.04021097719669342,
+      "weight_norm": 0.6479091644287109,
+      "rank": 56
+    },
+    {
+      "layer": 28,
+      "channel": 1141,
+      "score": 0.061701711267232895,
+      "cosine_similarity": 0.061701711267232895,
+      "dot_product": 0.03639213740825653,
+      "weight_norm": 0.5898075699806213,
+      "rank": 57
+    },
+    {
+      "layer": 39,
+      "channel": 3237,
+      "score": 0.06168507784605026,
+      "cosine_similarity": 0.06168507784605026,
+      "dot_product": 0.034899648278951645,
+      "weight_norm": 0.5657713413238525,
+      "rank": 58
+    },
+    {
+      "layer": 29,
+      "channel": 2094,
+      "score": 0.06164303421974182,
+      "cosine_similarity": 0.06164303421974182,
+      "dot_product": 0.06291799247264862,
+      "weight_norm": 1.02068293094635,
+      "rank": 59
+    },
+    {
+      "layer": 33,
+      "channel": 3660,
+      "score": 0.06162833049893379,
+      "cosine_similarity": 0.06162833049893379,
+      "dot_product": 0.05135565623641014,
+      "weight_norm": 0.833312451839447,
+      "rank": 60
+    },
+    {
+      "layer": 30,
+      "channel": 3020,
+      "score": 0.061585720628499985,
+      "cosine_similarity": 0.061585720628499985,
+      "dot_product": 0.02765587717294693,
+      "weight_norm": 0.44906315207481384,
+      "rank": 61
+    },
+    {
+      "layer": 30,
+      "channel": 2899,
+      "score": 0.06152592971920967,
+      "cosine_similarity": 0.06152592971920967,
+      "dot_product": 0.02681480534374714,
+      "weight_norm": 0.4358293414115906,
+      "rank": 62
+    },
+    {
+      "layer": 33,
+      "channel": 2471,
+      "score": 0.06150156259536743,
+      "cosine_similarity": 0.06150156259536743,
+      "dot_product": 0.058993399143218994,
+      "weight_norm": 0.95921790599823,
+      "rank": 63
+    },
+    {
+      "layer": 33,
+      "channel": 1116,
+      "score": 0.06138225272297859,
+      "cosine_similarity": 0.06138225272297859,
+      "dot_product": 0.05215167626738548,
+      "weight_norm": 0.8496214151382446,
+      "rank": 64
+    },
+    {
+      "layer": 35,
+      "channel": 1820,
+      "score": 0.06137316673994064,
+      "cosine_similarity": 0.06137316673994064,
+      "dot_product": 0.051235098391771317,
+      "weight_norm": 0.8348127007484436,
+      "rank": 65
+    },
+    {
+      "layer": 24,
+      "channel": 2427,
+      "score": 0.060901232063770294,
+      "cosine_similarity": 0.060901232063770294,
+      "dot_product": 0.027318354696035385,
+      "weight_norm": 0.4485681653022766,
+      "rank": 66
+    },
+    {
+      "layer": 34,
+      "channel": 735,
+      "score": 0.06060347706079483,
+      "cosine_similarity": 0.06060347706079483,
+      "dot_product": 0.0435786247253418,
+      "weight_norm": 0.7190779447555542,
+      "rank": 67
+    },
+    {
+      "layer": 42,
+      "channel": 2231,
+      "score": 0.06039870157837868,
+      "cosine_similarity": 0.06039870157837868,
+      "dot_product": 0.028087131679058075,
+      "weight_norm": 0.4650287330150604,
+      "rank": 68
+    },
+    {
+      "layer": 33,
+      "channel": 1733,
+      "score": 0.060323141515254974,
+      "cosine_similarity": 0.060323141515254974,
+      "dot_product": 0.050301529467105865,
+      "weight_norm": 0.8338678479194641,
+      "rank": 69
+    },
+    {
+      "layer": 30,
+      "channel": 3017,
+      "score": 0.060248423367738724,
+      "cosine_similarity": 0.060248423367738724,
+      "dot_product": 0.026432452723383904,
+      "weight_norm": 0.4387243986129761,
+      "rank": 70
+    },
+    {
+      "layer": 33,
+      "channel": 3823,
+      "score": 0.06006224825978279,
+      "cosine_similarity": 0.06006224825978279,
+      "dot_product": 0.04850558936595917,
+      "weight_norm": 0.8075886368751526,
+      "rank": 71
+    },
+    {
+      "layer": 38,
+      "channel": 548,
+      "score": 0.06005696952342987,
+      "cosine_similarity": 0.06005696952342987,
+      "dot_product": 0.039976608008146286,
+      "weight_norm": 0.6656447649002075,
+      "rank": 72
+    },
+    {
+      "layer": 42,
+      "channel": 2098,
+      "score": 0.05992625653743744,
+      "cosine_similarity": 0.05992625653743744,
+      "dot_product": 0.026586176827549934,
+      "weight_norm": 0.44364821910858154,
+      "rank": 73
+    },
+    {
+      "layer": 35,
+      "channel": 4092,
+      "score": 0.05979291349649429,
+      "cosine_similarity": 0.05979291349649429,
+      "dot_product": 0.05248517170548439,
+      "weight_norm": 0.8777824640274048,
+      "rank": 74
+    },
+    {
+      "layer": 39,
+      "channel": 3894,
+      "score": 0.05956310033798218,
+      "cosine_similarity": 0.05956310033798218,
+      "dot_product": 0.045876260846853256,
+      "weight_norm": 0.7702127695083618,
+      "rank": 75
+    },
+    {
+      "layer": 29,
+      "channel": 2134,
+      "score": 0.05920475348830223,
+      "cosine_similarity": 0.05920475348830223,
+      "dot_product": 0.06070328503847122,
+      "weight_norm": 1.02531099319458,
+      "rank": 76
+    },
+    {
+      "layer": 34,
+      "channel": 2638,
+      "score": 0.059183698147535324,
+      "cosine_similarity": 0.059183698147535324,
+      "dot_product": 0.0498456247150898,
+      "weight_norm": 0.842218816280365,
+      "rank": 77
+    },
+    {
+      "layer": 42,
+      "channel": 3874,
+      "score": 0.05898958072066307,
+      "cosine_similarity": 0.05898958072066307,
+      "dot_product": 0.03321691229939461,
+      "weight_norm": 0.5630979537963867,
+      "rank": 78
+    },
+    {
+      "layer": 34,
+      "channel": 2627,
+      "score": 0.058866389095783234,
+      "cosine_similarity": 0.058866389095783234,
+      "dot_product": 0.057299815118312836,
+      "weight_norm": 0.9733876585960388,
+      "rank": 79
+    },
+    {
+      "layer": 29,
+      "channel": 4021,
+      "score": 0.05870959907770157,
+      "cosine_similarity": 0.05870959907770157,
+      "dot_product": 0.06625381857156754,
+      "weight_norm": 1.1285005807876587,
+      "rank": 80
+    },
+    {
+      "layer": 39,
+      "channel": 3441,
+      "score": 0.05863620713353157,
+      "cosine_similarity": 0.05863620713353157,
+      "dot_product": 0.04601386561989784,
+      "weight_norm": 0.7847346663475037,
+      "rank": 81
+    },
+    {
+      "layer": 38,
+      "channel": 1395,
+      "score": 0.05837659537792206,
+      "cosine_similarity": 0.05837659537792206,
+      "dot_product": 0.04260437935590744,
+      "weight_norm": 0.7298195362091064,
+      "rank": 82
+    },
+    {
+      "layer": 39,
+      "channel": 4011,
+      "score": 0.05815880745649338,
+      "cosine_similarity": 0.05815880745649338,
+      "dot_product": 0.041970618069171906,
+      "weight_norm": 0.7216554284095764,
+      "rank": 83
+    },
+    {
+      "layer": 37,
+      "channel": 3669,
+      "score": 0.057827625423669815,
+      "cosine_similarity": 0.057827625423669815,
+      "dot_product": 0.03977873921394348,
+      "weight_norm": 0.6878846883773804,
+      "rank": 84
+    },
+    {
+      "layer": 41,
+      "channel": 1694,
+      "score": 0.057800278067588806,
+      "cosine_similarity": 0.057800278067588806,
+      "dot_product": 0.03978307172656059,
+      "weight_norm": 0.6882851123809814,
+      "rank": 85
+    },
+    {
+      "layer": 38,
+      "channel": 1445,
+      "score": 0.0575929693877697,
+      "cosine_similarity": 0.0575929693877697,
+      "dot_product": 0.04651577025651932,
+      "weight_norm": 0.8076640367507935,
+      "rank": 86
+    },
+    {
+      "layer": 37,
+      "channel": 2755,
+      "score": 0.0574224554002285,
+      "cosine_similarity": 0.0574224554002285,
+      "dot_product": 0.03507358953356743,
+      "weight_norm": 0.6107991933822632,
+      "rank": 87
+    },
+    {
+      "layer": 41,
+      "channel": 2390,
+      "score": 0.05741479620337486,
+      "cosine_similarity": 0.05741479620337486,
+      "dot_product": 0.0404510498046875,
+      "weight_norm": 0.704540491104126,
+      "rank": 88
+    },
+    {
+      "layer": 36,
+      "channel": 2335,
+      "score": 0.0573778972029686,
+      "cosine_similarity": 0.0573778972029686,
+      "dot_product": 0.05626677721738815,
+      "weight_norm": 0.9806350469589233,
+      "rank": 89
+    },
+    {
+      "layer": 35,
+      "channel": 2003,
+      "score": 0.05730820074677467,
+      "cosine_similarity": 0.05730820074677467,
+      "dot_product": 0.047487616539001465,
+      "weight_norm": 0.8286356329917908,
+      "rank": 90
+    },
+    {
+      "layer": 37,
+      "channel": 2944,
+      "score": 0.057277753949165344,
+      "cosine_similarity": 0.057277753949165344,
+      "dot_product": 0.03526381775736809,
+      "weight_norm": 0.6156634092330933,
+      "rank": 91
+    },
+    {
+      "layer": 41,
+      "channel": 1682,
+      "score": 0.05722557008266449,
+      "cosine_similarity": 0.05722557008266449,
+      "dot_product": 0.04088370129466057,
+      "weight_norm": 0.7144306302070618,
+      "rank": 92
+    },
+    {
+      "layer": 34,
+      "channel": 2593,
+      "score": 0.05713226646184921,
+      "cosine_similarity": 0.05713226646184921,
+      "dot_product": 0.050713587552309036,
+      "weight_norm": 0.8876522779464722,
+      "rank": 93
+    },
+    {
+      "layer": 31,
+      "channel": 2566,
+      "score": 0.0570477619767189,
+      "cosine_similarity": 0.0570477619767189,
+      "dot_product": 0.043746452778577805,
+      "weight_norm": 0.7668390870094299,
+      "rank": 94
+    },
+    {
+      "layer": 37,
+      "channel": 2910,
+      "score": 0.056966640055179596,
+      "cosine_similarity": 0.056966640055179596,
+      "dot_product": 0.03620493784546852,
+      "weight_norm": 0.6355463266372681,
+      "rank": 95
+    },
+    {
+      "layer": 29,
+      "channel": 3300,
+      "score": 0.05690936744213104,
+      "cosine_similarity": 0.05690936744213104,
+      "dot_product": 0.04450460150837898,
+      "weight_norm": 0.782025933265686,
+      "rank": 96
+    },
+    {
+      "layer": 25,
+      "channel": 1770,
+      "score": 0.05674996227025986,
+      "cosine_similarity": 0.05674996227025986,
+      "dot_product": 0.038907360285520554,
+      "weight_norm": 0.6855927109718323,
+      "rank": 97
+    },
+    {
+      "layer": 35,
+      "channel": 2954,
+      "score": 0.05670751631259918,
+      "cosine_similarity": 0.05670751631259918,
+      "dot_product": 0.04489123076200485,
+      "weight_norm": 0.7916275262832642,
+      "rank": 98
+    },
+    {
+      "layer": 42,
+      "channel": 3955,
+      "score": 0.05668055638670921,
+      "cosine_similarity": 0.05668055638670921,
+      "dot_product": 0.031534720212221146,
+      "weight_norm": 0.5563586950302124,
+      "rank": 99
+    },
+    {
+      "layer": 38,
+      "channel": 747,
+      "score": 0.0564391203224659,
+      "cosine_similarity": 0.0564391203224659,
+      "dot_product": 0.03802024573087692,
+      "weight_norm": 0.6736505627632141,
+      "rank": 100
+    },
+    {
+      "layer": 38,
+      "channel": 1052,
+      "score": 0.05639281123876572,
+      "cosine_similarity": 0.05639281123876572,
+      "dot_product": 0.049704667180776596,
+      "weight_norm": 0.8814007639884949,
+      "rank": 101
+    },
+    {
+      "layer": 31,
+      "channel": 3957,
+      "score": 0.056309547275304794,
+      "cosine_similarity": 0.056309547275304794,
+      "dot_product": 0.04102686792612076,
+      "weight_norm": 0.7285952568054199,
+      "rank": 102
+    },
+    {
+      "layer": 41,
+      "channel": 2480,
+      "score": 0.05626045912504196,
+      "cosine_similarity": 0.05626045912504196,
+      "dot_product": 0.037476569414138794,
+      "weight_norm": 0.6661262512207031,
+      "rank": 103
+    },
+    {
+      "layer": 34,
+      "channel": 2620,
+      "score": 0.055958788841962814,
+      "cosine_similarity": 0.055958788841962814,
+      "dot_product": 0.050310082733631134,
+      "weight_norm": 0.8990559577941895,
+      "rank": 104
+    },
+    {
+      "layer": 30,
+      "channel": 2923,
+      "score": 0.05567343160510063,
+      "cosine_similarity": 0.05567343160510063,
+      "dot_product": 0.02445334754884243,
+      "weight_norm": 0.4392283260822296,
+      "rank": 105
+    },
+    {
+      "layer": 42,
+      "channel": 2646,
+      "score": 0.055601127445697784,
+      "cosine_similarity": 0.055601127445697784,
+      "dot_product": 0.03257206454873085,
+      "weight_norm": 0.5858166217803955,
+      "rank": 106
+    },
+    {
+      "layer": 37,
+      "channel": 3618,
+      "score": 0.055586423724889755,
+      "cosine_similarity": 0.055586423724889755,
+      "dot_product": 0.03848547860980034,
+      "weight_norm": 0.6923539042472839,
+      "rank": 107
+    },
+    {
+      "layer": 33,
+      "channel": 3791,
+      "score": 0.05552816390991211,
+      "cosine_similarity": 0.05552816390991211,
+      "dot_product": 0.04595358297228813,
+      "weight_norm": 0.8275725245475769,
+      "rank": 108
+    },
+    {
+      "layer": 41,
+      "channel": 541,
+      "score": 0.05547448620200157,
+      "cosine_similarity": 0.05547448620200157,
+      "dot_product": 0.024712247774004936,
+      "weight_norm": 0.44547051191329956,
+      "rank": 109
+    },
+    {
+      "layer": 42,
+      "channel": 2329,
+      "score": 0.05544719472527504,
+      "cosine_similarity": 0.05544719472527504,
+      "dot_product": 0.025356028228998184,
+      "weight_norm": 0.45730048418045044,
+      "rank": 110
+    },
+    {
+      "layer": 38,
+      "channel": 1050,
+      "score": 0.055336881428956985,
+      "cosine_similarity": 0.055336881428956985,
+      "dot_product": 0.04348882660269737,
+      "weight_norm": 0.7858922481536865,
+      "rank": 111
+    },
+    {
+      "layer": 25,
+      "channel": 1618,
+      "score": 0.05533302575349808,
+      "cosine_similarity": 0.05533302575349808,
+      "dot_product": 0.03664467856287956,
+      "weight_norm": 0.6622568964958191,
+      "rank": 112
+    },
+    {
+      "layer": 39,
+      "channel": 182,
+      "score": 0.055327270179986954,
+      "cosine_similarity": 0.055327270179986954,
+      "dot_product": 0.03704378008842468,
+      "weight_norm": 0.6695392727851868,
+      "rank": 113
+    },
+    {
+      "layer": 24,
+      "channel": 216,
+      "score": 0.05526528134942055,
+      "cosine_similarity": 0.05526528134942055,
+      "dot_product": 0.02600901387631893,
+      "weight_norm": 0.4706212282180786,
+      "rank": 114
+    },
+    {
+      "layer": 41,
+      "channel": 653,
+      "score": 0.0552016980946064,
+      "cosine_similarity": 0.0552016980946064,
+      "dot_product": 0.02505442686378956,
+      "weight_norm": 0.45387059450149536,
+      "rank": 115
+    },
+    {
+      "layer": 38,
+      "channel": 2856,
+      "score": 0.054979924112558365,
+      "cosine_similarity": 0.054979924112558365,
+      "dot_product": 0.04167243093252182,
+      "weight_norm": 0.7579572200775146,
+      "rank": 116
+    },
+    {
+      "layer": 36,
+      "channel": 3775,
+      "score": 0.054643552750349045,
+      "cosine_similarity": 0.054643552750349045,
+      "dot_product": 0.0446041002869606,
+      "weight_norm": 0.8162738084793091,
+      "rank": 117
+    },
+    {
+      "layer": 38,
+      "channel": 215,
+      "score": 0.05462901294231415,
+      "cosine_similarity": 0.05462901294231415,
+      "dot_product": 0.03490091487765312,
+      "weight_norm": 0.638871431350708,
+      "rank": 118
+    },
+    {
+      "layer": 42,
+      "channel": 1150,
+      "score": 0.054611243307590485,
+      "cosine_similarity": 0.054611243307590485,
+      "dot_product": 0.030017171055078506,
+      "weight_norm": 0.5496518611907959,
+      "rank": 119
+    },
+    {
+      "layer": 36,
+      "channel": 1929,
+      "score": 0.05456331744790077,
+      "cosine_similarity": 0.05456331744790077,
+      "dot_product": 0.04840771481394768,
+      "weight_norm": 0.887184202671051,
+      "rank": 120
+    },
+    {
+      "layer": 33,
+      "channel": 2412,
+      "score": 0.05423981323838234,
+      "cosine_similarity": 0.05423981323838234,
+      "dot_product": 0.05063644424080849,
+      "weight_norm": 0.9335659742355347,
+      "rank": 121
+    },
+    {
+      "layer": 41,
+      "channel": 2438,
+      "score": 0.05417228117585182,
+      "cosine_similarity": 0.05417228117585182,
+      "dot_product": 0.024168243631720543,
+      "weight_norm": 0.4461367130279541,
+      "rank": 122
+    },
+    {
+      "layer": 32,
+      "channel": 3169,
+      "score": 0.0541347861289978,
+      "cosine_similarity": 0.0541347861289978,
+      "dot_product": 0.05577494204044342,
+      "weight_norm": 1.0302976369857788,
+      "rank": 123
+    },
+    {
+      "layer": 30,
+      "channel": 2971,
+      "score": 0.05412822589278221,
+      "cosine_similarity": 0.05412822589278221,
+      "dot_product": 0.0244522076100111,
+      "weight_norm": 0.4517459571361542,
+      "rank": 124
+    },
+    {
+      "layer": 33,
+      "channel": 1340,
+      "score": 0.05406589061021805,
+      "cosine_similarity": 0.05406589061021805,
+      "dot_product": 0.036377690732479095,
+      "weight_norm": 0.6728399395942688,
+      "rank": 125
+    },
+    {
+      "layer": 41,
+      "channel": 686,
+      "score": 0.05405246466398239,
+      "cosine_similarity": 0.05405246466398239,
+      "dot_product": 0.022650398313999176,
+      "weight_norm": 0.41904470324516296,
+      "rank": 126
+    },
+    {
+      "layer": 38,
+      "channel": 772,
+      "score": 0.053949471563100815,
+      "cosine_similarity": 0.053949471563100815,
+      "dot_product": 0.03712891414761543,
+      "weight_norm": 0.6882164478302002,
+      "rank": 127
+    },
+    {
+      "layer": 32,
+      "channel": 3290,
+      "score": 0.05384822189807892,
+      "cosine_similarity": 0.05384822189807892,
+      "dot_product": 0.061900388449430466,
+      "weight_norm": 1.1495344638824463,
+      "rank": 128
+    },
+    {
+      "layer": 33,
+      "channel": 2470,
+      "score": 0.05379512161016464,
+      "cosine_similarity": 0.05379512161016464,
+      "dot_product": 0.04953274875879288,
+      "weight_norm": 0.9207665324211121,
+      "rank": 129
+    },
+    {
+      "layer": 24,
+      "channel": 439,
+      "score": 0.053740452975034714,
+      "cosine_similarity": 0.053740452975034714,
+      "dot_product": 0.03299830108880997,
+      "weight_norm": 0.6140309572219849,
+      "rank": 130
+    },
+    {
+      "layer": 38,
+      "channel": 827,
+      "score": 0.05373019725084305,
+      "cosine_similarity": 0.05373019725084305,
+      "dot_product": 0.036161620169878006,
+      "weight_norm": 0.6730222702026367,
+      "rank": 131
+    },
+    {
+      "layer": 24,
+      "channel": 2652,
+      "score": 0.05367076396942139,
+      "cosine_similarity": 0.05367076396942139,
+      "dot_product": 0.027263488620519638,
+      "weight_norm": 0.5079765319824219,
+      "rank": 132
+    },
+    {
+      "layer": 39,
+      "channel": 3453,
+      "score": 0.053602565079927444,
+      "cosine_similarity": 0.053602565079927444,
+      "dot_product": 0.04459843784570694,
+      "weight_norm": 0.8320205807685852,
+      "rank": 133
+    },
+    {
+      "layer": 38,
+      "channel": 1490,
+      "score": 0.05359537526965141,
+      "cosine_similarity": 0.05359537526965141,
+      "dot_product": 0.037574730813503265,
+      "weight_norm": 0.7010815739631653,
+      "rank": 134
+    },
+    {
+      "layer": 35,
+      "channel": 2018,
+      "score": 0.0535946786403656,
+      "cosine_similarity": 0.0535946786403656,
+      "dot_product": 0.044905249029397964,
+      "weight_norm": 0.8378676772117615,
+      "rank": 135
+    },
+    {
+      "layer": 38,
+      "channel": 1497,
+      "score": 0.05355504900217056,
+      "cosine_similarity": 0.05355504900217056,
+      "dot_product": 0.029125671833753586,
+      "weight_norm": 0.5438454747200012,
+      "rank": 136
+    },
+    {
+      "layer": 39,
+      "channel": 3107,
+      "score": 0.05352426692843437,
+      "cosine_similarity": 0.05352426692843437,
+      "dot_product": 0.042498499155044556,
+      "weight_norm": 0.7940043210983276,
+      "rank": 137
+    },
+    {
+      "layer": 40,
+      "channel": 2704,
+      "score": 0.053490255028009415,
+      "cosine_similarity": 0.053490255028009415,
+      "dot_product": 0.03286454454064369,
+      "weight_norm": 0.6144024729728699,
+      "rank": 138
+    },
+    {
+      "layer": 33,
+      "channel": 1299,
+      "score": 0.05347488448023796,
+      "cosine_similarity": 0.05347488448023796,
+      "dot_product": 0.037528835237026215,
+      "weight_norm": 0.7018030285835266,
+      "rank": 139
+    },
+    {
+      "layer": 35,
+      "channel": 2956,
+      "score": 0.05338716134428978,
+      "cosine_similarity": 0.05338716134428978,
+      "dot_product": 0.04834401607513428,
+      "weight_norm": 0.9055363535881042,
+      "rank": 140
+    },
+    {
+      "layer": 32,
+      "channel": 470,
+      "score": 0.05337461829185486,
+      "cosine_similarity": 0.05337461829185486,
+      "dot_product": 0.05013728514313698,
+      "weight_norm": 0.939346969127655,
+      "rank": 141
+    },
+    {
+      "layer": 24,
+      "channel": 3093,
+      "score": 0.0533490851521492,
+      "cosine_similarity": 0.0533490851521492,
+      "dot_product": 0.029320774599909782,
+      "weight_norm": 0.549602210521698,
+      "rank": 142
+    },
+    {
+      "layer": 35,
+      "channel": 2906,
+      "score": 0.053342439234256744,
+      "cosine_similarity": 0.053342439234256744,
+      "dot_product": 0.03688763454556465,
+      "weight_norm": 0.6915251016616821,
+      "rank": 143
+    },
+    {
+      "layer": 30,
+      "channel": 2862,
+      "score": 0.05328187718987465,
+      "cosine_similarity": 0.05328187718987465,
+      "dot_product": 0.024098429828882217,
+      "weight_norm": 0.4522819221019745,
+      "rank": 144
+    },
+    {
+      "layer": 35,
+      "channel": 341,
+      "score": 0.05324249342083931,
+      "cosine_similarity": 0.05324249342083931,
+      "dot_product": 0.033653512597084045,
+      "weight_norm": 0.6320799589157104,
+      "rank": 145
+    },
+    {
+      "layer": 33,
+      "channel": 2455,
+      "score": 0.053158294409513474,
+      "cosine_similarity": 0.053158294409513474,
+      "dot_product": 0.04970380663871765,
+      "weight_norm": 0.935015082359314,
+      "rank": 146
+    },
+    {
+      "layer": 26,
+      "channel": 3786,
+      "score": 0.05311429500579834,
+      "cosine_similarity": 0.05311429500579834,
+      "dot_product": 0.03972738981246948,
+      "weight_norm": 0.7479603886604309,
+      "rank": 147
+    },
+    {
+      "layer": 42,
+      "channel": 2281,
+      "score": 0.0530584454536438,
+      "cosine_similarity": 0.0530584454536438,
+      "dot_product": 0.025348227471113205,
+      "weight_norm": 0.47774162888526917,
+      "rank": 148
+    },
+    {
+      "layer": 38,
+      "channel": 987,
+      "score": 0.053013455122709274,
+      "cosine_similarity": 0.053013455122709274,
+      "dot_product": 0.03776400908827782,
+      "weight_norm": 0.7123476266860962,
+      "rank": 149
+    },
+    {
+      "layer": 35,
+      "channel": 1966,
+      "score": 0.05297006666660309,
+      "cosine_similarity": 0.05297006666660309,
+      "dot_product": 0.04320929944515228,
+      "weight_norm": 0.8157305121421814,
+      "rank": 150
+    },
+    {
+      "layer": 38,
+      "channel": 824,
+      "score": 0.05292374640703201,
+      "cosine_similarity": 0.05292374640703201,
+      "dot_product": 0.037126630544662476,
+      "weight_norm": 0.7015117406845093,
+      "rank": 151
+    },
+    {
+      "layer": 35,
+      "channel": 2866,
+      "score": 0.052909571677446365,
+      "cosine_similarity": 0.052909571677446365,
+      "dot_product": 0.03814775496721268,
+      "weight_norm": 0.7209991216659546,
+      "rank": 152
+    },
+    {
+      "layer": 40,
+      "channel": 2813,
+      "score": 0.052895016968250275,
+      "cosine_similarity": 0.052895016968250275,
+      "dot_product": 0.03172363340854645,
+      "weight_norm": 0.5997471213340759,
+      "rank": 153
+    },
+    {
+      "layer": 28,
+      "channel": 1732,
+      "score": 0.05287247896194458,
+      "cosine_similarity": 0.05287247896194458,
+      "dot_product": 0.03046935796737671,
+      "weight_norm": 0.5762801170349121,
+      "rank": 154
+    },
+    {
+      "layer": 31,
+      "channel": 2981,
+      "score": 0.052860088646411896,
+      "cosine_similarity": 0.052860088646411896,
+      "dot_product": 0.04463017359375954,
+      "weight_norm": 0.8443076014518738,
+      "rank": 155
+    },
+    {
+      "layer": 34,
+      "channel": 587,
+      "score": 0.05281415209174156,
+      "cosine_similarity": 0.05281415209174156,
+      "dot_product": 0.03639651834964752,
+      "weight_norm": 0.6891433000564575,
+      "rank": 156
+    },
+    {
+      "layer": 30,
+      "channel": 2835,
+      "score": 0.05279405787587166,
+      "cosine_similarity": 0.05279405787587166,
+      "dot_product": 0.02329433150589466,
+      "weight_norm": 0.4412301778793335,
+      "rank": 157
+    },
+    {
+      "layer": 35,
+      "channel": 2848,
+      "score": 0.05269104987382889,
+      "cosine_similarity": 0.05269104987382889,
+      "dot_product": 0.03846267610788345,
+      "weight_norm": 0.7299660444259644,
+      "rank": 158
+    },
+    {
+      "layer": 24,
+      "channel": 2695,
+      "score": 0.05261801928281784,
+      "cosine_similarity": 0.05261801928281784,
+      "dot_product": 0.025391630828380585,
+      "weight_norm": 0.482565313577652,
+      "rank": 159
+    },
+    {
+      "layer": 39,
+      "channel": 2520,
+      "score": 0.05257578194141388,
+      "cosine_similarity": 0.05257578194141388,
+      "dot_product": 0.042019061744213104,
+      "weight_norm": 0.799209475517273,
+      "rank": 160
+    },
+    {
+      "layer": 29,
+      "channel": 3264,
+      "score": 0.05251098796725273,
+      "cosine_similarity": 0.05251098796725273,
+      "dot_product": 0.04293385520577431,
+      "weight_norm": 0.8176165819168091,
+      "rank": 161
+    },
+    {
+      "layer": 25,
+      "channel": 1095,
+      "score": 0.05247410014271736,
+      "cosine_similarity": 0.05247410014271736,
+      "dot_product": 0.03528716042637825,
+      "weight_norm": 0.6724681258201599,
+      "rank": 162
+    },
+    {
+      "layer": 35,
+      "channel": 2856,
+      "score": 0.05243467167019844,
+      "cosine_similarity": 0.05243467167019844,
+      "dot_product": 0.043281733989715576,
+      "weight_norm": 0.8254411220550537,
+      "rank": 163
+    },
+    {
+      "layer": 32,
+      "channel": 3023,
+      "score": 0.052319783717393875,
+      "cosine_similarity": 0.052319783717393875,
+      "dot_product": 0.04304362088441849,
+      "weight_norm": 0.8227025866508484,
+      "rank": 164
+    },
+    {
+      "layer": 26,
+      "channel": 2083,
+      "score": 0.05228719487786293,
+      "cosine_similarity": 0.05228719487786293,
+      "dot_product": 0.04511761665344238,
+      "weight_norm": 0.8628808259963989,
+      "rank": 165
+    },
+    {
+      "layer": 24,
+      "channel": 177,
+      "score": 0.05227716267108917,
+      "cosine_similarity": 0.05227716267108917,
+      "dot_product": 0.024058151990175247,
+      "weight_norm": 0.4602038562297821,
+      "rank": 166
+    },
+    {
+      "layer": 25,
+      "channel": 1158,
+      "score": 0.05227620154619217,
+      "cosine_similarity": 0.05227620154619217,
+      "dot_product": 0.03471224755048752,
+      "weight_norm": 0.6640162467956543,
+      "rank": 167
+    },
+    {
+      "layer": 41,
+      "channel": 1633,
+      "score": 0.05226434767246246,
+      "cosine_similarity": 0.05226434767246246,
+      "dot_product": 0.03718273341655731,
+      "weight_norm": 0.7114359140396118,
+      "rank": 168
+    },
+    {
+      "layer": 30,
+      "channel": 1884,
+      "score": 0.0522182323038578,
+      "cosine_similarity": 0.0522182323038578,
+      "dot_product": 0.028114695101976395,
+      "weight_norm": 0.5384076237678528,
+      "rank": 169
+    },
+    {
+      "layer": 35,
+      "channel": 2879,
+      "score": 0.05208278074860573,
+      "cosine_similarity": 0.05208278074860573,
+      "dot_product": 0.040859904140233994,
+      "weight_norm": 0.7845184803009033,
+      "rank": 170
+    },
+    {
+      "layer": 42,
+      "channel": 2501,
+      "score": 0.052060313522815704,
+      "cosine_similarity": 0.052060313522815704,
+      "dot_product": 0.024014970287680626,
+      "weight_norm": 0.4612913131713867,
+      "rank": 171
+    },
+    {
+      "layer": 40,
+      "channel": 1410,
+      "score": 0.052037835121154785,
+      "cosine_similarity": 0.052037835121154785,
+      "dot_product": 0.036378707736730576,
+      "weight_norm": 0.6990818977355957,
+      "rank": 172
+    },
+    {
+      "layer": 28,
+      "channel": 1059,
+      "score": 0.05202857777476311,
+      "cosine_similarity": 0.05202857777476311,
+      "dot_product": 0.03193199262022972,
+      "weight_norm": 0.6137394905090332,
+      "rank": 173
+    },
+    {
+      "layer": 33,
+      "channel": 1226,
+      "score": 0.05198109522461891,
+      "cosine_similarity": 0.05198109522461891,
+      "dot_product": 0.045405443757772446,
+      "weight_norm": 0.8734991550445557,
+      "rank": 174
+    },
+    {
+      "layer": 39,
+      "channel": 3261,
+      "score": 0.051927849650382996,
+      "cosine_similarity": 0.051927849650382996,
+      "dot_product": 0.03371793031692505,
+      "weight_norm": 0.6493226885795593,
+      "rank": 175
+    },
+    {
+      "layer": 41,
+      "channel": 2162,
+      "score": 0.05188022553920746,
+      "cosine_similarity": 0.05188022553920746,
+      "dot_product": 0.03284895047545433,
+      "weight_norm": 0.6331689953804016,
+      "rank": 176
+    },
+    {
+      "layer": 29,
+      "channel": 3222,
+      "score": 0.0517415814101696,
+      "cosine_similarity": 0.0517415814101696,
+      "dot_product": 0.04390609636902809,
+      "weight_norm": 0.8485650420188904,
+      "rank": 177
+    },
+    {
+      "layer": 34,
+      "channel": 2725,
+      "score": 0.05171855539083481,
+      "cosine_similarity": 0.05171855539083481,
+      "dot_product": 0.048494867980480194,
+      "weight_norm": 0.9376686215400696,
+      "rank": 178
+    },
+    {
+      "layer": 36,
+      "channel": 3784,
+      "score": 0.05169396102428436,
+      "cosine_similarity": 0.05169396102428436,
+      "dot_product": 0.03920520097017288,
+      "weight_norm": 0.7584096789360046,
+      "rank": 179
+    },
+    {
+      "layer": 24,
+      "channel": 4086,
+      "score": 0.05165844038128853,
+      "cosine_similarity": 0.05165844038128853,
+      "dot_product": 0.029295897111296654,
+      "weight_norm": 0.5671076774597168,
+      "rank": 180
+    },
+    {
+      "layer": 27,
+      "channel": 731,
+      "score": 0.051635999232530594,
+      "cosine_similarity": 0.051635999232530594,
+      "dot_product": 0.026846976950764656,
+      "weight_norm": 0.5199275016784668,
+      "rank": 181
+    },
+    {
+      "layer": 42,
+      "channel": 3730,
+      "score": 0.051616422832012177,
+      "cosine_similarity": 0.051616422832012177,
+      "dot_product": 0.028907159343361855,
+      "weight_norm": 0.5600380301475525,
+      "rank": 182
+    },
+    {
+      "layer": 25,
+      "channel": 1852,
+      "score": 0.05150897800922394,
+      "cosine_similarity": 0.05150897800922394,
+      "dot_product": 0.03280699625611305,
+      "weight_norm": 0.6369180083274841,
+      "rank": 183
+    },
+    {
+      "layer": 42,
+      "channel": 1028,
+      "score": 0.051504530012607574,
+      "cosine_similarity": 0.051504530012607574,
+      "dot_product": 0.029159342870116234,
+      "weight_norm": 0.5661510229110718,
+      "rank": 184
+    },
+    {
+      "layer": 33,
+      "channel": 1475,
+      "score": 0.051491864025592804,
+      "cosine_similarity": 0.051491864025592804,
+      "dot_product": 0.03903639689087868,
+      "weight_norm": 0.7581080794334412,
+      "rank": 185
+    },
+    {
+      "layer": 38,
+      "channel": 249,
+      "score": 0.05149177089333534,
+      "cosine_similarity": 0.05149177089333534,
+      "dot_product": 0.03280649334192276,
+      "weight_norm": 0.6371210813522339,
+      "rank": 186
+    },
+    {
+      "layer": 33,
+      "channel": 1578,
+      "score": 0.05148252844810486,
+      "cosine_similarity": 0.05148252844810486,
+      "dot_product": 0.04500333592295647,
+      "weight_norm": 0.8741477131843567,
+      "rank": 187
+    },
+    {
+      "layer": 36,
+      "channel": 2530,
+      "score": 0.05148239806294441,
+      "cosine_similarity": 0.05148239806294441,
+      "dot_product": 0.04983611777424812,
+      "weight_norm": 0.9680224657058716,
+      "rank": 188
+    },
+    {
+      "layer": 42,
+      "channel": 1097,
+      "score": 0.05145130679011345,
+      "cosine_similarity": 0.05145130679011345,
+      "dot_product": 0.02895291894674301,
+      "weight_norm": 0.5627246499061584,
+      "rank": 189
+    },
+    {
+      "layer": 33,
+      "channel": 2475,
+      "score": 0.05142490565776825,
+      "cosine_similarity": 0.05142490565776825,
+      "dot_product": 0.04669889807701111,
+      "weight_norm": 0.9080988764762878,
+      "rank": 190
+    },
+    {
+      "layer": 39,
+      "channel": 3165,
+      "score": 0.05142124742269516,
+      "cosine_similarity": 0.05142124742269516,
+      "dot_product": 0.03711407631635666,
+      "weight_norm": 0.721765398979187,
+      "rank": 191
+    },
+    {
+      "layer": 30,
+      "channel": 3199,
+      "score": 0.05136079713702202,
+      "cosine_similarity": 0.05136079713702202,
+      "dot_product": 0.024336354807019234,
+      "weight_norm": 0.47383132576942444,
+      "rank": 192
+    },
+    {
+      "layer": 42,
+      "channel": 3785,
+      "score": 0.051329486072063446,
+      "cosine_similarity": 0.051329486072063446,
+      "dot_product": 0.032407961785793304,
+      "weight_norm": 0.631371259689331,
+      "rank": 193
+    },
+    {
+      "layer": 39,
+      "channel": 3221,
+      "score": 0.051291778683662415,
+      "cosine_similarity": 0.051291778683662415,
+      "dot_product": 0.04023314639925957,
+      "weight_norm": 0.784397542476654,
+      "rank": 194
+    },
+    {
+      "layer": 35,
+      "channel": 2899,
+      "score": 0.051240913569927216,
+      "cosine_similarity": 0.051240913569927216,
+      "dot_product": 0.04063393548130989,
+      "weight_norm": 0.7929978966712952,
+      "rank": 195
+    },
+    {
+      "layer": 42,
+      "channel": 3997,
+      "score": 0.051229413598775864,
+      "cosine_similarity": 0.051229413598775864,
+      "dot_product": 0.02897229790687561,
+      "weight_norm": 0.5655403137207031,
+      "rank": 196
+    },
+    {
+      "layer": 36,
+      "channel": 3647,
+      "score": 0.05119623616337776,
+      "cosine_similarity": 0.05119623616337776,
+      "dot_product": 0.041357267647981644,
+      "weight_norm": 0.8078185319900513,
+      "rank": 197
+    },
+    {
+      "layer": 40,
+      "channel": 3051,
+      "score": 0.05115864798426628,
+      "cosine_similarity": 0.05115864798426628,
+      "dot_product": 0.035195790231227875,
+      "weight_norm": 0.6879734396934509,
+      "rank": 198
+    },
+    {
+      "layer": 30,
+      "channel": 4083,
+      "score": 0.05112640932202339,
+      "cosine_similarity": 0.05112640932202339,
+      "dot_product": 0.026651713997125626,
+      "weight_norm": 0.5212905406951904,
+      "rank": 199
+    },
+    {
+      "layer": 41,
+      "channel": 2697,
+      "score": 0.051113296300172806,
+      "cosine_similarity": 0.051113296300172806,
+      "dot_product": 0.03689790517091751,
+      "weight_norm": 0.7218846678733826,
+      "rank": 200
+    },
+    {
+      "layer": 39,
+      "channel": 3291,
+      "score": 0.0511091947555542,
+      "cosine_similarity": 0.0511091947555542,
+      "dot_product": 0.035515233874320984,
+      "weight_norm": 0.6948893070220947,
+      "rank": 201
+    },
+    {
+      "layer": 31,
+      "channel": 2575,
+      "score": 0.05110915005207062,
+      "cosine_similarity": 0.05110915005207062,
+      "dot_product": 0.03695535659790039,
+      "weight_norm": 0.7230673432350159,
+      "rank": 202
+    },
+    {
+      "layer": 40,
+      "channel": 2678,
+      "score": 0.05110251158475876,
+      "cosine_similarity": 0.05110251158475876,
+      "dot_product": 0.029447490349411964,
+      "weight_norm": 0.57624351978302,
+      "rank": 203
+    },
+    {
+      "layer": 24,
+      "channel": 3964,
+      "score": 0.05106942728161812,
+      "cosine_similarity": 0.05106942728161812,
+      "dot_product": 0.030089018866419792,
+      "weight_norm": 0.5891786813735962,
+      "rank": 204
+    },
+    {
+      "layer": 34,
+      "channel": 877,
+      "score": 0.050949327647686005,
+      "cosine_similarity": 0.050949327647686005,
+      "dot_product": 0.044432539492845535,
+      "weight_norm": 0.8720927834510803,
+      "rank": 205
+    },
+    {
+      "layer": 40,
+      "channel": 886,
+      "score": 0.050896819680929184,
+      "cosine_similarity": 0.050896819680929184,
+      "dot_product": 0.03445243090391159,
+      "weight_norm": 0.6769073605537415,
+      "rank": 206
+    },
+    {
+      "layer": 41,
+      "channel": 1668,
+      "score": 0.050872474908828735,
+      "cosine_similarity": 0.050872474908828735,
+      "dot_product": 0.03507610037922859,
+      "weight_norm": 0.6894907355308533,
+      "rank": 207
+    },
+    {
+      "layer": 32,
+      "channel": 555,
+      "score": 0.05082515999674797,
+      "cosine_similarity": 0.05082515999674797,
+      "dot_product": 0.052834607660770416,
+      "weight_norm": 1.039536476135254,
+      "rank": 208
+    },
+    {
+      "layer": 35,
+      "channel": 428,
+      "score": 0.05080686882138252,
+      "cosine_similarity": 0.05080686882138252,
+      "dot_product": 0.03493894636631012,
+      "weight_norm": 0.6876815557479858,
+      "rank": 209
+    },
+    {
+      "layer": 34,
+      "channel": 3042,
+      "score": 0.05076785385608673,
+      "cosine_similarity": 0.05076785385608673,
+      "dot_product": 0.04482603073120117,
+      "weight_norm": 0.8829609155654907,
+      "rank": 210
+    },
+    {
+      "layer": 24,
+      "channel": 357,
+      "score": 0.050743263214826584,
+      "cosine_similarity": 0.050743263214826584,
+      "dot_product": 0.03124968148767948,
+      "weight_norm": 0.6158390045166016,
+      "rank": 211
+    },
+    {
+      "layer": 25,
+      "channel": 1581,
+      "score": 0.05068138614296913,
+      "cosine_similarity": 0.05068138614296913,
+      "dot_product": 0.03232923522591591,
+      "weight_norm": 0.6378917098045349,
+      "rank": 212
+    },
+    {
+      "layer": 33,
+      "channel": 3682,
+      "score": 0.05066067725419998,
+      "cosine_similarity": 0.05066067725419998,
+      "dot_product": 0.04644192382693291,
+      "weight_norm": 0.9167252779006958,
+      "rank": 213
+    },
+    {
+      "layer": 31,
+      "channel": 3069,
+      "score": 0.05065549537539482,
+      "cosine_similarity": 0.05065549537539482,
+      "dot_product": 0.04063897579908371,
+      "weight_norm": 0.8022619485855103,
+      "rank": 214
+    },
+    {
+      "layer": 35,
+      "channel": 2013,
+      "score": 0.05060211941599846,
+      "cosine_similarity": 0.05060211941599846,
+      "dot_product": 0.04239339008927345,
+      "weight_norm": 0.8377789258956909,
+      "rank": 215
+    },
+    {
+      "layer": 28,
+      "channel": 1279,
+      "score": 0.05048292502760887,
+      "cosine_similarity": 0.05048292502760887,
+      "dot_product": 0.03173520416021347,
+      "weight_norm": 0.6286324262619019,
+      "rank": 216
+    },
+    {
+      "layer": 37,
+      "channel": 2687,
+      "score": 0.05047883838415146,
+      "cosine_similarity": 0.05047883838415146,
+      "dot_product": 0.03096950054168701,
+      "weight_norm": 0.6135145425796509,
+      "rank": 217
+    },
+    {
+      "layer": 38,
+      "channel": 706,
+      "score": 0.050460681319236755,
+      "cosine_similarity": 0.050460681319236755,
+      "dot_product": 0.03310205414891243,
+      "weight_norm": 0.6559969782829285,
+      "rank": 218
+    },
+    {
+      "layer": 33,
+      "channel": 201,
+      "score": 0.05045550316572189,
+      "cosine_similarity": 0.05045550316572189,
+      "dot_product": 0.041202228516340256,
+      "weight_norm": 0.816605269908905,
+      "rank": 219
+    },
+    {
+      "layer": 42,
+      "channel": 1443,
+      "score": 0.05034743621945381,
+      "cosine_similarity": 0.05034743621945381,
+      "dot_product": 0.027843555435538292,
+      "weight_norm": 0.5530282855033875,
+      "rank": 220
+    },
+    {
+      "layer": 36,
+      "channel": 1943,
+      "score": 0.050341714173555374,
+      "cosine_similarity": 0.050341714173555374,
+      "dot_product": 0.04671258106827736,
+      "weight_norm": 0.9279100298881531,
+      "rank": 221
+    },
+    {
+      "layer": 29,
+      "channel": 3102,
+      "score": 0.05030440911650658,
+      "cosine_similarity": 0.05030440911650658,
+      "dot_product": 0.04436222091317177,
+      "weight_norm": 0.8818753957748413,
+      "rank": 222
+    },
+    {
+      "layer": 29,
+      "channel": 3612,
+      "score": 0.05027880147099495,
+      "cosine_similarity": 0.05027880147099495,
+      "dot_product": 0.0479389913380146,
+      "weight_norm": 0.9534633159637451,
+      "rank": 223
+    },
+    {
+      "layer": 28,
+      "channel": 1344,
+      "score": 0.05027339607477188,
+      "cosine_similarity": 0.05027339607477188,
+      "dot_product": 0.03346743807196617,
+      "weight_norm": 0.6657087206840515,
+      "rank": 224
+    },
+    {
+      "layer": 32,
+      "channel": 793,
+      "score": 0.050191644579172134,
+      "cosine_similarity": 0.050191644579172134,
+      "dot_product": 0.048121124505996704,
+      "weight_norm": 0.9587476849555969,
+      "rank": 225
+    },
+    {
+      "layer": 33,
+      "channel": 1058,
+      "score": 0.050099022686481476,
+      "cosine_similarity": 0.050099022686481476,
+      "dot_product": 0.049042388796806335,
+      "weight_norm": 0.9789090752601624,
+      "rank": 226
+    },
+    {
+      "layer": 38,
+      "channel": 646,
+      "score": 0.050024013966321945,
+      "cosine_similarity": 0.050024013966321945,
+      "dot_product": 0.03430262953042984,
+      "weight_norm": 0.6857232451438904,
+      "rank": 227
+    },
+    {
+      "layer": 35,
+      "channel": 347,
+      "score": 0.049995116889476776,
+      "cosine_similarity": 0.049995116889476776,
+      "dot_product": 0.034081388264894485,
+      "weight_norm": 0.6816943287849426,
+      "rank": 228
+    },
+    {
+      "layer": 37,
+      "channel": 199,
+      "score": 0.04990975931286812,
+      "cosine_similarity": 0.04990975931286812,
+      "dot_product": 0.035998307168483734,
+      "weight_norm": 0.7212678790092468,
+      "rank": 229
+    },
+    {
+      "layer": 25,
+      "channel": 3530,
+      "score": 0.049905262887477875,
+      "cosine_similarity": 0.049905262887477875,
+      "dot_product": 0.032129835337400436,
+      "weight_norm": 0.6438165903091431,
+      "rank": 230
+    },
+    {
+      "layer": 41,
+      "channel": 1928,
+      "score": 0.04989291727542877,
+      "cosine_similarity": 0.04989291727542877,
+      "dot_product": 0.034992851316928864,
+      "weight_norm": 0.7013590931892395,
+      "rank": 231
+    },
+    {
+      "layer": 37,
+      "channel": 3642,
+      "score": 0.049890633672475815,
+      "cosine_similarity": 0.049890633672475815,
+      "dot_product": 0.034865424036979675,
+      "weight_norm": 0.6988370418548584,
+      "rank": 232
+    },
+    {
+      "layer": 39,
+      "channel": 70,
+      "score": 0.04988676682114601,
+      "cosine_similarity": 0.04988676682114601,
+      "dot_product": 0.032129108905792236,
+      "weight_norm": 0.6440407037734985,
+      "rank": 233
+    },
+    {
+      "layer": 40,
+      "channel": 3042,
+      "score": 0.049883488565683365,
+      "cosine_similarity": 0.049883488565683365,
+      "dot_product": 0.03378573805093765,
+      "weight_norm": 0.6772930026054382,
+      "rank": 234
+    },
+    {
+      "layer": 37,
+      "channel": 2919,
+      "score": 0.04987534508109093,
+      "cosine_similarity": 0.04987534508109093,
+      "dot_product": 0.03363309055566788,
+      "weight_norm": 0.6743429899215698,
+      "rank": 235
+    },
+    {
+      "layer": 38,
+      "channel": 764,
+      "score": 0.049826666712760925,
+      "cosine_similarity": 0.049826666712760925,
+      "dot_product": 0.033531174063682556,
+      "weight_norm": 0.6729564070701599,
+      "rank": 236
+    },
+    {
+      "layer": 37,
+      "channel": 3829,
+      "score": 0.04980376362800598,
+      "cosine_similarity": 0.04980376362800598,
+      "dot_product": 0.034956011921167374,
+      "weight_norm": 0.7018749117851257,
+      "rank": 237
+    },
+    {
+      "layer": 34,
+      "channel": 3157,
+      "score": 0.04976359382271767,
+      "cosine_similarity": 0.04976359382271767,
+      "dot_product": 0.027536289766430855,
+      "weight_norm": 0.5533420443534851,
+      "rank": 238
+    },
+    {
+      "layer": 25,
+      "channel": 2762,
+      "score": 0.04973573237657547,
+      "cosine_similarity": 0.04973573237657547,
+      "dot_product": 0.03581802546977997,
+      "weight_norm": 0.7201668620109558,
+      "rank": 239
+    },
+    {
+      "layer": 33,
+      "channel": 1344,
+      "score": 0.04961343854665756,
+      "cosine_similarity": 0.04961343854665756,
+      "dot_product": 0.034505993127822876,
+      "weight_norm": 0.6954969167709351,
+      "rank": 240
+    },
+    {
+      "layer": 35,
+      "channel": 3017,
+      "score": 0.0495869405567646,
+      "cosine_similarity": 0.0495869405567646,
+      "dot_product": 0.04108886793255806,
+      "weight_norm": 0.8286227583885193,
+      "rank": 241
+    },
+    {
+      "layer": 42,
+      "channel": 2071,
+      "score": 0.049580104649066925,
+      "cosine_similarity": 0.049580104649066925,
+      "dot_product": 0.02381761744618416,
+      "weight_norm": 0.4803865849971771,
+      "rank": 242
+    },
+    {
+      "layer": 34,
+      "channel": 1246,
+      "score": 0.04949638247489929,
+      "cosine_similarity": 0.04949638247489929,
+      "dot_product": 0.03938434645533562,
+      "weight_norm": 0.7957015037536621,
+      "rank": 243
+    },
+    {
+      "layer": 41,
+      "channel": 1539,
+      "score": 0.04949590191245079,
+      "cosine_similarity": 0.04949590191245079,
+      "dot_product": 0.034230854362249374,
+      "weight_norm": 0.6915896534919739,
+      "rank": 244
+    },
+    {
+      "layer": 34,
+      "channel": 391,
+      "score": 0.04949258640408516,
+      "cosine_similarity": 0.04949258640408516,
+      "dot_product": 0.042455144226551056,
+      "weight_norm": 0.8578081727027893,
+      "rank": 245
+    },
+    {
+      "layer": 39,
+      "channel": 213,
+      "score": 0.04948890581727028,
+      "cosine_similarity": 0.04948890581727028,
+      "dot_product": 0.03190775588154793,
+      "weight_norm": 0.6447456479072571,
+      "rank": 246
+    },
+    {
+      "layer": 33,
+      "channel": 3598,
+      "score": 0.0494597852230072,
+      "cosine_similarity": 0.0494597852230072,
+      "dot_product": 0.040860388427972794,
+      "weight_norm": 0.8261335492134094,
+      "rank": 247
+    },
+    {
+      "layer": 38,
+      "channel": 28,
+      "score": 0.04945964366197586,
+      "cosine_similarity": 0.04945964366197586,
+      "dot_product": 0.03089222125709057,
+      "weight_norm": 0.624594509601593,
+      "rank": 248
+    },
+    {
+      "layer": 27,
+      "channel": 1674,
+      "score": 0.049357932060956955,
+      "cosine_similarity": 0.049357932060956955,
+      "dot_product": 0.028642980381846428,
+      "weight_norm": 0.5803115963935852,
+      "rank": 249
+    },
+    {
+      "layer": 32,
+      "channel": 2930,
+      "score": 0.049350861459970474,
+      "cosine_similarity": 0.049350861459970474,
+      "dot_product": 0.03842168301343918,
+      "weight_norm": 0.7785412669181824,
+      "rank": 250
+    },
+    {
+      "layer": 31,
+      "channel": 357,
+      "score": 0.0493212565779686,
+      "cosine_similarity": 0.0493212565779686,
+      "dot_product": 0.038504909723997116,
+      "weight_norm": 0.7806960344314575,
+      "rank": 251
+    },
+    {
+      "layer": 41,
+      "channel": 2915,
+      "score": 0.049318213015794754,
+      "cosine_similarity": 0.049318213015794754,
+      "dot_product": 0.022194068878889084,
+      "weight_norm": 0.45001769065856934,
+      "rank": 252
+    },
+    {
+      "layer": 27,
+      "channel": 968,
+      "score": 0.049257371574640274,
+      "cosine_similarity": 0.049257371574640274,
+      "dot_product": 0.02555803768336773,
+      "weight_norm": 0.5188672542572021,
+      "rank": 253
+    },
+    {
+      "layer": 35,
+      "channel": 168,
+      "score": 0.04923466593027115,
+      "cosine_similarity": 0.04923466593027115,
+      "dot_product": 0.04225926846265793,
+      "weight_norm": 0.8583234548568726,
+      "rank": 254
+    },
+    {
+      "layer": 27,
+      "channel": 573,
+      "score": 0.04913471266627312,
+      "cosine_similarity": 0.04913471266627312,
+      "dot_product": 0.02700907178223133,
+      "weight_norm": 0.549694299697876,
+      "rank": 255
+    },
+    {
+      "layer": 36,
+      "channel": 3869,
+      "score": 0.049119021743535995,
+      "cosine_similarity": 0.049119021743535995,
+      "dot_product": 0.042529672384262085,
+      "weight_norm": 0.8658493161201477,
+      "rank": 256
+    },
+    {
+      "layer": 35,
+      "channel": 2832,
+      "score": 0.0490870401263237,
+      "cosine_similarity": 0.0490870401263237,
+      "dot_product": 0.042407386004924774,
+      "weight_norm": 0.8639222383499146,
+      "rank": 257
+    },
+    {
+      "layer": 24,
+      "channel": 3495,
+      "score": 0.049057211726903915,
+      "cosine_similarity": 0.049057211726903915,
+      "dot_product": 0.023691266775131226,
+      "weight_norm": 0.48293137550354004,
+      "rank": 258
+    },
+    {
+      "layer": 34,
+      "channel": 540,
+      "score": 0.049039121717214584,
+      "cosine_similarity": 0.049039121717214584,
+      "dot_product": 0.03465346246957779,
+      "weight_norm": 0.7066493034362793,
+      "rank": 259
+    },
+    {
+      "layer": 33,
+      "channel": 2526,
+      "score": 0.04903840273618698,
+      "cosine_similarity": 0.04903840273618698,
+      "dot_product": 0.04626617580652237,
+      "weight_norm": 0.9434682726860046,
+      "rank": 260
+    },
+    {
+      "layer": 33,
+      "channel": 2392,
+      "score": 0.04903670400381088,
+      "cosine_similarity": 0.04903670400381088,
+      "dot_product": 0.04498300701379776,
+      "weight_norm": 0.9173334240913391,
+      "rank": 261
+    },
+    {
+      "layer": 34,
+      "channel": 3327,
+      "score": 0.048973724246025085,
+      "cosine_similarity": 0.048973724246025085,
+      "dot_product": 0.029509438201785088,
+      "weight_norm": 0.6025565266609192,
+      "rank": 262
+    },
+    {
+      "layer": 40,
+      "channel": 2638,
+      "score": 0.04894983023405075,
+      "cosine_similarity": 0.04894983023405075,
+      "dot_product": 0.02845417894423008,
+      "weight_norm": 0.5812926888465881,
+      "rank": 263
+    },
+    {
+      "layer": 38,
+      "channel": 450,
+      "score": 0.04893143102526665,
+      "cosine_similarity": 0.04893143102526665,
+      "dot_product": 0.033612173050642014,
+      "weight_norm": 0.6869239807128906,
+      "rank": 264
+    },
+    {
+      "layer": 40,
+      "channel": 1329,
+      "score": 0.048826899379491806,
+      "cosine_similarity": 0.048826899379491806,
+      "dot_product": 0.03037385456264019,
+      "weight_norm": 0.622072160243988,
+      "rank": 265
+    },
+    {
+      "layer": 25,
+      "channel": 2010,
+      "score": 0.04882670193910599,
+      "cosine_similarity": 0.04882670193910599,
+      "dot_product": 0.02768523246049881,
+      "weight_norm": 0.5670101046562195,
+      "rank": 266
+    },
+    {
+      "layer": 33,
+      "channel": 3641,
+      "score": 0.04882659763097763,
+      "cosine_similarity": 0.04882659763097763,
+      "dot_product": 0.04190444201231003,
+      "weight_norm": 0.8582298159599304,
+      "rank": 267
+    },
+    {
+      "layer": 38,
+      "channel": 620,
+      "score": 0.04880592226982117,
+      "cosine_similarity": 0.04880592226982117,
+      "dot_product": 0.03225933760404587,
+      "weight_norm": 0.6609717607498169,
+      "rank": 268
+    },
+    {
+      "layer": 41,
+      "channel": 2412,
+      "score": 0.04879791662096977,
+      "cosine_similarity": 0.04879791662096977,
+      "dot_product": 0.032127510756254196,
+      "weight_norm": 0.6583787202835083,
+      "rank": 269
+    },
+    {
+      "layer": 24,
+      "channel": 2873,
+      "score": 0.04864754527807236,
+      "cosine_similarity": 0.04864754527807236,
+      "dot_product": 0.026157550513744354,
+      "weight_norm": 0.5376951694488525,
+      "rank": 270
+    },
+    {
+      "layer": 38,
+      "channel": 1262,
+      "score": 0.04858282953500748,
+      "cosine_similarity": 0.04858282953500748,
+      "dot_product": 0.046246353536844254,
+      "weight_norm": 0.9519073963165283,
+      "rank": 271
+    },
+    {
+      "layer": 35,
+      "channel": 2036,
+      "score": 0.04858218878507614,
+      "cosine_similarity": 0.04858218878507614,
+      "dot_product": 0.04092030972242355,
+      "weight_norm": 0.8422903418540955,
+      "rank": 272
+    },
+    {
+      "layer": 36,
+      "channel": 3655,
+      "score": 0.04856494814157486,
+      "cosine_similarity": 0.04856494814157486,
+      "dot_product": 0.03556660935282707,
+      "weight_norm": 0.7323514223098755,
+      "rank": 273
+    },
+    {
+      "layer": 31,
+      "channel": 923,
+      "score": 0.04854889586567879,
+      "cosine_similarity": 0.04854889586567879,
+      "dot_product": 0.036368563771247864,
+      "weight_norm": 0.749112069606781,
+      "rank": 274
+    },
+    {
+      "layer": 38,
+      "channel": 539,
+      "score": 0.04850026220083237,
+      "cosine_similarity": 0.04850026220083237,
+      "dot_product": 0.03402687609195709,
+      "weight_norm": 0.7015812993049622,
+      "rank": 275
+    },
+    {
+      "layer": 35,
+      "channel": 2379,
+      "score": 0.04848000779747963,
+      "cosine_similarity": 0.04848000779747963,
+      "dot_product": 0.04068393632769585,
+      "weight_norm": 0.8391899466514587,
+      "rank": 276
+    },
+    {
+      "layer": 24,
+      "channel": 2900,
+      "score": 0.048450566828250885,
+      "cosine_similarity": 0.048450566828250885,
+      "dot_product": 0.029481174424290657,
+      "weight_norm": 0.6084794402122498,
+      "rank": 277
+    },
+    {
+      "layer": 24,
+      "channel": 109,
+      "score": 0.04844117909669876,
+      "cosine_similarity": 0.04844117909669876,
+      "dot_product": 0.02361477166414261,
+      "weight_norm": 0.48749372363090515,
+      "rank": 278
+    },
+    {
+      "layer": 29,
+      "channel": 2964,
+      "score": 0.048434752970933914,
+      "cosine_similarity": 0.048434752970933914,
+      "dot_product": 0.04243884235620499,
+      "weight_norm": 0.8762064576148987,
+      "rank": 279
+    },
+    {
+      "layer": 38,
+      "channel": 1447,
+      "score": 0.04841373860836029,
+      "cosine_similarity": 0.04841373860836029,
+      "dot_product": 0.031541116535663605,
+      "weight_norm": 0.6514910459518433,
+      "rank": 280
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "model_alias": "qwen3_vl_8b_instruct",
+  "model_path": "/specific/scratches/scratch/georgejammal/trajectory-drift-guard/models/Qwen3-VL-8B-Instruct",
+  "component": "mlp",
+  "write_vector_key_template": "model.language_model.layers.{layer}.mlp.down_proj.weight",
+  "direction_metadata": {
+    "kind": "counting",
+    "direction": "word-minus-digit",
+    "language": "pooled_en_zh",
+    "digits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "formula": "normalize(mean(word-minus-digit))",
+    "norm_before_normalization": 1.0915025472640991,
+    "components": [
+      {
+        "language": "en",
+        "digit": 0,
+        "word": "zero",
+        "digit_token_ids": [
+          15
+        ],
+        "word_token_ids": [
+          14154
+        ],
+        "component_norm": 2.086181163787842
+      },
+      {
+        "language": "en",
+        "digit": 1,
+        "word": "one",
+        "digit_token_ids": [
+          16
+        ],
+        "word_token_ids": [
+          603
+        ],
+        "component_norm": 2.162997245788574
+      },
+      {
+        "language": "en",
+        "digit": 2,
+        "word": "two",
+        "digit_token_ids": [
+          17
+        ],
+        "word_token_ids": [
+          19789
+        ],
+        "component_norm": 2.0256314277648926
+      },
+      {
+        "language": "en",
+        "digit": 3,
+        "word": "three",
+        "digit_token_ids": [
+          18
+        ],
+        "word_token_ids": [
+          27856
+        ],
+        "component_norm": 2.0189521312713623
+      },
+      {
+        "language": "en",
+        "digit": 4,
+        "word": "four",
+        "digit_token_ids": [
+          19
+        ],
+        "word_token_ids": [
+          34024
+        ],
+        "component_norm": 2.049226999282837
+      },
+      {
+        "language": "en",
+        "digit": 5,
+        "word": "five",
+        "digit_token_ids": [
+          20
+        ],
+        "word_token_ids": [
+          52670
+        ],
+        "component_norm": 1.9841431379318237
+      },
+      {
+        "language": "en",
+        "digit": 6,
+        "word": "six",
+        "digit_token_ids": [
+          21
+        ],
+        "word_token_ids": [
+          50364
+        ],
+        "component_norm": 1.9709258079528809
+      },
+      {
+        "language": "en",
+        "digit": 7,
+        "word": "seven",
+        "digit_token_ids": [
+          22
+        ],
+        "word_token_ids": [
+          80185
+        ],
+        "component_norm": 1.9782657623291016
+      },
+      {
+        "language": "en",
+        "digit": 8,
+        "word": "eight",
+        "digit_token_ids": [
+          23
+        ],
+        "word_token_ids": [
+          67532
+        ],
+        "component_norm": 2.0233590602874756
+      },
+      {
+        "language": "en",
+        "digit": 9,
+        "word": "nine",
+        "digit_token_ids": [
+          24
+        ],
+        "word_token_ids": [
+          93223
+        ],
+        "component_norm": 1.9976487159729004
+      },
+      {
+        "language": "zh",
+        "digit": 0,
+        "word": "零",
+        "digit_token_ids": [
+          15
+        ],
+        "word_token_ids": [
+          99822
+        ],
+        "component_norm": 2.1342954635620117
+      },
+      {
+        "language": "zh",
+        "digit": 1,
+        "word": "一",
+        "digit_token_ids": [
+          16
+        ],
+        "word_token_ids": [
+          14777
+        ],
+        "component_norm": 2.0916225910186768
+      },
+      {
+        "language": "zh",
+        "digit": 2,
+        "word": "二",
+        "digit_token_ids": [
+          17
+        ],
+        "word_token_ids": [
+          40820
+        ],
+        "component_norm": 2.0033416748046875
+      },
+      {
+        "language": "zh",
+        "digit": 3,
+        "word": "三",
+        "digit_token_ids": [
+          18
+        ],
+        "word_token_ids": [
+          44991
+        ],
+        "component_norm": 2.0370795726776123
+      },
+      {
+        "language": "zh",
+        "digit": 4,
+        "word": "四",
+        "digit_token_ids": [
+          19
+        ],
+        "word_token_ids": [
+          63703
+        ],
+        "component_norm": 2.0529980659484863
+      },
+      {
+        "language": "zh",
+        "digit": 5,
+        "word": "五",
+        "digit_token_ids": [
+          20
+        ],
+        "word_token_ids": [
+          75108
+        ],
+        "component_norm": 2.073922872543335
+      },
+      {
+        "language": "zh",
+        "digit": 6,
+        "word": "六",
+        "digit_token_ids": [
+          21
+        ],
+        "word_token_ids": [
+          99566
+        ],
+        "component_norm": 2.068382978439331
+      },
+      {
+        "language": "zh",
+        "digit": 7,
+        "word": "七",
+        "digit_token_ids": [
+          22
+        ],
+        "word_token_ids": [
+          99612
+        ],
+        "component_norm": 2.119060754776001
+      },
+      {
+        "language": "zh",
+        "digit": 8,
+        "word": "八",
+        "digit_token_ids": [
+          23
+        ],
+        "word_token_ids": [
+          99568
+        ],
+        "component_norm": 2.049248218536377
+      },
+      {
+        "language": "zh",
+        "digit": 9,
+        "word": "九",
+        "digit_token_ids": [
+          24
+        ],
+        "word_token_ids": [
+          99609
+        ],
+        "component_norm": 2.0863542556762695
+      }
+    ]
+  },
+  "window": "34-35",
+  "layers": [
+    34,
+    35
+  ],
+  "sigma": 5.5,
+  "null_cosine_sd": 0.015625,
+  "cosine_threshold": 0.0859375,
+  "selection_rule": "cosine_similarity >= sigma / sqrt(d_model)",
+  "selected_count": 9,
+  "layer_counts": {
+    "34": 0,
+    "35": 9
+  },
+  "rows": [
+    {
+      "layer": 35,
+      "neuron": 5953,
+      "score": 0.10994447767734528,
+      "cosine_similarity": 0.10994447767734528,
+      "dot_product": 0.08821580559015274,
+      "weight_norm": 0.8023668527603149,
+      "rank": 1
+    },
+    {
+      "layer": 35,
+      "neuron": 9490,
+      "score": 0.10346143692731857,
+      "cosine_similarity": 0.10346143692731857,
+      "dot_product": 0.16848206520080566,
+      "weight_norm": 1.6284527778625488,
+      "rank": 2
+    },
+    {
+      "layer": 35,
+      "neuron": 10182,
+      "score": 0.09910604357719421,
+      "cosine_similarity": 0.09910604357719421,
+      "dot_product": 0.08697938919067383,
+      "weight_norm": 0.8776395916938782,
+      "rank": 3
+    },
+    {
+      "layer": 35,
+      "neuron": 8716,
+      "score": 0.09697205573320389,
+      "cosine_similarity": 0.09697205573320389,
+      "dot_product": 0.0849020853638649,
+      "weight_norm": 0.8755314350128174,
+      "rank": 4
+    },
+    {
+      "layer": 35,
+      "neuron": 9896,
+      "score": 0.09307611733675003,
+      "cosine_similarity": 0.09307611733675003,
+      "dot_product": 0.07901157438755035,
+      "weight_norm": 0.8488920331001282,
+      "rank": 5
+    },
+    {
+      "layer": 35,
+      "neuron": 9313,
+      "score": 0.0918770506978035,
+      "cosine_similarity": 0.0918770506978035,
+      "dot_product": 0.08590362221002579,
+      "weight_norm": 0.9349845051765442,
+      "rank": 6
+    },
+    {
+      "layer": 35,
+      "neuron": 11333,
+      "score": 0.09111905097961426,
+      "cosine_similarity": 0.09111905097961426,
+      "dot_product": 0.08831364661455154,
+      "weight_norm": 0.9692116379737854,
+      "rank": 7
+    },
+    {
+      "layer": 35,
+      "neuron": 11693,
+      "score": 0.09058468788862228,
+      "cosine_similarity": 0.09058468788862228,
+      "dot_product": 0.07067431509494781,
+      "weight_norm": 0.7802015542984009,
+      "rank": 8
+    },
+    {
+      "layer": 35,
+      "neuron": 3294,
+      "score": 0.0872240960597992,
+      "cosine_similarity": 0.0872240960597992,
+      "dot_product": 0.07924487441778183,
+      "weight_norm": 0.9085204601287842,
+      "rank": 9
+    }
+  ]
+}

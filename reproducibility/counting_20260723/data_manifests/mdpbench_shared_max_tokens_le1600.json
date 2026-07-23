@@ -1,0 +1,4400 @@
+{
+  "benchmark": "MDPBench",
+  "rule": "max gold-token count across all four model tokenizers <= 1600",
+  "models": {
+    "qwen2_5_vl_3b_instruct": "/specific/scratches/scratch/georgejammal/trajectory-drift-guard/models/Qwen2.5-VL-3B-Instruct",
+    "qwen3_vl_8b_instruct": "/specific/scratches/scratch/georgejammal/trajectory-drift-guard/models/Qwen3-VL-8B-Instruct",
+    "gemma3_4b_it": "/specific/scratches/scratch/georgejammal/trajectory-drift-guard/models/gemma-3-4b-it",
+    "gemma3_12b_it": "/specific/scratches/scratch/georgejammal/trajectory-drift-guard/models/gemma-3-12b-it"
+  },
+  "datasets": {
+    "Arabic": {
+      "total": 160,
+      "kept": 144,
+      "annotation_indices": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "token_counts": {
+        "0": {
+          "qwen2_5_vl_3b_instruct": 4306,
+          "qwen3_vl_8b_instruct": 4306,
+          "gemma3_4b_it": 3900,
+          "gemma3_12b_it": 3900
+        },
+        "1": {
+          "qwen2_5_vl_3b_instruct": 4306,
+          "qwen3_vl_8b_instruct": 4306,
+          "gemma3_4b_it": 3900,
+          "gemma3_12b_it": 3900
+        },
+        "2": {
+          "qwen2_5_vl_3b_instruct": 4306,
+          "qwen3_vl_8b_instruct": 4306,
+          "gemma3_4b_it": 3900,
+          "gemma3_12b_it": 3900
+        },
+        "3": {
+          "qwen2_5_vl_3b_instruct": 4306,
+          "qwen3_vl_8b_instruct": 4306,
+          "gemma3_4b_it": 3900,
+          "gemma3_12b_it": 3900
+        },
+        "4": {
+          "qwen2_5_vl_3b_instruct": 2848,
+          "qwen3_vl_8b_instruct": 2848,
+          "gemma3_4b_it": 2535,
+          "gemma3_12b_it": 2535
+        },
+        "5": {
+          "qwen2_5_vl_3b_instruct": 2848,
+          "qwen3_vl_8b_instruct": 2848,
+          "gemma3_4b_it": 2535,
+          "gemma3_12b_it": 2535
+        },
+        "6": {
+          "qwen2_5_vl_3b_instruct": 2848,
+          "qwen3_vl_8b_instruct": 2848,
+          "gemma3_4b_it": 2535,
+          "gemma3_12b_it": 2535
+        },
+        "7": {
+          "qwen2_5_vl_3b_instruct": 2848,
+          "qwen3_vl_8b_instruct": 2848,
+          "gemma3_4b_it": 2535,
+          "gemma3_12b_it": 2535
+        },
+        "8": {
+          "qwen2_5_vl_3b_instruct": 3046,
+          "qwen3_vl_8b_instruct": 3046,
+          "gemma3_4b_it": 2744,
+          "gemma3_12b_it": 2744
+        },
+        "9": {
+          "qwen2_5_vl_3b_instruct": 3046,
+          "qwen3_vl_8b_instruct": 3046,
+          "gemma3_4b_it": 2744,
+          "gemma3_12b_it": 2744
+        },
+        "10": {
+          "qwen2_5_vl_3b_instruct": 3046,
+          "qwen3_vl_8b_instruct": 3046,
+          "gemma3_4b_it": 2744,
+          "gemma3_12b_it": 2744
+        },
+        "11": {
+          "qwen2_5_vl_3b_instruct": 3046,
+          "qwen3_vl_8b_instruct": 3046,
+          "gemma3_4b_it": 2744,
+          "gemma3_12b_it": 2744
+        },
+        "12": {
+          "qwen2_5_vl_3b_instruct": 760,
+          "qwen3_vl_8b_instruct": 760,
+          "gemma3_4b_it": 588,
+          "gemma3_12b_it": 588
+        },
+        "13": {
+          "qwen2_5_vl_3b_instruct": 760,
+          "qwen3_vl_8b_instruct": 760,
+          "gemma3_4b_it": 588,
+          "gemma3_12b_it": 588
+        },
+        "14": {
+          "qwen2_5_vl_3b_instruct": 760,
+          "qwen3_vl_8b_instruct": 760,
+          "gemma3_4b_it": 588,
+          "gemma3_12b_it": 588
+        },
+        "15": {
+          "qwen2_5_vl_3b_instruct": 760,
+          "qwen3_vl_8b_instruct": 760,
+          "gemma3_4b_it": 588,
+          "gemma3_12b_it": 588
+        },
+        "16": {
+          "qwen2_5_vl_3b_instruct": 1246,
+          "qwen3_vl_8b_instruct": 1246,
+          "gemma3_4b_it": 1105,
+          "gemma3_12b_it": 1105
+        },
+        "17": {
+          "qwen2_5_vl_3b_instruct": 1246,
+          "qwen3_vl_8b_instruct": 1246,
+          "gemma3_4b_it": 1105,
+          "gemma3_12b_it": 1105
+        },
+        "18": {
+          "qwen2_5_vl_3b_instruct": 1246,
+          "qwen3_vl_8b_instruct": 1246,
+          "gemma3_4b_it": 1105,
+          "gemma3_12b_it": 1105
+        },
+        "19": {
+          "qwen2_5_vl_3b_instruct": 1246,
+          "qwen3_vl_8b_instruct": 1246,
+          "gemma3_4b_it": 1105,
+          "gemma3_12b_it": 1105
+        },
+        "20": {
+          "qwen2_5_vl_3b_instruct": 1222,
+          "qwen3_vl_8b_instruct": 1222,
+          "gemma3_4b_it": 1114,
+          "gemma3_12b_it": 1114
+        },
+        "21": {
+          "qwen2_5_vl_3b_instruct": 1222,
+          "qwen3_vl_8b_instruct": 1222,
+          "gemma3_4b_it": 1114,
+          "gemma3_12b_it": 1114
+        },
+        "22": {
+          "qwen2_5_vl_3b_instruct": 1222,
+          "qwen3_vl_8b_instruct": 1222,
+          "gemma3_4b_it": 1114,
+          "gemma3_12b_it": 1114
+        },
+        "23": {
+          "qwen2_5_vl_3b_instruct": 1222,
+          "qwen3_vl_8b_instruct": 1222,
+          "gemma3_4b_it": 1114,
+          "gemma3_12b_it": 1114
+        },
+        "24": {
+          "qwen2_5_vl_3b_instruct": 1233,
+          "qwen3_vl_8b_instruct": 1233,
+          "gemma3_4b_it": 1149,
+          "gemma3_12b_it": 1149
+        },
+        "25": {
+          "qwen2_5_vl_3b_instruct": 1233,
+          "qwen3_vl_8b_instruct": 1233,
+          "gemma3_4b_it": 1149,
+          "gemma3_12b_it": 1149
+        },
+        "26": {
+          "qwen2_5_vl_3b_instruct": 1233,
+          "qwen3_vl_8b_instruct": 1233,
+          "gemma3_4b_it": 1149,
+          "gemma3_12b_it": 1149
+        },
+        "27": {
+          "qwen2_5_vl_3b_instruct": 1233,
+          "qwen3_vl_8b_instruct": 1233,
+          "gemma3_4b_it": 1149,
+          "gemma3_12b_it": 1149
+        },
+        "28": {
+          "qwen2_5_vl_3b_instruct": 1301,
+          "qwen3_vl_8b_instruct": 1301,
+          "gemma3_4b_it": 1193,
+          "gemma3_12b_it": 1193
+        },
+        "29": {
+          "qwen2_5_vl_3b_instruct": 1301,
+          "qwen3_vl_8b_instruct": 1301,
+          "gemma3_4b_it": 1193,
+          "gemma3_12b_it": 1193
+        },
+        "30": {
+          "qwen2_5_vl_3b_instruct": 1301,
+          "qwen3_vl_8b_instruct": 1301,
+          "gemma3_4b_it": 1193,
+          "gemma3_12b_it": 1193
+        },
+        "31": {
+          "qwen2_5_vl_3b_instruct": 1301,
+          "qwen3_vl_8b_instruct": 1301,
+          "gemma3_4b_it": 1193,
+          "gemma3_12b_it": 1193
+        },
+        "32": {
+          "qwen2_5_vl_3b_instruct": 1277,
+          "qwen3_vl_8b_instruct": 1277,
+          "gemma3_4b_it": 1169,
+          "gemma3_12b_it": 1169
+        },
+        "33": {
+          "qwen2_5_vl_3b_instruct": 1277,
+          "qwen3_vl_8b_instruct": 1277,
+          "gemma3_4b_it": 1169,
+          "gemma3_12b_it": 1169
+        },
+        "34": {
+          "qwen2_5_vl_3b_instruct": 1277,
+          "qwen3_vl_8b_instruct": 1277,
+          "gemma3_4b_it": 1169,
+          "gemma3_12b_it": 1169
+        },
+        "35": {
+          "qwen2_5_vl_3b_instruct": 1277,
+          "qwen3_vl_8b_instruct": 1277,
+          "gemma3_4b_it": 1169,
+          "gemma3_12b_it": 1169
+        },
+        "36": {
+          "qwen2_5_vl_3b_instruct": 1262,
+          "qwen3_vl_8b_instruct": 1262,
+          "gemma3_4b_it": 1162,
+          "gemma3_12b_it": 1162
+        },
+        "37": {
+          "qwen2_5_vl_3b_instruct": 1262,
+          "qwen3_vl_8b_instruct": 1262,
+          "gemma3_4b_it": 1162,
+          "gemma3_12b_it": 1162
+        },
+        "38": {
+          "qwen2_5_vl_3b_instruct": 1262,
+          "qwen3_vl_8b_instruct": 1262,
+          "gemma3_4b_it": 1162,
+          "gemma3_12b_it": 1162
+        },
+        "39": {
+          "qwen2_5_vl_3b_instruct": 1262,
+          "qwen3_vl_8b_instruct": 1262,
+          "gemma3_4b_it": 1162,
+          "gemma3_12b_it": 1162
+        },
+        "40": {
+          "qwen2_5_vl_3b_instruct": 805,
+          "qwen3_vl_8b_instruct": 805,
+          "gemma3_4b_it": 763,
+          "gemma3_12b_it": 763
+        },
+        "41": {
+          "qwen2_5_vl_3b_instruct": 805,
+          "qwen3_vl_8b_instruct": 805,
+          "gemma3_4b_it": 763,
+          "gemma3_12b_it": 763
+        },
+        "42": {
+          "qwen2_5_vl_3b_instruct": 805,
+          "qwen3_vl_8b_instruct": 805,
+          "gemma3_4b_it": 763,
+          "gemma3_12b_it": 763
+        },
+        "43": {
+          "qwen2_5_vl_3b_instruct": 805,
+          "qwen3_vl_8b_instruct": 805,
+          "gemma3_4b_it": 763,
+          "gemma3_12b_it": 763
+        },
+        "44": {
+          "qwen2_5_vl_3b_instruct": 480,
+          "qwen3_vl_8b_instruct": 480,
+          "gemma3_4b_it": 449,
+          "gemma3_12b_it": 449
+        },
+        "45": {
+          "qwen2_5_vl_3b_instruct": 480,
+          "qwen3_vl_8b_instruct": 480,
+          "gemma3_4b_it": 449,
+          "gemma3_12b_it": 449
+        },
+        "46": {
+          "qwen2_5_vl_3b_instruct": 480,
+          "qwen3_vl_8b_instruct": 480,
+          "gemma3_4b_it": 449,
+          "gemma3_12b_it": 449
+        },
+        "47": {
+          "qwen2_5_vl_3b_instruct": 480,
+          "qwen3_vl_8b_instruct": 480,
+          "gemma3_4b_it": 449,
+          "gemma3_12b_it": 449
+        },
+        "48": {
+          "qwen2_5_vl_3b_instruct": 814,
+          "qwen3_vl_8b_instruct": 814,
+          "gemma3_4b_it": 773,
+          "gemma3_12b_it": 773
+        },
+        "49": {
+          "qwen2_5_vl_3b_instruct": 814,
+          "qwen3_vl_8b_instruct": 814,
+          "gemma3_4b_it": 773,
+          "gemma3_12b_it": 773
+        },
+        "50": {
+          "qwen2_5_vl_3b_instruct": 814,
+          "qwen3_vl_8b_instruct": 814,
+          "gemma3_4b_it": 773,
+          "gemma3_12b_it": 773
+        },
+        "51": {
+          "qwen2_5_vl_3b_instruct": 814,
+          "qwen3_vl_8b_instruct": 814,
+          "gemma3_4b_it": 773,
+          "gemma3_12b_it": 773
+        },
+        "52": {
+          "qwen2_5_vl_3b_instruct": 1217,
+          "qwen3_vl_8b_instruct": 1217,
+          "gemma3_4b_it": 993,
+          "gemma3_12b_it": 993
+        },
+        "53": {
+          "qwen2_5_vl_3b_instruct": 1217,
+          "qwen3_vl_8b_instruct": 1217,
+          "gemma3_4b_it": 993,
+          "gemma3_12b_it": 993
+        },
+        "54": {
+          "qwen2_5_vl_3b_instruct": 1217,
+          "qwen3_vl_8b_instruct": 1217,
+          "gemma3_4b_it": 993,
+          "gemma3_12b_it": 993
+        },
+        "55": {
+          "qwen2_5_vl_3b_instruct": 1217,
+          "qwen3_vl_8b_instruct": 1217,
+          "gemma3_4b_it": 993,
+          "gemma3_12b_it": 993
+        },
+        "56": {
+          "qwen2_5_vl_3b_instruct": 1095,
+          "qwen3_vl_8b_instruct": 1095,
+          "gemma3_4b_it": 980,
+          "gemma3_12b_it": 980
+        },
+        "57": {
+          "qwen2_5_vl_3b_instruct": 1095,
+          "qwen3_vl_8b_instruct": 1095,
+          "gemma3_4b_it": 980,
+          "gemma3_12b_it": 980
+        },
+        "58": {
+          "qwen2_5_vl_3b_instruct": 1095,
+          "qwen3_vl_8b_instruct": 1095,
+          "gemma3_4b_it": 980,
+          "gemma3_12b_it": 980
+        },
+        "59": {
+          "qwen2_5_vl_3b_instruct": 1095,
+          "qwen3_vl_8b_instruct": 1095,
+          "gemma3_4b_it": 980,
+          "gemma3_12b_it": 980
+        },
+        "60": {
+          "qwen2_5_vl_3b_instruct": 1110,
+          "qwen3_vl_8b_instruct": 1110,
+          "gemma3_4b_it": 977,
+          "gemma3_12b_it": 977
+        },
+        "61": {
+          "qwen2_5_vl_3b_instruct": 1110,
+          "qwen3_vl_8b_instruct": 1110,
+          "gemma3_4b_it": 977,
+          "gemma3_12b_it": 977
+        },
+        "62": {
+          "qwen2_5_vl_3b_instruct": 1110,
+          "qwen3_vl_8b_instruct": 1110,
+          "gemma3_4b_it": 977,
+          "gemma3_12b_it": 977
+        },
+        "63": {
+          "qwen2_5_vl_3b_instruct": 1110,
+          "qwen3_vl_8b_instruct": 1110,
+          "gemma3_4b_it": 977,
+          "gemma3_12b_it": 977
+        },
+        "64": {
+          "qwen2_5_vl_3b_instruct": 831,
+          "qwen3_vl_8b_instruct": 831,
+          "gemma3_4b_it": 779,
+          "gemma3_12b_it": 779
+        },
+        "65": {
+          "qwen2_5_vl_3b_instruct": 831,
+          "qwen3_vl_8b_instruct": 831,
+          "gemma3_4b_it": 779,
+          "gemma3_12b_it": 779
+        },
+        "66": {
+          "qwen2_5_vl_3b_instruct": 831,
+          "qwen3_vl_8b_instruct": 831,
+          "gemma3_4b_it": 779,
+          "gemma3_12b_it": 779
+        },
+        "67": {
+          "qwen2_5_vl_3b_instruct": 831,
+          "qwen3_vl_8b_instruct": 831,
+          "gemma3_4b_it": 779,
+          "gemma3_12b_it": 779
+        },
+        "68": {
+          "qwen2_5_vl_3b_instruct": 748,
+          "qwen3_vl_8b_instruct": 748,
+          "gemma3_4b_it": 732,
+          "gemma3_12b_it": 732
+        },
+        "69": {
+          "qwen2_5_vl_3b_instruct": 748,
+          "qwen3_vl_8b_instruct": 748,
+          "gemma3_4b_it": 732,
+          "gemma3_12b_it": 732
+        },
+        "70": {
+          "qwen2_5_vl_3b_instruct": 748,
+          "qwen3_vl_8b_instruct": 748,
+          "gemma3_4b_it": 732,
+          "gemma3_12b_it": 732
+        },
+        "71": {
+          "qwen2_5_vl_3b_instruct": 748,
+          "qwen3_vl_8b_instruct": 748,
+          "gemma3_4b_it": 732,
+          "gemma3_12b_it": 732
+        },
+        "72": {
+          "qwen2_5_vl_3b_instruct": 718,
+          "qwen3_vl_8b_instruct": 718,
+          "gemma3_4b_it": 672,
+          "gemma3_12b_it": 672
+        },
+        "73": {
+          "qwen2_5_vl_3b_instruct": 718,
+          "qwen3_vl_8b_instruct": 718,
+          "gemma3_4b_it": 672,
+          "gemma3_12b_it": 672
+        },
+        "74": {
+          "qwen2_5_vl_3b_instruct": 718,
+          "qwen3_vl_8b_instruct": 718,
+          "gemma3_4b_it": 672,
+          "gemma3_12b_it": 672
+        },
+        "75": {
+          "qwen2_5_vl_3b_instruct": 718,
+          "qwen3_vl_8b_instruct": 718,
+          "gemma3_4b_it": 672,
+          "gemma3_12b_it": 672
+        },
+        "76": {
+          "qwen2_5_vl_3b_instruct": 1157,
+          "qwen3_vl_8b_instruct": 1157,
+          "gemma3_4b_it": 1049,
+          "gemma3_12b_it": 1049
+        },
+        "77": {
+          "qwen2_5_vl_3b_instruct": 1157,
+          "qwen3_vl_8b_instruct": 1157,
+          "gemma3_4b_it": 1049,
+          "gemma3_12b_it": 1049
+        },
+        "78": {
+          "qwen2_5_vl_3b_instruct": 1157,
+          "qwen3_vl_8b_instruct": 1157,
+          "gemma3_4b_it": 1049,
+          "gemma3_12b_it": 1049
+        },
+        "79": {
+          "qwen2_5_vl_3b_instruct": 1157,
+          "qwen3_vl_8b_instruct": 1157,
+          "gemma3_4b_it": 1049,
+          "gemma3_12b_it": 1049
+        },
+        "80": {
+          "qwen2_5_vl_3b_instruct": 1103,
+          "qwen3_vl_8b_instruct": 1103,
+          "gemma3_4b_it": 1005,
+          "gemma3_12b_it": 1005
+        },
+        "81": {
+          "qwen2_5_vl_3b_instruct": 1103,
+          "qwen3_vl_8b_instruct": 1103,
+          "gemma3_4b_it": 1005,
+          "gemma3_12b_it": 1005
+        },
+        "82": {
+          "qwen2_5_vl_3b_instruct": 1103,
+          "qwen3_vl_8b_instruct": 1103,
+          "gemma3_4b_it": 1005,
+          "gemma3_12b_it": 1005
+        },
+        "83": {
+          "qwen2_5_vl_3b_instruct": 1103,
+          "qwen3_vl_8b_instruct": 1103,
+          "gemma3_4b_it": 1005,
+          "gemma3_12b_it": 1005
+        },
+        "84": {
+          "qwen2_5_vl_3b_instruct": 1092,
+          "qwen3_vl_8b_instruct": 1092,
+          "gemma3_4b_it": 989,
+          "gemma3_12b_it": 989
+        },
+        "85": {
+          "qwen2_5_vl_3b_instruct": 1092,
+          "qwen3_vl_8b_instruct": 1092,
+          "gemma3_4b_it": 989,
+          "gemma3_12b_it": 989
+        },
+        "86": {
+          "qwen2_5_vl_3b_instruct": 1092,
+          "qwen3_vl_8b_instruct": 1092,
+          "gemma3_4b_it": 989,
+          "gemma3_12b_it": 989
+        },
+        "87": {
+          "qwen2_5_vl_3b_instruct": 1092,
+          "qwen3_vl_8b_instruct": 1092,
+          "gemma3_4b_it": 989,
+          "gemma3_12b_it": 989
+        },
+        "88": {
+          "qwen2_5_vl_3b_instruct": 718,
+          "qwen3_vl_8b_instruct": 718,
+          "gemma3_4b_it": 662,
+          "gemma3_12b_it": 662
+        },
+        "89": {
+          "qwen2_5_vl_3b_instruct": 718,
+          "qwen3_vl_8b_instruct": 718,
+          "gemma3_4b_it": 662,
+          "gemma3_12b_it": 662
+        },
+        "90": {
+          "qwen2_5_vl_3b_instruct": 718,
+          "qwen3_vl_8b_instruct": 718,
+          "gemma3_4b_it": 662,
+          "gemma3_12b_it": 662
+        },
+        "91": {
+          "qwen2_5_vl_3b_instruct": 718,
+          "qwen3_vl_8b_instruct": 718,
+          "gemma3_4b_it": 662,
+          "gemma3_12b_it": 662
+        },
+        "92": {
+          "qwen2_5_vl_3b_instruct": 669,
+          "qwen3_vl_8b_instruct": 669,
+          "gemma3_4b_it": 582,
+          "gemma3_12b_it": 582
+        },
+        "93": {
+          "qwen2_5_vl_3b_instruct": 669,
+          "qwen3_vl_8b_instruct": 669,
+          "gemma3_4b_it": 582,
+          "gemma3_12b_it": 582
+        },
+        "94": {
+          "qwen2_5_vl_3b_instruct": 669,
+          "qwen3_vl_8b_instruct": 669,
+          "gemma3_4b_it": 582,
+          "gemma3_12b_it": 582
+        },
+        "95": {
+          "qwen2_5_vl_3b_instruct": 669,
+          "qwen3_vl_8b_instruct": 669,
+          "gemma3_4b_it": 582,
+          "gemma3_12b_it": 582
+        },
+        "96": {
+          "qwen2_5_vl_3b_instruct": 648,
+          "qwen3_vl_8b_instruct": 648,
+          "gemma3_4b_it": 575,
+          "gemma3_12b_it": 575
+        },
+        "97": {
+          "qwen2_5_vl_3b_instruct": 648,
+          "qwen3_vl_8b_instruct": 648,
+          "gemma3_4b_it": 575,
+          "gemma3_12b_it": 575
+        },
+        "98": {
+          "qwen2_5_vl_3b_instruct": 648,
+          "qwen3_vl_8b_instruct": 648,
+          "gemma3_4b_it": 575,
+          "gemma3_12b_it": 575
+        },
+        "99": {
+          "qwen2_5_vl_3b_instruct": 648,
+          "qwen3_vl_8b_instruct": 648,
+          "gemma3_4b_it": 575,
+          "gemma3_12b_it": 575
+        },
+        "100": {
+          "qwen2_5_vl_3b_instruct": 850,
+          "qwen3_vl_8b_instruct": 850,
+          "gemma3_4b_it": 758,
+          "gemma3_12b_it": 758
+        },
+        "101": {
+          "qwen2_5_vl_3b_instruct": 850,
+          "qwen3_vl_8b_instruct": 850,
+          "gemma3_4b_it": 758,
+          "gemma3_12b_it": 758
+        },
+        "102": {
+          "qwen2_5_vl_3b_instruct": 850,
+          "qwen3_vl_8b_instruct": 850,
+          "gemma3_4b_it": 758,
+          "gemma3_12b_it": 758
+        },
+        "103": {
+          "qwen2_5_vl_3b_instruct": 850,
+          "qwen3_vl_8b_instruct": 850,
+          "gemma3_4b_it": 758,
+          "gemma3_12b_it": 758
+        },
+        "104": {
+          "qwen2_5_vl_3b_instruct": 1509,
+          "qwen3_vl_8b_instruct": 1509,
+          "gemma3_4b_it": 1224,
+          "gemma3_12b_it": 1224
+        },
+        "105": {
+          "qwen2_5_vl_3b_instruct": 1509,
+          "qwen3_vl_8b_instruct": 1509,
+          "gemma3_4b_it": 1224,
+          "gemma3_12b_it": 1224
+        },
+        "106": {
+          "qwen2_5_vl_3b_instruct": 1509,
+          "qwen3_vl_8b_instruct": 1509,
+          "gemma3_4b_it": 1224,
+          "gemma3_12b_it": 1224
+        },
+        "107": {
+          "qwen2_5_vl_3b_instruct": 1509,
+          "qwen3_vl_8b_instruct": 1509,
+          "gemma3_4b_it": 1224,
+          "gemma3_12b_it": 1224
+        },
+        "108": {
+          "qwen2_5_vl_3b_instruct": 1271,
+          "qwen3_vl_8b_instruct": 1271,
+          "gemma3_4b_it": 879,
+          "gemma3_12b_it": 879
+        },
+        "109": {
+          "qwen2_5_vl_3b_instruct": 1271,
+          "qwen3_vl_8b_instruct": 1271,
+          "gemma3_4b_it": 879,
+          "gemma3_12b_it": 879
+        },
+        "110": {
+          "qwen2_5_vl_3b_instruct": 1271,
+          "qwen3_vl_8b_instruct": 1271,
+          "gemma3_4b_it": 879,
+          "gemma3_12b_it": 879
+        },
+        "111": {
+          "qwen2_5_vl_3b_instruct": 1271,
+          "qwen3_vl_8b_instruct": 1271,
+          "gemma3_4b_it": 879,
+          "gemma3_12b_it": 879
+        },
+        "112": {
+          "qwen2_5_vl_3b_instruct": 1621,
+          "qwen3_vl_8b_instruct": 1621,
+          "gemma3_4b_it": 1245,
+          "gemma3_12b_it": 1245
+        },
+        "113": {
+          "qwen2_5_vl_3b_instruct": 1621,
+          "qwen3_vl_8b_instruct": 1621,
+          "gemma3_4b_it": 1245,
+          "gemma3_12b_it": 1245
+        },
+        "114": {
+          "qwen2_5_vl_3b_instruct": 1621,
+          "qwen3_vl_8b_instruct": 1621,
+          "gemma3_4b_it": 1245,
+          "gemma3_12b_it": 1245
+        },
+        "115": {
+          "qwen2_5_vl_3b_instruct": 1621,
+          "qwen3_vl_8b_instruct": 1621,
+          "gemma3_4b_it": 1245,
+          "gemma3_12b_it": 1245
+        },
+        "116": {
+          "qwen2_5_vl_3b_instruct": 581,
+          "qwen3_vl_8b_instruct": 581,
+          "gemma3_4b_it": 478,
+          "gemma3_12b_it": 478
+        },
+        "117": {
+          "qwen2_5_vl_3b_instruct": 581,
+          "qwen3_vl_8b_instruct": 581,
+          "gemma3_4b_it": 478,
+          "gemma3_12b_it": 478
+        },
+        "118": {
+          "qwen2_5_vl_3b_instruct": 581,
+          "qwen3_vl_8b_instruct": 581,
+          "gemma3_4b_it": 478,
+          "gemma3_12b_it": 478
+        },
+        "119": {
+          "qwen2_5_vl_3b_instruct": 581,
+          "qwen3_vl_8b_instruct": 581,
+          "gemma3_4b_it": 478,
+          "gemma3_12b_it": 478
+        },
+        "120": {
+          "qwen2_5_vl_3b_instruct": 1209,
+          "qwen3_vl_8b_instruct": 1209,
+          "gemma3_4b_it": 940,
+          "gemma3_12b_it": 940
+        },
+        "121": {
+          "qwen2_5_vl_3b_instruct": 1209,
+          "qwen3_vl_8b_instruct": 1209,
+          "gemma3_4b_it": 940,
+          "gemma3_12b_it": 940
+        },
+        "122": {
+          "qwen2_5_vl_3b_instruct": 1209,
+          "qwen3_vl_8b_instruct": 1209,
+          "gemma3_4b_it": 940,
+          "gemma3_12b_it": 940
+        },
+        "123": {
+          "qwen2_5_vl_3b_instruct": 1209,
+          "qwen3_vl_8b_instruct": 1209,
+          "gemma3_4b_it": 940,
+          "gemma3_12b_it": 940
+        },
+        "124": {
+          "qwen2_5_vl_3b_instruct": 692,
+          "qwen3_vl_8b_instruct": 692,
+          "gemma3_4b_it": 557,
+          "gemma3_12b_it": 557
+        },
+        "125": {
+          "qwen2_5_vl_3b_instruct": 692,
+          "qwen3_vl_8b_instruct": 692,
+          "gemma3_4b_it": 557,
+          "gemma3_12b_it": 557
+        },
+        "126": {
+          "qwen2_5_vl_3b_instruct": 692,
+          "qwen3_vl_8b_instruct": 692,
+          "gemma3_4b_it": 557,
+          "gemma3_12b_it": 557
+        },
+        "127": {
+          "qwen2_5_vl_3b_instruct": 692,
+          "qwen3_vl_8b_instruct": 692,
+          "gemma3_4b_it": 557,
+          "gemma3_12b_it": 557
+        },
+        "128": {
+          "qwen2_5_vl_3b_instruct": 575,
+          "qwen3_vl_8b_instruct": 575,
+          "gemma3_4b_it": 477,
+          "gemma3_12b_it": 477
+        },
+        "129": {
+          "qwen2_5_vl_3b_instruct": 575,
+          "qwen3_vl_8b_instruct": 575,
+          "gemma3_4b_it": 477,
+          "gemma3_12b_it": 477
+        },
+        "130": {
+          "qwen2_5_vl_3b_instruct": 575,
+          "qwen3_vl_8b_instruct": 575,
+          "gemma3_4b_it": 477,
+          "gemma3_12b_it": 477
+        },
+        "131": {
+          "qwen2_5_vl_3b_instruct": 575,
+          "qwen3_vl_8b_instruct": 575,
+          "gemma3_4b_it": 477,
+          "gemma3_12b_it": 477
+        },
+        "132": {
+          "qwen2_5_vl_3b_instruct": 1217,
+          "qwen3_vl_8b_instruct": 1217,
+          "gemma3_4b_it": 866,
+          "gemma3_12b_it": 866
+        },
+        "133": {
+          "qwen2_5_vl_3b_instruct": 1217,
+          "qwen3_vl_8b_instruct": 1217,
+          "gemma3_4b_it": 866,
+          "gemma3_12b_it": 866
+        },
+        "134": {
+          "qwen2_5_vl_3b_instruct": 1217,
+          "qwen3_vl_8b_instruct": 1217,
+          "gemma3_4b_it": 866,
+          "gemma3_12b_it": 866
+        },
+        "135": {
+          "qwen2_5_vl_3b_instruct": 1217,
+          "qwen3_vl_8b_instruct": 1217,
+          "gemma3_4b_it": 866,
+          "gemma3_12b_it": 866
+        },
+        "136": {
+          "qwen2_5_vl_3b_instruct": 596,
+          "qwen3_vl_8b_instruct": 596,
+          "gemma3_4b_it": 488,
+          "gemma3_12b_it": 488
+        },
+        "137": {
+          "qwen2_5_vl_3b_instruct": 596,
+          "qwen3_vl_8b_instruct": 596,
+          "gemma3_4b_it": 488,
+          "gemma3_12b_it": 488
+        },
+        "138": {
+          "qwen2_5_vl_3b_instruct": 596,
+          "qwen3_vl_8b_instruct": 596,
+          "gemma3_4b_it": 488,
+          "gemma3_12b_it": 488
+        },
+        "139": {
+          "qwen2_5_vl_3b_instruct": 596,
+          "qwen3_vl_8b_instruct": 596,
+          "gemma3_4b_it": 488,
+          "gemma3_12b_it": 488
+        },
+        "140": {
+          "qwen2_5_vl_3b_instruct": 684,
+          "qwen3_vl_8b_instruct": 684,
+          "gemma3_4b_it": 561,
+          "gemma3_12b_it": 561
+        },
+        "141": {
+          "qwen2_5_vl_3b_instruct": 684,
+          "qwen3_vl_8b_instruct": 684,
+          "gemma3_4b_it": 561,
+          "gemma3_12b_it": 561
+        },
+        "142": {
+          "qwen2_5_vl_3b_instruct": 684,
+          "qwen3_vl_8b_instruct": 684,
+          "gemma3_4b_it": 561,
+          "gemma3_12b_it": 561
+        },
+        "143": {
+          "qwen2_5_vl_3b_instruct": 684,
+          "qwen3_vl_8b_instruct": 684,
+          "gemma3_4b_it": 561,
+          "gemma3_12b_it": 561
+        },
+        "144": {
+          "qwen2_5_vl_3b_instruct": 463,
+          "qwen3_vl_8b_instruct": 463,
+          "gemma3_4b_it": 425,
+          "gemma3_12b_it": 425
+        },
+        "145": {
+          "qwen2_5_vl_3b_instruct": 463,
+          "qwen3_vl_8b_instruct": 463,
+          "gemma3_4b_it": 425,
+          "gemma3_12b_it": 425
+        },
+        "146": {
+          "qwen2_5_vl_3b_instruct": 463,
+          "qwen3_vl_8b_instruct": 463,
+          "gemma3_4b_it": 425,
+          "gemma3_12b_it": 425
+        },
+        "147": {
+          "qwen2_5_vl_3b_instruct": 463,
+          "qwen3_vl_8b_instruct": 463,
+          "gemma3_4b_it": 425,
+          "gemma3_12b_it": 425
+        },
+        "148": {
+          "qwen2_5_vl_3b_instruct": 562,
+          "qwen3_vl_8b_instruct": 562,
+          "gemma3_4b_it": 485,
+          "gemma3_12b_it": 485
+        },
+        "149": {
+          "qwen2_5_vl_3b_instruct": 562,
+          "qwen3_vl_8b_instruct": 562,
+          "gemma3_4b_it": 485,
+          "gemma3_12b_it": 485
+        },
+        "150": {
+          "qwen2_5_vl_3b_instruct": 562,
+          "qwen3_vl_8b_instruct": 562,
+          "gemma3_4b_it": 485,
+          "gemma3_12b_it": 485
+        },
+        "151": {
+          "qwen2_5_vl_3b_instruct": 562,
+          "qwen3_vl_8b_instruct": 562,
+          "gemma3_4b_it": 485,
+          "gemma3_12b_it": 485
+        },
+        "152": {
+          "qwen2_5_vl_3b_instruct": 1443,
+          "qwen3_vl_8b_instruct": 1443,
+          "gemma3_4b_it": 1159,
+          "gemma3_12b_it": 1159
+        },
+        "153": {
+          "qwen2_5_vl_3b_instruct": 1443,
+          "qwen3_vl_8b_instruct": 1443,
+          "gemma3_4b_it": 1159,
+          "gemma3_12b_it": 1159
+        },
+        "154": {
+          "qwen2_5_vl_3b_instruct": 1443,
+          "qwen3_vl_8b_instruct": 1443,
+          "gemma3_4b_it": 1159,
+          "gemma3_12b_it": 1159
+        },
+        "155": {
+          "qwen2_5_vl_3b_instruct": 1443,
+          "qwen3_vl_8b_instruct": 1443,
+          "gemma3_4b_it": 1159,
+          "gemma3_12b_it": 1159
+        },
+        "156": {
+          "qwen2_5_vl_3b_instruct": 1208,
+          "qwen3_vl_8b_instruct": 1208,
+          "gemma3_4b_it": 871,
+          "gemma3_12b_it": 871
+        },
+        "157": {
+          "qwen2_5_vl_3b_instruct": 1208,
+          "qwen3_vl_8b_instruct": 1208,
+          "gemma3_4b_it": 871,
+          "gemma3_12b_it": 871
+        },
+        "158": {
+          "qwen2_5_vl_3b_instruct": 1208,
+          "qwen3_vl_8b_instruct": 1208,
+          "gemma3_4b_it": 871,
+          "gemma3_12b_it": 871
+        },
+        "159": {
+          "qwen2_5_vl_3b_instruct": 1208,
+          "qwen3_vl_8b_instruct": 1208,
+          "gemma3_4b_it": 871,
+          "gemma3_12b_it": 871
+        }
+      }
+    },
+    "Japanese": {
+      "total": 160,
+      "kept": 120,
+      "annotation_indices": [
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        240,
+        241,
+        242,
+        243,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315
+      ],
+      "token_counts": {
+        "160": {
+          "qwen2_5_vl_3b_instruct": 2374,
+          "qwen3_vl_8b_instruct": 2374,
+          "gemma3_4b_it": 1940,
+          "gemma3_12b_it": 1940
+        },
+        "161": {
+          "qwen2_5_vl_3b_instruct": 2374,
+          "qwen3_vl_8b_instruct": 2374,
+          "gemma3_4b_it": 1940,
+          "gemma3_12b_it": 1940
+        },
+        "162": {
+          "qwen2_5_vl_3b_instruct": 2374,
+          "qwen3_vl_8b_instruct": 2374,
+          "gemma3_4b_it": 1940,
+          "gemma3_12b_it": 1940
+        },
+        "163": {
+          "qwen2_5_vl_3b_instruct": 2374,
+          "qwen3_vl_8b_instruct": 2374,
+          "gemma3_4b_it": 1940,
+          "gemma3_12b_it": 1940
+        },
+        "164": {
+          "qwen2_5_vl_3b_instruct": 1278,
+          "qwen3_vl_8b_instruct": 1278,
+          "gemma3_4b_it": 1125,
+          "gemma3_12b_it": 1125
+        },
+        "165": {
+          "qwen2_5_vl_3b_instruct": 1278,
+          "qwen3_vl_8b_instruct": 1278,
+          "gemma3_4b_it": 1125,
+          "gemma3_12b_it": 1125
+        },
+        "166": {
+          "qwen2_5_vl_3b_instruct": 1278,
+          "qwen3_vl_8b_instruct": 1278,
+          "gemma3_4b_it": 1125,
+          "gemma3_12b_it": 1125
+        },
+        "167": {
+          "qwen2_5_vl_3b_instruct": 1278,
+          "qwen3_vl_8b_instruct": 1278,
+          "gemma3_4b_it": 1125,
+          "gemma3_12b_it": 1125
+        },
+        "168": {
+          "qwen2_5_vl_3b_instruct": 803,
+          "qwen3_vl_8b_instruct": 803,
+          "gemma3_4b_it": 637,
+          "gemma3_12b_it": 637
+        },
+        "169": {
+          "qwen2_5_vl_3b_instruct": 803,
+          "qwen3_vl_8b_instruct": 803,
+          "gemma3_4b_it": 637,
+          "gemma3_12b_it": 637
+        },
+        "170": {
+          "qwen2_5_vl_3b_instruct": 803,
+          "qwen3_vl_8b_instruct": 803,
+          "gemma3_4b_it": 637,
+          "gemma3_12b_it": 637
+        },
+        "171": {
+          "qwen2_5_vl_3b_instruct": 803,
+          "qwen3_vl_8b_instruct": 803,
+          "gemma3_4b_it": 637,
+          "gemma3_12b_it": 637
+        },
+        "172": {
+          "qwen2_5_vl_3b_instruct": 1220,
+          "qwen3_vl_8b_instruct": 1220,
+          "gemma3_4b_it": 926,
+          "gemma3_12b_it": 926
+        },
+        "173": {
+          "qwen2_5_vl_3b_instruct": 1220,
+          "qwen3_vl_8b_instruct": 1220,
+          "gemma3_4b_it": 926,
+          "gemma3_12b_it": 926
+        },
+        "174": {
+          "qwen2_5_vl_3b_instruct": 1220,
+          "qwen3_vl_8b_instruct": 1220,
+          "gemma3_4b_it": 926,
+          "gemma3_12b_it": 926
+        },
+        "175": {
+          "qwen2_5_vl_3b_instruct": 1220,
+          "qwen3_vl_8b_instruct": 1220,
+          "gemma3_4b_it": 926,
+          "gemma3_12b_it": 926
+        },
+        "176": {
+          "qwen2_5_vl_3b_instruct": 1180,
+          "qwen3_vl_8b_instruct": 1180,
+          "gemma3_4b_it": 901,
+          "gemma3_12b_it": 901
+        },
+        "177": {
+          "qwen2_5_vl_3b_instruct": 1180,
+          "qwen3_vl_8b_instruct": 1180,
+          "gemma3_4b_it": 901,
+          "gemma3_12b_it": 901
+        },
+        "178": {
+          "qwen2_5_vl_3b_instruct": 1180,
+          "qwen3_vl_8b_instruct": 1180,
+          "gemma3_4b_it": 901,
+          "gemma3_12b_it": 901
+        },
+        "179": {
+          "qwen2_5_vl_3b_instruct": 1180,
+          "qwen3_vl_8b_instruct": 1180,
+          "gemma3_4b_it": 901,
+          "gemma3_12b_it": 901
+        },
+        "180": {
+          "qwen2_5_vl_3b_instruct": 431,
+          "qwen3_vl_8b_instruct": 431,
+          "gemma3_4b_it": 378,
+          "gemma3_12b_it": 378
+        },
+        "181": {
+          "qwen2_5_vl_3b_instruct": 431,
+          "qwen3_vl_8b_instruct": 431,
+          "gemma3_4b_it": 378,
+          "gemma3_12b_it": 378
+        },
+        "182": {
+          "qwen2_5_vl_3b_instruct": 431,
+          "qwen3_vl_8b_instruct": 431,
+          "gemma3_4b_it": 378,
+          "gemma3_12b_it": 378
+        },
+        "183": {
+          "qwen2_5_vl_3b_instruct": 431,
+          "qwen3_vl_8b_instruct": 431,
+          "gemma3_4b_it": 378,
+          "gemma3_12b_it": 378
+        },
+        "184": {
+          "qwen2_5_vl_3b_instruct": 639,
+          "qwen3_vl_8b_instruct": 639,
+          "gemma3_4b_it": 570,
+          "gemma3_12b_it": 570
+        },
+        "185": {
+          "qwen2_5_vl_3b_instruct": 639,
+          "qwen3_vl_8b_instruct": 639,
+          "gemma3_4b_it": 570,
+          "gemma3_12b_it": 570
+        },
+        "186": {
+          "qwen2_5_vl_3b_instruct": 639,
+          "qwen3_vl_8b_instruct": 639,
+          "gemma3_4b_it": 570,
+          "gemma3_12b_it": 570
+        },
+        "187": {
+          "qwen2_5_vl_3b_instruct": 639,
+          "qwen3_vl_8b_instruct": 639,
+          "gemma3_4b_it": 570,
+          "gemma3_12b_it": 570
+        },
+        "188": {
+          "qwen2_5_vl_3b_instruct": 552,
+          "qwen3_vl_8b_instruct": 552,
+          "gemma3_4b_it": 485,
+          "gemma3_12b_it": 485
+        },
+        "189": {
+          "qwen2_5_vl_3b_instruct": 552,
+          "qwen3_vl_8b_instruct": 552,
+          "gemma3_4b_it": 485,
+          "gemma3_12b_it": 485
+        },
+        "190": {
+          "qwen2_5_vl_3b_instruct": 552,
+          "qwen3_vl_8b_instruct": 552,
+          "gemma3_4b_it": 485,
+          "gemma3_12b_it": 485
+        },
+        "191": {
+          "qwen2_5_vl_3b_instruct": 552,
+          "qwen3_vl_8b_instruct": 552,
+          "gemma3_4b_it": 485,
+          "gemma3_12b_it": 485
+        },
+        "192": {
+          "qwen2_5_vl_3b_instruct": 512,
+          "qwen3_vl_8b_instruct": 512,
+          "gemma3_4b_it": 471,
+          "gemma3_12b_it": 471
+        },
+        "193": {
+          "qwen2_5_vl_3b_instruct": 512,
+          "qwen3_vl_8b_instruct": 512,
+          "gemma3_4b_it": 471,
+          "gemma3_12b_it": 471
+        },
+        "194": {
+          "qwen2_5_vl_3b_instruct": 512,
+          "qwen3_vl_8b_instruct": 512,
+          "gemma3_4b_it": 471,
+          "gemma3_12b_it": 471
+        },
+        "195": {
+          "qwen2_5_vl_3b_instruct": 512,
+          "qwen3_vl_8b_instruct": 512,
+          "gemma3_4b_it": 471,
+          "gemma3_12b_it": 471
+        },
+        "196": {
+          "qwen2_5_vl_3b_instruct": 452,
+          "qwen3_vl_8b_instruct": 452,
+          "gemma3_4b_it": 419,
+          "gemma3_12b_it": 419
+        },
+        "197": {
+          "qwen2_5_vl_3b_instruct": 452,
+          "qwen3_vl_8b_instruct": 452,
+          "gemma3_4b_it": 419,
+          "gemma3_12b_it": 419
+        },
+        "198": {
+          "qwen2_5_vl_3b_instruct": 452,
+          "qwen3_vl_8b_instruct": 452,
+          "gemma3_4b_it": 419,
+          "gemma3_12b_it": 419
+        },
+        "199": {
+          "qwen2_5_vl_3b_instruct": 452,
+          "qwen3_vl_8b_instruct": 452,
+          "gemma3_4b_it": 419,
+          "gemma3_12b_it": 419
+        },
+        "200": {
+          "qwen2_5_vl_3b_instruct": 220,
+          "qwen3_vl_8b_instruct": 220,
+          "gemma3_4b_it": 184,
+          "gemma3_12b_it": 184
+        },
+        "201": {
+          "qwen2_5_vl_3b_instruct": 220,
+          "qwen3_vl_8b_instruct": 220,
+          "gemma3_4b_it": 184,
+          "gemma3_12b_it": 184
+        },
+        "202": {
+          "qwen2_5_vl_3b_instruct": 220,
+          "qwen3_vl_8b_instruct": 220,
+          "gemma3_4b_it": 184,
+          "gemma3_12b_it": 184
+        },
+        "203": {
+          "qwen2_5_vl_3b_instruct": 220,
+          "qwen3_vl_8b_instruct": 220,
+          "gemma3_4b_it": 184,
+          "gemma3_12b_it": 184
+        },
+        "204": {
+          "qwen2_5_vl_3b_instruct": 455,
+          "qwen3_vl_8b_instruct": 455,
+          "gemma3_4b_it": 388,
+          "gemma3_12b_it": 388
+        },
+        "205": {
+          "qwen2_5_vl_3b_instruct": 455,
+          "qwen3_vl_8b_instruct": 455,
+          "gemma3_4b_it": 388,
+          "gemma3_12b_it": 388
+        },
+        "206": {
+          "qwen2_5_vl_3b_instruct": 455,
+          "qwen3_vl_8b_instruct": 455,
+          "gemma3_4b_it": 388,
+          "gemma3_12b_it": 388
+        },
+        "207": {
+          "qwen2_5_vl_3b_instruct": 455,
+          "qwen3_vl_8b_instruct": 455,
+          "gemma3_4b_it": 388,
+          "gemma3_12b_it": 388
+        },
+        "208": {
+          "qwen2_5_vl_3b_instruct": 232,
+          "qwen3_vl_8b_instruct": 232,
+          "gemma3_4b_it": 228,
+          "gemma3_12b_it": 228
+        },
+        "209": {
+          "qwen2_5_vl_3b_instruct": 232,
+          "qwen3_vl_8b_instruct": 232,
+          "gemma3_4b_it": 228,
+          "gemma3_12b_it": 228
+        },
+        "210": {
+          "qwen2_5_vl_3b_instruct": 232,
+          "qwen3_vl_8b_instruct": 232,
+          "gemma3_4b_it": 228,
+          "gemma3_12b_it": 228
+        },
+        "211": {
+          "qwen2_5_vl_3b_instruct": 232,
+          "qwen3_vl_8b_instruct": 232,
+          "gemma3_4b_it": 228,
+          "gemma3_12b_it": 228
+        },
+        "212": {
+          "qwen2_5_vl_3b_instruct": 44,
+          "qwen3_vl_8b_instruct": 44,
+          "gemma3_4b_it": 37,
+          "gemma3_12b_it": 37
+        },
+        "213": {
+          "qwen2_5_vl_3b_instruct": 44,
+          "qwen3_vl_8b_instruct": 44,
+          "gemma3_4b_it": 37,
+          "gemma3_12b_it": 37
+        },
+        "214": {
+          "qwen2_5_vl_3b_instruct": 44,
+          "qwen3_vl_8b_instruct": 44,
+          "gemma3_4b_it": 37,
+          "gemma3_12b_it": 37
+        },
+        "215": {
+          "qwen2_5_vl_3b_instruct": 44,
+          "qwen3_vl_8b_instruct": 44,
+          "gemma3_4b_it": 37,
+          "gemma3_12b_it": 37
+        },
+        "216": {
+          "qwen2_5_vl_3b_instruct": 228,
+          "qwen3_vl_8b_instruct": 228,
+          "gemma3_4b_it": 229,
+          "gemma3_12b_it": 229
+        },
+        "217": {
+          "qwen2_5_vl_3b_instruct": 228,
+          "qwen3_vl_8b_instruct": 228,
+          "gemma3_4b_it": 229,
+          "gemma3_12b_it": 229
+        },
+        "218": {
+          "qwen2_5_vl_3b_instruct": 228,
+          "qwen3_vl_8b_instruct": 228,
+          "gemma3_4b_it": 229,
+          "gemma3_12b_it": 229
+        },
+        "219": {
+          "qwen2_5_vl_3b_instruct": 228,
+          "qwen3_vl_8b_instruct": 228,
+          "gemma3_4b_it": 229,
+          "gemma3_12b_it": 229
+        },
+        "220": {
+          "qwen2_5_vl_3b_instruct": 110,
+          "qwen3_vl_8b_instruct": 110,
+          "gemma3_4b_it": 107,
+          "gemma3_12b_it": 107
+        },
+        "221": {
+          "qwen2_5_vl_3b_instruct": 110,
+          "qwen3_vl_8b_instruct": 110,
+          "gemma3_4b_it": 107,
+          "gemma3_12b_it": 107
+        },
+        "222": {
+          "qwen2_5_vl_3b_instruct": 110,
+          "qwen3_vl_8b_instruct": 110,
+          "gemma3_4b_it": 107,
+          "gemma3_12b_it": 107
+        },
+        "223": {
+          "qwen2_5_vl_3b_instruct": 110,
+          "qwen3_vl_8b_instruct": 110,
+          "gemma3_4b_it": 107,
+          "gemma3_12b_it": 107
+        },
+        "224": {
+          "qwen2_5_vl_3b_instruct": 1832,
+          "qwen3_vl_8b_instruct": 1832,
+          "gemma3_4b_it": 1483,
+          "gemma3_12b_it": 1483
+        },
+        "225": {
+          "qwen2_5_vl_3b_instruct": 1832,
+          "qwen3_vl_8b_instruct": 1832,
+          "gemma3_4b_it": 1483,
+          "gemma3_12b_it": 1483
+        },
+        "226": {
+          "qwen2_5_vl_3b_instruct": 1832,
+          "qwen3_vl_8b_instruct": 1832,
+          "gemma3_4b_it": 1483,
+          "gemma3_12b_it": 1483
+        },
+        "227": {
+          "qwen2_5_vl_3b_instruct": 1832,
+          "qwen3_vl_8b_instruct": 1832,
+          "gemma3_4b_it": 1483,
+          "gemma3_12b_it": 1483
+        },
+        "228": {
+          "qwen2_5_vl_3b_instruct": 2265,
+          "qwen3_vl_8b_instruct": 2265,
+          "gemma3_4b_it": 1803,
+          "gemma3_12b_it": 1803
+        },
+        "229": {
+          "qwen2_5_vl_3b_instruct": 2265,
+          "qwen3_vl_8b_instruct": 2265,
+          "gemma3_4b_it": 1803,
+          "gemma3_12b_it": 1803
+        },
+        "230": {
+          "qwen2_5_vl_3b_instruct": 2265,
+          "qwen3_vl_8b_instruct": 2265,
+          "gemma3_4b_it": 1803,
+          "gemma3_12b_it": 1803
+        },
+        "231": {
+          "qwen2_5_vl_3b_instruct": 2265,
+          "qwen3_vl_8b_instruct": 2265,
+          "gemma3_4b_it": 1803,
+          "gemma3_12b_it": 1803
+        },
+        "232": {
+          "qwen2_5_vl_3b_instruct": 2227,
+          "qwen3_vl_8b_instruct": 2227,
+          "gemma3_4b_it": 1853,
+          "gemma3_12b_it": 1853
+        },
+        "233": {
+          "qwen2_5_vl_3b_instruct": 2227,
+          "qwen3_vl_8b_instruct": 2227,
+          "gemma3_4b_it": 1853,
+          "gemma3_12b_it": 1853
+        },
+        "234": {
+          "qwen2_5_vl_3b_instruct": 2227,
+          "qwen3_vl_8b_instruct": 2227,
+          "gemma3_4b_it": 1853,
+          "gemma3_12b_it": 1853
+        },
+        "235": {
+          "qwen2_5_vl_3b_instruct": 2227,
+          "qwen3_vl_8b_instruct": 2227,
+          "gemma3_4b_it": 1853,
+          "gemma3_12b_it": 1853
+        },
+        "236": {
+          "qwen2_5_vl_3b_instruct": 2058,
+          "qwen3_vl_8b_instruct": 2058,
+          "gemma3_4b_it": 1687,
+          "gemma3_12b_it": 1687
+        },
+        "237": {
+          "qwen2_5_vl_3b_instruct": 2058,
+          "qwen3_vl_8b_instruct": 2058,
+          "gemma3_4b_it": 1687,
+          "gemma3_12b_it": 1687
+        },
+        "238": {
+          "qwen2_5_vl_3b_instruct": 2058,
+          "qwen3_vl_8b_instruct": 2058,
+          "gemma3_4b_it": 1687,
+          "gemma3_12b_it": 1687
+        },
+        "239": {
+          "qwen2_5_vl_3b_instruct": 2058,
+          "qwen3_vl_8b_instruct": 2058,
+          "gemma3_4b_it": 1687,
+          "gemma3_12b_it": 1687
+        },
+        "240": {
+          "qwen2_5_vl_3b_instruct": 576,
+          "qwen3_vl_8b_instruct": 576,
+          "gemma3_4b_it": 487,
+          "gemma3_12b_it": 487
+        },
+        "241": {
+          "qwen2_5_vl_3b_instruct": 576,
+          "qwen3_vl_8b_instruct": 576,
+          "gemma3_4b_it": 487,
+          "gemma3_12b_it": 487
+        },
+        "242": {
+          "qwen2_5_vl_3b_instruct": 576,
+          "qwen3_vl_8b_instruct": 576,
+          "gemma3_4b_it": 487,
+          "gemma3_12b_it": 487
+        },
+        "243": {
+          "qwen2_5_vl_3b_instruct": 576,
+          "qwen3_vl_8b_instruct": 576,
+          "gemma3_4b_it": 487,
+          "gemma3_12b_it": 487
+        },
+        "244": {
+          "qwen2_5_vl_3b_instruct": 3250,
+          "qwen3_vl_8b_instruct": 3250,
+          "gemma3_4b_it": 2618,
+          "gemma3_12b_it": 2618
+        },
+        "245": {
+          "qwen2_5_vl_3b_instruct": 3250,
+          "qwen3_vl_8b_instruct": 3250,
+          "gemma3_4b_it": 2618,
+          "gemma3_12b_it": 2618
+        },
+        "246": {
+          "qwen2_5_vl_3b_instruct": 3250,
+          "qwen3_vl_8b_instruct": 3250,
+          "gemma3_4b_it": 2618,
+          "gemma3_12b_it": 2618
+        },
+        "247": {
+          "qwen2_5_vl_3b_instruct": 3250,
+          "qwen3_vl_8b_instruct": 3250,
+          "gemma3_4b_it": 2618,
+          "gemma3_12b_it": 2618
+        },
+        "248": {
+          "qwen2_5_vl_3b_instruct": 2421,
+          "qwen3_vl_8b_instruct": 2421,
+          "gemma3_4b_it": 2001,
+          "gemma3_12b_it": 2001
+        },
+        "249": {
+          "qwen2_5_vl_3b_instruct": 2421,
+          "qwen3_vl_8b_instruct": 2421,
+          "gemma3_4b_it": 2001,
+          "gemma3_12b_it": 2001
+        },
+        "250": {
+          "qwen2_5_vl_3b_instruct": 2421,
+          "qwen3_vl_8b_instruct": 2421,
+          "gemma3_4b_it": 2001,
+          "gemma3_12b_it": 2001
+        },
+        "251": {
+          "qwen2_5_vl_3b_instruct": 2421,
+          "qwen3_vl_8b_instruct": 2421,
+          "gemma3_4b_it": 2001,
+          "gemma3_12b_it": 2001
+        },
+        "252": {
+          "qwen2_5_vl_3b_instruct": 2772,
+          "qwen3_vl_8b_instruct": 2772,
+          "gemma3_4b_it": 2333,
+          "gemma3_12b_it": 2333
+        },
+        "253": {
+          "qwen2_5_vl_3b_instruct": 2772,
+          "qwen3_vl_8b_instruct": 2772,
+          "gemma3_4b_it": 2333,
+          "gemma3_12b_it": 2333
+        },
+        "254": {
+          "qwen2_5_vl_3b_instruct": 2772,
+          "qwen3_vl_8b_instruct": 2772,
+          "gemma3_4b_it": 2333,
+          "gemma3_12b_it": 2333
+        },
+        "255": {
+          "qwen2_5_vl_3b_instruct": 2772,
+          "qwen3_vl_8b_instruct": 2772,
+          "gemma3_4b_it": 2333,
+          "gemma3_12b_it": 2333
+        },
+        "256": {
+          "qwen2_5_vl_3b_instruct": 2077,
+          "qwen3_vl_8b_instruct": 2077,
+          "gemma3_4b_it": 1685,
+          "gemma3_12b_it": 1685
+        },
+        "257": {
+          "qwen2_5_vl_3b_instruct": 2077,
+          "qwen3_vl_8b_instruct": 2077,
+          "gemma3_4b_it": 1685,
+          "gemma3_12b_it": 1685
+        },
+        "258": {
+          "qwen2_5_vl_3b_instruct": 2077,
+          "qwen3_vl_8b_instruct": 2077,
+          "gemma3_4b_it": 1685,
+          "gemma3_12b_it": 1685
+        },
+        "259": {
+          "qwen2_5_vl_3b_instruct": 2077,
+          "qwen3_vl_8b_instruct": 2077,
+          "gemma3_4b_it": 1685,
+          "gemma3_12b_it": 1685
+        },
+        "260": {
+          "qwen2_5_vl_3b_instruct": 283,
+          "qwen3_vl_8b_instruct": 283,
+          "gemma3_4b_it": 286,
+          "gemma3_12b_it": 286
+        },
+        "261": {
+          "qwen2_5_vl_3b_instruct": 283,
+          "qwen3_vl_8b_instruct": 283,
+          "gemma3_4b_it": 286,
+          "gemma3_12b_it": 286
+        },
+        "262": {
+          "qwen2_5_vl_3b_instruct": 283,
+          "qwen3_vl_8b_instruct": 283,
+          "gemma3_4b_it": 286,
+          "gemma3_12b_it": 286
+        },
+        "263": {
+          "qwen2_5_vl_3b_instruct": 283,
+          "qwen3_vl_8b_instruct": 283,
+          "gemma3_4b_it": 286,
+          "gemma3_12b_it": 286
+        },
+        "264": {
+          "qwen2_5_vl_3b_instruct": 224,
+          "qwen3_vl_8b_instruct": 224,
+          "gemma3_4b_it": 206,
+          "gemma3_12b_it": 206
+        },
+        "265": {
+          "qwen2_5_vl_3b_instruct": 224,
+          "qwen3_vl_8b_instruct": 224,
+          "gemma3_4b_it": 206,
+          "gemma3_12b_it": 206
+        },
+        "266": {
+          "qwen2_5_vl_3b_instruct": 224,
+          "qwen3_vl_8b_instruct": 224,
+          "gemma3_4b_it": 206,
+          "gemma3_12b_it": 206
+        },
+        "267": {
+          "qwen2_5_vl_3b_instruct": 224,
+          "qwen3_vl_8b_instruct": 224,
+          "gemma3_4b_it": 206,
+          "gemma3_12b_it": 206
+        },
+        "268": {
+          "qwen2_5_vl_3b_instruct": 294,
+          "qwen3_vl_8b_instruct": 294,
+          "gemma3_4b_it": 276,
+          "gemma3_12b_it": 276
+        },
+        "269": {
+          "qwen2_5_vl_3b_instruct": 294,
+          "qwen3_vl_8b_instruct": 294,
+          "gemma3_4b_it": 276,
+          "gemma3_12b_it": 276
+        },
+        "270": {
+          "qwen2_5_vl_3b_instruct": 294,
+          "qwen3_vl_8b_instruct": 294,
+          "gemma3_4b_it": 276,
+          "gemma3_12b_it": 276
+        },
+        "271": {
+          "qwen2_5_vl_3b_instruct": 294,
+          "qwen3_vl_8b_instruct": 294,
+          "gemma3_4b_it": 276,
+          "gemma3_12b_it": 276
+        },
+        "272": {
+          "qwen2_5_vl_3b_instruct": 406,
+          "qwen3_vl_8b_instruct": 406,
+          "gemma3_4b_it": 350,
+          "gemma3_12b_it": 350
+        },
+        "273": {
+          "qwen2_5_vl_3b_instruct": 406,
+          "qwen3_vl_8b_instruct": 406,
+          "gemma3_4b_it": 350,
+          "gemma3_12b_it": 350
+        },
+        "274": {
+          "qwen2_5_vl_3b_instruct": 406,
+          "qwen3_vl_8b_instruct": 406,
+          "gemma3_4b_it": 350,
+          "gemma3_12b_it": 350
+        },
+        "275": {
+          "qwen2_5_vl_3b_instruct": 406,
+          "qwen3_vl_8b_instruct": 406,
+          "gemma3_4b_it": 350,
+          "gemma3_12b_it": 350
+        },
+        "276": {
+          "qwen2_5_vl_3b_instruct": 840,
+          "qwen3_vl_8b_instruct": 840,
+          "gemma3_4b_it": 721,
+          "gemma3_12b_it": 721
+        },
+        "277": {
+          "qwen2_5_vl_3b_instruct": 840,
+          "qwen3_vl_8b_instruct": 840,
+          "gemma3_4b_it": 721,
+          "gemma3_12b_it": 721
+        },
+        "278": {
+          "qwen2_5_vl_3b_instruct": 840,
+          "qwen3_vl_8b_instruct": 840,
+          "gemma3_4b_it": 721,
+          "gemma3_12b_it": 721
+        },
+        "279": {
+          "qwen2_5_vl_3b_instruct": 840,
+          "qwen3_vl_8b_instruct": 840,
+          "gemma3_4b_it": 721,
+          "gemma3_12b_it": 721
+        },
+        "280": {
+          "qwen2_5_vl_3b_instruct": 266,
+          "qwen3_vl_8b_instruct": 266,
+          "gemma3_4b_it": 248,
+          "gemma3_12b_it": 248
+        },
+        "281": {
+          "qwen2_5_vl_3b_instruct": 266,
+          "qwen3_vl_8b_instruct": 266,
+          "gemma3_4b_it": 248,
+          "gemma3_12b_it": 248
+        },
+        "282": {
+          "qwen2_5_vl_3b_instruct": 266,
+          "qwen3_vl_8b_instruct": 266,
+          "gemma3_4b_it": 248,
+          "gemma3_12b_it": 248
+        },
+        "283": {
+          "qwen2_5_vl_3b_instruct": 266,
+          "qwen3_vl_8b_instruct": 266,
+          "gemma3_4b_it": 248,
+          "gemma3_12b_it": 248
+        },
+        "284": {
+          "qwen2_5_vl_3b_instruct": 289,
+          "qwen3_vl_8b_instruct": 289,
+          "gemma3_4b_it": 246,
+          "gemma3_12b_it": 246
+        },
+        "285": {
+          "qwen2_5_vl_3b_instruct": 289,
+          "qwen3_vl_8b_instruct": 289,
+          "gemma3_4b_it": 246,
+          "gemma3_12b_it": 246
+        },
+        "286": {
+          "qwen2_5_vl_3b_instruct": 289,
+          "qwen3_vl_8b_instruct": 289,
+          "gemma3_4b_it": 246,
+          "gemma3_12b_it": 246
+        },
+        "287": {
+          "qwen2_5_vl_3b_instruct": 289,
+          "qwen3_vl_8b_instruct": 289,
+          "gemma3_4b_it": 246,
+          "gemma3_12b_it": 246
+        },
+        "288": {
+          "qwen2_5_vl_3b_instruct": 102,
+          "qwen3_vl_8b_instruct": 102,
+          "gemma3_4b_it": 87,
+          "gemma3_12b_it": 87
+        },
+        "289": {
+          "qwen2_5_vl_3b_instruct": 102,
+          "qwen3_vl_8b_instruct": 102,
+          "gemma3_4b_it": 87,
+          "gemma3_12b_it": 87
+        },
+        "290": {
+          "qwen2_5_vl_3b_instruct": 102,
+          "qwen3_vl_8b_instruct": 102,
+          "gemma3_4b_it": 87,
+          "gemma3_12b_it": 87
+        },
+        "291": {
+          "qwen2_5_vl_3b_instruct": 102,
+          "qwen3_vl_8b_instruct": 102,
+          "gemma3_4b_it": 87,
+          "gemma3_12b_it": 87
+        },
+        "292": {
+          "qwen2_5_vl_3b_instruct": 327,
+          "qwen3_vl_8b_instruct": 327,
+          "gemma3_4b_it": 292,
+          "gemma3_12b_it": 292
+        },
+        "293": {
+          "qwen2_5_vl_3b_instruct": 327,
+          "qwen3_vl_8b_instruct": 327,
+          "gemma3_4b_it": 292,
+          "gemma3_12b_it": 292
+        },
+        "294": {
+          "qwen2_5_vl_3b_instruct": 327,
+          "qwen3_vl_8b_instruct": 327,
+          "gemma3_4b_it": 292,
+          "gemma3_12b_it": 292
+        },
+        "295": {
+          "qwen2_5_vl_3b_instruct": 327,
+          "qwen3_vl_8b_instruct": 327,
+          "gemma3_4b_it": 292,
+          "gemma3_12b_it": 292
+        },
+        "296": {
+          "qwen2_5_vl_3b_instruct": 283,
+          "qwen3_vl_8b_instruct": 283,
+          "gemma3_4b_it": 257,
+          "gemma3_12b_it": 257
+        },
+        "297": {
+          "qwen2_5_vl_3b_instruct": 283,
+          "qwen3_vl_8b_instruct": 283,
+          "gemma3_4b_it": 257,
+          "gemma3_12b_it": 257
+        },
+        "298": {
+          "qwen2_5_vl_3b_instruct": 283,
+          "qwen3_vl_8b_instruct": 283,
+          "gemma3_4b_it": 257,
+          "gemma3_12b_it": 257
+        },
+        "299": {
+          "qwen2_5_vl_3b_instruct": 283,
+          "qwen3_vl_8b_instruct": 283,
+          "gemma3_4b_it": 257,
+          "gemma3_12b_it": 257
+        },
+        "300": {
+          "qwen2_5_vl_3b_instruct": 967,
+          "qwen3_vl_8b_instruct": 967,
+          "gemma3_4b_it": 876,
+          "gemma3_12b_it": 876
+        },
+        "301": {
+          "qwen2_5_vl_3b_instruct": 967,
+          "qwen3_vl_8b_instruct": 967,
+          "gemma3_4b_it": 876,
+          "gemma3_12b_it": 876
+        },
+        "302": {
+          "qwen2_5_vl_3b_instruct": 967,
+          "qwen3_vl_8b_instruct": 967,
+          "gemma3_4b_it": 876,
+          "gemma3_12b_it": 876
+        },
+        "303": {
+          "qwen2_5_vl_3b_instruct": 967,
+          "qwen3_vl_8b_instruct": 967,
+          "gemma3_4b_it": 876,
+          "gemma3_12b_it": 876
+        },
+        "304": {
+          "qwen2_5_vl_3b_instruct": 663,
+          "qwen3_vl_8b_instruct": 663,
+          "gemma3_4b_it": 569,
+          "gemma3_12b_it": 569
+        },
+        "305": {
+          "qwen2_5_vl_3b_instruct": 663,
+          "qwen3_vl_8b_instruct": 663,
+          "gemma3_4b_it": 569,
+          "gemma3_12b_it": 569
+        },
+        "306": {
+          "qwen2_5_vl_3b_instruct": 663,
+          "qwen3_vl_8b_instruct": 663,
+          "gemma3_4b_it": 569,
+          "gemma3_12b_it": 569
+        },
+        "307": {
+          "qwen2_5_vl_3b_instruct": 663,
+          "qwen3_vl_8b_instruct": 663,
+          "gemma3_4b_it": 569,
+          "gemma3_12b_it": 569
+        },
+        "308": {
+          "qwen2_5_vl_3b_instruct": 1420,
+          "qwen3_vl_8b_instruct": 1420,
+          "gemma3_4b_it": 1212,
+          "gemma3_12b_it": 1212
+        },
+        "309": {
+          "qwen2_5_vl_3b_instruct": 1420,
+          "qwen3_vl_8b_instruct": 1420,
+          "gemma3_4b_it": 1212,
+          "gemma3_12b_it": 1212
+        },
+        "310": {
+          "qwen2_5_vl_3b_instruct": 1420,
+          "qwen3_vl_8b_instruct": 1420,
+          "gemma3_4b_it": 1212,
+          "gemma3_12b_it": 1212
+        },
+        "311": {
+          "qwen2_5_vl_3b_instruct": 1420,
+          "qwen3_vl_8b_instruct": 1420,
+          "gemma3_4b_it": 1212,
+          "gemma3_12b_it": 1212
+        },
+        "312": {
+          "qwen2_5_vl_3b_instruct": 1454,
+          "qwen3_vl_8b_instruct": 1454,
+          "gemma3_4b_it": 1323,
+          "gemma3_12b_it": 1323
+        },
+        "313": {
+          "qwen2_5_vl_3b_instruct": 1454,
+          "qwen3_vl_8b_instruct": 1454,
+          "gemma3_4b_it": 1323,
+          "gemma3_12b_it": 1323
+        },
+        "314": {
+          "qwen2_5_vl_3b_instruct": 1454,
+          "qwen3_vl_8b_instruct": 1454,
+          "gemma3_4b_it": 1323,
+          "gemma3_12b_it": 1323
+        },
+        "315": {
+          "qwen2_5_vl_3b_instruct": 1454,
+          "qwen3_vl_8b_instruct": 1454,
+          "gemma3_4b_it": 1323,
+          "gemma3_12b_it": 1323
+        },
+        "316": {
+          "qwen2_5_vl_3b_instruct": 1844,
+          "qwen3_vl_8b_instruct": 1844,
+          "gemma3_4b_it": 1708,
+          "gemma3_12b_it": 1708
+        },
+        "317": {
+          "qwen2_5_vl_3b_instruct": 1844,
+          "qwen3_vl_8b_instruct": 1844,
+          "gemma3_4b_it": 1708,
+          "gemma3_12b_it": 1708
+        },
+        "318": {
+          "qwen2_5_vl_3b_instruct": 1844,
+          "qwen3_vl_8b_instruct": 1844,
+          "gemma3_4b_it": 1708,
+          "gemma3_12b_it": 1708
+        },
+        "319": {
+          "qwen2_5_vl_3b_instruct": 1844,
+          "qwen3_vl_8b_instruct": 1844,
+          "gemma3_4b_it": 1708,
+          "gemma3_12b_it": 1708
+        }
+      }
+    },
+    "Korean": {
+      "total": 160,
+      "kept": 136,
+      "annotation_indices": [
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        332,
+        333,
+        334,
+        335,
+        336,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        356,
+        357,
+        358,
+        359,
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399,
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        448,
+        449,
+        450,
+        451,
+        452,
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459,
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479
+      ],
+      "token_counts": {
+        "320": {
+          "qwen2_5_vl_3b_instruct": 460,
+          "qwen3_vl_8b_instruct": 460,
+          "gemma3_4b_it": 403,
+          "gemma3_12b_it": 403
+        },
+        "321": {
+          "qwen2_5_vl_3b_instruct": 460,
+          "qwen3_vl_8b_instruct": 460,
+          "gemma3_4b_it": 403,
+          "gemma3_12b_it": 403
+        },
+        "322": {
+          "qwen2_5_vl_3b_instruct": 460,
+          "qwen3_vl_8b_instruct": 460,
+          "gemma3_4b_it": 403,
+          "gemma3_12b_it": 403
+        },
+        "323": {
+          "qwen2_5_vl_3b_instruct": 460,
+          "qwen3_vl_8b_instruct": 460,
+          "gemma3_4b_it": 403,
+          "gemma3_12b_it": 403
+        },
+        "324": {
+          "qwen2_5_vl_3b_instruct": 474,
+          "qwen3_vl_8b_instruct": 474,
+          "gemma3_4b_it": 406,
+          "gemma3_12b_it": 406
+        },
+        "325": {
+          "qwen2_5_vl_3b_instruct": 474,
+          "qwen3_vl_8b_instruct": 474,
+          "gemma3_4b_it": 406,
+          "gemma3_12b_it": 406
+        },
+        "326": {
+          "qwen2_5_vl_3b_instruct": 474,
+          "qwen3_vl_8b_instruct": 474,
+          "gemma3_4b_it": 406,
+          "gemma3_12b_it": 406
+        },
+        "327": {
+          "qwen2_5_vl_3b_instruct": 474,
+          "qwen3_vl_8b_instruct": 474,
+          "gemma3_4b_it": 406,
+          "gemma3_12b_it": 406
+        },
+        "328": {
+          "qwen2_5_vl_3b_instruct": 3454,
+          "qwen3_vl_8b_instruct": 3454,
+          "gemma3_4b_it": 2966,
+          "gemma3_12b_it": 2966
+        },
+        "329": {
+          "qwen2_5_vl_3b_instruct": 3454,
+          "qwen3_vl_8b_instruct": 3454,
+          "gemma3_4b_it": 2966,
+          "gemma3_12b_it": 2966
+        },
+        "330": {
+          "qwen2_5_vl_3b_instruct": 3454,
+          "qwen3_vl_8b_instruct": 3454,
+          "gemma3_4b_it": 2966,
+          "gemma3_12b_it": 2966
+        },
+        "331": {
+          "qwen2_5_vl_3b_instruct": 3454,
+          "qwen3_vl_8b_instruct": 3454,
+          "gemma3_4b_it": 2966,
+          "gemma3_12b_it": 2966
+        },
+        "332": {
+          "qwen2_5_vl_3b_instruct": 385,
+          "qwen3_vl_8b_instruct": 385,
+          "gemma3_4b_it": 302,
+          "gemma3_12b_it": 302
+        },
+        "333": {
+          "qwen2_5_vl_3b_instruct": 385,
+          "qwen3_vl_8b_instruct": 385,
+          "gemma3_4b_it": 302,
+          "gemma3_12b_it": 302
+        },
+        "334": {
+          "qwen2_5_vl_3b_instruct": 385,
+          "qwen3_vl_8b_instruct": 385,
+          "gemma3_4b_it": 302,
+          "gemma3_12b_it": 302
+        },
+        "335": {
+          "qwen2_5_vl_3b_instruct": 385,
+          "qwen3_vl_8b_instruct": 385,
+          "gemma3_4b_it": 302,
+          "gemma3_12b_it": 302
+        },
+        "336": {
+          "qwen2_5_vl_3b_instruct": 621,
+          "qwen3_vl_8b_instruct": 621,
+          "gemma3_4b_it": 528,
+          "gemma3_12b_it": 528
+        },
+        "337": {
+          "qwen2_5_vl_3b_instruct": 621,
+          "qwen3_vl_8b_instruct": 621,
+          "gemma3_4b_it": 528,
+          "gemma3_12b_it": 528
+        },
+        "338": {
+          "qwen2_5_vl_3b_instruct": 621,
+          "qwen3_vl_8b_instruct": 621,
+          "gemma3_4b_it": 528,
+          "gemma3_12b_it": 528
+        },
+        "339": {
+          "qwen2_5_vl_3b_instruct": 621,
+          "qwen3_vl_8b_instruct": 621,
+          "gemma3_4b_it": 528,
+          "gemma3_12b_it": 528
+        },
+        "340": {
+          "qwen2_5_vl_3b_instruct": 305,
+          "qwen3_vl_8b_instruct": 305,
+          "gemma3_4b_it": 257,
+          "gemma3_12b_it": 257
+        },
+        "341": {
+          "qwen2_5_vl_3b_instruct": 305,
+          "qwen3_vl_8b_instruct": 305,
+          "gemma3_4b_it": 257,
+          "gemma3_12b_it": 257
+        },
+        "342": {
+          "qwen2_5_vl_3b_instruct": 305,
+          "qwen3_vl_8b_instruct": 305,
+          "gemma3_4b_it": 257,
+          "gemma3_12b_it": 257
+        },
+        "343": {
+          "qwen2_5_vl_3b_instruct": 305,
+          "qwen3_vl_8b_instruct": 305,
+          "gemma3_4b_it": 257,
+          "gemma3_12b_it": 257
+        },
+        "344": {
+          "qwen2_5_vl_3b_instruct": 1344,
+          "qwen3_vl_8b_instruct": 1344,
+          "gemma3_4b_it": 1147,
+          "gemma3_12b_it": 1147
+        },
+        "345": {
+          "qwen2_5_vl_3b_instruct": 1344,
+          "qwen3_vl_8b_instruct": 1344,
+          "gemma3_4b_it": 1147,
+          "gemma3_12b_it": 1147
+        },
+        "346": {
+          "qwen2_5_vl_3b_instruct": 1344,
+          "qwen3_vl_8b_instruct": 1344,
+          "gemma3_4b_it": 1147,
+          "gemma3_12b_it": 1147
+        },
+        "347": {
+          "qwen2_5_vl_3b_instruct": 1344,
+          "qwen3_vl_8b_instruct": 1344,
+          "gemma3_4b_it": 1147,
+          "gemma3_12b_it": 1147
+        },
+        "348": {
+          "qwen2_5_vl_3b_instruct": 702,
+          "qwen3_vl_8b_instruct": 702,
+          "gemma3_4b_it": 608,
+          "gemma3_12b_it": 608
+        },
+        "349": {
+          "qwen2_5_vl_3b_instruct": 702,
+          "qwen3_vl_8b_instruct": 702,
+          "gemma3_4b_it": 608,
+          "gemma3_12b_it": 608
+        },
+        "350": {
+          "qwen2_5_vl_3b_instruct": 702,
+          "qwen3_vl_8b_instruct": 702,
+          "gemma3_4b_it": 608,
+          "gemma3_12b_it": 608
+        },
+        "351": {
+          "qwen2_5_vl_3b_instruct": 702,
+          "qwen3_vl_8b_instruct": 702,
+          "gemma3_4b_it": 608,
+          "gemma3_12b_it": 608
+        },
+        "352": {
+          "qwen2_5_vl_3b_instruct": 1001,
+          "qwen3_vl_8b_instruct": 1001,
+          "gemma3_4b_it": 876,
+          "gemma3_12b_it": 876
+        },
+        "353": {
+          "qwen2_5_vl_3b_instruct": 1001,
+          "qwen3_vl_8b_instruct": 1001,
+          "gemma3_4b_it": 876,
+          "gemma3_12b_it": 876
+        },
+        "354": {
+          "qwen2_5_vl_3b_instruct": 1001,
+          "qwen3_vl_8b_instruct": 1001,
+          "gemma3_4b_it": 876,
+          "gemma3_12b_it": 876
+        },
+        "355": {
+          "qwen2_5_vl_3b_instruct": 1001,
+          "qwen3_vl_8b_instruct": 1001,
+          "gemma3_4b_it": 876,
+          "gemma3_12b_it": 876
+        },
+        "356": {
+          "qwen2_5_vl_3b_instruct": 375,
+          "qwen3_vl_8b_instruct": 375,
+          "gemma3_4b_it": 310,
+          "gemma3_12b_it": 310
+        },
+        "357": {
+          "qwen2_5_vl_3b_instruct": 375,
+          "qwen3_vl_8b_instruct": 375,
+          "gemma3_4b_it": 310,
+          "gemma3_12b_it": 310
+        },
+        "358": {
+          "qwen2_5_vl_3b_instruct": 375,
+          "qwen3_vl_8b_instruct": 375,
+          "gemma3_4b_it": 310,
+          "gemma3_12b_it": 310
+        },
+        "359": {
+          "qwen2_5_vl_3b_instruct": 375,
+          "qwen3_vl_8b_instruct": 375,
+          "gemma3_4b_it": 310,
+          "gemma3_12b_it": 310
+        },
+        "360": {
+          "qwen2_5_vl_3b_instruct": 481,
+          "qwen3_vl_8b_instruct": 481,
+          "gemma3_4b_it": 422,
+          "gemma3_12b_it": 422
+        },
+        "361": {
+          "qwen2_5_vl_3b_instruct": 481,
+          "qwen3_vl_8b_instruct": 481,
+          "gemma3_4b_it": 422,
+          "gemma3_12b_it": 422
+        },
+        "362": {
+          "qwen2_5_vl_3b_instruct": 481,
+          "qwen3_vl_8b_instruct": 481,
+          "gemma3_4b_it": 422,
+          "gemma3_12b_it": 422
+        },
+        "363": {
+          "qwen2_5_vl_3b_instruct": 481,
+          "qwen3_vl_8b_instruct": 481,
+          "gemma3_4b_it": 422,
+          "gemma3_12b_it": 422
+        },
+        "364": {
+          "qwen2_5_vl_3b_instruct": 709,
+          "qwen3_vl_8b_instruct": 709,
+          "gemma3_4b_it": 613,
+          "gemma3_12b_it": 613
+        },
+        "365": {
+          "qwen2_5_vl_3b_instruct": 709,
+          "qwen3_vl_8b_instruct": 709,
+          "gemma3_4b_it": 613,
+          "gemma3_12b_it": 613
+        },
+        "366": {
+          "qwen2_5_vl_3b_instruct": 709,
+          "qwen3_vl_8b_instruct": 709,
+          "gemma3_4b_it": 613,
+          "gemma3_12b_it": 613
+        },
+        "367": {
+          "qwen2_5_vl_3b_instruct": 709,
+          "qwen3_vl_8b_instruct": 709,
+          "gemma3_4b_it": 613,
+          "gemma3_12b_it": 613
+        },
+        "368": {
+          "qwen2_5_vl_3b_instruct": 996,
+          "qwen3_vl_8b_instruct": 996,
+          "gemma3_4b_it": 841,
+          "gemma3_12b_it": 841
+        },
+        "369": {
+          "qwen2_5_vl_3b_instruct": 996,
+          "qwen3_vl_8b_instruct": 996,
+          "gemma3_4b_it": 841,
+          "gemma3_12b_it": 841
+        },
+        "370": {
+          "qwen2_5_vl_3b_instruct": 996,
+          "qwen3_vl_8b_instruct": 996,
+          "gemma3_4b_it": 841,
+          "gemma3_12b_it": 841
+        },
+        "371": {
+          "qwen2_5_vl_3b_instruct": 996,
+          "qwen3_vl_8b_instruct": 996,
+          "gemma3_4b_it": 841,
+          "gemma3_12b_it": 841
+        },
+        "372": {
+          "qwen2_5_vl_3b_instruct": 365,
+          "qwen3_vl_8b_instruct": 365,
+          "gemma3_4b_it": 311,
+          "gemma3_12b_it": 311
+        },
+        "373": {
+          "qwen2_5_vl_3b_instruct": 365,
+          "qwen3_vl_8b_instruct": 365,
+          "gemma3_4b_it": 311,
+          "gemma3_12b_it": 311
+        },
+        "374": {
+          "qwen2_5_vl_3b_instruct": 365,
+          "qwen3_vl_8b_instruct": 365,
+          "gemma3_4b_it": 311,
+          "gemma3_12b_it": 311
+        },
+        "375": {
+          "qwen2_5_vl_3b_instruct": 365,
+          "qwen3_vl_8b_instruct": 365,
+          "gemma3_4b_it": 311,
+          "gemma3_12b_it": 311
+        },
+        "376": {
+          "qwen2_5_vl_3b_instruct": 927,
+          "qwen3_vl_8b_instruct": 927,
+          "gemma3_4b_it": 865,
+          "gemma3_12b_it": 865
+        },
+        "377": {
+          "qwen2_5_vl_3b_instruct": 927,
+          "qwen3_vl_8b_instruct": 927,
+          "gemma3_4b_it": 865,
+          "gemma3_12b_it": 865
+        },
+        "378": {
+          "qwen2_5_vl_3b_instruct": 927,
+          "qwen3_vl_8b_instruct": 927,
+          "gemma3_4b_it": 865,
+          "gemma3_12b_it": 865
+        },
+        "379": {
+          "qwen2_5_vl_3b_instruct": 927,
+          "qwen3_vl_8b_instruct": 927,
+          "gemma3_4b_it": 865,
+          "gemma3_12b_it": 865
+        },
+        "380": {
+          "qwen2_5_vl_3b_instruct": 725,
+          "qwen3_vl_8b_instruct": 725,
+          "gemma3_4b_it": 607,
+          "gemma3_12b_it": 607
+        },
+        "381": {
+          "qwen2_5_vl_3b_instruct": 725,
+          "qwen3_vl_8b_instruct": 725,
+          "gemma3_4b_it": 607,
+          "gemma3_12b_it": 607
+        },
+        "382": {
+          "qwen2_5_vl_3b_instruct": 725,
+          "qwen3_vl_8b_instruct": 725,
+          "gemma3_4b_it": 607,
+          "gemma3_12b_it": 607
+        },
+        "383": {
+          "qwen2_5_vl_3b_instruct": 725,
+          "qwen3_vl_8b_instruct": 725,
+          "gemma3_4b_it": 607,
+          "gemma3_12b_it": 607
+        },
+        "384": {
+          "qwen2_5_vl_3b_instruct": 870,
+          "qwen3_vl_8b_instruct": 870,
+          "gemma3_4b_it": 799,
+          "gemma3_12b_it": 799
+        },
+        "385": {
+          "qwen2_5_vl_3b_instruct": 870,
+          "qwen3_vl_8b_instruct": 870,
+          "gemma3_4b_it": 799,
+          "gemma3_12b_it": 799
+        },
+        "386": {
+          "qwen2_5_vl_3b_instruct": 870,
+          "qwen3_vl_8b_instruct": 870,
+          "gemma3_4b_it": 799,
+          "gemma3_12b_it": 799
+        },
+        "387": {
+          "qwen2_5_vl_3b_instruct": 870,
+          "qwen3_vl_8b_instruct": 870,
+          "gemma3_4b_it": 799,
+          "gemma3_12b_it": 799
+        },
+        "388": {
+          "qwen2_5_vl_3b_instruct": 773,
+          "qwen3_vl_8b_instruct": 773,
+          "gemma3_4b_it": 688,
+          "gemma3_12b_it": 688
+        },
+        "389": {
+          "qwen2_5_vl_3b_instruct": 773,
+          "qwen3_vl_8b_instruct": 773,
+          "gemma3_4b_it": 688,
+          "gemma3_12b_it": 688
+        },
+        "390": {
+          "qwen2_5_vl_3b_instruct": 773,
+          "qwen3_vl_8b_instruct": 773,
+          "gemma3_4b_it": 688,
+          "gemma3_12b_it": 688
+        },
+        "391": {
+          "qwen2_5_vl_3b_instruct": 773,
+          "qwen3_vl_8b_instruct": 773,
+          "gemma3_4b_it": 688,
+          "gemma3_12b_it": 688
+        },
+        "392": {
+          "qwen2_5_vl_3b_instruct": 327,
+          "qwen3_vl_8b_instruct": 327,
+          "gemma3_4b_it": 306,
+          "gemma3_12b_it": 306
+        },
+        "393": {
+          "qwen2_5_vl_3b_instruct": 327,
+          "qwen3_vl_8b_instruct": 327,
+          "gemma3_4b_it": 306,
+          "gemma3_12b_it": 306
+        },
+        "394": {
+          "qwen2_5_vl_3b_instruct": 327,
+          "qwen3_vl_8b_instruct": 327,
+          "gemma3_4b_it": 306,
+          "gemma3_12b_it": 306
+        },
+        "395": {
+          "qwen2_5_vl_3b_instruct": 327,
+          "qwen3_vl_8b_instruct": 327,
+          "gemma3_4b_it": 306,
+          "gemma3_12b_it": 306
+        },
+        "396": {
+          "qwen2_5_vl_3b_instruct": 251,
+          "qwen3_vl_8b_instruct": 251,
+          "gemma3_4b_it": 227,
+          "gemma3_12b_it": 227
+        },
+        "397": {
+          "qwen2_5_vl_3b_instruct": 251,
+          "qwen3_vl_8b_instruct": 251,
+          "gemma3_4b_it": 227,
+          "gemma3_12b_it": 227
+        },
+        "398": {
+          "qwen2_5_vl_3b_instruct": 251,
+          "qwen3_vl_8b_instruct": 251,
+          "gemma3_4b_it": 227,
+          "gemma3_12b_it": 227
+        },
+        "399": {
+          "qwen2_5_vl_3b_instruct": 251,
+          "qwen3_vl_8b_instruct": 251,
+          "gemma3_4b_it": 227,
+          "gemma3_12b_it": 227
+        },
+        "400": {
+          "qwen2_5_vl_3b_instruct": 186,
+          "qwen3_vl_8b_instruct": 186,
+          "gemma3_4b_it": 170,
+          "gemma3_12b_it": 170
+        },
+        "401": {
+          "qwen2_5_vl_3b_instruct": 186,
+          "qwen3_vl_8b_instruct": 186,
+          "gemma3_4b_it": 170,
+          "gemma3_12b_it": 170
+        },
+        "402": {
+          "qwen2_5_vl_3b_instruct": 186,
+          "qwen3_vl_8b_instruct": 186,
+          "gemma3_4b_it": 170,
+          "gemma3_12b_it": 170
+        },
+        "403": {
+          "qwen2_5_vl_3b_instruct": 186,
+          "qwen3_vl_8b_instruct": 186,
+          "gemma3_4b_it": 170,
+          "gemma3_12b_it": 170
+        },
+        "404": {
+          "qwen2_5_vl_3b_instruct": 220,
+          "qwen3_vl_8b_instruct": 220,
+          "gemma3_4b_it": 191,
+          "gemma3_12b_it": 191
+        },
+        "405": {
+          "qwen2_5_vl_3b_instruct": 220,
+          "qwen3_vl_8b_instruct": 220,
+          "gemma3_4b_it": 191,
+          "gemma3_12b_it": 191
+        },
+        "406": {
+          "qwen2_5_vl_3b_instruct": 220,
+          "qwen3_vl_8b_instruct": 220,
+          "gemma3_4b_it": 191,
+          "gemma3_12b_it": 191
+        },
+        "407": {
+          "qwen2_5_vl_3b_instruct": 220,
+          "qwen3_vl_8b_instruct": 220,
+          "gemma3_4b_it": 191,
+          "gemma3_12b_it": 191
+        },
+        "408": {
+          "qwen2_5_vl_3b_instruct": 1019,
+          "qwen3_vl_8b_instruct": 1019,
+          "gemma3_4b_it": 867,
+          "gemma3_12b_it": 867
+        },
+        "409": {
+          "qwen2_5_vl_3b_instruct": 1019,
+          "qwen3_vl_8b_instruct": 1019,
+          "gemma3_4b_it": 867,
+          "gemma3_12b_it": 867
+        },
+        "410": {
+          "qwen2_5_vl_3b_instruct": 1019,
+          "qwen3_vl_8b_instruct": 1019,
+          "gemma3_4b_it": 867,
+          "gemma3_12b_it": 867
+        },
+        "411": {
+          "qwen2_5_vl_3b_instruct": 1019,
+          "qwen3_vl_8b_instruct": 1019,
+          "gemma3_4b_it": 867,
+          "gemma3_12b_it": 867
+        },
+        "412": {
+          "qwen2_5_vl_3b_instruct": 1558,
+          "qwen3_vl_8b_instruct": 1558,
+          "gemma3_4b_it": 1305,
+          "gemma3_12b_it": 1305
+        },
+        "413": {
+          "qwen2_5_vl_3b_instruct": 1558,
+          "qwen3_vl_8b_instruct": 1558,
+          "gemma3_4b_it": 1305,
+          "gemma3_12b_it": 1305
+        },
+        "414": {
+          "qwen2_5_vl_3b_instruct": 1558,
+          "qwen3_vl_8b_instruct": 1558,
+          "gemma3_4b_it": 1305,
+          "gemma3_12b_it": 1305
+        },
+        "415": {
+          "qwen2_5_vl_3b_instruct": 1558,
+          "qwen3_vl_8b_instruct": 1558,
+          "gemma3_4b_it": 1305,
+          "gemma3_12b_it": 1305
+        },
+        "416": {
+          "qwen2_5_vl_3b_instruct": 1104,
+          "qwen3_vl_8b_instruct": 1104,
+          "gemma3_4b_it": 976,
+          "gemma3_12b_it": 976
+        },
+        "417": {
+          "qwen2_5_vl_3b_instruct": 1104,
+          "qwen3_vl_8b_instruct": 1104,
+          "gemma3_4b_it": 976,
+          "gemma3_12b_it": 976
+        },
+        "418": {
+          "qwen2_5_vl_3b_instruct": 1104,
+          "qwen3_vl_8b_instruct": 1104,
+          "gemma3_4b_it": 976,
+          "gemma3_12b_it": 976
+        },
+        "419": {
+          "qwen2_5_vl_3b_instruct": 1104,
+          "qwen3_vl_8b_instruct": 1104,
+          "gemma3_4b_it": 976,
+          "gemma3_12b_it": 976
+        },
+        "420": {
+          "qwen2_5_vl_3b_instruct": 1022,
+          "qwen3_vl_8b_instruct": 1022,
+          "gemma3_4b_it": 851,
+          "gemma3_12b_it": 851
+        },
+        "421": {
+          "qwen2_5_vl_3b_instruct": 1022,
+          "qwen3_vl_8b_instruct": 1022,
+          "gemma3_4b_it": 851,
+          "gemma3_12b_it": 851
+        },
+        "422": {
+          "qwen2_5_vl_3b_instruct": 1022,
+          "qwen3_vl_8b_instruct": 1022,
+          "gemma3_4b_it": 851,
+          "gemma3_12b_it": 851
+        },
+        "423": {
+          "qwen2_5_vl_3b_instruct": 1022,
+          "qwen3_vl_8b_instruct": 1022,
+          "gemma3_4b_it": 851,
+          "gemma3_12b_it": 851
+        },
+        "424": {
+          "qwen2_5_vl_3b_instruct": 771,
+          "qwen3_vl_8b_instruct": 771,
+          "gemma3_4b_it": 665,
+          "gemma3_12b_it": 665
+        },
+        "425": {
+          "qwen2_5_vl_3b_instruct": 771,
+          "qwen3_vl_8b_instruct": 771,
+          "gemma3_4b_it": 665,
+          "gemma3_12b_it": 665
+        },
+        "426": {
+          "qwen2_5_vl_3b_instruct": 771,
+          "qwen3_vl_8b_instruct": 771,
+          "gemma3_4b_it": 665,
+          "gemma3_12b_it": 665
+        },
+        "427": {
+          "qwen2_5_vl_3b_instruct": 771,
+          "qwen3_vl_8b_instruct": 771,
+          "gemma3_4b_it": 665,
+          "gemma3_12b_it": 665
+        },
+        "428": {
+          "qwen2_5_vl_3b_instruct": 2344,
+          "qwen3_vl_8b_instruct": 2344,
+          "gemma3_4b_it": 2113,
+          "gemma3_12b_it": 2113
+        },
+        "429": {
+          "qwen2_5_vl_3b_instruct": 2344,
+          "qwen3_vl_8b_instruct": 2344,
+          "gemma3_4b_it": 2113,
+          "gemma3_12b_it": 2113
+        },
+        "430": {
+          "qwen2_5_vl_3b_instruct": 2344,
+          "qwen3_vl_8b_instruct": 2344,
+          "gemma3_4b_it": 2113,
+          "gemma3_12b_it": 2113
+        },
+        "431": {
+          "qwen2_5_vl_3b_instruct": 2344,
+          "qwen3_vl_8b_instruct": 2344,
+          "gemma3_4b_it": 2113,
+          "gemma3_12b_it": 2113
+        },
+        "432": {
+          "qwen2_5_vl_3b_instruct": 3426,
+          "qwen3_vl_8b_instruct": 3426,
+          "gemma3_4b_it": 3128,
+          "gemma3_12b_it": 3128
+        },
+        "433": {
+          "qwen2_5_vl_3b_instruct": 3426,
+          "qwen3_vl_8b_instruct": 3426,
+          "gemma3_4b_it": 3128,
+          "gemma3_12b_it": 3128
+        },
+        "434": {
+          "qwen2_5_vl_3b_instruct": 3426,
+          "qwen3_vl_8b_instruct": 3426,
+          "gemma3_4b_it": 3128,
+          "gemma3_12b_it": 3128
+        },
+        "435": {
+          "qwen2_5_vl_3b_instruct": 3426,
+          "qwen3_vl_8b_instruct": 3426,
+          "gemma3_4b_it": 3128,
+          "gemma3_12b_it": 3128
+        },
+        "436": {
+          "qwen2_5_vl_3b_instruct": 3141,
+          "qwen3_vl_8b_instruct": 3141,
+          "gemma3_4b_it": 2696,
+          "gemma3_12b_it": 2696
+        },
+        "437": {
+          "qwen2_5_vl_3b_instruct": 3141,
+          "qwen3_vl_8b_instruct": 3141,
+          "gemma3_4b_it": 2696,
+          "gemma3_12b_it": 2696
+        },
+        "438": {
+          "qwen2_5_vl_3b_instruct": 3141,
+          "qwen3_vl_8b_instruct": 3141,
+          "gemma3_4b_it": 2696,
+          "gemma3_12b_it": 2696
+        },
+        "439": {
+          "qwen2_5_vl_3b_instruct": 3141,
+          "qwen3_vl_8b_instruct": 3141,
+          "gemma3_4b_it": 2696,
+          "gemma3_12b_it": 2696
+        },
+        "440": {
+          "qwen2_5_vl_3b_instruct": 3441,
+          "qwen3_vl_8b_instruct": 3441,
+          "gemma3_4b_it": 2958,
+          "gemma3_12b_it": 2958
+        },
+        "441": {
+          "qwen2_5_vl_3b_instruct": 3441,
+          "qwen3_vl_8b_instruct": 3441,
+          "gemma3_4b_it": 2958,
+          "gemma3_12b_it": 2958
+        },
+        "442": {
+          "qwen2_5_vl_3b_instruct": 3441,
+          "qwen3_vl_8b_instruct": 3441,
+          "gemma3_4b_it": 2958,
+          "gemma3_12b_it": 2958
+        },
+        "443": {
+          "qwen2_5_vl_3b_instruct": 3441,
+          "qwen3_vl_8b_instruct": 3441,
+          "gemma3_4b_it": 2958,
+          "gemma3_12b_it": 2958
+        },
+        "444": {
+          "qwen2_5_vl_3b_instruct": 3638,
+          "qwen3_vl_8b_instruct": 3638,
+          "gemma3_4b_it": 3182,
+          "gemma3_12b_it": 3182
+        },
+        "445": {
+          "qwen2_5_vl_3b_instruct": 3638,
+          "qwen3_vl_8b_instruct": 3638,
+          "gemma3_4b_it": 3182,
+          "gemma3_12b_it": 3182
+        },
+        "446": {
+          "qwen2_5_vl_3b_instruct": 3638,
+          "qwen3_vl_8b_instruct": 3638,
+          "gemma3_4b_it": 3182,
+          "gemma3_12b_it": 3182
+        },
+        "447": {
+          "qwen2_5_vl_3b_instruct": 3638,
+          "qwen3_vl_8b_instruct": 3638,
+          "gemma3_4b_it": 3182,
+          "gemma3_12b_it": 3182
+        },
+        "448": {
+          "qwen2_5_vl_3b_instruct": 247,
+          "qwen3_vl_8b_instruct": 247,
+          "gemma3_4b_it": 226,
+          "gemma3_12b_it": 226
+        },
+        "449": {
+          "qwen2_5_vl_3b_instruct": 247,
+          "qwen3_vl_8b_instruct": 247,
+          "gemma3_4b_it": 226,
+          "gemma3_12b_it": 226
+        },
+        "450": {
+          "qwen2_5_vl_3b_instruct": 247,
+          "qwen3_vl_8b_instruct": 247,
+          "gemma3_4b_it": 226,
+          "gemma3_12b_it": 226
+        },
+        "451": {
+          "qwen2_5_vl_3b_instruct": 247,
+          "qwen3_vl_8b_instruct": 247,
+          "gemma3_4b_it": 226,
+          "gemma3_12b_it": 226
+        },
+        "452": {
+          "qwen2_5_vl_3b_instruct": 172,
+          "qwen3_vl_8b_instruct": 172,
+          "gemma3_4b_it": 161,
+          "gemma3_12b_it": 161
+        },
+        "453": {
+          "qwen2_5_vl_3b_instruct": 172,
+          "qwen3_vl_8b_instruct": 172,
+          "gemma3_4b_it": 161,
+          "gemma3_12b_it": 161
+        },
+        "454": {
+          "qwen2_5_vl_3b_instruct": 172,
+          "qwen3_vl_8b_instruct": 172,
+          "gemma3_4b_it": 161,
+          "gemma3_12b_it": 161
+        },
+        "455": {
+          "qwen2_5_vl_3b_instruct": 172,
+          "qwen3_vl_8b_instruct": 172,
+          "gemma3_4b_it": 161,
+          "gemma3_12b_it": 161
+        },
+        "456": {
+          "qwen2_5_vl_3b_instruct": 84,
+          "qwen3_vl_8b_instruct": 84,
+          "gemma3_4b_it": 76,
+          "gemma3_12b_it": 76
+        },
+        "457": {
+          "qwen2_5_vl_3b_instruct": 84,
+          "qwen3_vl_8b_instruct": 84,
+          "gemma3_4b_it": 76,
+          "gemma3_12b_it": 76
+        },
+        "458": {
+          "qwen2_5_vl_3b_instruct": 84,
+          "qwen3_vl_8b_instruct": 84,
+          "gemma3_4b_it": 76,
+          "gemma3_12b_it": 76
+        },
+        "459": {
+          "qwen2_5_vl_3b_instruct": 84,
+          "qwen3_vl_8b_instruct": 84,
+          "gemma3_4b_it": 76,
+          "gemma3_12b_it": 76
+        },
+        "460": {
+          "qwen2_5_vl_3b_instruct": 162,
+          "qwen3_vl_8b_instruct": 162,
+          "gemma3_4b_it": 136,
+          "gemma3_12b_it": 136
+        },
+        "461": {
+          "qwen2_5_vl_3b_instruct": 162,
+          "qwen3_vl_8b_instruct": 162,
+          "gemma3_4b_it": 136,
+          "gemma3_12b_it": 136
+        },
+        "462": {
+          "qwen2_5_vl_3b_instruct": 162,
+          "qwen3_vl_8b_instruct": 162,
+          "gemma3_4b_it": 136,
+          "gemma3_12b_it": 136
+        },
+        "463": {
+          "qwen2_5_vl_3b_instruct": 162,
+          "qwen3_vl_8b_instruct": 162,
+          "gemma3_4b_it": 136,
+          "gemma3_12b_it": 136
+        },
+        "464": {
+          "qwen2_5_vl_3b_instruct": 341,
+          "qwen3_vl_8b_instruct": 341,
+          "gemma3_4b_it": 293,
+          "gemma3_12b_it": 293
+        },
+        "465": {
+          "qwen2_5_vl_3b_instruct": 341,
+          "qwen3_vl_8b_instruct": 341,
+          "gemma3_4b_it": 293,
+          "gemma3_12b_it": 293
+        },
+        "466": {
+          "qwen2_5_vl_3b_instruct": 341,
+          "qwen3_vl_8b_instruct": 341,
+          "gemma3_4b_it": 293,
+          "gemma3_12b_it": 293
+        },
+        "467": {
+          "qwen2_5_vl_3b_instruct": 341,
+          "qwen3_vl_8b_instruct": 341,
+          "gemma3_4b_it": 293,
+          "gemma3_12b_it": 293
+        },
+        "468": {
+          "qwen2_5_vl_3b_instruct": 138,
+          "qwen3_vl_8b_instruct": 138,
+          "gemma3_4b_it": 138,
+          "gemma3_12b_it": 138
+        },
+        "469": {
+          "qwen2_5_vl_3b_instruct": 138,
+          "qwen3_vl_8b_instruct": 138,
+          "gemma3_4b_it": 138,
+          "gemma3_12b_it": 138
+        },
+        "470": {
+          "qwen2_5_vl_3b_instruct": 138,
+          "qwen3_vl_8b_instruct": 138,
+          "gemma3_4b_it": 138,
+          "gemma3_12b_it": 138
+        },
+        "471": {
+          "qwen2_5_vl_3b_instruct": 138,
+          "qwen3_vl_8b_instruct": 138,
+          "gemma3_4b_it": 138,
+          "gemma3_12b_it": 138
+        },
+        "472": {
+          "qwen2_5_vl_3b_instruct": 139,
+          "qwen3_vl_8b_instruct": 139,
+          "gemma3_4b_it": 129,
+          "gemma3_12b_it": 129
+        },
+        "473": {
+          "qwen2_5_vl_3b_instruct": 139,
+          "qwen3_vl_8b_instruct": 139,
+          "gemma3_4b_it": 129,
+          "gemma3_12b_it": 129
+        },
+        "474": {
+          "qwen2_5_vl_3b_instruct": 139,
+          "qwen3_vl_8b_instruct": 139,
+          "gemma3_4b_it": 129,
+          "gemma3_12b_it": 129
+        },
+        "475": {
+          "qwen2_5_vl_3b_instruct": 139,
+          "qwen3_vl_8b_instruct": 139,
+          "gemma3_4b_it": 129,
+          "gemma3_12b_it": 129
+        },
+        "476": {
+          "qwen2_5_vl_3b_instruct": 583,
+          "qwen3_vl_8b_instruct": 583,
+          "gemma3_4b_it": 515,
+          "gemma3_12b_it": 515
+        },
+        "477": {
+          "qwen2_5_vl_3b_instruct": 583,
+          "qwen3_vl_8b_instruct": 583,
+          "gemma3_4b_it": 515,
+          "gemma3_12b_it": 515
+        },
+        "478": {
+          "qwen2_5_vl_3b_instruct": 583,
+          "qwen3_vl_8b_instruct": 583,
+          "gemma3_4b_it": 515,
+          "gemma3_12b_it": 515
+        },
+        "479": {
+          "qwen2_5_vl_3b_instruct": 583,
+          "qwen3_vl_8b_instruct": 583,
+          "gemma3_4b_it": 515,
+          "gemma3_12b_it": 515
+        }
+      }
+    },
+    "Russian": {
+      "total": 160,
+      "kept": 116,
+      "annotation_indices": [
+        480,
+        481,
+        482,
+        483,
+        484,
+        485,
+        486,
+        487,
+        488,
+        489,
+        490,
+        491,
+        496,
+        497,
+        498,
+        499,
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511,
+        516,
+        517,
+        518,
+        519,
+        520,
+        521,
+        522,
+        523,
+        524,
+        525,
+        526,
+        527,
+        528,
+        529,
+        530,
+        531,
+        532,
+        533,
+        534,
+        535,
+        536,
+        537,
+        538,
+        539,
+        540,
+        541,
+        542,
+        543,
+        544,
+        545,
+        546,
+        547,
+        552,
+        553,
+        554,
+        555,
+        556,
+        557,
+        558,
+        559,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575,
+        592,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599,
+        600,
+        601,
+        602,
+        603,
+        616,
+        617,
+        618,
+        619,
+        620,
+        621,
+        622,
+        623,
+        624,
+        625,
+        626,
+        627,
+        628,
+        629,
+        630,
+        631,
+        632,
+        633,
+        634,
+        635,
+        636,
+        637,
+        638,
+        639
+      ],
+      "token_counts": {
+        "480": {
+          "qwen2_5_vl_3b_instruct": 801,
+          "qwen3_vl_8b_instruct": 801,
+          "gemma3_4b_it": 639,
+          "gemma3_12b_it": 639
+        },
+        "481": {
+          "qwen2_5_vl_3b_instruct": 801,
+          "qwen3_vl_8b_instruct": 801,
+          "gemma3_4b_it": 639,
+          "gemma3_12b_it": 639
+        },
+        "482": {
+          "qwen2_5_vl_3b_instruct": 801,
+          "qwen3_vl_8b_instruct": 801,
+          "gemma3_4b_it": 639,
+          "gemma3_12b_it": 639
+        },
+        "483": {
+          "qwen2_5_vl_3b_instruct": 801,
+          "qwen3_vl_8b_instruct": 801,
+          "gemma3_4b_it": 639,
+          "gemma3_12b_it": 639
+        },
+        "484": {
+          "qwen2_5_vl_3b_instruct": 861,
+          "qwen3_vl_8b_instruct": 861,
+          "gemma3_4b_it": 698,
+          "gemma3_12b_it": 698
+        },
+        "485": {
+          "qwen2_5_vl_3b_instruct": 861,
+          "qwen3_vl_8b_instruct": 861,
+          "gemma3_4b_it": 698,
+          "gemma3_12b_it": 698
+        },
+        "486": {
+          "qwen2_5_vl_3b_instruct": 861,
+          "qwen3_vl_8b_instruct": 861,
+          "gemma3_4b_it": 698,
+          "gemma3_12b_it": 698
+        },
+        "487": {
+          "qwen2_5_vl_3b_instruct": 861,
+          "qwen3_vl_8b_instruct": 861,
+          "gemma3_4b_it": 698,
+          "gemma3_12b_it": 698
+        },
+        "488": {
+          "qwen2_5_vl_3b_instruct": 940,
+          "qwen3_vl_8b_instruct": 940,
+          "gemma3_4b_it": 758,
+          "gemma3_12b_it": 758
+        },
+        "489": {
+          "qwen2_5_vl_3b_instruct": 940,
+          "qwen3_vl_8b_instruct": 940,
+          "gemma3_4b_it": 758,
+          "gemma3_12b_it": 758
+        },
+        "490": {
+          "qwen2_5_vl_3b_instruct": 940,
+          "qwen3_vl_8b_instruct": 940,
+          "gemma3_4b_it": 758,
+          "gemma3_12b_it": 758
+        },
+        "491": {
+          "qwen2_5_vl_3b_instruct": 940,
+          "qwen3_vl_8b_instruct": 940,
+          "gemma3_4b_it": 758,
+          "gemma3_12b_it": 758
+        },
+        "492": {
+          "qwen2_5_vl_3b_instruct": 1722,
+          "qwen3_vl_8b_instruct": 1722,
+          "gemma3_4b_it": 1392,
+          "gemma3_12b_it": 1392
+        },
+        "493": {
+          "qwen2_5_vl_3b_instruct": 1722,
+          "qwen3_vl_8b_instruct": 1722,
+          "gemma3_4b_it": 1392,
+          "gemma3_12b_it": 1392
+        },
+        "494": {
+          "qwen2_5_vl_3b_instruct": 1722,
+          "qwen3_vl_8b_instruct": 1722,
+          "gemma3_4b_it": 1392,
+          "gemma3_12b_it": 1392
+        },
+        "495": {
+          "qwen2_5_vl_3b_instruct": 1722,
+          "qwen3_vl_8b_instruct": 1722,
+          "gemma3_4b_it": 1392,
+          "gemma3_12b_it": 1392
+        },
+        "496": {
+          "qwen2_5_vl_3b_instruct": 640,
+          "qwen3_vl_8b_instruct": 640,
+          "gemma3_4b_it": 521,
+          "gemma3_12b_it": 521
+        },
+        "497": {
+          "qwen2_5_vl_3b_instruct": 640,
+          "qwen3_vl_8b_instruct": 640,
+          "gemma3_4b_it": 521,
+          "gemma3_12b_it": 521
+        },
+        "498": {
+          "qwen2_5_vl_3b_instruct": 640,
+          "qwen3_vl_8b_instruct": 640,
+          "gemma3_4b_it": 521,
+          "gemma3_12b_it": 521
+        },
+        "499": {
+          "qwen2_5_vl_3b_instruct": 640,
+          "qwen3_vl_8b_instruct": 640,
+          "gemma3_4b_it": 521,
+          "gemma3_12b_it": 521
+        },
+        "500": {
+          "qwen2_5_vl_3b_instruct": 300,
+          "qwen3_vl_8b_instruct": 300,
+          "gemma3_4b_it": 247,
+          "gemma3_12b_it": 247
+        },
+        "501": {
+          "qwen2_5_vl_3b_instruct": 300,
+          "qwen3_vl_8b_instruct": 300,
+          "gemma3_4b_it": 247,
+          "gemma3_12b_it": 247
+        },
+        "502": {
+          "qwen2_5_vl_3b_instruct": 300,
+          "qwen3_vl_8b_instruct": 300,
+          "gemma3_4b_it": 247,
+          "gemma3_12b_it": 247
+        },
+        "503": {
+          "qwen2_5_vl_3b_instruct": 300,
+          "qwen3_vl_8b_instruct": 300,
+          "gemma3_4b_it": 247,
+          "gemma3_12b_it": 247
+        },
+        "504": {
+          "qwen2_5_vl_3b_instruct": 950,
+          "qwen3_vl_8b_instruct": 950,
+          "gemma3_4b_it": 776,
+          "gemma3_12b_it": 776
+        },
+        "505": {
+          "qwen2_5_vl_3b_instruct": 950,
+          "qwen3_vl_8b_instruct": 950,
+          "gemma3_4b_it": 776,
+          "gemma3_12b_it": 776
+        },
+        "506": {
+          "qwen2_5_vl_3b_instruct": 950,
+          "qwen3_vl_8b_instruct": 950,
+          "gemma3_4b_it": 776,
+          "gemma3_12b_it": 776
+        },
+        "507": {
+          "qwen2_5_vl_3b_instruct": 950,
+          "qwen3_vl_8b_instruct": 950,
+          "gemma3_4b_it": 776,
+          "gemma3_12b_it": 776
+        },
+        "508": {
+          "qwen2_5_vl_3b_instruct": 996,
+          "qwen3_vl_8b_instruct": 996,
+          "gemma3_4b_it": 821,
+          "gemma3_12b_it": 821
+        },
+        "509": {
+          "qwen2_5_vl_3b_instruct": 996,
+          "qwen3_vl_8b_instruct": 996,
+          "gemma3_4b_it": 821,
+          "gemma3_12b_it": 821
+        },
+        "510": {
+          "qwen2_5_vl_3b_instruct": 996,
+          "qwen3_vl_8b_instruct": 996,
+          "gemma3_4b_it": 821,
+          "gemma3_12b_it": 821
+        },
+        "511": {
+          "qwen2_5_vl_3b_instruct": 996,
+          "qwen3_vl_8b_instruct": 996,
+          "gemma3_4b_it": 821,
+          "gemma3_12b_it": 821
+        },
+        "512": {
+          "qwen2_5_vl_3b_instruct": 1786,
+          "qwen3_vl_8b_instruct": 1786,
+          "gemma3_4b_it": 1419,
+          "gemma3_12b_it": 1419
+        },
+        "513": {
+          "qwen2_5_vl_3b_instruct": 1786,
+          "qwen3_vl_8b_instruct": 1786,
+          "gemma3_4b_it": 1419,
+          "gemma3_12b_it": 1419
+        },
+        "514": {
+          "qwen2_5_vl_3b_instruct": 1786,
+          "qwen3_vl_8b_instruct": 1786,
+          "gemma3_4b_it": 1419,
+          "gemma3_12b_it": 1419
+        },
+        "515": {
+          "qwen2_5_vl_3b_instruct": 1786,
+          "qwen3_vl_8b_instruct": 1786,
+          "gemma3_4b_it": 1419,
+          "gemma3_12b_it": 1419
+        },
+        "516": {
+          "qwen2_5_vl_3b_instruct": 1159,
+          "qwen3_vl_8b_instruct": 1159,
+          "gemma3_4b_it": 1002,
+          "gemma3_12b_it": 1002
+        },
+        "517": {
+          "qwen2_5_vl_3b_instruct": 1159,
+          "qwen3_vl_8b_instruct": 1159,
+          "gemma3_4b_it": 1002,
+          "gemma3_12b_it": 1002
+        },
+        "518": {
+          "qwen2_5_vl_3b_instruct": 1159,
+          "qwen3_vl_8b_instruct": 1159,
+          "gemma3_4b_it": 1002,
+          "gemma3_12b_it": 1002
+        },
+        "519": {
+          "qwen2_5_vl_3b_instruct": 1159,
+          "qwen3_vl_8b_instruct": 1159,
+          "gemma3_4b_it": 1002,
+          "gemma3_12b_it": 1002
+        },
+        "520": {
+          "qwen2_5_vl_3b_instruct": 477,
+          "qwen3_vl_8b_instruct": 477,
+          "gemma3_4b_it": 401,
+          "gemma3_12b_it": 401
+        },
+        "521": {
+          "qwen2_5_vl_3b_instruct": 477,
+          "qwen3_vl_8b_instruct": 477,
+          "gemma3_4b_it": 401,
+          "gemma3_12b_it": 401
+        },
+        "522": {
+          "qwen2_5_vl_3b_instruct": 477,
+          "qwen3_vl_8b_instruct": 477,
+          "gemma3_4b_it": 401,
+          "gemma3_12b_it": 401
+        },
+        "523": {
+          "qwen2_5_vl_3b_instruct": 477,
+          "qwen3_vl_8b_instruct": 477,
+          "gemma3_4b_it": 401,
+          "gemma3_12b_it": 401
+        },
+        "524": {
+          "qwen2_5_vl_3b_instruct": 618,
+          "qwen3_vl_8b_instruct": 618,
+          "gemma3_4b_it": 531,
+          "gemma3_12b_it": 531
+        },
+        "525": {
+          "qwen2_5_vl_3b_instruct": 618,
+          "qwen3_vl_8b_instruct": 618,
+          "gemma3_4b_it": 531,
+          "gemma3_12b_it": 531
+        },
+        "526": {
+          "qwen2_5_vl_3b_instruct": 618,
+          "qwen3_vl_8b_instruct": 618,
+          "gemma3_4b_it": 531,
+          "gemma3_12b_it": 531
+        },
+        "527": {
+          "qwen2_5_vl_3b_instruct": 618,
+          "qwen3_vl_8b_instruct": 618,
+          "gemma3_4b_it": 531,
+          "gemma3_12b_it": 531
+        },
+        "528": {
+          "qwen2_5_vl_3b_instruct": 705,
+          "qwen3_vl_8b_instruct": 705,
+          "gemma3_4b_it": 589,
+          "gemma3_12b_it": 589
+        },
+        "529": {
+          "qwen2_5_vl_3b_instruct": 705,
+          "qwen3_vl_8b_instruct": 705,
+          "gemma3_4b_it": 589,
+          "gemma3_12b_it": 589
+        },
+        "530": {
+          "qwen2_5_vl_3b_instruct": 705,
+          "qwen3_vl_8b_instruct": 705,
+          "gemma3_4b_it": 589,
+          "gemma3_12b_it": 589
+        },
+        "531": {
+          "qwen2_5_vl_3b_instruct": 705,
+          "qwen3_vl_8b_instruct": 705,
+          "gemma3_4b_it": 589,
+          "gemma3_12b_it": 589
+        },
+        "532": {
+          "qwen2_5_vl_3b_instruct": 604,
+          "qwen3_vl_8b_instruct": 604,
+          "gemma3_4b_it": 500,
+          "gemma3_12b_it": 500
+        },
+        "533": {
+          "qwen2_5_vl_3b_instruct": 604,
+          "qwen3_vl_8b_instruct": 604,
+          "gemma3_4b_it": 500,
+          "gemma3_12b_it": 500
+        },
+        "534": {
+          "qwen2_5_vl_3b_instruct": 604,
+          "qwen3_vl_8b_instruct": 604,
+          "gemma3_4b_it": 500,
+          "gemma3_12b_it": 500
+        },
+        "535": {
+          "qwen2_5_vl_3b_instruct": 604,
+          "qwen3_vl_8b_instruct": 604,
+          "gemma3_4b_it": 500,
+          "gemma3_12b_it": 500
+        },
+        "536": {
+          "qwen2_5_vl_3b_instruct": 719,
+          "qwen3_vl_8b_instruct": 719,
+          "gemma3_4b_it": 600,
+          "gemma3_12b_it": 600
+        },
+        "537": {
+          "qwen2_5_vl_3b_instruct": 719,
+          "qwen3_vl_8b_instruct": 719,
+          "gemma3_4b_it": 600,
+          "gemma3_12b_it": 600
+        },
+        "538": {
+          "qwen2_5_vl_3b_instruct": 719,
+          "qwen3_vl_8b_instruct": 719,
+          "gemma3_4b_it": 600,
+          "gemma3_12b_it": 600
+        },
+        "539": {
+          "qwen2_5_vl_3b_instruct": 719,
+          "qwen3_vl_8b_instruct": 719,
+          "gemma3_4b_it": 600,
+          "gemma3_12b_it": 600
+        },
+        "540": {
+          "qwen2_5_vl_3b_instruct": 396,
+          "qwen3_vl_8b_instruct": 396,
+          "gemma3_4b_it": 330,
+          "gemma3_12b_it": 330
+        },
+        "541": {
+          "qwen2_5_vl_3b_instruct": 396,
+          "qwen3_vl_8b_instruct": 396,
+          "gemma3_4b_it": 330,
+          "gemma3_12b_it": 330
+        },
+        "542": {
+          "qwen2_5_vl_3b_instruct": 396,
+          "qwen3_vl_8b_instruct": 396,
+          "gemma3_4b_it": 330,
+          "gemma3_12b_it": 330
+        },
+        "543": {
+          "qwen2_5_vl_3b_instruct": 396,
+          "qwen3_vl_8b_instruct": 396,
+          "gemma3_4b_it": 330,
+          "gemma3_12b_it": 330
+        },
+        "544": {
+          "qwen2_5_vl_3b_instruct": 998,
+          "qwen3_vl_8b_instruct": 998,
+          "gemma3_4b_it": 788,
+          "gemma3_12b_it": 788
+        },
+        "545": {
+          "qwen2_5_vl_3b_instruct": 998,
+          "qwen3_vl_8b_instruct": 998,
+          "gemma3_4b_it": 788,
+          "gemma3_12b_it": 788
+        },
+        "546": {
+          "qwen2_5_vl_3b_instruct": 998,
+          "qwen3_vl_8b_instruct": 998,
+          "gemma3_4b_it": 788,
+          "gemma3_12b_it": 788
+        },
+        "547": {
+          "qwen2_5_vl_3b_instruct": 998,
+          "qwen3_vl_8b_instruct": 998,
+          "gemma3_4b_it": 788,
+          "gemma3_12b_it": 788
+        },
+        "548": {
+          "qwen2_5_vl_3b_instruct": 2036,
+          "qwen3_vl_8b_instruct": 2036,
+          "gemma3_4b_it": 1522,
+          "gemma3_12b_it": 1522
+        },
+        "549": {
+          "qwen2_5_vl_3b_instruct": 2036,
+          "qwen3_vl_8b_instruct": 2036,
+          "gemma3_4b_it": 1522,
+          "gemma3_12b_it": 1522
+        },
+        "550": {
+          "qwen2_5_vl_3b_instruct": 2036,
+          "qwen3_vl_8b_instruct": 2036,
+          "gemma3_4b_it": 1522,
+          "gemma3_12b_it": 1522
+        },
+        "551": {
+          "qwen2_5_vl_3b_instruct": 2036,
+          "qwen3_vl_8b_instruct": 2036,
+          "gemma3_4b_it": 1522,
+          "gemma3_12b_it": 1522
+        },
+        "552": {
+          "qwen2_5_vl_3b_instruct": 1435,
+          "qwen3_vl_8b_instruct": 1435,
+          "gemma3_4b_it": 1059,
+          "gemma3_12b_it": 1059
+        },
+        "553": {
+          "qwen2_5_vl_3b_instruct": 1435,
+          "qwen3_vl_8b_instruct": 1435,
+          "gemma3_4b_it": 1059,
+          "gemma3_12b_it": 1059
+        },
+        "554": {
+          "qwen2_5_vl_3b_instruct": 1435,
+          "qwen3_vl_8b_instruct": 1435,
+          "gemma3_4b_it": 1059,
+          "gemma3_12b_it": 1059
+        },
+        "555": {
+          "qwen2_5_vl_3b_instruct": 1435,
+          "qwen3_vl_8b_instruct": 1435,
+          "gemma3_4b_it": 1059,
+          "gemma3_12b_it": 1059
+        },
+        "556": {
+          "qwen2_5_vl_3b_instruct": 244,
+          "qwen3_vl_8b_instruct": 244,
+          "gemma3_4b_it": 221,
+          "gemma3_12b_it": 221
+        },
+        "557": {
+          "qwen2_5_vl_3b_instruct": 244,
+          "qwen3_vl_8b_instruct": 244,
+          "gemma3_4b_it": 221,
+          "gemma3_12b_it": 221
+        },
+        "558": {
+          "qwen2_5_vl_3b_instruct": 244,
+          "qwen3_vl_8b_instruct": 244,
+          "gemma3_4b_it": 221,
+          "gemma3_12b_it": 221
+        },
+        "559": {
+          "qwen2_5_vl_3b_instruct": 244,
+          "qwen3_vl_8b_instruct": 244,
+          "gemma3_4b_it": 221,
+          "gemma3_12b_it": 221
+        },
+        "560": {
+          "qwen2_5_vl_3b_instruct": 1749,
+          "qwen3_vl_8b_instruct": 1749,
+          "gemma3_4b_it": 1518,
+          "gemma3_12b_it": 1518
+        },
+        "561": {
+          "qwen2_5_vl_3b_instruct": 1749,
+          "qwen3_vl_8b_instruct": 1749,
+          "gemma3_4b_it": 1518,
+          "gemma3_12b_it": 1518
+        },
+        "562": {
+          "qwen2_5_vl_3b_instruct": 1749,
+          "qwen3_vl_8b_instruct": 1749,
+          "gemma3_4b_it": 1518,
+          "gemma3_12b_it": 1518
+        },
+        "563": {
+          "qwen2_5_vl_3b_instruct": 1749,
+          "qwen3_vl_8b_instruct": 1749,
+          "gemma3_4b_it": 1518,
+          "gemma3_12b_it": 1518
+        },
+        "564": {
+          "qwen2_5_vl_3b_instruct": 1210,
+          "qwen3_vl_8b_instruct": 1210,
+          "gemma3_4b_it": 1033,
+          "gemma3_12b_it": 1033
+        },
+        "565": {
+          "qwen2_5_vl_3b_instruct": 1210,
+          "qwen3_vl_8b_instruct": 1210,
+          "gemma3_4b_it": 1033,
+          "gemma3_12b_it": 1033
+        },
+        "566": {
+          "qwen2_5_vl_3b_instruct": 1210,
+          "qwen3_vl_8b_instruct": 1210,
+          "gemma3_4b_it": 1033,
+          "gemma3_12b_it": 1033
+        },
+        "567": {
+          "qwen2_5_vl_3b_instruct": 1210,
+          "qwen3_vl_8b_instruct": 1210,
+          "gemma3_4b_it": 1033,
+          "gemma3_12b_it": 1033
+        },
+        "568": {
+          "qwen2_5_vl_3b_instruct": 235,
+          "qwen3_vl_8b_instruct": 235,
+          "gemma3_4b_it": 197,
+          "gemma3_12b_it": 197
+        },
+        "569": {
+          "qwen2_5_vl_3b_instruct": 235,
+          "qwen3_vl_8b_instruct": 235,
+          "gemma3_4b_it": 197,
+          "gemma3_12b_it": 197
+        },
+        "570": {
+          "qwen2_5_vl_3b_instruct": 235,
+          "qwen3_vl_8b_instruct": 235,
+          "gemma3_4b_it": 197,
+          "gemma3_12b_it": 197
+        },
+        "571": {
+          "qwen2_5_vl_3b_instruct": 235,
+          "qwen3_vl_8b_instruct": 235,
+          "gemma3_4b_it": 197,
+          "gemma3_12b_it": 197
+        },
+        "572": {
+          "qwen2_5_vl_3b_instruct": 983,
+          "qwen3_vl_8b_instruct": 983,
+          "gemma3_4b_it": 887,
+          "gemma3_12b_it": 887
+        },
+        "573": {
+          "qwen2_5_vl_3b_instruct": 983,
+          "qwen3_vl_8b_instruct": 983,
+          "gemma3_4b_it": 887,
+          "gemma3_12b_it": 887
+        },
+        "574": {
+          "qwen2_5_vl_3b_instruct": 983,
+          "qwen3_vl_8b_instruct": 983,
+          "gemma3_4b_it": 887,
+          "gemma3_12b_it": 887
+        },
+        "575": {
+          "qwen2_5_vl_3b_instruct": 983,
+          "qwen3_vl_8b_instruct": 983,
+          "gemma3_4b_it": 887,
+          "gemma3_12b_it": 887
+        },
+        "576": {
+          "qwen2_5_vl_3b_instruct": 3278,
+          "qwen3_vl_8b_instruct": 3278,
+          "gemma3_4b_it": 2832,
+          "gemma3_12b_it": 2832
+        },
+        "577": {
+          "qwen2_5_vl_3b_instruct": 3278,
+          "qwen3_vl_8b_instruct": 3278,
+          "gemma3_4b_it": 2832,
+          "gemma3_12b_it": 2832
+        },
+        "578": {
+          "qwen2_5_vl_3b_instruct": 3278,
+          "qwen3_vl_8b_instruct": 3278,
+          "gemma3_4b_it": 2832,
+          "gemma3_12b_it": 2832
+        },
+        "579": {
+          "qwen2_5_vl_3b_instruct": 3278,
+          "qwen3_vl_8b_instruct": 3278,
+          "gemma3_4b_it": 2832,
+          "gemma3_12b_it": 2832
+        },
+        "580": {
+          "qwen2_5_vl_3b_instruct": 2286,
+          "qwen3_vl_8b_instruct": 2286,
+          "gemma3_4b_it": 1883,
+          "gemma3_12b_it": 1883
+        },
+        "581": {
+          "qwen2_5_vl_3b_instruct": 2286,
+          "qwen3_vl_8b_instruct": 2286,
+          "gemma3_4b_it": 1883,
+          "gemma3_12b_it": 1883
+        },
+        "582": {
+          "qwen2_5_vl_3b_instruct": 2286,
+          "qwen3_vl_8b_instruct": 2286,
+          "gemma3_4b_it": 1883,
+          "gemma3_12b_it": 1883
+        },
+        "583": {
+          "qwen2_5_vl_3b_instruct": 2286,
+          "qwen3_vl_8b_instruct": 2286,
+          "gemma3_4b_it": 1883,
+          "gemma3_12b_it": 1883
+        },
+        "584": {
+          "qwen2_5_vl_3b_instruct": 2828,
+          "qwen3_vl_8b_instruct": 2828,
+          "gemma3_4b_it": 2381,
+          "gemma3_12b_it": 2381
+        },
+        "585": {
+          "qwen2_5_vl_3b_instruct": 2828,
+          "qwen3_vl_8b_instruct": 2828,
+          "gemma3_4b_it": 2381,
+          "gemma3_12b_it": 2381
+        },
+        "586": {
+          "qwen2_5_vl_3b_instruct": 2828,
+          "qwen3_vl_8b_instruct": 2828,
+          "gemma3_4b_it": 2381,
+          "gemma3_12b_it": 2381
+        },
+        "587": {
+          "qwen2_5_vl_3b_instruct": 2828,
+          "qwen3_vl_8b_instruct": 2828,
+          "gemma3_4b_it": 2381,
+          "gemma3_12b_it": 2381
+        },
+        "588": {
+          "qwen2_5_vl_3b_instruct": 1772,
+          "qwen3_vl_8b_instruct": 1772,
+          "gemma3_4b_it": 1431,
+          "gemma3_12b_it": 1431
+        },
+        "589": {
+          "qwen2_5_vl_3b_instruct": 1772,
+          "qwen3_vl_8b_instruct": 1772,
+          "gemma3_4b_it": 1431,
+          "gemma3_12b_it": 1431
+        },
+        "590": {
+          "qwen2_5_vl_3b_instruct": 1772,
+          "qwen3_vl_8b_instruct": 1772,
+          "gemma3_4b_it": 1431,
+          "gemma3_12b_it": 1431
+        },
+        "591": {
+          "qwen2_5_vl_3b_instruct": 1772,
+          "qwen3_vl_8b_instruct": 1772,
+          "gemma3_4b_it": 1431,
+          "gemma3_12b_it": 1431
+        },
+        "592": {
+          "qwen2_5_vl_3b_instruct": 1573,
+          "qwen3_vl_8b_instruct": 1573,
+          "gemma3_4b_it": 1297,
+          "gemma3_12b_it": 1297
+        },
+        "593": {
+          "qwen2_5_vl_3b_instruct": 1573,
+          "qwen3_vl_8b_instruct": 1573,
+          "gemma3_4b_it": 1297,
+          "gemma3_12b_it": 1297
+        },
+        "594": {
+          "qwen2_5_vl_3b_instruct": 1573,
+          "qwen3_vl_8b_instruct": 1573,
+          "gemma3_4b_it": 1297,
+          "gemma3_12b_it": 1297
+        },
+        "595": {
+          "qwen2_5_vl_3b_instruct": 1573,
+          "qwen3_vl_8b_instruct": 1573,
+          "gemma3_4b_it": 1297,
+          "gemma3_12b_it": 1297
+        },
+        "596": {
+          "qwen2_5_vl_3b_instruct": 925,
+          "qwen3_vl_8b_instruct": 925,
+          "gemma3_4b_it": 743,
+          "gemma3_12b_it": 743
+        },
+        "597": {
+          "qwen2_5_vl_3b_instruct": 925,
+          "qwen3_vl_8b_instruct": 925,
+          "gemma3_4b_it": 743,
+          "gemma3_12b_it": 743
+        },
+        "598": {
+          "qwen2_5_vl_3b_instruct": 925,
+          "qwen3_vl_8b_instruct": 925,
+          "gemma3_4b_it": 743,
+          "gemma3_12b_it": 743
+        },
+        "599": {
+          "qwen2_5_vl_3b_instruct": 925,
+          "qwen3_vl_8b_instruct": 925,
+          "gemma3_4b_it": 743,
+          "gemma3_12b_it": 743
+        },
+        "600": {
+          "qwen2_5_vl_3b_instruct": 1179,
+          "qwen3_vl_8b_instruct": 1179,
+          "gemma3_4b_it": 1072,
+          "gemma3_12b_it": 1072
+        },
+        "601": {
+          "qwen2_5_vl_3b_instruct": 1179,
+          "qwen3_vl_8b_instruct": 1179,
+          "gemma3_4b_it": 1072,
+          "gemma3_12b_it": 1072
+        },
+        "602": {
+          "qwen2_5_vl_3b_instruct": 1179,
+          "qwen3_vl_8b_instruct": 1179,
+          "gemma3_4b_it": 1072,
+          "gemma3_12b_it": 1072
+        },
+        "603": {
+          "qwen2_5_vl_3b_instruct": 1179,
+          "qwen3_vl_8b_instruct": 1179,
+          "gemma3_4b_it": 1072,
+          "gemma3_12b_it": 1072
+        },
+        "604": {
+          "qwen2_5_vl_3b_instruct": 2434,
+          "qwen3_vl_8b_instruct": 2434,
+          "gemma3_4b_it": 2131,
+          "gemma3_12b_it": 2131
+        },
+        "605": {
+          "qwen2_5_vl_3b_instruct": 2434,
+          "qwen3_vl_8b_instruct": 2434,
+          "gemma3_4b_it": 2131,
+          "gemma3_12b_it": 2131
+        },
+        "606": {
+          "qwen2_5_vl_3b_instruct": 2434,
+          "qwen3_vl_8b_instruct": 2434,
+          "gemma3_4b_it": 2131,
+          "gemma3_12b_it": 2131
+        },
+        "607": {
+          "qwen2_5_vl_3b_instruct": 2434,
+          "qwen3_vl_8b_instruct": 2434,
+          "gemma3_4b_it": 2131,
+          "gemma3_12b_it": 2131
+        },
+        "608": {
+          "qwen2_5_vl_3b_instruct": 4537,
+          "qwen3_vl_8b_instruct": 4537,
+          "gemma3_4b_it": 4137,
+          "gemma3_12b_it": 4137
+        },
+        "609": {
+          "qwen2_5_vl_3b_instruct": 4537,
+          "qwen3_vl_8b_instruct": 4537,
+          "gemma3_4b_it": 4137,
+          "gemma3_12b_it": 4137
+        },
+        "610": {
+          "qwen2_5_vl_3b_instruct": 4537,
+          "qwen3_vl_8b_instruct": 4537,
+          "gemma3_4b_it": 4137,
+          "gemma3_12b_it": 4137
+        },
+        "611": {
+          "qwen2_5_vl_3b_instruct": 4537,
+          "qwen3_vl_8b_instruct": 4537,
+          "gemma3_4b_it": 4137,
+          "gemma3_12b_it": 4137
+        },
+        "612": {
+          "qwen2_5_vl_3b_instruct": 3201,
+          "qwen3_vl_8b_instruct": 3201,
+          "gemma3_4b_it": 2863,
+          "gemma3_12b_it": 2863
+        },
+        "613": {
+          "qwen2_5_vl_3b_instruct": 3201,
+          "qwen3_vl_8b_instruct": 3201,
+          "gemma3_4b_it": 2863,
+          "gemma3_12b_it": 2863
+        },
+        "614": {
+          "qwen2_5_vl_3b_instruct": 3201,
+          "qwen3_vl_8b_instruct": 3201,
+          "gemma3_4b_it": 2863,
+          "gemma3_12b_it": 2863
+        },
+        "615": {
+          "qwen2_5_vl_3b_instruct": 3201,
+          "qwen3_vl_8b_instruct": 3201,
+          "gemma3_4b_it": 2863,
+          "gemma3_12b_it": 2863
+        },
+        "616": {
+          "qwen2_5_vl_3b_instruct": 78,
+          "qwen3_vl_8b_instruct": 78,
+          "gemma3_4b_it": 59,
+          "gemma3_12b_it": 59
+        },
+        "617": {
+          "qwen2_5_vl_3b_instruct": 78,
+          "qwen3_vl_8b_instruct": 78,
+          "gemma3_4b_it": 59,
+          "gemma3_12b_it": 59
+        },
+        "618": {
+          "qwen2_5_vl_3b_instruct": 78,
+          "qwen3_vl_8b_instruct": 78,
+          "gemma3_4b_it": 59,
+          "gemma3_12b_it": 59
+        },
+        "619": {
+          "qwen2_5_vl_3b_instruct": 78,
+          "qwen3_vl_8b_instruct": 78,
+          "gemma3_4b_it": 59,
+          "gemma3_12b_it": 59
+        },
+        "620": {
+          "qwen2_5_vl_3b_instruct": 556,
+          "qwen3_vl_8b_instruct": 556,
+          "gemma3_4b_it": 434,
+          "gemma3_12b_it": 434
+        },
+        "621": {
+          "qwen2_5_vl_3b_instruct": 556,
+          "qwen3_vl_8b_instruct": 556,
+          "gemma3_4b_it": 434,
+          "gemma3_12b_it": 434
+        },
+        "622": {
+          "qwen2_5_vl_3b_instruct": 556,
+          "qwen3_vl_8b_instruct": 556,
+          "gemma3_4b_it": 434,
+          "gemma3_12b_it": 434
+        },
+        "623": {
+          "qwen2_5_vl_3b_instruct": 556,
+          "qwen3_vl_8b_instruct": 556,
+          "gemma3_4b_it": 434,
+          "gemma3_12b_it": 434
+        },
+        "624": {
+          "qwen2_5_vl_3b_instruct": 387,
+          "qwen3_vl_8b_instruct": 387,
+          "gemma3_4b_it": 330,
+          "gemma3_12b_it": 330
+        },
+        "625": {
+          "qwen2_5_vl_3b_instruct": 387,
+          "qwen3_vl_8b_instruct": 387,
+          "gemma3_4b_it": 330,
+          "gemma3_12b_it": 330
+        },
+        "626": {
+          "qwen2_5_vl_3b_instruct": 387,
+          "qwen3_vl_8b_instruct": 387,
+          "gemma3_4b_it": 330,
+          "gemma3_12b_it": 330
+        },
+        "627": {
+          "qwen2_5_vl_3b_instruct": 387,
+          "qwen3_vl_8b_instruct": 387,
+          "gemma3_4b_it": 330,
+          "gemma3_12b_it": 330
+        },
+        "628": {
+          "qwen2_5_vl_3b_instruct": 630,
+          "qwen3_vl_8b_instruct": 630,
+          "gemma3_4b_it": 490,
+          "gemma3_12b_it": 490
+        },
+        "629": {
+          "qwen2_5_vl_3b_instruct": 630,
+          "qwen3_vl_8b_instruct": 630,
+          "gemma3_4b_it": 490,
+          "gemma3_12b_it": 490
+        },
+        "630": {
+          "qwen2_5_vl_3b_instruct": 630,
+          "qwen3_vl_8b_instruct": 630,
+          "gemma3_4b_it": 490,
+          "gemma3_12b_it": 490
+        },
+        "631": {
+          "qwen2_5_vl_3b_instruct": 630,
+          "qwen3_vl_8b_instruct": 630,
+          "gemma3_4b_it": 490,
+          "gemma3_12b_it": 490
+        },
+        "632": {
+          "qwen2_5_vl_3b_instruct": 724,
+          "qwen3_vl_8b_instruct": 724,
+          "gemma3_4b_it": 580,
+          "gemma3_12b_it": 580
+        },
+        "633": {
+          "qwen2_5_vl_3b_instruct": 724,
+          "qwen3_vl_8b_instruct": 724,
+          "gemma3_4b_it": 580,
+          "gemma3_12b_it": 580
+        },
+        "634": {
+          "qwen2_5_vl_3b_instruct": 724,
+          "qwen3_vl_8b_instruct": 724,
+          "gemma3_4b_it": 580,
+          "gemma3_12b_it": 580
+        },
+        "635": {
+          "qwen2_5_vl_3b_instruct": 724,
+          "qwen3_vl_8b_instruct": 724,
+          "gemma3_4b_it": 580,
+          "gemma3_12b_it": 580
+        },
+        "636": {
+          "qwen2_5_vl_3b_instruct": 646,
+          "qwen3_vl_8b_instruct": 646,
+          "gemma3_4b_it": 518,
+          "gemma3_12b_it": 518
+        },
+        "637": {
+          "qwen2_5_vl_3b_instruct": 646,
+          "qwen3_vl_8b_instruct": 646,
+          "gemma3_4b_it": 518,
+          "gemma3_12b_it": 518
+        },
+        "638": {
+          "qwen2_5_vl_3b_instruct": 646,
+          "qwen3_vl_8b_instruct": 646,
+          "gemma3_4b_it": 518,
+          "gemma3_12b_it": 518
+        },
+        "639": {
+          "qwen2_5_vl_3b_instruct": 646,
+          "qwen3_vl_8b_instruct": 646,
+          "gemma3_4b_it": 518,
+          "gemma3_12b_it": 518
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1480 @@
+{
+  "model_alias": "qwen3_vl_8b_instruct",
+  "model_path": "/specific/scratches/scratch/georgejammal/trajectory-drift-guard/models/Qwen3-VL-8B-Instruct",
+  "component": "mlp",
+  "write_vector_key_template": "model.language_model.layers.{layer}.mlp.down_proj.weight",
+  "direction_metadata": {
+    "kind": "counting",
+    "direction": "word-minus-digit",
+    "language": "pooled_en_zh",
+    "digits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "formula": "normalize(mean(word-minus-digit))",
+    "norm_before_normalization": 1.0915025472640991,
+    "components": [
+      {
+        "language": "en",
+        "digit": 0,
+        "word": "zero",
+        "digit_token_ids": [
+          15
+        ],
+        "word_token_ids": [
+          14154
+        ],
+        "component_norm": 2.086181163787842
+      },
+      {
+        "language": "en",
+        "digit": 1,
+        "word": "one",
+        "digit_token_ids": [
+          16
+        ],
+        "word_token_ids": [
+          603
+        ],
+        "component_norm": 2.162997245788574
+      },
+      {
+        "language": "en",
+        "digit": 2,
+        "word": "two",
+        "digit_token_ids": [
+          17
+        ],
+        "word_token_ids": [
+          19789
+        ],
+        "component_norm": 2.0256314277648926
+      },
+      {
+        "language": "en",
+        "digit": 3,
+        "word": "three",
+        "digit_token_ids": [
+          18
+        ],
+        "word_token_ids": [
+          27856
+        ],
+        "component_norm": 2.0189521312713623
+      },
+      {
+        "language": "en",
+        "digit": 4,
+        "word": "four",
+        "digit_token_ids": [
+          19
+        ],
+        "word_token_ids": [
+          34024
+        ],
+        "component_norm": 2.049226999282837
+      },
+      {
+        "language": "en",
+        "digit": 5,
+        "word": "five",
+        "digit_token_ids": [
+          20
+        ],
+        "word_token_ids": [
+          52670
+        ],
+        "component_norm": 1.9841431379318237
+      },
+      {
+        "language": "en",
+        "digit": 6,
+        "word": "six",
+        "digit_token_ids": [
+          21
+        ],
+        "word_token_ids": [
+          50364
+        ],
+        "component_norm": 1.9709258079528809
+      },
+      {
+        "language": "en",
+        "digit": 7,
+        "word": "seven",
+        "digit_token_ids": [
+          22
+        ],
+        "word_token_ids": [
+          80185
+        ],
+        "component_norm": 1.9782657623291016
+      },
+      {
+        "language": "en",
+        "digit": 8,
+        "word": "eight",
+        "digit_token_ids": [
+          23
+        ],
+        "word_token_ids": [
+          67532
+        ],
+        "component_norm": 2.0233590602874756
+      },
+      {
+        "language": "en",
+        "digit": 9,
+        "word": "nine",
+        "digit_token_ids": [
+          24
+        ],
+        "word_token_ids": [
+          93223
+        ],
+        "component_norm": 1.9976487159729004
+      },
+      {
+        "language": "zh",
+        "digit": 0,
+        "word": "零",
+        "digit_token_ids": [
+          15
+        ],
+        "word_token_ids": [
+          99822
+        ],
+        "component_norm": 2.1342954635620117
+      },
+      {
+        "language": "zh",
+        "digit": 1,
+        "word": "一",
+        "digit_token_ids": [
+          16
+        ],
+        "word_token_ids": [
+          14777
+        ],
+        "component_norm": 2.0916225910186768
+      },
+      {
+        "language": "zh",
+        "digit": 2,
+        "word": "二",
+        "digit_token_ids": [
+          17
+        ],
+        "word_token_ids": [
+          40820
+        ],
+        "component_norm": 2.0033416748046875
+      },
+      {
+        "language": "zh",
+        "digit": 3,
+        "word": "三",
+        "digit_token_ids": [
+          18
+        ],
+        "word_token_ids": [
+          44991
+        ],
+        "component_norm": 2.0370795726776123
+      },
+      {
+        "language": "zh",
+        "digit": 4,
+        "word": "四",
+        "digit_token_ids": [
+          19
+        ],
+        "word_token_ids": [
+          63703
+        ],
+        "component_norm": 2.0529980659484863
+      },
+      {
+        "language": "zh",
+        "digit": 5,
+        "word": "五",
+        "digit_token_ids": [
+          20
+        ],
+        "word_token_ids": [
+          75108
+        ],
+        "component_norm": 2.073922872543335
+      },
+      {
+        "language": "zh",
+        "digit": 6,
+        "word": "六",
+        "digit_token_ids": [
+          21
+        ],
+        "word_token_ids": [
+          99566
+        ],
+        "component_norm": 2.068382978439331
+      },
+      {
+        "language": "zh",
+        "digit": 7,
+        "word": "七",
+        "digit_token_ids": [
+          22
+        ],
+        "word_token_ids": [
+          99612
+        ],
+        "component_norm": 2.119060754776001
+      },
+      {
+        "language": "zh",
+        "digit": 8,
+        "word": "八",
+        "digit_token_ids": [
+          23
+        ],
+        "word_token_ids": [
+          99568
+        ],
+        "component_norm": 2.049248218536377
+      },
+      {
+        "language": "zh",
+        "digit": 9,
+        "word": "九",
+        "digit_token_ids": [
+          24
+        ],
+        "word_token_ids": [
+          99609
+        ],
+        "component_norm": 2.0863542556762695
+      }
+    ]
+  },
+  "window": "34-35",
+  "layers": [
+    34,
+    35
+  ],
+  "sigma": 3.0,
+  "null_cosine_sd": 0.015625,
+  "cosine_threshold": 0.046875,
+  "selection_rule": "cosine_similarity >= sigma / sqrt(d_model)",
+  "selected_count": 133,
+  "layer_counts": {
+    "34": 58,
+    "35": 75
+  },
+  "rows": [
+    {
+      "layer": 35,
+      "neuron": 5953,
+      "score": 0.10994447767734528,
+      "cosine_similarity": 0.10994447767734528,
+      "dot_product": 0.08821580559015274,
+      "weight_norm": 0.8023668527603149,
+      "rank": 1
+    },
+    {
+      "layer": 35,
+      "neuron": 9490,
+      "score": 0.10346143692731857,
+      "cosine_similarity": 0.10346143692731857,
+      "dot_product": 0.16848206520080566,
+      "weight_norm": 1.6284527778625488,
+      "rank": 2
+    },
+    {
+      "layer": 35,
+      "neuron": 10182,
+      "score": 0.09910604357719421,
+      "cosine_similarity": 0.09910604357719421,
+      "dot_product": 0.08697938919067383,
+      "weight_norm": 0.8776395916938782,
+      "rank": 3
+    },
+    {
+      "layer": 35,
+      "neuron": 8716,
+      "score": 0.09697205573320389,
+      "cosine_similarity": 0.09697205573320389,
+      "dot_product": 0.0849020853638649,
+      "weight_norm": 0.8755314350128174,
+      "rank": 4
+    },
+    {
+      "layer": 35,
+      "neuron": 9896,
+      "score": 0.09307611733675003,
+      "cosine_similarity": 0.09307611733675003,
+      "dot_product": 0.07901157438755035,
+      "weight_norm": 0.8488920331001282,
+      "rank": 5
+    },
+    {
+      "layer": 35,
+      "neuron": 9313,
+      "score": 0.0918770506978035,
+      "cosine_similarity": 0.0918770506978035,
+      "dot_product": 0.08590362221002579,
+      "weight_norm": 0.9349845051765442,
+      "rank": 6
+    },
+    {
+      "layer": 35,
+      "neuron": 11333,
+      "score": 0.09111905097961426,
+      "cosine_similarity": 0.09111905097961426,
+      "dot_product": 0.08831364661455154,
+      "weight_norm": 0.9692116379737854,
+      "rank": 7
+    },
+    {
+      "layer": 35,
+      "neuron": 11693,
+      "score": 0.09058468788862228,
+      "cosine_similarity": 0.09058468788862228,
+      "dot_product": 0.07067431509494781,
+      "weight_norm": 0.7802015542984009,
+      "rank": 8
+    },
+    {
+      "layer": 35,
+      "neuron": 3294,
+      "score": 0.0872240960597992,
+      "cosine_similarity": 0.0872240960597992,
+      "dot_product": 0.07924487441778183,
+      "weight_norm": 0.9085204601287842,
+      "rank": 9
+    },
+    {
+      "layer": 35,
+      "neuron": 9305,
+      "score": 0.08498591929674149,
+      "cosine_similarity": 0.08498591929674149,
+      "dot_product": 0.0823601633310318,
+      "weight_norm": 0.9691036343574524,
+      "rank": 10
+    },
+    {
+      "layer": 34,
+      "neuron": 4065,
+      "score": 0.08261005580425262,
+      "cosine_similarity": 0.08261005580425262,
+      "dot_product": 0.0804997980594635,
+      "weight_norm": 0.9744551777839661,
+      "rank": 11
+    },
+    {
+      "layer": 35,
+      "neuron": 3967,
+      "score": 0.08134881407022476,
+      "cosine_similarity": 0.08134881407022476,
+      "dot_product": 0.12234287708997726,
+      "weight_norm": 1.5039294958114624,
+      "rank": 12
+    },
+    {
+      "layer": 35,
+      "neuron": 5743,
+      "score": 0.08061821758747101,
+      "cosine_similarity": 0.08061821758747101,
+      "dot_product": 0.06785883754491806,
+      "weight_norm": 0.8417308330535889,
+      "rank": 13
+    },
+    {
+      "layer": 35,
+      "neuron": 9581,
+      "score": 0.0775289535522461,
+      "cosine_similarity": 0.0775289535522461,
+      "dot_product": 0.0733846053481102,
+      "weight_norm": 0.9465445280075073,
+      "rank": 14
+    },
+    {
+      "layer": 35,
+      "neuron": 6296,
+      "score": 0.07673057168722153,
+      "cosine_similarity": 0.07673057168722153,
+      "dot_product": 0.06461279094219208,
+      "weight_norm": 0.8420736193656921,
+      "rank": 15
+    },
+    {
+      "layer": 35,
+      "neuron": 3378,
+      "score": 0.07643827050924301,
+      "cosine_similarity": 0.07643827050924301,
+      "dot_product": 0.04766872152686119,
+      "weight_norm": 0.623623788356781,
+      "rank": 16
+    },
+    {
+      "layer": 35,
+      "neuron": 11457,
+      "score": 0.07589636743068695,
+      "cosine_similarity": 0.07589636743068695,
+      "dot_product": 0.05319514125585556,
+      "weight_norm": 0.7008917927742004,
+      "rank": 17
+    },
+    {
+      "layer": 35,
+      "neuron": 10152,
+      "score": 0.0757734626531601,
+      "cosine_similarity": 0.0757734626531601,
+      "dot_product": 0.06001787260174751,
+      "weight_norm": 0.7920697927474976,
+      "rank": 18
+    },
+    {
+      "layer": 35,
+      "neuron": 7774,
+      "score": 0.07403703033924103,
+      "cosine_similarity": 0.07403703033924103,
+      "dot_product": 0.05736352875828743,
+      "weight_norm": 0.7747951149940491,
+      "rank": 19
+    },
+    {
+      "layer": 35,
+      "neuron": 9463,
+      "score": 0.0739002451300621,
+      "cosine_similarity": 0.0739002451300621,
+      "dot_product": 0.06709669530391693,
+      "weight_norm": 0.9079360365867615,
+      "rank": 20
+    },
+    {
+      "layer": 35,
+      "neuron": 4728,
+      "score": 0.07318981736898422,
+      "cosine_similarity": 0.07318981736898422,
+      "dot_product": 0.07110056281089783,
+      "weight_norm": 0.9714543223381042,
+      "rank": 21
+    },
+    {
+      "layer": 35,
+      "neuron": 2486,
+      "score": 0.07216934859752655,
+      "cosine_similarity": 0.07216934859752655,
+      "dot_product": 0.07764623314142227,
+      "weight_norm": 1.0758893489837646,
+      "rank": 22
+    },
+    {
+      "layer": 35,
+      "neuron": 5402,
+      "score": 0.07189039885997772,
+      "cosine_similarity": 0.07189039885997772,
+      "dot_product": 0.11202383041381836,
+      "weight_norm": 1.5582585334777832,
+      "rank": 23
+    },
+    {
+      "layer": 35,
+      "neuron": 9922,
+      "score": 0.07067175209522247,
+      "cosine_similarity": 0.07067175209522247,
+      "dot_product": 0.05891769006848335,
+      "weight_norm": 0.8336809277534485,
+      "rank": 24
+    },
+    {
+      "layer": 35,
+      "neuron": 2975,
+      "score": 0.07032042741775513,
+      "cosine_similarity": 0.07032042741775513,
+      "dot_product": 0.08803185075521469,
+      "weight_norm": 1.251867413520813,
+      "rank": 25
+    },
+    {
+      "layer": 35,
+      "neuron": 10846,
+      "score": 0.06898333132266998,
+      "cosine_similarity": 0.06898333132266998,
+      "dot_product": 0.06215127557516098,
+      "weight_norm": 0.9009608030319214,
+      "rank": 26
+    },
+    {
+      "layer": 35,
+      "neuron": 10064,
+      "score": 0.06890393048524857,
+      "cosine_similarity": 0.06890393048524857,
+      "dot_product": 0.06898319721221924,
+      "weight_norm": 1.001150369644165,
+      "rank": 27
+    },
+    {
+      "layer": 34,
+      "neuron": 9247,
+      "score": 0.0679970234632492,
+      "cosine_similarity": 0.0679970234632492,
+      "dot_product": 0.1469622552394867,
+      "weight_norm": 2.161304235458374,
+      "rank": 28
+    },
+    {
+      "layer": 34,
+      "neuron": 4514,
+      "score": 0.06785529106855392,
+      "cosine_similarity": 0.06785529106855392,
+      "dot_product": 0.10131339728832245,
+      "weight_norm": 1.4930802583694458,
+      "rank": 29
+    },
+    {
+      "layer": 34,
+      "neuron": 7880,
+      "score": 0.06664467602968216,
+      "cosine_similarity": 0.06664467602968216,
+      "dot_product": 0.11657235026359558,
+      "weight_norm": 1.7491623163223267,
+      "rank": 30
+    },
+    {
+      "layer": 34,
+      "neuron": 1938,
+      "score": 0.06660865992307663,
+      "cosine_similarity": 0.06660865992307663,
+      "dot_product": 0.08362424373626709,
+      "weight_norm": 1.2554559707641602,
+      "rank": 31
+    },
+    {
+      "layer": 34,
+      "neuron": 8553,
+      "score": 0.06596938520669937,
+      "cosine_similarity": 0.06596938520669937,
+      "dot_product": 0.07159721851348877,
+      "weight_norm": 1.0853097438812256,
+      "rank": 32
+    },
+    {
+      "layer": 35,
+      "neuron": 290,
+      "score": 0.06566809862852097,
+      "cosine_similarity": 0.06566809862852097,
+      "dot_product": 0.07100815325975418,
+      "weight_norm": 1.0813188552856445,
+      "rank": 33
+    },
+    {
+      "layer": 35,
+      "neuron": 6424,
+      "score": 0.06563162803649902,
+      "cosine_similarity": 0.06563162803649902,
+      "dot_product": 0.0899779200553894,
+      "weight_norm": 1.3709536790847778,
+      "rank": 34
+    },
+    {
+      "layer": 34,
+      "neuron": 6244,
+      "score": 0.06545057892799377,
+      "cosine_similarity": 0.06545057892799377,
+      "dot_product": 0.0768711194396019,
+      "weight_norm": 1.174491047859192,
+      "rank": 35
+    },
+    {
+      "layer": 34,
+      "neuron": 1525,
+      "score": 0.06403966248035431,
+      "cosine_similarity": 0.06403966248035431,
+      "dot_product": 0.11835916340351105,
+      "weight_norm": 1.8482165336608887,
+      "rank": 36
+    },
+    {
+      "layer": 34,
+      "neuron": 6300,
+      "score": 0.06370752304792404,
+      "cosine_similarity": 0.06370752304792404,
+      "dot_product": 0.11456289142370224,
+      "weight_norm": 1.7982631921768188,
+      "rank": 37
+    },
+    {
+      "layer": 34,
+      "neuron": 3908,
+      "score": 0.06369353085756302,
+      "cosine_similarity": 0.06369353085756302,
+      "dot_product": 0.10201005637645721,
+      "weight_norm": 1.601576328277588,
+      "rank": 38
+    },
+    {
+      "layer": 34,
+      "neuron": 320,
+      "score": 0.06272731721401215,
+      "cosine_similarity": 0.06272731721401215,
+      "dot_product": 0.0667208656668663,
+      "weight_norm": 1.0636652708053589,
+      "rank": 39
+    },
+    {
+      "layer": 34,
+      "neuron": 11009,
+      "score": 0.0624309778213501,
+      "cosine_similarity": 0.0624309778213501,
+      "dot_product": 0.10417524725198746,
+      "weight_norm": 1.6686466932296753,
+      "rank": 40
+    },
+    {
+      "layer": 34,
+      "neuron": 1449,
+      "score": 0.06169164553284645,
+      "cosine_similarity": 0.06169164553284645,
+      "dot_product": 0.09884987026453018,
+      "weight_norm": 1.6023218631744385,
+      "rank": 41
+    },
+    {
+      "layer": 35,
+      "neuron": 10301,
+      "score": 0.061428479850292206,
+      "cosine_similarity": 0.061428479850292206,
+      "dot_product": 0.06325358152389526,
+      "weight_norm": 1.0297110080718994,
+      "rank": 42
+    },
+    {
+      "layer": 35,
+      "neuron": 6859,
+      "score": 0.06124159321188927,
+      "cosine_similarity": 0.06124159321188927,
+      "dot_product": 0.06352347880601883,
+      "weight_norm": 1.0372604131698608,
+      "rank": 43
+    },
+    {
+      "layer": 35,
+      "neuron": 4330,
+      "score": 0.06049792468547821,
+      "cosine_similarity": 0.06049792468547821,
+      "dot_product": 0.11953216046094894,
+      "weight_norm": 1.9758059978485107,
+      "rank": 44
+    },
+    {
+      "layer": 35,
+      "neuron": 5900,
+      "score": 0.060496315360069275,
+      "cosine_similarity": 0.060496315360069275,
+      "dot_product": 0.06608136743307114,
+      "weight_norm": 1.0923205614089966,
+      "rank": 45
+    },
+    {
+      "layer": 34,
+      "neuron": 7902,
+      "score": 0.06041039526462555,
+      "cosine_similarity": 0.06041039526462555,
+      "dot_product": 0.05895308032631874,
+      "weight_norm": 0.9758764505386353,
+      "rank": 46
+    },
+    {
+      "layer": 35,
+      "neuron": 10964,
+      "score": 0.059947386384010315,
+      "cosine_similarity": 0.059947386384010315,
+      "dot_product": 0.06861616671085358,
+      "weight_norm": 1.1446064710617065,
+      "rank": 47
+    },
+    {
+      "layer": 34,
+      "neuron": 11173,
+      "score": 0.05982394888997078,
+      "cosine_similarity": 0.05982394888997078,
+      "dot_product": 0.08872365206480026,
+      "weight_norm": 1.483079195022583,
+      "rank": 48
+    },
+    {
+      "layer": 35,
+      "neuron": 6412,
+      "score": 0.05905476212501526,
+      "cosine_similarity": 0.05905476212501526,
+      "dot_product": 0.05874509736895561,
+      "weight_norm": 0.9947563409805298,
+      "rank": 49
+    },
+    {
+      "layer": 35,
+      "neuron": 7376,
+      "score": 0.059053245931863785,
+      "cosine_similarity": 0.059053245931863785,
+      "dot_product": 0.0687287375330925,
+      "weight_norm": 1.1638435125350952,
+      "rank": 50
+    },
+    {
+      "layer": 35,
+      "neuron": 9845,
+      "score": 0.05903000384569168,
+      "cosine_similarity": 0.05903000384569168,
+      "dot_product": 0.06775201857089996,
+      "weight_norm": 1.1477556228637695,
+      "rank": 51
+    },
+    {
+      "layer": 34,
+      "neuron": 230,
+      "score": 0.05872870981693268,
+      "cosine_similarity": 0.05872870981693268,
+      "dot_product": 0.09010401368141174,
+      "weight_norm": 1.5342413187026978,
+      "rank": 52
+    },
+    {
+      "layer": 34,
+      "neuron": 1837,
+      "score": 0.05830948054790497,
+      "cosine_similarity": 0.05830948054790497,
+      "dot_product": 0.10836616903543472,
+      "weight_norm": 1.8584656715393066,
+      "rank": 53
+    },
+    {
+      "layer": 34,
+      "neuron": 6649,
+      "score": 0.058128222823143005,
+      "cosine_similarity": 0.058128222823143005,
+      "dot_product": 0.05871891602873802,
+      "weight_norm": 1.0101618766784668,
+      "rank": 54
+    },
+    {
+      "layer": 35,
+      "neuron": 11987,
+      "score": 0.05810409039258957,
+      "cosine_similarity": 0.05810409039258957,
+      "dot_product": 0.07262613624334335,
+      "weight_norm": 1.2499315738677979,
+      "rank": 55
+    },
+    {
+      "layer": 35,
+      "neuron": 6428,
+      "score": 0.058023687452077866,
+      "cosine_similarity": 0.058023687452077866,
+      "dot_product": 0.07467570155858994,
+      "weight_norm": 1.2869864702224731,
+      "rank": 56
+    },
+    {
+      "layer": 34,
+      "neuron": 9284,
+      "score": 0.05775488540530205,
+      "cosine_similarity": 0.05775488540530205,
+      "dot_product": 0.09691231697797775,
+      "weight_norm": 1.6779934167861938,
+      "rank": 57
+    },
+    {
+      "layer": 34,
+      "neuron": 10752,
+      "score": 0.05769692733883858,
+      "cosine_similarity": 0.05769692733883858,
+      "dot_product": 0.052757758647203445,
+      "weight_norm": 0.9143946170806885,
+      "rank": 58
+    },
+    {
+      "layer": 35,
+      "neuron": 6473,
+      "score": 0.05737146735191345,
+      "cosine_similarity": 0.05737146735191345,
+      "dot_product": 0.06319353729486465,
+      "weight_norm": 1.10148024559021,
+      "rank": 59
+    },
+    {
+      "layer": 34,
+      "neuron": 428,
+      "score": 0.05736122280359268,
+      "cosine_similarity": 0.05736122280359268,
+      "dot_product": 0.09674684703350067,
+      "weight_norm": 1.686624526977539,
+      "rank": 60
+    },
+    {
+      "layer": 35,
+      "neuron": 2564,
+      "score": 0.05727517232298851,
+      "cosine_similarity": 0.05727517232298851,
+      "dot_product": 0.05632072314620018,
+      "weight_norm": 0.9833357334136963,
+      "rank": 61
+    },
+    {
+      "layer": 34,
+      "neuron": 2577,
+      "score": 0.057122696191072464,
+      "cosine_similarity": 0.057122696191072464,
+      "dot_product": 0.06914568692445755,
+      "weight_norm": 1.2104766368865967,
+      "rank": 62
+    },
+    {
+      "layer": 34,
+      "neuron": 3482,
+      "score": 0.05691694840788841,
+      "cosine_similarity": 0.05691694840788841,
+      "dot_product": 0.10303960740566254,
+      "weight_norm": 1.8103501796722412,
+      "rank": 63
+    },
+    {
+      "layer": 35,
+      "neuron": 3316,
+      "score": 0.05679118260741234,
+      "cosine_similarity": 0.05679118260741234,
+      "dot_product": 0.07977574318647385,
+      "weight_norm": 1.4047205448150635,
+      "rank": 64
+    },
+    {
+      "layer": 34,
+      "neuron": 7327,
+      "score": 0.05676659196615219,
+      "cosine_similarity": 0.05676659196615219,
+      "dot_product": 0.08352532982826233,
+      "weight_norm": 1.4713817834854126,
+      "rank": 65
+    },
+    {
+      "layer": 34,
+      "neuron": 9872,
+      "score": 0.056545987725257874,
+      "cosine_similarity": 0.056545987725257874,
+      "dot_product": 0.06915056705474854,
+      "weight_norm": 1.2229084968566895,
+      "rank": 66
+    },
+    {
+      "layer": 34,
+      "neuron": 12227,
+      "score": 0.05609593167901039,
+      "cosine_similarity": 0.05609593167901039,
+      "dot_product": 0.08256199955940247,
+      "weight_norm": 1.4718000888824463,
+      "rank": 67
+    },
+    {
+      "layer": 35,
+      "neuron": 6770,
+      "score": 0.05604761838912964,
+      "cosine_similarity": 0.05604761838912964,
+      "dot_product": 0.05520068481564522,
+      "weight_norm": 0.984889030456543,
+      "rank": 68
+    },
+    {
+      "layer": 35,
+      "neuron": 1076,
+      "score": 0.05591229721903801,
+      "cosine_similarity": 0.05591229721903801,
+      "dot_product": 0.06170416623353958,
+      "weight_norm": 1.1035884618759155,
+      "rank": 69
+    },
+    {
+      "layer": 35,
+      "neuron": 3784,
+      "score": 0.05579780787229538,
+      "cosine_similarity": 0.05579780787229538,
+      "dot_product": 0.1007193773984909,
+      "weight_norm": 1.8050776720046997,
+      "rank": 70
+    },
+    {
+      "layer": 34,
+      "neuron": 10378,
+      "score": 0.055408693850040436,
+      "cosine_similarity": 0.055408693850040436,
+      "dot_product": 0.08816905319690704,
+      "weight_norm": 1.5912494659423828,
+      "rank": 71
+    },
+    {
+      "layer": 35,
+      "neuron": 10985,
+      "score": 0.05526876449584961,
+      "cosine_similarity": 0.05526876449584961,
+      "dot_product": 0.09391061216592789,
+      "weight_norm": 1.699162483215332,
+      "rank": 72
+    },
+    {
+      "layer": 34,
+      "neuron": 11169,
+      "score": 0.05472492426633835,
+      "cosine_similarity": 0.05472492426633835,
+      "dot_product": 0.06745622307062149,
+      "weight_norm": 1.2326416969299316,
+      "rank": 73
+    },
+    {
+      "layer": 35,
+      "neuron": 2001,
+      "score": 0.05464706942439079,
+      "cosine_similarity": 0.05464706942439079,
+      "dot_product": 0.059896234422922134,
+      "weight_norm": 1.0960557460784912,
+      "rank": 74
+    },
+    {
+      "layer": 34,
+      "neuron": 4653,
+      "score": 0.05401897057890892,
+      "cosine_similarity": 0.05401897057890892,
+      "dot_product": 0.0704011395573616,
+      "weight_norm": 1.303267002105713,
+      "rank": 75
+    },
+    {
+      "layer": 35,
+      "neuron": 8136,
+      "score": 0.053937554359436035,
+      "cosine_similarity": 0.053937554359436035,
+      "dot_product": 0.045113399624824524,
+      "weight_norm": 0.83640056848526,
+      "rank": 76
+    },
+    {
+      "layer": 35,
+      "neuron": 5089,
+      "score": 0.05388422682881355,
+      "cosine_similarity": 0.05388422682881355,
+      "dot_product": 0.037043578922748566,
+      "weight_norm": 0.6874660849571228,
+      "rank": 77
+    },
+    {
+      "layer": 35,
+      "neuron": 1745,
+      "score": 0.053563442081213,
+      "cosine_similarity": 0.053563442081213,
+      "dot_product": 0.08274718374013901,
+      "weight_norm": 1.544844388961792,
+      "rank": 78
+    },
+    {
+      "layer": 34,
+      "neuron": 313,
+      "score": 0.0534188486635685,
+      "cosine_similarity": 0.0534188486635685,
+      "dot_product": 0.08523659408092499,
+      "weight_norm": 1.5956276655197144,
+      "rank": 79
+    },
+    {
+      "layer": 34,
+      "neuron": 5978,
+      "score": 0.05338849127292633,
+      "cosine_similarity": 0.05338849127292633,
+      "dot_product": 0.06567001342773438,
+      "weight_norm": 1.2300406694412231,
+      "rank": 80
+    },
+    {
+      "layer": 35,
+      "neuron": 431,
+      "score": 0.05328458175063133,
+      "cosine_similarity": 0.05328458175063133,
+      "dot_product": 0.05208687111735344,
+      "weight_norm": 0.9775223731994629,
+      "rank": 81
+    },
+    {
+      "layer": 34,
+      "neuron": 3399,
+      "score": 0.05323643609881401,
+      "cosine_similarity": 0.05323643609881401,
+      "dot_product": 0.08580581098794937,
+      "weight_norm": 1.6117873191833496,
+      "rank": 82
+    },
+    {
+      "layer": 35,
+      "neuron": 11610,
+      "score": 0.05313485115766525,
+      "cosine_similarity": 0.05313485115766525,
+      "dot_product": 0.04999401792883873,
+      "weight_norm": 0.9408894181251526,
+      "rank": 83
+    },
+    {
+      "layer": 35,
+      "neuron": 9825,
+      "score": 0.05290210619568825,
+      "cosine_similarity": 0.05290210619568825,
+      "dot_product": 0.09866321831941605,
+      "weight_norm": 1.865014910697937,
+      "rank": 84
+    },
+    {
+      "layer": 34,
+      "neuron": 9001,
+      "score": 0.052577704191207886,
+      "cosine_similarity": 0.052577704191207886,
+      "dot_product": 0.08961118757724762,
+      "weight_norm": 1.7043571472167969,
+      "rank": 85
+    },
+    {
+      "layer": 35,
+      "neuron": 3600,
+      "score": 0.052518781274557114,
+      "cosine_similarity": 0.052518781274557114,
+      "dot_product": 0.05723508074879646,
+      "weight_norm": 1.0898021459579468,
+      "rank": 86
+    },
+    {
+      "layer": 35,
+      "neuron": 4886,
+      "score": 0.05242868885397911,
+      "cosine_similarity": 0.05242868885397911,
+      "dot_product": 0.054375696927309036,
+      "weight_norm": 1.0371363162994385,
+      "rank": 87
+    },
+    {
+      "layer": 34,
+      "neuron": 1650,
+      "score": 0.05189495161175728,
+      "cosine_similarity": 0.05189495161175728,
+      "dot_product": 0.08728241175413132,
+      "weight_norm": 1.6819056272506714,
+      "rank": 88
+    },
+    {
+      "layer": 34,
+      "neuron": 2541,
+      "score": 0.051591914147138596,
+      "cosine_similarity": 0.051591914147138596,
+      "dot_product": 0.05738958716392517,
+      "weight_norm": 1.1123756170272827,
+      "rank": 89
+    },
+    {
+      "layer": 35,
+      "neuron": 9817,
+      "score": 0.0514599047601223,
+      "cosine_similarity": 0.0514599047601223,
+      "dot_product": 0.04063586890697479,
+      "weight_norm": 0.7896608114242554,
+      "rank": 90
+    },
+    {
+      "layer": 34,
+      "neuron": 5594,
+      "score": 0.051368530839681625,
+      "cosine_similarity": 0.051368530839681625,
+      "dot_product": 0.09013094007968903,
+      "weight_norm": 1.7545944452285767,
+      "rank": 91
+    },
+    {
+      "layer": 35,
+      "neuron": 4688,
+      "score": 0.05116306245326996,
+      "cosine_similarity": 0.05116306245326996,
+      "dot_product": 0.05875346437096596,
+      "weight_norm": 1.1483570337295532,
+      "rank": 92
+    },
+    {
+      "layer": 34,
+      "neuron": 5782,
+      "score": 0.05098648741841316,
+      "cosine_similarity": 0.05098648741841316,
+      "dot_product": 0.08517832309007645,
+      "weight_norm": 1.6706057786941528,
+      "rank": 93
+    },
+    {
+      "layer": 34,
+      "neuron": 7881,
+      "score": 0.05096004158258438,
+      "cosine_similarity": 0.05096004158258438,
+      "dot_product": 0.0896683782339096,
+      "weight_norm": 1.7595821619033813,
+      "rank": 94
+    },
+    {
+      "layer": 34,
+      "neuron": 2934,
+      "score": 0.050882283598184586,
+      "cosine_similarity": 0.050882283598184586,
+      "dot_product": 0.08641953021287918,
+      "weight_norm": 1.6984208822250366,
+      "rank": 95
+    },
+    {
+      "layer": 35,
+      "neuron": 4570,
+      "score": 0.05061912536621094,
+      "cosine_similarity": 0.05061912536621094,
+      "dot_product": 0.05801878124475479,
+      "weight_norm": 1.1461830139160156,
+      "rank": 96
+    },
+    {
+      "layer": 34,
+      "neuron": 7683,
+      "score": 0.05048954486846924,
+      "cosine_similarity": 0.05048954486846924,
+      "dot_product": 0.08688034862279892,
+      "weight_norm": 1.7207591533660889,
+      "rank": 97
+    },
+    {
+      "layer": 35,
+      "neuron": 2628,
+      "score": 0.05037498474121094,
+      "cosine_similarity": 0.05037498474121094,
+      "dot_product": 0.05928730592131615,
+      "weight_norm": 1.1769195795059204,
+      "rank": 98
+    },
+    {
+      "layer": 34,
+      "neuron": 11354,
+      "score": 0.05030275881290436,
+      "cosine_similarity": 0.05030275881290436,
+      "dot_product": 0.0672517791390419,
+      "weight_norm": 1.3369401693344116,
+      "rank": 99
+    },
+    {
+      "layer": 34,
+      "neuron": 10521,
+      "score": 0.05023076385259628,
+      "cosine_similarity": 0.05023076385259628,
+      "dot_product": 0.06999574601650238,
+      "weight_norm": 1.3934836387634277,
+      "rank": 100
+    },
+    {
+      "layer": 34,
+      "neuron": 7316,
+      "score": 0.04967688024044037,
+      "cosine_similarity": 0.04967688024044037,
+      "dot_product": 0.05632233992218971,
+      "weight_norm": 1.133773684501648,
+      "rank": 101
+    },
+    {
+      "layer": 35,
+      "neuron": 413,
+      "score": 0.04963511973619461,
+      "cosine_similarity": 0.04963511973619461,
+      "dot_product": 0.050291139632463455,
+      "weight_norm": 1.0132168531417847,
+      "rank": 102
+    },
+    {
+      "layer": 34,
+      "neuron": 6564,
+      "score": 0.04960860311985016,
+      "cosine_similarity": 0.04960860311985016,
+      "dot_product": 0.09085876494646072,
+      "weight_norm": 1.831512212753296,
+      "rank": 103
+    },
+    {
+      "layer": 35,
+      "neuron": 6136,
+      "score": 0.0495709553360939,
+      "cosine_similarity": 0.0495709553360939,
+      "dot_product": 0.045303843915462494,
+      "weight_norm": 0.9139190912246704,
+      "rank": 104
+    },
+    {
+      "layer": 35,
+      "neuron": 7188,
+      "score": 0.049493372440338135,
+      "cosine_similarity": 0.049493372440338135,
+      "dot_product": 0.04989452287554741,
+      "weight_norm": 1.0081051588058472,
+      "rank": 105
+    },
+    {
+      "layer": 34,
+      "neuron": 8976,
+      "score": 0.049135684967041016,
+      "cosine_similarity": 0.049135684967041016,
+      "dot_product": 0.08130194991827011,
+      "weight_norm": 1.6546416282653809,
+      "rank": 106
+    },
+    {
+      "layer": 35,
+      "neuron": 1142,
+      "score": 0.049079570919275284,
+      "cosine_similarity": 0.049079570919275284,
+      "dot_product": 0.06417816132307053,
+      "weight_norm": 1.307634949684143,
+      "rank": 107
+    },
+    {
+      "layer": 35,
+      "neuron": 3183,
+      "score": 0.04904596507549286,
+      "cosine_similarity": 0.04904596507549286,
+      "dot_product": 0.10106997936964035,
+      "weight_norm": 2.0607194900512695,
+      "rank": 108
+    },
+    {
+      "layer": 35,
+      "neuron": 9859,
+      "score": 0.04901967942714691,
+      "cosine_similarity": 0.04901967942714691,
+      "dot_product": 0.04651568830013275,
+      "weight_norm": 0.9489186406135559,
+      "rank": 109
+    },
+    {
+      "layer": 34,
+      "neuron": 5875,
+      "score": 0.04901596158742905,
+      "cosine_similarity": 0.04901596158742905,
+      "dot_product": 0.08939812332391739,
+      "weight_norm": 1.8238574266433716,
+      "rank": 110
+    },
+    {
+      "layer": 34,
+      "neuron": 6307,
+      "score": 0.04893453046679497,
+      "cosine_similarity": 0.04893453046679497,
+      "dot_product": 0.08718865364789963,
+      "weight_norm": 1.7817409038543701,
+      "rank": 111
+    },
+    {
+      "layer": 34,
+      "neuron": 8505,
+      "score": 0.04885005205869675,
+      "cosine_similarity": 0.04885005205869675,
+      "dot_product": 0.08959990739822388,
+      "weight_norm": 1.8341823816299438,
+      "rank": 112
+    },
+    {
+      "layer": 35,
+      "neuron": 11680,
+      "score": 0.04873858019709587,
+      "cosine_similarity": 0.04873858019709587,
+      "dot_product": 0.08583437651395798,
+      "weight_norm": 1.761117696762085,
+      "rank": 113
+    },
+    {
+      "layer": 34,
+      "neuron": 111,
+      "score": 0.04858129844069481,
+      "cosine_similarity": 0.04858129844069481,
+      "dot_product": 0.058650583028793335,
+      "weight_norm": 1.2072666883468628,
+      "rank": 114
+    },
+    {
+      "layer": 34,
+      "neuron": 4417,
+      "score": 0.048522334545850754,
+      "cosine_similarity": 0.048522334545850754,
+      "dot_product": 0.09418181329965591,
+      "weight_norm": 1.9409992694854736,
+      "rank": 115
+    },
+    {
+      "layer": 35,
+      "neuron": 216,
+      "score": 0.04841256141662598,
+      "cosine_similarity": 0.04841256141662598,
+      "dot_product": 0.04609358310699463,
+      "weight_norm": 0.952099621295929,
+      "rank": 116
+    },
+    {
+      "layer": 34,
+      "neuron": 2505,
+      "score": 0.04832635819911957,
+      "cosine_similarity": 0.04832635819911957,
+      "dot_product": 0.04974614456295967,
+      "weight_norm": 1.02937912940979,
+      "rank": 117
+    },
+    {
+      "layer": 35,
+      "neuron": 8036,
+      "score": 0.04825795069336891,
+      "cosine_similarity": 0.04825795069336891,
+      "dot_product": 0.08581223338842392,
+      "weight_norm": 1.7781988382339478,
+      "rank": 118
+    },
+    {
+      "layer": 34,
+      "neuron": 9339,
+      "score": 0.04807828739285469,
+      "cosine_similarity": 0.04807828739285469,
+      "dot_product": 0.06994789093732834,
+      "weight_norm": 1.454874873161316,
+      "rank": 119
+    },
+    {
+      "layer": 34,
+      "neuron": 9829,
+      "score": 0.048018086701631546,
+      "cosine_similarity": 0.048018086701631546,
+      "dot_product": 0.07877782732248306,
+      "weight_norm": 1.6405866146087646,
+      "rank": 120
+    },
+    {
+      "layer": 35,
+      "neuron": 7930,
+      "score": 0.04791456088423729,
+      "cosine_similarity": 0.04791456088423729,
+      "dot_product": 0.027814339846372604,
+      "weight_norm": 0.5804986953735352,
+      "rank": 121
+    },
+    {
+      "layer": 35,
+      "neuron": 10584,
+      "score": 0.047826677560806274,
+      "cosine_similarity": 0.047826677560806274,
+      "dot_product": 0.044103726744651794,
+      "weight_norm": 0.9221574664115906,
+      "rank": 122
+    },
+    {
+      "layer": 34,
+      "neuron": 11024,
+      "score": 0.0477529875934124,
+      "cosine_similarity": 0.0477529875934124,
+      "dot_product": 0.07143519073724747,
+      "weight_norm": 1.4959313869476318,
+      "rank": 123
+    },
+    {
+      "layer": 35,
+      "neuron": 8198,
+      "score": 0.047717075794935226,
+      "cosine_similarity": 0.047717075794935226,
+      "dot_product": 0.07879000157117844,
+      "weight_norm": 1.6511908769607544,
+      "rank": 124
+    },
+    {
+      "layer": 35,
+      "neuron": 7171,
+      "score": 0.04768185690045357,
+      "cosine_similarity": 0.04768185690045357,
+      "dot_product": 0.034386392682790756,
+      "weight_norm": 0.7211630344390869,
+      "rank": 125
+    },
+    {
+      "layer": 35,
+      "neuron": 6422,
+      "score": 0.04734930396080017,
+      "cosine_similarity": 0.04734930396080017,
+      "dot_product": 0.047079794108867645,
+      "weight_norm": 0.9943080544471741,
+      "rank": 126
+    },
+    {
+      "layer": 35,
+      "neuron": 12081,
+      "score": 0.047306086868047714,
+      "cosine_similarity": 0.047306086868047714,
+      "dot_product": 0.08841083943843842,
+      "weight_norm": 1.8689104318618774,
+      "rank": 127
+    },
+    {
+      "layer": 34,
+      "neuron": 4749,
+      "score": 0.047179728746414185,
+      "cosine_similarity": 0.047179728746414185,
+      "dot_product": 0.07290913164615631,
+      "weight_norm": 1.5453486442565918,
+      "rank": 128
+    },
+    {
+      "layer": 34,
+      "neuron": 6272,
+      "score": 0.047163333743810654,
+      "cosine_similarity": 0.047163333743810654,
+      "dot_product": 0.05548892542719841,
+      "weight_norm": 1.1765267848968506,
+      "rank": 129
+    },
+    {
+      "layer": 34,
+      "neuron": 1060,
+      "score": 0.04703798145055771,
+      "cosine_similarity": 0.04703798145055771,
+      "dot_product": 0.08704780787229538,
+      "weight_norm": 1.8505855798721313,
+      "rank": 130
+    },
+    {
+      "layer": 35,
+      "neuron": 11383,
+      "score": 0.04701776057481766,
+      "cosine_similarity": 0.04701776057481766,
+      "dot_product": 0.05146512761712074,
+      "weight_norm": 1.094589114189148,
+      "rank": 131
+    },
+    {
+      "layer": 34,
+      "neuron": 3496,
+      "score": 0.04690295085310936,
+      "cosine_similarity": 0.04690295085310936,
+      "dot_product": 0.0740126222372055,
+      "weight_norm": 1.5779950618743896,
+      "rank": 132
+    },
+    {
+      "layer": 35,
+      "neuron": 2537,
+      "score": 0.04689456894993782,
+      "cosine_similarity": 0.04689456894993782,
+      "dot_product": 0.04907580837607384,
+      "weight_norm": 1.0465136766433716,
+      "rank": 133
+    }
+  ]
+}

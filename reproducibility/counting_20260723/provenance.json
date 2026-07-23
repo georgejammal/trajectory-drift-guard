@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "bundle": "counting_20260723",
+  "created_on": "2026-07-23",
+  "repository_root": "/specific/scratches/scratch/georgejammal/trajectory-drift-guard",
+  "source_control": {
+    "remote_snapshot_compared": "https://github.com/georgejammal/trajectory-drift-guard",
+    "local_git_commit": "unavailable: git executable was not available in the capture environment",
+    "working_tree_state": "dirty; frozen file SHA-256 hashes below are authoritative"
+  },
+  "environment": {
+    "python": "3.11.5",
+    "torch": "2.6.0+cu124",
+    "torch_cuda_runtime": "12.4",
+    "transformers": "4.57.1",
+    "requirements_file": "environment/requirements-all.txt",
+    "dtype": "bfloat16",
+    "generation": {
+      "do_sample": false,
+      "max_new_tokens": 16,
+      "seed": "not applicable: greedy decoding; no random generation path"
+    }
+  },
+  "hardware": {
+    "recorded_qwen25_intervention": {
+      "slurm_job_id": "672915",
+      "node": "n-802",
+      "gpu": "NVIDIA L40S",
+      "elapsed": "00:15:53",
+      "state": "COMPLETED"
+    },
+    "completed_gemma4_gemma12_qwen3_sweeps": {
+      "slurm_job_id": "unavailable in saved artifacts",
+      "gpu": "unavailable in saved artifacts",
+      "note": "Do not infer this from the GPU visible while creating this bundle."
+    },
+    "capture_host_visible_gpus": {
+      "model": "NVIDIA GeForce GTX TITAN X",
+      "count": 4,
+      "driver": "535.309.01",
+      "memory_mib_each": 12288,
+      "note": "Capture-host hardware only; it was not used to identify historical runs."
+    }
+  },
+  "counting_protocol": {
+    "direction": "word-minus-digit",
+    "digits": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "intervention": "absolute value of selected scalar activations",
+    "mlp_scope": "all_positions",
+    "attention_scope": "last_position",
+    "component_mode_completed_validation_sweeps": "mlp_attn",
+    "sigmas_completed_validation_sweeps": [2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5],
+    "qwen_max_pixels": 401408,
+    "prompt_suffix": " Answer with one number do not add any further explanations."
+  },
+  "splits": {
+    "test": {
+      "countbenchqa": 437,
+      "how_many": 440,
+      "tallyqa_balanced": 450
+    },
+    "validation": {
+      "how_many_validation": {
+        "size": 160,
+        "seed": 20260721,
+        "per_label": 20
+      },
+      "tallyqa_validation": {
+        "size": 180,
+        "seed": 20260722,
+        "per_label": 20
+      }
+    }
+  },
+  "completed_validation_windows": {
+    "gemma3_4b_it": "17-23",
+    "gemma3_12b_it": "24-42",
+    "qwen3_vl_8b_instruct": "34-35"
+  },
+  "frozen_file_sha256": {
+    "scripts/run_search.py": "0c898d7d184c0d42e668904f405472c679fd5deeb4da84c7b5c97f698aac1679",
+    "scripts/run_counting_baseline_suite.py": "71b3bec826b0e0d243e8c3357f98b1192d1ee0c3253f4e9416630e8f72668944",
+    "scripts/probe_counting_batch.py": "db27c56b235f403683505ef0a544d18073fb10ba2d79375c7bb5d00be3c260f9",
+    "scripts/run_counting_sweep_after_probe.sh": "f7f6d4f14f9b648650ffe14d234870a1748d5211127aea56e694dec30fd09a5d",
+    "scripts/run_counting_validation_sweep_after_probe.sh": "5cbe75ff6e6ebd8188153bb11e20ad7724d4f82d4ce13fccbde997b11ca662a8",
+    "scripts/materialize_counting_validation.py": "fd3eb376e51759d0f3201cf0ebee2f9079944738d7af517a3e0cc2d0bf666d78",
+    "src/parsing_neurons_repro/directions.py": "a6872134876a4fe56165ee7c2d1ba1e2451ce8cda443b50123c95afad283d8c8",
+    "src/parsing_neurons_repro/scoring.py": "5ad7c62846e73bbbe2f02172da64fe0bff0d9ba500d2a0f3020d7ab946d007f9",
+    "src/parsing_neurons_repro/interventions.py": "80cd6096f7c36e88bb02b36ba4065f69c19849cba92a4fd7eca70df49a7b8c83",
+    "src/parsing_neurons_repro/generation.py": "d719ce0d1c1261f55ee65613e95783058a857f80e3b9529884dc51b30110472d",
+    "src/parsing_neurons_repro/search.py": "25b47ad73bd75eb6bd6e4f21b6b3016f201fb9b4e9ab346b7a4357c4bdefca08",
+    "src/parsing_neurons_repro/tasks/counting.py": "a3315338ceefa9c20bf4c132808ae049144f2ef519f3589edb04878c09130123"
+  }
+}
